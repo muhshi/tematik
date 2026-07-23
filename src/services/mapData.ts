@@ -4,12 +4,14 @@ import type { MapDataResponse } from "@/types/map";
  * Fetch merged GeoJSON data (spatial + population) from the internal API route.
  * This is the single entry point for frontend components to get map data.
  */
-export async function fetchMapData(): Promise<MapDataResponse> {
-  const response = await fetch("/api/map-data", {
+export async function fetchMapData(year: string = "2020"): Promise<MapDataResponse> {
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "";
+  const response = await fetch(`${baseUrl}/api/map-data?year=${year}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
+    next: { revalidate: 3600 },
   });
 
   if (!response.ok) {

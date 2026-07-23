@@ -23,12 +23,13 @@ export default function Page() {
   const [selectedRegion, setSelectedRegion] = useState<RegionDetail | null>(null);
 
   const [granularity, setGranularity] = useState<"Kecamatan" | "Desa">("Desa");
+  const [selectedYear, setSelectedYear] = useState<string>("2024");
 
   useEffect(() => {
     async function loadData() {
       try {
         setLoading(true);
-        const data = await fetchMapData();
+        const data = await fetchMapData(selectedYear);
         setMapData(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
@@ -37,15 +38,16 @@ export default function Page() {
       }
     }
     loadData();
-  }, []);
+  }, [selectedYear]);
 
   const handleRegionClick = (feature: DemakFeature) => {
     setSelectedRegion({
       kecamatan: feature.properties.district,
       village: feature.properties.village,
       jumlahPenduduk: feature.properties.jumlahPenduduk,
-      luasWilayah: null, // Mock data for V1
-      kepadatan: null, // Mock data for V1
+      luasWilayah: feature.properties.luasWilayah ?? null,
+      kepadatan: feature.properties.kepadatan ?? null,
+      jumlahDesa: feature.properties.jumlahDesa,
     });
   };
 
@@ -54,11 +56,12 @@ export default function Page() {
       <div className="flex h-full w-full flex-col relative overflow-hidden">
         {/* Top Filter Bar */}
         <FilterBar
-          year={mapData?.metadata.year ?? ""}
+          year={selectedYear}
           source={mapData?.metadata.source ?? "Loading..."}
           isCached={mapData?.metadata.isCached ?? false}
           granularity={granularity}
           onGranularityChange={setGranularity}
+          onYearChange={setSelectedYear}
         />
 
         {/* Main Map Area */}

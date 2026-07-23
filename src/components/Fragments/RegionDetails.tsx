@@ -63,7 +63,7 @@ export function RegionDetails({ data, onClose }: RegionDetailsProps) {
 
         <Separator className="my-5" />
 
-        {/* 2x2 Grid Stats (Mocked for V1) */}
+        {/* 2x2 Grid Stats */}
         <div className="mb-6 grid grid-cols-2 gap-4">
           <div className="flex flex-col gap-1 rounded-lg border border-border p-3">
             <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
@@ -71,7 +71,7 @@ export function RegionDetails({ data, onClose }: RegionDetailsProps) {
               Kepadatan
             </div>
             <span className="text-base font-semibold text-foreground">
-              {data.kepadatan ? `${data.kepadatan} /km²` : "N/A"}
+              {data.kepadatan ? `${new Intl.NumberFormat("id-ID", { maximumFractionDigits: 1 }).format(data.kepadatan)} jiwa/km²` : "N/A"}
             </span>
           </div>
           <div className="flex flex-col gap-1 rounded-lg border border-border p-3">
@@ -80,7 +80,7 @@ export function RegionDetails({ data, onClose }: RegionDetailsProps) {
               Luas Area
             </div>
             <span className="text-base font-semibold text-foreground">
-              {data.luasWilayah ? `${data.luasWilayah} km²` : "N/A"}
+              {data.luasWilayah ? `${new Intl.NumberFormat("id-ID", { maximumFractionDigits: 1 }).format(data.luasWilayah)} km²` : "N/A"}
             </span>
           </div>
           <div className="flex flex-col gap-1 rounded-lg border border-border p-3">
@@ -88,7 +88,9 @@ export function RegionDetails({ data, onClose }: RegionDetailsProps) {
               <MapIcon className="h-3.5 w-3.5" />
               Desa/Kel
             </div>
-            <span className="text-base font-semibold text-foreground">N/A</span>
+            <span className="text-base font-semibold text-foreground">
+              {data.jumlahDesa ? data.jumlahDesa.toString() : (data.village ? "1" : "N/A")}
+            </span>
           </div>
           <div className="flex flex-col gap-1 rounded-lg border border-border p-3">
             <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">

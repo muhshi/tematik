@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { readFile } from "fs/promises";
 import { join } from "path";
+import area from "@turf/area";
 import type {
   DemakFeatureCollection,
   DemakGeoJsonProperties,
@@ -8,9 +9,7 @@ import type {
   MapDataResponse,
 } from "@/types/map";
 import {
-  fetchStaticTableList,
-  fetchStaticTableView,
-  parsePopulationTable,
+  fetchDynamicPopulationData,
   normalizeKecamatanName,
 } from "@/services/bpsApi";
 
@@ -27,37 +26,54 @@ async function loadDemakGeoJson(): Promise<DemakFeatureCollection> {
 
 /**
  * Join BPS population data with GeoJSON features.
- * Matches kecamatan names using normalized string comparison.
+ * Matches kecamatan names using normalized string comparison and adds metrics.
  */
 function joinDataWithGeoJson(
-  geojson: DemakFeatureCollection,
-  populationData: KecamatanData[]
+  geoJson: DemakFeatureCollection,
+  popData: KecamatanData[],
+  baseDesaGeoJson?: DemakFeatureCollection
 ): DemakFeatureCollection {
-  // Build a lookup map with normalized kecamatan names
-  const dataMap = new Map<string, number>();
-  for (const item of populationData) {
-    const normalized = normalizeKecamatanName(item.kecamatan);
-    dataMap.set(normalized, item.jumlahPenduduk);
-  }
+  const newFeatures = geoJson.features.map((feature) => {
+    const districtName = feature.properties.district;
+    const normalizedKec = normalizeKecamatanName(districtName);
 
-  // Inject population data into GeoJSON properties
-  const enrichedFeatures = geojson.features.map((feature) => {
-    const kecName = feature.properties.district;
-    const normalizedName = normalizeKecamatanName(kecName);
-    const population = dataMap.get(normalizedName) ?? null;
+    // Find matching population data
+    const match = popData.find(
+      (d) => normalizeKecamatanName(d.kecamatan) === normalizedKec
+    );
+
+    const population = match ? match.jumlahPenduduk : null;
+    
+    // Calculate Area (in square kilometers)
+    const areaSqMeters = area(feature);
+    const luasWilayah = areaSqMeters / 1_000_000;
+    
+    // Calculate Density (people per sq km)
+    const kepadatan = population ? (population / luasWilayah) : null;
+    
+    // Calculate Jumlah Desa (if baseDesaGeoJson is provided, meaning we are processing Kecamatan map)
+    let jumlahDesa = undefined;
+    if (baseDesaGeoJson) {
+      jumlahDesa = baseDesaGeoJson.features.filter(
+        (f) => normalizeKecamatanName(f.properties.district) === normalizedKec
+      ).length;
+    }
 
     return {
       ...feature,
       properties: {
         ...feature.properties,
         jumlahPenduduk: population,
+        luasWilayah,
+        kepadatan,
+        jumlahDesa,
       } as DemakGeoJsonProperties,
     };
   });
 
   return {
-    ...geojson,
-    features: enrichedFeatures,
+    ...geoJson,
+    features: newFeatures,
   };
 }
 
@@ -65,8 +81,11 @@ function joinDataWithGeoJson(
  * GET /api/map-data
  * Returns enriched GeoJSON with population data from BPS.
  */
-export async function GET() {
+export async function GET(request: Request) {
   try {
+    const { searchParams } = new URL(request.url);
+    const requestedYear = searchParams.get("year") || "2024";
+
     // 1. Load GeoJSON files
     const geojsonDesa = await loadDemakGeoJson();
     
@@ -78,39 +97,39 @@ export async function GET() {
     let populationData: KecamatanData[] = [];
     let isCached = false;
     let source = "BPS Kabupaten Demak";
-    let year = new Date().getFullYear().toString();
+    let year = requestedYear;
 
     try {
-      // 2. Fetch BPS table list to find population table ID
-      const tables = await fetchStaticTableList();
-
-      if (tables.length > 0) {
-        // Use the first matching table
-        const targetTable = tables[0];
-
-        // 3. Fetch the table view (raw HTML)
-        const tableView = await fetchStaticTableView(targetTable.table_id);
-
-        if (tableView?.table) {
-          // 4. Parse HTML to extract population data
-          populationData = parsePopulationTable(tableView.table);
-
-          // Extract year from title if available
-          const yearMatch = tableView.title.match(/(\d{4})/);
-          if (yearMatch) {
-            year = yearMatch[1];
-          }
-        }
-      }
+      // 2. Fetch dynamic population data from BPS for the requested year
+      populationData = await fetchDynamicPopulationData(requestedYear);
     } catch (bpsError) {
-      // BPS API is down or API key invalid -- use fallback (null data)
-      console.error("[map-data] BPS API error, serving GeoJSON without population data:", bpsError);
-      source = "Fallback (BPS Unavailable)";
+      // BPS API is down or API key invalid -- use fallback (mock data)
+      console.error("[map-data] BPS API error, using mock data for testing:", bpsError);
+      source = "Mock Data (No API Key)";
       isCached = true;
+      
+      // Inject mock data so the choropleth colors can be tested
+      // In a real scenario, this would be empty if the year doesn't exist, but for UI testing we always return something
+      populationData = [
+        { kecamatan: "Mranggen", jumlahPenduduk: 175000 },
+        { kecamatan: "Karangawen", jumlahPenduduk: 95000 },
+        { kecamatan: "Guntur", jumlahPenduduk: 88000 },
+        { kecamatan: "Sayung", jumlahPenduduk: 105000 },
+        { kecamatan: "Karangtengah", jumlahPenduduk: 68000 },
+        { kecamatan: "Wonosalam", jumlahPenduduk: 85000 },
+        { kecamatan: "Dempet", jumlahPenduduk: 59000 },
+        { kecamatan: "Gajah", jumlahPenduduk: 52000 },
+        { kecamatan: "Karanganyar", jumlahPenduduk: 77000 },
+        { kecamatan: "Mijen", jumlahPenduduk: 58000 },
+        { kecamatan: "Demak", jumlahPenduduk: 112000 },
+        { kecamatan: "Bonang", jumlahPenduduk: 106000 },
+        { kecamatan: "Wedung", jumlahPenduduk: 82000 },
+        { kecamatan: "Kebonagung", jumlahPenduduk: 42000 },
+      ];
     }
 
     // 5. Join data with GeoJSON
-    const enrichedGeoJsonKecamatan = joinDataWithGeoJson(geojsonKec, populationData);
+    const enrichedGeoJsonKecamatan = joinDataWithGeoJson(geojsonKec, populationData, geojsonDesa);
     const enrichedGeoJsonDesa = joinDataWithGeoJson(geojsonDesa, populationData);
 
     const response: MapDataResponse = {

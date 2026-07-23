@@ -11,9 +11,13 @@ interface FilterBarProps {
   isCached: boolean;
   granularity: Granularity;
   onGranularityChange: (granularity: Granularity) => void;
+  onYearChange: (year: string) => void;
 }
 
-export function FilterBar({ year, source, isCached, granularity, onGranularityChange }: FilterBarProps) {
+export function FilterBar({ year, source, isCached, granularity, onGranularityChange, onYearChange }: FilterBarProps) {
+  // Years available from BPS API (Var 31 for 2011-2020, Var 248 for 2021-2024)
+  const availableYears = ["2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011"];
+
   return (
     <div className="flex h-16 shrink-0 items-center justify-between border-b border-border bg-card px-6">
       {/* Left side: Primary Filters */}
@@ -27,12 +31,18 @@ export function FilterBar({ year, source, isCached, granularity, onGranularityCh
           </div>
         </div>
 
-        {/* Year Select (Mocked for V1, dynamic based on data) */}
+        {/* Year Select (Dynamic from 2011 to 2020) */}
         <div className="flex items-center gap-2">
           <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Year</span>
-          <div className="flex items-center gap-2 rounded-md border border-border bg-muted/50 px-3 py-1.5 text-sm font-medium text-foreground">
-            {year || "2024"}
-          </div>
+          <select 
+            value={year}
+            onChange={(e) => onYearChange(e.target.value)}
+            className="flex h-8 items-center justify-between rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {availableYears.map(y => (
+              <option key={y} value={y}>{y}</option>
+            ))}
+          </select>
         </div>
 
         {/* Granularity Toggle */}
@@ -55,7 +65,7 @@ export function FilterBar({ year, source, isCached, granularity, onGranularityCh
         </div>
 
         {/* Advanced Filters Button */}
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <span className="text-[10px] font-semibold uppercase tracking-wider text-transparent">
             Filter
           </span>
@@ -63,7 +73,7 @@ export function FilterBar({ year, source, isCached, granularity, onGranularityCh
             <SlidersHorizontal className="h-3.5 w-3.5" />
             Advanced Filters
           </Button>
-        </div>
+        </div> */}
       </div>
 
       {/* Right side: Data source info */}

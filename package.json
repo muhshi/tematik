@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",
+    "@turf/area": "^7.3.5",
     "@turf/dissolve": "^7.3.5",
     "@turf/helpers": "^7.3.5",
     "@turf/union": "^7.3.5",

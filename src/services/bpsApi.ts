@@ -1,18 +1,8 @@
-import * as cheerio from "cheerio";
-import type {
-  BpsListResponse,
-  BpsStaticTableListItem,
-  BpsStaticTableView,
-  KecamatanData,
-} from "@/types/map";
+import type { KecamatanData } from "@/types/map";
 
 const BPS_BASE_URL = "https://webapi.bps.go.id/v1";
 
-/**
- * Retrieve the BPS API key from environment variables.
- * Throws if the key is not configured.
- */
-function getApiKey(): string {
+export function getApiKey(): string {
   const key = process.env.BPS_API_KEY;
   if (!key || key === "your_bps_api_key_here") {
     throw new Error("BPS_API_KEY is not configured in .env.local");
@@ -20,102 +10,64 @@ function getApiKey(): string {
   return key;
 }
 
-/**
- * Fetch the list of static tables from BPS for Kabupaten Demak (domain 3321)
- * filtered by keyword "penduduk".
- */
-export async function fetchStaticTableList(): Promise<
-  BpsStaticTableListItem[]
-> {
-  const apiKey = getApiKey();
-  const url = `${BPS_BASE_URL}/api/list/model/statictable/domain/3321/keyword/penduduk/key/${apiKey}/`;
-
-  const response = await fetch(url, { next: { revalidate: 86400 } });
-
-  if (!response.ok) {
-    throw new Error(`BPS API list request failed: ${response.status}`);
-  }
-
-  const data: BpsListResponse = await response.json();
-
-  if (data.status === "Error" || data["data-availability"] === "not-available") {
-    return [];
-  }
-
-  return data.data[1] ?? [];
-}
-
-/**
- * Fetch a specific static table view by its ID.
- * Returns the raw data including the HTML table string.
- */
-export async function fetchStaticTableView(
-  tableId: number
-): Promise<BpsStaticTableView["data"] | null> {
-  const apiKey = getApiKey();
-  const url = `${BPS_BASE_URL}/api/view/model/statictable/domain/3321/id/${tableId}/key/${apiKey}/`;
-
-  const response = await fetch(url, { next: { revalidate: 86400 } });
-
-  if (!response.ok) {
-    throw new Error(`BPS API view request failed: ${response.status}`);
-  }
-
-  const result: BpsStaticTableView = await response.json();
-
-  if (
-    result.status === "Error" ||
-    result["data-availability"] === "not-available"
-  ) {
-    return null;
-  }
-
-  return result.data;
-}
-
-/**
- * Normalize kecamatan name for consistent matching.
- * Converts to lowercase, removes extra whitespace, trims.
- */
 export function normalizeKecamatanName(name: string): string {
   return name.toLowerCase().replace(/\s+/g, "").trim();
 }
 
-/**
- * Parse the raw HTML table string from BPS into structured KecamatanData.
- * Uses Cheerio to extract rows containing kecamatan names and population numbers.
- */
-export function parsePopulationTable(htmlString: string): KecamatanData[] {
-  const $ = cheerio.load(htmlString);
+export async function fetchDynamicPopulationData(yearStr: string = "2024"): Promise<KecamatanData[]> {
+  const apiKey = getApiKey();
+  
+  // Mapping Year to BPS 'th' parameter
+  // BPS uses th_id = year - 1900. (e.g., 2024 -> 124, 2020 -> 120)
+  const year = parseInt(yearStr, 10) || 2024;
+  const th_id = year - 1900;
+  
+  // BPS changed the variable ID after the 2020 census:
+  // 2011-2020 uses var 31 (Jumlah Penduduk) with turvar 25 (Laki-laki+Perempuan)
+  // 2021-2024 uses var 248 (Proyeksi Hasil LFSP2020) with turvar 0 (Tidak ada)
+  const isPost2020 = year > 2020;
+  const var_id = isPost2020 ? 248 : 31;
+  const turvar_id = isPost2020 ? 0 : 25;
+  
+  const url = `${BPS_BASE_URL}/api/list/model/data/domain/3321/var/${var_id}/th/${th_id}/key/${apiKey}/`;
+
+  const response = await fetch(url, { next: { revalidate: 86400 } });
+
+  if (!response.ok) {
+    throw new Error(`BPS API request failed: ${response.status}`);
+  }
+
+  const result = await response.json();
+
+  if (result.status === "Error" || result["data-availability"] === "not-available") {
+    throw new Error("Data not available from BPS API for this year");
+  }
+
+  // Parse the dynamic data format
+  const vervarList = result.vervar || []; // List of kecamatans
+  const datacontent = result.datacontent || {};
+  
   const results: KecamatanData[] = [];
-
-  // BPS tables vary in structure -- iterate all rows
-  $("tr").each((_index, row) => {
-    const cells = $(row).find("td");
-
-    if (cells.length < 2) return;
-
-    // Try to find kecamatan name + population number in each row
-    const firstCell = $(cells[0]).text().trim();
-    const lastCell = $(cells[cells.length - 1]).text().trim();
-
-    // Skip header rows, total rows, or rows with non-data content
-    if (!firstCell || firstCell.toLowerCase().includes("kecamatan")) return;
-    if (firstCell.toLowerCase().includes("jumlah")) return;
-    if (firstCell.toLowerCase().includes("total")) return;
-    if (firstCell.toLowerCase().includes("kabupaten")) return;
-
-    // Parse the population number (remove dots/commas used as thousand separators)
-    const populationStr = lastCell.replace(/[.\s]/g, "").replace(",", ".");
-    const population = parseInt(populationStr, 10);
-
-    if (!isNaN(population) && population > 0) {
+  
+  for (const vervar of vervarList) {
+    const kecamatanId = vervar.val;
+    const kecamatanName = vervar.label;
+    
+    if (kecamatanName.toLowerCase().includes("kab. demak")) continue;
+    
+    // Construct the data key based on BPS rule: vervar + var + turvar + th + turtahun
+    // e.g. vervarId + 248 + 0 + th_id + 0
+    const dataKey = `${kecamatanId}${var_id}${turvar_id}${th_id}0`;
+    
+    const population = datacontent[dataKey];
+    
+    if (population !== undefined) {
       results.push({
-        kecamatan: firstCell,
-        jumlahPenduduk: population,
+        kecamatan: kecamatanName,
+        jumlahPenduduk: population
       });
     }
-  });
+  }
 
   return results;
 }

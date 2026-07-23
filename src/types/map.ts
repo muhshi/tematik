@@ -60,6 +60,9 @@ export interface DemakGeoJsonBaseProperties {
 /** Properties after joining with BPS population data */
 export interface DemakGeoJsonProperties extends DemakGeoJsonBaseProperties {
   jumlahPenduduk: number | null;
+  luasWilayah?: number | null;
+  kepadatan?: number | null;
+  jumlahDesa?: number;
 }
 
 /** A single feature in the Demak GeoJSON */
@@ -85,6 +88,7 @@ export interface RegionDetail {
   jumlahPenduduk: number | null;
   luasWilayah: number | null;
   kepadatan: number | null;
+  jumlahDesa?: number;
 }
 
 /** API response wrapper from /api/map-data */
