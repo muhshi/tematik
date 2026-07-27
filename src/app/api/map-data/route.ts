@@ -14,6 +14,7 @@ import {
 } from "@/services/bpsApi";
 
 export const revalidate = 86400; // Cache for 24 hours
+export const dynamic = 'force-dynamic'; // Prevent Next.js from attempting static generation during build
 
 /**
  * Load the local Demak GeoJSON file from assets.

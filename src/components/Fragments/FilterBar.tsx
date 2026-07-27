@@ -19,9 +19,9 @@ export function FilterBar({ year, source, isCached, granularity, onGranularityCh
   const availableYears = ["2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011"];
 
   return (
-    <div className="flex h-16 shrink-0 items-center justify-between border-b border-border bg-card px-6">
+    <div className="flex min-h-16 flex-col lg:flex-row shrink-0 items-center justify-between gap-4 border-b border-border bg-card px-4 py-4 lg:px-6 lg:py-0">
       {/* Left side: Primary Filters */}
-      <div className="flex items-center gap-6">
+      <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start lg:gap-6">
         
         {/* Indicator Select (Mocked for V1) */}
         <div className="flex items-center gap-2">

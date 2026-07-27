@@ -18,7 +18,7 @@ export function RegionDetails({ data, onClose }: RegionDetailsProps) {
     : "N/A";
 
   return (
-    <div className="region-panel-enter absolute bottom-0 right-0 top-0 z-[1010] flex w-80 flex-col border-l border-border bg-card shadow-2xl">
+    <div className="region-panel-enter absolute bottom-0 right-0 top-0 z-[1010] flex w-full sm:w-80 flex-col border-l border-border bg-card shadow-2xl">
       {/* Header */}
       <div className="flex items-center justify-between border-b border-border p-5">
         <div className="flex flex-col">

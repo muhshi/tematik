@@ -29,23 +29,41 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Infrastructure", icon: Building2 },
 ];
 
-export function Sidebar() {
+interface SidebarProps {
+  isMobileOpen?: boolean;
+  onCloseMobile?: () => void;
+}
+
+export function Sidebar({ isMobileOpen = false, onCloseMobile }: SidebarProps) {
   const [collapsed, setCollapsed] = useState(false);
+  const isTextVisible = !collapsed || isMobileOpen;
 
   return (
-    <aside
-      className={`
-        relative flex flex-col border-r border-sidebar-border bg-sidebar
-        transition-all duration-300 ease-in-out
-        ${collapsed ? "w-16" : "w-60"}
-      `}
-    >
+    <>
+      {/* Mobile Backdrop */}
+      {isMobileOpen && (
+        <div 
+          className="fixed inset-0 z-[1020] bg-black/50 md:hidden" 
+          onClick={onCloseMobile} 
+          aria-hidden="true" 
+        />
+      )}
+
+      <aside
+        className={`
+          absolute inset-y-0 left-0 z-[1030] flex flex-col border-r border-sidebar-border bg-sidebar
+          transition-transform duration-300 ease-in-out md:relative md:translate-x-0
+          ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
+          ${collapsed ? "md:w-16" : "md:w-60"}
+          w-60
+        `}
+      >
       {/* Logo Section */}
       <div className="flex items-center gap-3 px-4 py-5">
         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary">
           <Map className="h-5 w-5 text-sidebar-primary-foreground" />
         </div>
-        {!collapsed && (
+        {isTextVisible && (
           <div className="flex flex-col overflow-hidden">
             <span className="truncate text-sm font-semibold text-sidebar-foreground">
               Statistik Demak
@@ -75,10 +93,10 @@ export function Sidebar() {
                     : "text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                 }
               `}
-              title={collapsed ? item.label : undefined}
+              title={!isTextVisible ? item.label : undefined}
             >
               <Icon className="h-[18px] w-[18px] shrink-0" />
-              {!collapsed && <span className="truncate">{item.label}</span>}
+              {isTextVisible && <span className="truncate">{item.label}</span>}
             </button>
           );
         })}
@@ -90,12 +108,12 @@ export function Sidebar() {
 
         <button className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-sidebar-foreground/60 transition-colors hover:text-sidebar-foreground">
           <HelpCircle className="h-[18px] w-[18px] shrink-0" />
-          {!collapsed && <span>Help Center</span>}
+          {isTextVisible && <span>Help Center</span>}
         </button>
 
         <button className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-sidebar-foreground/60 transition-colors hover:text-sidebar-foreground">
           <FileText className="h-[18px] w-[18px] shrink-0" />
-          {!collapsed && <span>Documentation</span>}
+          {isTextVisible && <span>Documentation</span>}
         </button>
 
         <div className="px-1 pt-2">
@@ -104,11 +122,11 @@ export function Sidebar() {
             className={`
               w-full bg-sidebar-primary text-sidebar-primary-foreground
               hover:bg-sidebar-primary/90
-              ${collapsed ? "px-0" : ""}
+              ${!isTextVisible ? "px-0" : ""}
             `}
           >
             <Download className="h-4 w-4 shrink-0" />
-            {!collapsed && <span>Export Data</span>}
+            {isTextVisible && <span>Export Data</span>}
           </Button>
         </div>
       </div>
@@ -116,7 +134,7 @@ export function Sidebar() {
       {/* Collapse Toggle */}
       <button
         onClick={() => setCollapsed(!collapsed)}
-        className="absolute -right-3 top-7 z-10 flex h-6 w-6 items-center justify-center rounded-full border border-sidebar-border bg-sidebar text-sidebar-foreground/60 shadow-sm transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+        className="absolute -right-3 top-7 z-10 hidden md:flex h-6 w-6 items-center justify-center rounded-full border border-sidebar-border bg-sidebar text-sidebar-foreground/60 shadow-sm transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
         aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
       >
         {collapsed ? (
@@ -126,5 +144,6 @@ export function Sidebar() {
         )}
       </button>
     </aside>
+    </>
   );
 }
