@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useMemo } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { MapContainer, TileLayer, GeoJSON, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import type { Map as LeafletMap, PathOptions, Layer } from "leaflet";
@@ -10,6 +10,7 @@ interface MapCanvasProps {
   geojson: DemakFeatureCollection;
   onRegionClick: (feature: DemakFeature) => void;
   granularity: Granularity;
+  year: string;
 }
 
 // Function to calculate color based on population
@@ -35,7 +36,7 @@ function getFeatureStyle(feature: any, granularity: Granularity): PathOptions {
   };
 }
 
-export default function MapCanvas({ geojson, onRegionClick, granularity }: MapCanvasProps) {
+export default function MapCanvas({ geojson, onRegionClick, granularity, year }: MapCanvasProps) {
   const mapRef = useRef<LeafletMap | null>(null);
 
   // We just use the passed geojson directly since it's now perfectly pre-processed by the API
@@ -110,7 +111,7 @@ export default function MapCanvas({ geojson, onRegionClick, granularity }: MapCa
         
         {displayGeojson && displayGeojson.features.length > 0 && (
           <GeoJSON
-            key={granularity} // Force re-render when granularity changes
+            key={`${granularity}-${year}`} // Paksa react-leaflet render ulang saat tahun/granularity berubah
             data={displayGeojson}
             style={(feature) => getFeatureStyle(feature, granularity)}
             onEachFeature={onEachFeature}

@@ -29,6 +29,7 @@ export default function Page() {
     async function loadData() {
       try {
         setLoading(true);
+        setSelectedRegion(null); // Clear panel kanan saat ganti tahun biar tidak nampilin data basi
         const data = await fetchMapData(selectedYear);
         setMapData(data);
       } catch (err) {
@@ -79,6 +80,7 @@ export default function Page() {
                   geojson={granularity === "Kecamatan" ? mapData.geojsonKecamatan : mapData.geojsonDesa}
                   onRegionClick={handleRegionClick}
                   granularity={granularity}
+                  year={mapData.metadata.year.toString()}
                 />
               )}
 

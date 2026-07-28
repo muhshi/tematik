@@ -11,7 +11,7 @@ export async function fetchMapData(year: string = "2020"): Promise<MapDataRespon
     headers: {
       "Content-Type": "application/json",
     },
-    next: { revalidate: 3600 },
+    cache: "no-store", // Mencegah browser nge-cache GET request ini
   });
 
   if (!response.ok) {
