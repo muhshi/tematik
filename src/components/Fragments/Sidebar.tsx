@@ -43,7 +43,7 @@ export function Sidebar({ isMobileOpen = false, onCloseMobile }: SidebarProps) {
       {/* Mobile Backdrop */}
       {isMobileOpen && (
         <div 
-          className="fixed inset-0 z-[1020] bg-black/50 md:hidden" 
+          className="absolute inset-0 top-14 z-[1020] bg-black/50 md:hidden" 
           onClick={onCloseMobile} 
           aria-hidden="true" 
         />
@@ -51,15 +51,15 @@ export function Sidebar({ isMobileOpen = false, onCloseMobile }: SidebarProps) {
 
       <aside
         className={`
-          absolute inset-y-0 left-0 z-[1030] flex flex-col border-r border-sidebar-border bg-sidebar
-          transition-transform duration-300 ease-in-out md:relative md:translate-x-0
+          absolute top-14 bottom-0 left-0 z-[1030] flex flex-col border-r border-sidebar-border bg-sidebar
+          transition-transform duration-300 ease-in-out md:relative md:top-0 md:bottom-0 md:translate-x-0
           ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
-          ${collapsed ? "md:w-16" : "md:w-60"}
-          w-60
+          ${collapsed ? "md:w-16" : "md:w-64"}
+          w-64
         `}
       >
-      {/* Logo Section */}
-      <div className="flex items-center gap-3 px-4 py-5">
+      {/* Logo Section - Hidden on Mobile */}
+      <div className="hidden md:flex items-center gap-3 px-4 py-5">
         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary">
           <Map className="h-5 w-5 text-sidebar-primary-foreground" />
         </div>
@@ -75,7 +75,7 @@ export function Sidebar({ isMobileOpen = false, onCloseMobile }: SidebarProps) {
         )}
       </div>
 
-      <Separator className="bg-sidebar-border" />
+      <Separator className="hidden md:block bg-sidebar-border" />
 
       {/* Navigation Items */}
       <nav className="flex flex-1 flex-col gap-1 px-2 py-3">

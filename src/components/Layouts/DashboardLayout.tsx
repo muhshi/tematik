@@ -13,7 +13,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
-    <div className="flex h-screen w-full flex-col md:flex-row overflow-hidden bg-background">
+    <div className="relative flex h-screen w-full flex-col md:flex-row overflow-hidden bg-background">
       {/* Mobile Header */}
       <div className="flex h-14 shrink-0 items-center justify-between border-b border-border bg-sidebar px-4 md:hidden">
         <div className="flex items-center gap-3">
