@@ -71,20 +71,33 @@ export default function Page() {
               <span className="font-semibold">Failed to load map data</span>
               <span className="text-sm">{error}</span>
             </div>
-          ) : loading ? (
-            <Skeleton className="h-full w-full rounded-none" />
           ) : (
-            mapData && (
-              <MapCanvas
-                geojson={granularity === "Kecamatan" ? mapData.geojsonKecamatan : mapData.geojsonDesa}
-                onRegionClick={handleRegionClick}
-                granularity={granularity}
-              />
-            )
+            <>
+              {/* Map Canvas (Keep mounted if we have data) */}
+              {mapData && (
+                <MapCanvas
+                  geojson={granularity === "Kecamatan" ? mapData.geojsonKecamatan : mapData.geojsonDesa}
+                  onRegionClick={handleRegionClick}
+                  granularity={granularity}
+                />
+              )}
+
+              {/* Loading State / Spinner */}
+              {loading && (
+                <div className={`absolute inset-0 z-[2000] flex items-center justify-center ${mapData ? 'bg-white/40 backdrop-blur-[1px]' : 'bg-slate-50'}`}>
+                  <div className="flex flex-col items-center gap-3 rounded-xl bg-card px-6 py-5 shadow-xl border border-border">
+                    <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+                    <span className="text-sm font-medium text-foreground">
+                      {mapData ? "Menarik Data BPS..." : "Memuat Peta..."}
+                    </span>
+                  </div>
+                </div>
+              )}
+            </>
           )}
 
           {/* Overlays */}
-          {!loading && !error && <MapLegend />}
+          {!error && mapData && <MapLegend />}
           
           {selectedRegion && (
             <RegionDetails
