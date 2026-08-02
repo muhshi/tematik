@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useMemo } from "react";
-import { MapContainer, TileLayer, GeoJSON, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON, useMap, ZoomControl } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import type { Map as LeafletMap, PathOptions, Layer } from "leaflet";
 import type { DemakFeatureCollection, DemakFeature, Granularity } from "@/types/map";
@@ -99,11 +99,12 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year }:
       <MapContainer
         center={[-6.89, 110.64]} // Approximate center of Demak
         zoom={11}
-        zoomControl={true}
+        zoomControl={false}
         scrollWheelZoom={true}
         className="h-full w-full"
         ref={mapRef}
       >
+        <ZoomControl position="topleft" />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"

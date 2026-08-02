@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   BarChart3,
   Users,
@@ -9,7 +10,6 @@ import {
   HelpCircle,
   FileText,
   Download,
-  Map,
   PanelLeftClose,
   PanelLeftOpen,
 } from "lucide-react";
@@ -60,8 +60,8 @@ export function Sidebar({ isMobileOpen = false, onCloseMobile }: SidebarProps) {
       >
       {/* Logo Section - Hidden on Mobile */}
       <div className="hidden md:flex items-center gap-3 px-4 py-5">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary">
-          <Map className="h-5 w-5 text-sidebar-primary-foreground" />
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center">
+          <Image src="/logoBPS.png" alt="Logo BPS Demak" width={32} height={32} className="object-contain" priority />
         </div>
         {isTextVisible && (
           <div className="flex flex-col overflow-hidden">

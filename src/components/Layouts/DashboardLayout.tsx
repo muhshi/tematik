@@ -2,8 +2,9 @@
 
 import { type ReactNode, useState } from "react";
 import { Sidebar } from "@/components/Fragments/Sidebar";
-import { Menu, Map } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/Elements/button";
+import Image from "next/image";
 
 interface DashboardLayoutProps {
   children: ReactNode;
@@ -17,9 +18,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       {/* Mobile Header */}
       <div className="flex h-14 shrink-0 items-center justify-between border-b border-border bg-sidebar px-4 md:hidden">
         <div className="flex items-center gap-3">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary">
-            <Map className="h-4 w-4 text-sidebar-primary-foreground" />
-          </div>
+          <Image src="/logoBPS.png" alt="Logo BPS Demak" width={28} height={28} className="object-contain" />
           <span className="text-sm font-semibold text-sidebar-foreground">
             Statistik Demak
           </span>
