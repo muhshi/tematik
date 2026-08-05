@@ -41,10 +41,9 @@ export interface BpsStaticTableView {
 
 // -- Parsed Data Types --
 
-/** Result of parsing BPS HTML table per kecamatan */
 export interface KecamatanData {
   kecamatan: string;
-  jumlahPenduduk: number;
+  value: number;
 }
 
 // -- GeoJSON Property Types --
@@ -59,7 +58,7 @@ export interface DemakGeoJsonBaseProperties {
 
 /** Properties after joining with BPS population data */
 export interface DemakGeoJsonProperties extends DemakGeoJsonBaseProperties {
-  jumlahPenduduk: number | null;
+  value: number | null;
   luasWilayah?: number | null;
   kepadatan?: number | null;
   jumlahDesa?: number;
@@ -81,11 +80,10 @@ export type DemakFeatureCollection = FeatureCollection<
 
 export type Granularity = "Kecamatan" | "Desa";
 
-/** Data shown in the Region Details panel */
 export interface RegionDetail {
   kecamatan: string;
   village?: string;
-  jumlahPenduduk: number | null;
+  value: number | null;
   luasWilayah: number | null;
   kepadatan: number | null;
   jumlahDesa?: number;

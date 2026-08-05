@@ -11,36 +11,50 @@ interface MapCanvasProps {
   onRegionClick: (feature: DemakFeature) => void;
   granularity: Granularity;
   year: string;
+  indicatorName: string;
 }
 
-// Function to calculate color based on population
-function getColor(population: number | null): string {
-  if (population === null) return "#e2e8f0"; // Gray for no data
-  // Using Demak's approximate population range for scale
-  if (population > 100000) return "var(--choropleth-4)";
-  if (population > 75000) return "var(--choropleth-3)";
-  if (population > 50000) return "var(--choropleth-2)";
-  return "var(--choropleth-1)";
-}
-
-// Style function for GeoJSON features
-function getFeatureStyle(feature: any, granularity: Granularity): PathOptions {
-  const pop = feature?.properties?.jumlahPenduduk ?? null;
-  return {
-    fillColor: getColor(pop),
-    weight: granularity === "Kecamatan" ? 2 : 1,
-    opacity: 1,
-    color: granularity === "Kecamatan" ? "white" : "white", // Border color
-    dashArray: granularity === "Kecamatan" ? "" : "3",
-    fillOpacity: 0.8,
-  };
-}
-
-export default function MapCanvas({ geojson, onRegionClick, granularity, year }: MapCanvasProps) {
+// {*Fungsi Utama: Komponen Visual yang merender Peta menggunakan library Leaflet*}
+export default function MapCanvas({ geojson, onRegionClick, granularity, year, indicatorName }: MapCanvasProps) {
   const mapRef = useRef<LeafletMap | null>(null);
 
-  // We just use the passed geojson directly since it's now perfectly pre-processed by the API
+  // {*Menyimpan GeoJSON yang sudah siap pakai*}
   const displayGeojson = geojson;
+
+  // {*Menghitung Min/Max untuk Skala Warna*}
+  const { minVal, range } = useMemo(() => {
+    const vals = geojson.features
+      .map((f) => f.properties.value)
+      .filter((v) => v !== null) as number[];
+    if (vals.length === 0) return { minVal: 0, range: 0 };
+    const min = Math.min(...vals);
+    const max = Math.max(...vals);
+    return { minVal: min, range: max - min };
+  }, [geojson]);
+
+  // {*Fungsi: Menentukan Warna spesifik untuk suatu nilai (menggunakan rentang min-max)*}
+  const getColor = (value: number | null) => {
+    if (value === null) return "#e2e8f0"; // {*Abu-abu jika tidak ada data*}
+    if (range === 0) return "var(--choropleth-2)"; // {*Satu warna jika nilai sama semua*}
+    const percent = (value - minVal) / range;
+    if (percent > 0.75) return "var(--choropleth-4)";
+    if (percent > 0.5) return "var(--choropleth-3)";
+    if (percent > 0.25) return "var(--choropleth-2)";
+    return "var(--choropleth-1)";
+  };
+
+  // {*Fungsi: Menerapkan styling (warna, ketebalan garis) untuk setiap Poligon/Wilayah Peta*}
+  const getFeatureStyle = (feature: any, granularity: Granularity): PathOptions => {
+    const val = feature?.properties?.value ?? null;
+    return {
+      fillColor: getColor(val),
+      weight: granularity === "Kecamatan" ? 2 : 1,
+      opacity: 1,
+      color: "white", // Border color
+      dashArray: granularity === "Kecamatan" ? "" : "3",
+      fillOpacity: 0.8,
+    };
+  };
 
   // Helper component to adjust map bounds to fit GeoJSON
   function FitBounds({ data }: { data: DemakFeatureCollection | null }) {
@@ -55,20 +69,21 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year }:
   }
 
   // Handle interaction for each polygon
+  // {*Fungsi: Memastikan interaksi user (hover, klik) berjalan dengan benar di Peta*}
   const onEachFeature = (feature: any, layer: Layer) => {
     const demakFeature = feature as DemakFeature;
     const name = demakFeature.properties.district;
     const village = granularity === "Desa" ? demakFeature.properties.village : null;
-    const pop = demakFeature.properties.jumlahPenduduk;
+    const val = demakFeature.properties.value;
     
-    // Format population number
-    const popText = pop ? new Intl.NumberFormat("id-ID").format(pop) : "Data Tidak Tersedia";
+    // Format value number
+    const valText = val !== null ? new Intl.NumberFormat("id-ID").format(val) : "Data Tidak Tersedia";
 
     // Bind popup
     layer.bindPopup(`
-      <div class="font-semibold text-primary mb-1">Kec. ${name}</div>
+      <div class="font-semibold text-primary mb-1">Kecamatan ${name}</div>
       ${village ? `<div class="text-sm font-medium mb-1 text-slate-700 dark:text-slate-300">Desa ${village}</div>` : ''}
-      <div class="text-muted-foreground text-sm">Penduduk Kec: <span class="font-medium text-foreground">${popText}</span></div>
+      <div class="text-muted-foreground text-sm">${indicatorName}: <span class="font-medium text-foreground">${valText}</span></div>
     `);
 
     // Click event
@@ -85,11 +100,13 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year }:
           fillOpacity: 0.9,
         });
         layer.bringToFront();
+        layer.openPopup(); // Munculkan popup saat di-hover
       },
       mouseout: (e) => {
         const layer = e.target;
         // Reset style
         layer.setStyle(getFeatureStyle(feature, granularity));
+        layer.closePopup(); // Tutup popup saat mouse pergi
       },
     });
   };

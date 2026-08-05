@@ -35,7 +35,7 @@ export default function LandingPage() {
                 
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <Link href="/dashboard">
-                    <Button className="bg-[#f99a40] hover:bg-[#e68a33] text-white font-medium px-6 h-11 rounded-md shadow-sm">
+                    <Button className="bg-[#0077c0] hover:bg-[#005a94] text-white font-medium px-6 h-11 rounded-md shadow-sm">
                       Mulai Jelajah
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -153,11 +153,11 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">PERTUMBUHAN</p>
-                    <p className="text-lg font-bold text-emerald-600">+1.2%</p>
+                    <p className="text-lg font-bold text-emerald-700">+1.2%</p>
                   </div>
                 </div>
                 <Link href="/dashboard" className="w-full sm:w-auto mt-4 sm:mt-0">
-                  <Button className="w-full sm:w-auto bg-[#f99a40] hover:bg-[#e68a33] text-white rounded-full px-8 h-12 text-[15px] font-bold shadow-md transition-all hover:-translate-y-0.5 group">
+                  <Button className="w-full sm:w-auto bg-[#0077c0] hover:bg-[#005a94] text-white rounded-full px-8 h-12 text-[15px] font-bold shadow-md transition-all hover:-translate-y-0.5 group">
                     Lihat Dashboard Lengkap
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -184,7 +184,7 @@ export default function LandingPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/dashboard">
-                <Button className="bg-[#f99a40] hover:bg-[#e68a33] text-white font-bold px-10 h-14 rounded-full text-base shadow-sm transition-all hover:-translate-y-0.5">
+                <Button className="bg-[#0077c0] hover:bg-[#005a94] text-white font-bold px-10 h-14 rounded-full text-base shadow-sm transition-all hover:-translate-y-0.5">
                   Buka Dashboard Sekarang
                 </Button>
               </Link>

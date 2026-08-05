@@ -2,6 +2,7 @@ import type { KecamatanData } from "@/types/map";
 
 const BPS_BASE_URL = "https://webapi.bps.go.id/v1";
 
+// {*Fungsi: Mengambil API Key BPS dari file .env.local*}
 export function getApiKey(): string {
   const key = process.env.BPS_API_KEY;
   if (!key || key === "your_bps_api_key_here") {
@@ -10,25 +11,28 @@ export function getApiKey(): string {
   return key;
 }
 
+// {*Fungsi: Membersihkan dan menyamakan format nama kecamatan (huruf kecil, tanpa spasi)*}
 export function normalizeKecamatanName(name: string): string {
   return name.toLowerCase().replace(/\s+/g, "").trim();
 }
 
-export async function fetchDynamicPopulationData(yearStr: string = "2024"): Promise<KecamatanData[]> {
+// {*Fungsi: Menarik data dinamis dari server BPS berdasarkan Tahun dan ID Indikator*}
+export async function fetchDynamicBpsData(yearStr: string = "2024", targetVarId?: number): Promise<KecamatanData[]> {
   const apiKey = getApiKey();
   
-  // Mapping Year to BPS 'th' parameter
-  // BPS uses th_id = year - 1900. (e.g., 2024 -> 124, 2020 -> 120)
+  // {*Konversi Tahun ke ID BPS (1900 = 0)*}
   const year = parseInt(yearStr, 10) || 2024;
   const th_id = year - 1900;
   
-  // BPS changed the variable ID after the 2020 census:
-  // 2011-2020 uses var 31 (Jumlah Penduduk) with turvar 25 (Laki-laki+Perempuan)
-  // 2021-2024 uses var 248 (Proyeksi Hasil LFSP2020) with turvar 0 (Tidak ada)
-  const isPost2020 = year > 2020;
-  const var_id = isPost2020 ? 248 : 31;
-  const turvar_id = isPost2020 ? 0 : 25;
+  let var_id = targetVarId;
   
+  // {*Fallback Indikator Default jika kosong*}
+  if (!var_id) {
+    const isPost2020 = year > 2020;
+    var_id = isPost2020 ? 248 : 31;
+  }
+  
+  // {*Fetching API BPS Backend*}
   const url = `${BPS_BASE_URL}/api/list/model/data/domain/3321/var/${var_id}/th/${th_id}/key/${apiKey}/`;
 
   const response = await fetch(url, { next: { revalidate: 86400 } });
@@ -43,9 +47,16 @@ export async function fetchDynamicPopulationData(yearStr: string = "2024"): Prom
     throw new Error("Data not available from BPS API for this year");
   }
 
-  // Parse the dynamic data format
-  const vervarList = result.vervar || []; // List of kecamatans
+  // {*Parsing Data Mentah BPS*}
+  const vervarList = result.vervar || []; 
   const datacontent = result.datacontent || {};
+  
+  // {*Mencari Variabel Turunan (Total) Terbaik*}
+  const turvarList = result.turvar || [];
+  const turvar_id = turvarList.length > 0 ? turvarList[turvarList.length - 1].val : 0;
+  
+  const turtahunList = result.turtahun || [];
+  const turtahun_id = turtahunList.length > 0 ? turtahunList[turtahunList.length - 1].val : 0;
   
   const results: KecamatanData[] = [];
   
@@ -55,16 +66,26 @@ export async function fetchDynamicPopulationData(yearStr: string = "2024"): Prom
     
     if (kecamatanName.toLowerCase().includes("kab. demak")) continue;
     
-    // Construct the data key based on BPS rule: vervar + var + turvar + th + turtahun
-    // e.g. vervarId + 248 + 0 + th_id + 0
-    const dataKey = `${kecamatanId}${var_id}${turvar_id}${th_id}0`;
+    // {*Menyusun Kunci Unik Data BPS*}
+    const dataKey = `${kecamatanId}${var_id}${turvar_id}${th_id}${turtahun_id}`;
     
-    const population = datacontent[dataKey];
+    let value = datacontent[dataKey];
     
-    if (population !== undefined) {
+    // {*Mencoba Kunci Cadangan jika Kunci Utama Kosong*}
+    if (value === undefined && turvarList.length > 1) {
+      for (const tv of turvarList) {
+        const fallbackKey = `${kecamatanId}${var_id}${tv.val}${th_id}${turtahun_id}`;
+        if (datacontent[fallbackKey] !== undefined) {
+          value = datacontent[fallbackKey];
+          break;
+        }
+      }
+    }
+    
+    if (value !== undefined) {
       results.push({
         kecamatan: kecamatanName,
-        jumlahPenduduk: population
+        value: typeof value === "number" ? value : parseFloat(value) || 0
       });
     }
   }

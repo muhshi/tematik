@@ -9,13 +9,15 @@ import { RegionDetails } from "@/components/Fragments/RegionDetails";
 import { Skeleton } from "@/components/Elements/skeleton";
 import { fetchMapData } from "@/services/mapData";
 import type { MapDataResponse, DemakFeature, RegionDetail } from "@/types/map";
+import type { Indicator } from "@/actions/adminActions";
 
-// Dynamically import the MapCanvas with ssr: false to prevent "Window is not defined" error
+// {*Import dinamis agar Map tidak error di SSR Next.js*}
 const MapCanvas = dynamic(() => import("@/components/Fragments/MapCanvas"), {
   ssr: false,
   loading: () => <Skeleton className="h-full w-full rounded-none" />,
 });
 
+// {*Fungsi Utama: Komponen Induk (Halaman Dashboard) yang menggabungkan seluruh layout & logika*}
 export default function Page() {
   const [mapData, setMapData] = useState<MapDataResponse | null>(null);
   const [loading, setLoading] = useState(true);
@@ -23,14 +25,92 @@ export default function Page() {
   const [selectedRegion, setSelectedRegion] = useState<RegionDetail | null>(null);
 
   const [granularity, setGranularity] = useState<"Kecamatan" | "Desa">("Desa");
-  const [selectedYear, setSelectedYear] = useState<string>("2024");
+  const [selectedYear, setSelectedYear] = useState<string>("");
+  const [availableYears, setAvailableYears] = useState<string[]>([]);
+  const [yearsLoading, setYearsLoading] = useState(false);
+  
+  const [activeIndicators, setActiveIndicators] = useState<Indicator[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>("Sosial dan Kependudukan");
+  const [selectedSubjectId, setSelectedSubjectId] = useState<number | null>(null);
+  const [selectedIndicatorId, setSelectedIndicatorId] = useState<string>("");
 
+  // {*Fungsi: Menarik Indikator Aktif dari API saat halaman pertama kali dibuka*}
+  useEffect(() => {
+    async function loadIndicators() {
+      try {
+        const res = await fetch("/api/indicators/active");
+        if (res.ok) {
+          const indicators: Indicator[] = await res.json();
+          setActiveIndicators(indicators);
+          // Default to first active indicator's category, subject, and indicator
+          if (indicators.length > 0) {
+            setSelectedCategory(indicators[0].category);
+            setSelectedSubjectId(indicators[0].subjectId);
+            setSelectedIndicatorId(indicators[0].id);
+          } else {
+            setSelectedIndicatorId("var-31");
+          }
+        } else {
+          setSelectedIndicatorId("var-31");
+        }
+      } catch (err) {
+        console.error("Failed to load active indicators", err);
+        setSelectedIndicatorId("var-31");
+      }
+    }
+    loadIndicators();
+  }, []);
+
+  // {*Auto-select indikator pertama jika subjek diganti*}
+  useEffect(() => {
+    if (activeIndicators.length > 0 && selectedSubjectId !== null) {
+      const indicatorsInSubject = activeIndicators.filter(i => i.subjectId === selectedSubjectId);
+      if (indicatorsInSubject.length > 0) {
+        setSelectedIndicatorId(indicatorsInSubject[0].id);
+      }
+    }
+  }, [selectedSubjectId, activeIndicators]);
+
+  // {*Fungsi: Menarik Daftar Tahun Tersedia dari BPS saat Indikator diganti*}
+  useEffect(() => {
+    if (!selectedIndicatorId) return;
+    
+    async function loadYears() {
+      setYearsLoading(true);
+      try {
+        const res = await fetch(`/api/available-years?var=${selectedIndicatorId}`);
+        if (res.ok) {
+          const years: { th_id: number; year: string }[] = await res.json();
+          const yearStrings = years.map(y => y.year);
+          setAvailableYears(yearStrings);
+          // Auto-select the latest (first) year
+          if (yearStrings.length > 0) {
+            setSelectedYear(yearStrings[0]);
+          }
+        } else {
+          setAvailableYears([]);
+        }
+      } catch (err) {
+        console.error("Failed to load available years", err);
+        setAvailableYears([]);
+      } finally {
+        setYearsLoading(false);
+      }
+    }
+    loadYears();
+  }, [selectedIndicatorId]);
+
+  // {*Fungsi: Menarik Data Mentah Peta & BPS (Backend) saat Tahun/Indikator berubah*}
   useEffect(() => {
     async function loadData() {
+      if (!selectedIndicatorId || !selectedYear) return; // Wait until both are set
+      
       try {
         setLoading(true);
-        setSelectedRegion(null); // Clear panel kanan saat ganti tahun biar tidak nampilin data basi
-        const data = await fetchMapData(selectedYear);
+        setError(null);
+        // {*Bersihkan panel detail kanan saat load data baru*}
+        setSelectedRegion(null); 
+        const data = await fetchMapData(selectedYear, selectedIndicatorId);
         setMapData(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
@@ -39,13 +119,14 @@ export default function Page() {
       }
     }
     loadData();
-  }, [selectedYear]);
+  }, [selectedYear, selectedIndicatorId]);
 
+  // {*Fungsi: Menyimpan data daerah yang diklik user untuk ditampilkan di Panel Kanan*}
   const handleRegionClick = (feature: DemakFeature) => {
     setSelectedRegion({
       kecamatan: feature.properties.district,
       village: feature.properties.village,
-      jumlahPenduduk: feature.properties.jumlahPenduduk,
+      value: feature.properties.value,
       luasWilayah: feature.properties.luasWilayah ?? null,
       kepadatan: feature.properties.kepadatan ?? null,
       jumlahDesa: feature.properties.jumlahDesa,
@@ -53,7 +134,13 @@ export default function Page() {
   };
 
   return (
-    <DashboardLayout>
+    <DashboardLayout 
+      activeIndicators={activeIndicators}
+      selectedCategory={selectedCategory} 
+      onCategorySelect={setSelectedCategory}
+      selectedSubjectId={selectedSubjectId}
+      onSubjectSelect={setSelectedSubjectId}
+    >
       <div className="flex h-full w-full flex-col relative overflow-hidden">
         {/* Top Filter Bar */}
         <FilterBar
@@ -63,6 +150,13 @@ export default function Page() {
           granularity={granularity}
           onGranularityChange={setGranularity}
           onYearChange={setSelectedYear}
+          availableYears={availableYears}
+          yearsLoading={yearsLoading}
+          activeIndicators={activeIndicators}
+          selectedCategory={selectedCategory}
+          selectedSubjectId={selectedSubjectId}
+          selectedIndicatorId={selectedIndicatorId}
+          onIndicatorChange={setSelectedIndicatorId}
         />
 
         {/* Main Map Area */}
@@ -74,17 +168,18 @@ export default function Page() {
             </div>
           ) : (
             <>
-              {/* Map Canvas (Keep mounted if we have data) */}
+              {/* {*Render Kanvas Peta Utama*} */}
               {mapData && (
                 <MapCanvas
                   geojson={granularity === "Kecamatan" ? mapData.geojsonKecamatan : mapData.geojsonDesa}
                   onRegionClick={handleRegionClick}
                   granularity={granularity}
                   year={mapData.metadata.year.toString()}
+                  indicatorName={activeIndicators.find(i => i.id === selectedIndicatorId)?.name || "Nilai Indikator"}
                 />
               )}
 
-              {/* Loading State / Spinner */}
+              {/* {*Render UI Loading (Spinner)*} */}
               {loading && (
                 <div className={`absolute inset-0 z-[2000] flex items-center justify-center ${mapData ? 'bg-white/40 backdrop-blur-[1px]' : 'bg-slate-50'}`}>
                   <div className="flex flex-col items-center gap-3 rounded-xl bg-card px-6 py-5 shadow-xl border border-border">
@@ -98,12 +193,18 @@ export default function Page() {
             </>
           )}
 
-          {/* Overlays */}
-          {!error && mapData && <MapLegend />}
+          {/* {*Render UI Kotak Legenda Warna Peta*} */}
+          {!error && mapData && (
+            <MapLegend 
+              data={granularity === "Kecamatan" ? mapData.geojsonKecamatan : mapData.geojsonDesa} 
+              indicatorName={activeIndicators.find(i => i.id === selectedIndicatorId)?.name || "Nilai Indikator"}
+            />
+          )}
           
           {selectedRegion && (
             <RegionDetails
               data={selectedRegion}
+              indicatorName={activeIndicators.find(i => i.id === selectedIndicatorId)?.name || "Nilai Indikator"}
               onClose={() => setSelectedRegion(null)}
             />
           )}

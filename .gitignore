@@ -61,3 +61,8 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# Scratch & test files
+test-*.json
+test-api.js
+test-results*

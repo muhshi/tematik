@@ -92,7 +92,7 @@ export function LandingNavbar() {
             </li>
           </ul>
           <Link href="/dashboard">
-            <Button className="bg-[#f99a40] hover:bg-[#e68a33] text-white font-medium rounded-full px-7 h-10 text-sm shadow-sm transition-transform hover:-translate-y-0.5">
+            <Button className="bg-[#0077c0] hover:bg-[#005a94] text-white font-medium rounded-full px-7 h-10 text-sm shadow-sm transition-transform hover:-translate-y-0.5">
               Masuk Dashboard
             </Button>
           </Link>
@@ -102,6 +102,7 @@ export function LandingNavbar() {
         <button
           className="md:hidden text-slate-900 p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
         >
           <Menu className="h-6 w-6" />
         </button>

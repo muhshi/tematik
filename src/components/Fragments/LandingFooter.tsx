@@ -72,16 +72,16 @@ export function LandingFooter() {
             </div>
 
             <div className="flex items-center gap-3 mt-4">
-              <a href="#" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
+              <a href="#" aria-label="Twitter" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
                 <TwitterIcon />
               </a>
-              <a href="#" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
+              <a href="#" aria-label="Facebook" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
                 <FacebookIcon />
               </a>
-              <a href="#" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
+              <a href="#" aria-label="Instagram" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
                 <InstagramIcon />
               </a>
-              <a href="#" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
+              <a href="#" aria-label="Youtube" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
                 <YoutubeIcon />
               </a>
             </div>
@@ -118,7 +118,7 @@ export function LandingFooter() {
             &copy; Copyright <span className="font-bold text-slate-700">Statistik Demak</span> All Rights Reserved
           </p>
           <p className="text-[13px] text-slate-600">
-            Designed by <span className="text-[#f99a40] hover:text-amber-600 transition-colors font-medium cursor-pointer">BPS Demak Web Team</span>
+            Designed by <span className="text-[#0077c0] hover:text-[#005a94] transition-colors font-medium cursor-pointer">BPS Demak Web Team</span>
           </p>
         </div>
       </div>
@@ -126,7 +126,7 @@ export function LandingFooter() {
       {/* Floating Scroll to Top Button */}
       <button 
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 md:bottom-10 md:right-10 h-14 w-14 rounded-full bg-[#f99a40] hover:bg-[#e68a33] text-white flex items-center justify-center shadow-lg shadow-orange-500/20 transition-all duration-300 z-50 ${
+        className={`fixed bottom-8 right-8 md:bottom-10 md:right-10 h-14 w-14 rounded-full bg-[#0077c0] hover:bg-[#005a94] text-white flex items-center justify-center shadow-lg shadow-blue-500/20 transition-all duration-300 z-50 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
         }`}
         aria-label="Scroll to top"

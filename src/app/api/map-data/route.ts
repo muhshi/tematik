@@ -9,25 +9,20 @@ import type {
   MapDataResponse,
 } from "@/types/map";
 import {
-  fetchDynamicPopulationData,
+  fetchDynamicBpsData,
   normalizeKecamatanName,
 } from "@/services/bpsApi";
 
 export const dynamic = 'force-dynamic'; // Prevent Next.js from attempting static generation during build
 
-/**
- * Load the local Demak GeoJSON file from assets.
- */
+// {*Fungsi: Membaca file GeoJSON Demak lokal (file aset polygon wilayah)*}
 async function loadDemakGeoJson(): Promise<DemakFeatureCollection> {
   const filePath = join(process.cwd(), "src", "assets", "demak.geojson");
   const raw = await readFile(filePath, "utf-8");
   return JSON.parse(raw) as DemakFeatureCollection;
 }
 
-/**
- * Join BPS population data with GeoJSON features.
- * Matches kecamatan names using normalized string comparison and adds metrics.
- */
+// {*Fungsi Utama: Menggabungkan data spasial GeoJSON dengan angka statistik dari BPS berdasarkan nama Kecamatan*}
 function joinDataWithGeoJson(
   geoJson: DemakFeatureCollection,
   popData: KecamatanData[],
@@ -42,14 +37,14 @@ function joinDataWithGeoJson(
       (d) => normalizeKecamatanName(d.kecamatan) === normalizedKec
     );
 
-    const population = match ? match.jumlahPenduduk : null;
+    const value = match ? match.value : null;
     
     // Calculate Area (in square kilometers)
     const areaSqMeters = area(feature);
     const luasWilayah = areaSqMeters / 1_000_000;
     
     // Calculate Density (people per sq km)
-    const kepadatan = population ? (population / luasWilayah) : null;
+    const kepadatan = value ? (value / luasWilayah) : null;
     
     // Calculate Jumlah Desa (if baseDesaGeoJson is provided, meaning we are processing Kecamatan map)
     let jumlahDesa = undefined;
@@ -63,7 +58,7 @@ function joinDataWithGeoJson(
       ...feature,
       properties: {
         ...feature.properties,
-        jumlahPenduduk: population,
+        value,
         luasWilayah,
         kepadatan,
         jumlahDesa,
@@ -77,14 +72,15 @@ function joinDataWithGeoJson(
   };
 }
 
-/**
- * GET /api/map-data
- * Returns enriched GeoJSON with population data from BPS.
- */
+// {*Fungsi Utama: Endpoint API Next.js yang mengembalikan GeoJSON utuh lengkap dengan nilai statistik dari BPS*}
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const requestedYear = searchParams.get("year") || "2024";
+    const varIdStr = searchParams.get("var");
+    
+    // Ekstrak ID dari string 'var-31' menjadi number 31
+    const targetVarId = varIdStr ? parseInt(varIdStr.replace(/\D/g, ''), 10) : undefined;
 
     // 1. Load GeoJSON files
     const geojsonDesa = await loadDemakGeoJson();
@@ -101,7 +97,7 @@ export async function GET(request: Request) {
 
     try {
       // 2. Fetch dynamic population data from BPS for the requested year
-      populationData = await fetchDynamicPopulationData(requestedYear);
+      populationData = await fetchDynamicBpsData(requestedYear, targetVarId);
     } catch (bpsError) {
       // BPS API is down or API key invalid -- use fallback (mock data)
       console.error("[map-data] BPS API error, using mock data for testing:", bpsError);
@@ -111,20 +107,20 @@ export async function GET(request: Request) {
       // Inject mock data so the choropleth colors can be tested
       // In a real scenario, this would be empty if the year doesn't exist, but for UI testing we always return something
       populationData = [
-        { kecamatan: "Mranggen", jumlahPenduduk: 175000 },
-        { kecamatan: "Karangawen", jumlahPenduduk: 95000 },
-        { kecamatan: "Guntur", jumlahPenduduk: 88000 },
-        { kecamatan: "Sayung", jumlahPenduduk: 105000 },
-        { kecamatan: "Karangtengah", jumlahPenduduk: 68000 },
-        { kecamatan: "Wonosalam", jumlahPenduduk: 85000 },
-        { kecamatan: "Dempet", jumlahPenduduk: 59000 },
-        { kecamatan: "Gajah", jumlahPenduduk: 52000 },
-        { kecamatan: "Karanganyar", jumlahPenduduk: 77000 },
-        { kecamatan: "Mijen", jumlahPenduduk: 58000 },
-        { kecamatan: "Demak", jumlahPenduduk: 112000 },
-        { kecamatan: "Bonang", jumlahPenduduk: 106000 },
-        { kecamatan: "Wedung", jumlahPenduduk: 82000 },
-        { kecamatan: "Kebonagung", jumlahPenduduk: 42000 },
+        { kecamatan: "Mranggen", value: 175000 },
+        { kecamatan: "Karangawen", value: 95000 },
+        { kecamatan: "Guntur", value: 88000 },
+        { kecamatan: "Sayung", value: 105000 },
+        { kecamatan: "Karangtengah", value: 68000 },
+        { kecamatan: "Wonosalam", value: 85000 },
+        { kecamatan: "Dempet", value: 59000 },
+        { kecamatan: "Gajah", value: 52000 },
+        { kecamatan: "Karanganyar", value: 77000 },
+        { kecamatan: "Mijen", value: 58000 },
+        { kecamatan: "Demak", value: 112000 },
+        { kecamatan: "Bonang", value: 106000 },
+        { kecamatan: "Wedung", value: 82000 },
+        { kecamatan: "Kebonagung", value: 42000 },
       ];
     }
 

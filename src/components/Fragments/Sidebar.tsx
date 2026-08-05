@@ -23,18 +23,30 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { label: "Economy", icon: BarChart3 },
-  { label: "Social", icon: Users, active: true },
-  { label: "Environment", icon: Leaf },
-  { label: "Infrastructure", icon: Building2 },
+  { label: "Sosial dan Kependudukan", icon: Users },
+  { label: "Ekonomi dan Perdagangan", icon: BarChart3 },
+  { label: "Pertanian dan Pertambangan", icon: Leaf },
 ];
 
 interface SidebarProps {
   isMobileOpen?: boolean;
   onCloseMobile?: () => void;
+  activeIndicators?: any[];
+  selectedCategory?: string;
+  onCategorySelect?: (category: string) => void;
+  selectedSubjectId?: number | null;
+  onSubjectSelect?: (subjectId: number) => void;
 }
 
-export function Sidebar({ isMobileOpen = false, onCloseMobile }: SidebarProps) {
+export function Sidebar({ 
+  isMobileOpen = false, 
+  onCloseMobile, 
+  activeIndicators = [],
+  selectedCategory, 
+  onCategorySelect,
+  selectedSubjectId,
+  onSubjectSelect
+}: SidebarProps) {
   const [collapsed, setCollapsed] = useState(false);
   const isTextVisible = !collapsed || isMobileOpen;
 
@@ -81,23 +93,63 @@ export function Sidebar({ isMobileOpen = false, onCloseMobile }: SidebarProps) {
       <nav className="flex flex-1 flex-col gap-1 px-2 py-3">
         {NAV_ITEMS.map((item) => {
           const Icon = item.icon;
+          const isActive = selectedCategory === item.label;
+          
+          // Get unique subjects for this category from activeIndicators
+          const indicatorsInCategory = activeIndicators.filter(i => i.category === item.label);
+          const uniqueSubjects = Array.from(new Map(indicatorsInCategory.map(i => [i.subjectId, { id: i.subjectId, name: i.subjectName || "Subject " + i.subjectId }])).values());
+
           return (
-            <button
-              key={item.label}
-              className={`
-                group flex items-center gap-3 rounded-lg px-3 py-2.5
-                text-sm font-medium transition-all duration-200
-                ${
-                  item.active
-                    ? "bg-sidebar-primary text-sidebar-primary-foreground shadow-sm"
-                    : "text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                }
-              `}
-              title={!isTextVisible ? item.label : undefined}
-            >
-              <Icon className="h-[18px] w-[18px] shrink-0" />
-              {isTextVisible && <span className="truncate">{item.label}</span>}
-            </button>
+            <div key={item.label} className="flex flex-col gap-1">
+              <button
+                onClick={() => {
+                  if (onCategorySelect) onCategorySelect(item.label);
+                  if (!isActive && uniqueSubjects.length > 0 && onSubjectSelect) {
+                    onSubjectSelect(uniqueSubjects[0].id);
+                  }
+                }}
+                className={`
+                  group flex items-center gap-3 rounded-lg px-3 py-2.5
+                  text-sm font-medium transition-all duration-200
+                  ${
+                    isActive
+                      ? "bg-sidebar-primary text-sidebar-primary-foreground shadow-sm"
+                      : "text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                  }
+                `}
+                title={!isTextVisible ? item.label : undefined}
+              >
+                <Icon className="h-[18px] w-[18px] shrink-0" />
+                {isTextVisible && <span className="truncate text-left leading-tight line-clamp-2" title={item.label}>{item.label}</span>}
+              </button>
+              
+              {/* Render Subjects as Accordion if category is active */}
+              {isActive && uniqueSubjects.length > 0 && isTextVisible && (
+                <div className="ml-9 mt-1 flex flex-col gap-1">
+                  {uniqueSubjects.map(sub => {
+                    const isSubActive = selectedSubjectId === sub.id;
+                    return (
+                      <button
+                        key={sub.id}
+                        onClick={() => {
+                          if (onSubjectSelect) onSubjectSelect(sub.id);
+                          if (isMobileOpen && onCloseMobile) onCloseMobile();
+                        }}
+                        className={`
+                          flex items-center rounded-md px-3 py-2 text-xs font-medium transition-colors
+                          ${isSubActive 
+                            ? "bg-sidebar-accent/50 text-sidebar-primary shadow-sm" 
+                            : "text-sidebar-foreground/60 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                          }
+                        `}
+                      >
+                        <span className="truncate text-left">{sub.name}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           );
         })}
       </nav>

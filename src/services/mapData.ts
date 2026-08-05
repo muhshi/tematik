@@ -1,17 +1,15 @@
 import type { MapDataResponse } from "@/types/map";
 
-/**
- * Fetch merged GeoJSON data (spatial + population) from the internal API route.
- * This is the single entry point for frontend components to get map data.
- */
-export async function fetchMapData(year: string = "2020"): Promise<MapDataResponse> {
+// {*Fungsi Utama: Fetch API internal Next.js untuk menyatukan Peta GeoJSON & Data BPS*}
+export async function fetchMapData(year: string = "2020", indicator?: string): Promise<MapDataResponse> {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "";
-  const response = await fetch(`${baseUrl}/api/map-data?year=${year}`, {
+  const query = indicator ? `?year=${year}&var=${indicator}` : `?year=${year}`;
+  const response = await fetch(`${baseUrl}/api/map-data${query}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
-    cache: "no-store", // Mencegah browser nge-cache GET request ini
+    cache: "no-store", // {*Mencegah caching agar data selalu baru*}
   });
 
   if (!response.ok) {

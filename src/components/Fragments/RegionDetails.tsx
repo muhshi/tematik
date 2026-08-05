@@ -7,14 +7,16 @@ import type { RegionDetail } from "@/types/map";
 
 interface RegionDetailsProps {
   data: RegionDetail | null;
+  indicatorName: string;
   onClose: () => void;
 }
 
-export function RegionDetails({ data, onClose }: RegionDetailsProps) {
+// {*Fungsi Utama: Menampilkan Panel Samping Kanan (Detail Kecamatan/Desa) saat wilayah diklik*}
+export function RegionDetails({ data, indicatorName, onClose }: RegionDetailsProps) {
   if (!data) return null;
 
-  const formattedPop = data.jumlahPenduduk
-    ? new Intl.NumberFormat("id-ID").format(data.jumlahPenduduk)
+  const formattedVal = data.value !== null
+    ? new Intl.NumberFormat("id-ID").format(data.value)
     : "N/A";
 
   return (
@@ -43,20 +45,17 @@ export function RegionDetails({ data, onClose }: RegionDetailsProps) {
         {/* Main Statistic */}
         <div className="mb-6 rounded-xl bg-slate-50 p-4 dark:bg-slate-900/50">
           <div className="text-sm font-medium text-muted-foreground">
-            Total Penduduk
+            {indicatorName}
           </div>
           <div className="mt-1 flex items-baseline gap-2">
             <span className="text-3xl font-bold tracking-tight text-primary">
-              {formattedPop}
-            </span>
-            <span className="text-sm font-medium text-muted-foreground">
-              jiwa
+              {formattedVal}
             </span>
           </div>
-          {data.jumlahPenduduk && (
+          {data.value !== null && (
             <div className="mt-3 flex items-center gap-1.5 text-xs font-medium text-emerald-600">
               <TrendingUp className="h-3.5 w-3.5" />
-              <span>Estimasi 2024</span>
+              <span>Data BPS</span>
             </div>
           )}
         </div>

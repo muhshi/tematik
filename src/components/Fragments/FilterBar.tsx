@@ -4,6 +4,7 @@ import { SlidersHorizontal } from "lucide-react";
 import { Badge } from "@/components/Elements/badge";
 import { Button } from "@/components/Elements/button";
 import type { Granularity } from "@/types/map";
+import type { Indicator } from "@/actions/adminActions";
 
 interface FilterBarProps {
   year: string;
@@ -12,36 +13,78 @@ interface FilterBarProps {
   granularity: Granularity;
   onGranularityChange: (granularity: Granularity) => void;
   onYearChange: (year: string) => void;
+  availableYears: string[];
+  yearsLoading: boolean;
+  activeIndicators: Indicator[];
+  selectedCategory: string;
+  selectedSubjectId: number | null;
+  selectedIndicatorId: string;
+  onIndicatorChange: (id: string) => void;
 }
 
-export function FilterBar({ year, source, isCached, granularity, onGranularityChange, onYearChange }: FilterBarProps) {
-  // Years available from BPS API (Var 31 for 2011-2020, Var 248 for 2021-2024)
-  const availableYears = ["2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011"];
+// {*Fungsi Utama: Komponen Bar Navigasi (Pilih Tahun, Kategori, Subjek, Indikator) di atas Peta*}
+export function FilterBar({ 
+  year, 
+  source, 
+  isCached, 
+  granularity, 
+  onGranularityChange, 
+  onYearChange,
+  availableYears,
+  yearsLoading,
+  activeIndicators,
+  selectedCategory,
+  selectedSubjectId,
+  selectedIndicatorId,
+  onIndicatorChange
+}: FilterBarProps) {
+  const filteredIndicators = selectedSubjectId !== null 
+    ? activeIndicators.filter(i => i.subjectId === selectedSubjectId)
+    : [];
 
   return (
     <div className="flex min-h-16 flex-col lg:flex-row shrink-0 items-center justify-between gap-4 border-b border-border bg-card px-4 py-4 lg:px-6 lg:py-0">
       {/* Left side: Primary Filters */}
       <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start lg:gap-6">
         
-        {/* Indicator Select (Mocked for V1) */}
+        {/* Indicator Select (Dynamic) */}
         <div className="flex items-center gap-2">
           <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Indicator</span>
-          <div className="flex items-center gap-2 rounded-md border border-border bg-muted/50 px-3 py-1.5 text-sm font-medium text-foreground">
-            Jumlah Penduduk
-          </div>
+          <select
+            value={selectedIndicatorId}
+            onChange={(e) => onIndicatorChange(e.target.value)}
+            className="flex h-8 w-48 md:w-64 items-center justify-between rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+          >
+            {filteredIndicators.length === 0 ? (
+              <option value="">Tidak ada indikator aktif</option>
+            ) : (
+              filteredIndicators.map(ind => (
+                <option key={ind.id} value={ind.id}>
+                  {ind.name}
+                </option>
+              ))
+            )}
+          </select>
         </div>
 
-        {/* Year Select (Dynamic from 2011 to 2020) */}
+        {/* Year Select (Dynamic from BPS API) */}
         <div className="flex items-center gap-2">
           <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Year</span>
           <select 
             value={year}
             onChange={(e) => onYearChange(e.target.value)}
+            disabled={yearsLoading || availableYears.length === 0}
             className="flex h-8 items-center justify-between rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {availableYears.map(y => (
-              <option key={y} value={y}>{y}</option>
-            ))}
+            {yearsLoading ? (
+              <option value="">Loading...</option>
+            ) : availableYears.length === 0 ? (
+              <option value="">Tidak ada data</option>
+            ) : (
+              availableYears.map(y => (
+                <option key={y} value={y}>{y}</option>
+              ))
+            )}
           </select>
         </div>
 

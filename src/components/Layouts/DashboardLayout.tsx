@@ -8,9 +8,21 @@ import Image from "next/image";
 
 interface DashboardLayoutProps {
   children: ReactNode;
+  activeIndicators?: any[];
+  selectedCategory?: string;
+  onCategorySelect?: (category: string) => void;
+  selectedSubjectId?: number | null;
+  onSubjectSelect?: (subjectId: number) => void;
 }
 
-export function DashboardLayout({ children }: DashboardLayoutProps) {
+export function DashboardLayout({ 
+  children, 
+  activeIndicators = [],
+  selectedCategory, 
+  onCategorySelect,
+  selectedSubjectId,
+  onSubjectSelect
+}: DashboardLayoutProps) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
@@ -34,7 +46,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       </div>
 
       {/* Sidebar */}
-      <Sidebar isMobileOpen={isMobileOpen} onCloseMobile={() => setIsMobileOpen(false)} />
+      <Sidebar 
+        isMobileOpen={isMobileOpen} 
+        onCloseMobile={() => setIsMobileOpen(false)} 
+        activeIndicators={activeIndicators}
+        selectedCategory={selectedCategory}
+        onCategorySelect={onCategorySelect}
+        selectedSubjectId={selectedSubjectId}
+        onSubjectSelect={onSubjectSelect}
+      />
 
       {/* Main Content Area */}
       <main className="flex flex-1 flex-col overflow-hidden">
