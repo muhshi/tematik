@@ -78,7 +78,7 @@ export type DemakFeatureCollection = FeatureCollection<
 
 // -- UI State Types --
 
-export type Granularity = "Kecamatan" | "Desa";
+export type Granularity = "Provinsi" | "Kabupaten" | "Kecamatan" | "Desa";
 
 export interface RegionDetail {
   kecamatan: string;

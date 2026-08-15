@@ -1,0 +1,54 @@
+// {*Fungsi: Configuration file Prisma ORM untuk Supabase PostgreSQL*}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// {*Model 1: Tabel Indikator Strategis Pilihan Admin*}
+model StrategicIndicator {
+  id        Int      @id @default(autoincrement())
+  varId     Int      @unique @map("var_id")
+  name      String
+  subject   String
+  unit      String   @default("")
+  domain    Int      @default(3300)
+  isActive  Boolean  @default(true) @map("is_active")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("strategic_indicators")
+}
+
+// {*Model 2: Tabel Angka Statistik BPS per Wilayah (Kab/Kota atau Kecamatan)*}
+model BpsData {
+  id         Int      @id @default(autoincrement())
+  domain     Int      // 3300 (Jateng), 3321 (Demak), dll
+  varId      Int      @map("var_id")
+  year       Int      // 2024, 2025, dst
+  regionId   Int      @map("region_id") // Kode wilayah BPS (3301, 3302, dst)
+  regionName String   @map("region_name") // Nama Kab/Kota/Kecamatan
+  value      Float?
+  fetchedAt  DateTime @default(now()) @map("fetched_at")
+
+  @@unique([domain, varId, year, regionId], name: "unique_bps_record")
+  @@map("bps_data")
+}
+
+// {*Model 3: Log Riwayat Eksekusi Scheduler / Cron Job*}
+model SyncLog {
+  id         Int       @id @default(autoincrement())
+  startedAt  DateTime  @default(now()) @map("started_at")
+  finishedAt DateTime? @map("finished_at")
+  status     String    @default("running") // 'running', 'success', 'failed'
+  totalRows  Int       @default(0) @map("total_rows")
+  errors     String?   @db.Text
+  message    String?   @db.Text
+
+  @@map("sync_logs")
+}

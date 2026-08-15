@@ -8,7 +8,7 @@ import { MapLegend } from "@/components/Fragments/MapLegend";
 import { RegionDetails } from "@/components/Fragments/RegionDetails";
 import { Skeleton } from "@/components/Elements/skeleton";
 import { fetchMapData } from "@/services/mapData";
-import type { MapDataResponse, DemakFeature, RegionDetail } from "@/types/map";
+import type { MapDataResponse, DemakFeature, RegionDetail, Granularity } from "@/types/map";
 import type { Indicator } from "@/actions/adminActions";
 
 // {*Import dinamis agar Map tidak error di SSR Next.js*}
@@ -24,7 +24,7 @@ export default function Page() {
   const [error, setError] = useState<string | null>(null);
   const [selectedRegion, setSelectedRegion] = useState<RegionDetail | null>(null);
 
-  const [granularity, setGranularity] = useState<"Kecamatan" | "Desa">("Desa");
+  const [granularity, setGranularity] = useState<Granularity>("Kabupaten");
   const [selectedYear, setSelectedYear] = useState<string>("");
   const [availableYears, setAvailableYears] = useState<string[]>([]);
   const [yearsLoading, setYearsLoading] = useState(false);
@@ -121,7 +121,7 @@ export default function Page() {
     loadData();
   }, [selectedYear, selectedIndicatorId]);
 
-  // {*Fungsi: Menyimpan data daerah yang diklik user untuk ditampilkan di Panel Kanan*}
+  // {*Fungsi: Menyimpan data daerah yang diklik user untuk ditampilkan di Panel Kanan & Drill-down*}
   const handleRegionClick = (feature: DemakFeature) => {
     setSelectedRegion({
       kecamatan: feature.properties.district,
@@ -131,6 +131,11 @@ export default function Page() {
       kepadatan: feature.properties.kepadatan ?? null,
       jumlahDesa: feature.properties.jumlahDesa,
     });
+
+    // Jika sedang di mode Kabupaten (Jateng) dan diklik, otomatis drill-down ke Kecamatan
+    if (granularity === "Kabupaten" || granularity === "Provinsi") {
+      setGranularity("Kecamatan");
+    }
   };
 
   return (
@@ -171,7 +176,13 @@ export default function Page() {
               {/* {*Render Kanvas Peta Utama*} */}
               {mapData && (
                 <MapCanvas
-                  geojson={granularity === "Kecamatan" ? mapData.geojsonKecamatan : mapData.geojsonDesa}
+                  geojson={
+                    granularity === "Kabupaten" || granularity === "Provinsi"
+                      ? ((mapData as any).geojsonKabupaten || mapData.geojsonKecamatan)
+                      : granularity === "Kecamatan"
+                      ? mapData.geojsonKecamatan
+                      : mapData.geojsonDesa
+                  }
                   onRegionClick={handleRegionClick}
                   granularity={granularity}
                   year={mapData.metadata.year.toString()}
@@ -196,9 +207,28 @@ export default function Page() {
           {/* {*Render UI Kotak Legenda Warna Peta*} */}
           {!error && mapData && (
             <MapLegend 
-              data={granularity === "Kecamatan" ? mapData.geojsonKecamatan : mapData.geojsonDesa} 
+              data={
+                granularity === "Kabupaten" || granularity === "Provinsi"
+                  ? ((mapData as any).geojsonKabupaten || mapData.geojsonKecamatan)
+                  : granularity === "Kecamatan"
+                  ? mapData.geojsonKecamatan
+                  : mapData.geojsonDesa
+              } 
               indicatorName={activeIndicators.find(i => i.id === selectedIndicatorId)?.name || "Nilai Indikator"}
             />
+          )}
+
+          {/* Tombol Navigasi Kembali ke Level Kabupaten Jateng */}
+          {granularity !== "Kabupaten" && (
+            <button
+              onClick={() => {
+                setGranularity("Kabupaten");
+                setSelectedRegion(null);
+              }}
+              className="absolute top-4 left-14 z-[1000] flex items-center gap-2 px-3 py-1.5 bg-white/90 hover:bg-white text-slate-800 text-xs font-semibold rounded-lg shadow-md border border-slate-200 backdrop-blur-sm transition-all"
+            >
+              ← Kembali ke Peta Jawa Tengah
+            </button>
           )}
           
           {selectedRegion && (

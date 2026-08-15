@@ -2,9 +2,11 @@
 
 import fs from "fs";
 import path from "path";
+import { prisma } from "@/lib/prisma";
+import { deleteCache } from "@/lib/redis";
+import { executeBpsSync } from "@/services/bpsScheduler";
 
 // BPS API Constants
-const API_KEY = "ac9780c3023e0762d5eb07f1c2f00dc6"; // Updated API KEY from test-api.js
 const DOMAIN = "3321";
 const BASE_URL = "https://webapi.bps.go.id/v1/api/list/model";
 
@@ -61,37 +63,76 @@ function ensureDataDir() {
   }
 }
 
+import { getBpsCategory } from "@/lib/bpsHelpers";
+
 /**
- * Action 1: Get Indicator Data (reads from cache)
+ * Action 1: Get Indicator Data (reads from Supabase DB, falls back to JSON file)
  */
-// {*Fungsi: Membaca file master katalog indikator BPS (bps-catalog.json)*}
-export async function getIndicatorData(): Promise<{ indicators: Indicator[], syncDate: string | null }> {
+export async function getIndicatorData(): Promise<{ indicators: Indicator[]; syncDate: string | null }> {
   try {
+    // 1. Try reading from Supabase DB via Prisma (dengan 5s timeout guard)
+    try {
+      const dbQueryPromise = prisma.strategicIndicator.findMany({
+        orderBy: [{ subject: "asc" }, { name: "asc" }],
+      });
+
+      const timeoutPromise = new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error("Prisma connection timeout")), 5000)
+      );
+
+      const dbIndicators = await Promise.race([dbQueryPromise, timeoutPromise]);
+
+      if (dbIndicators.length > 0) {
+        const lastLog = await prisma.syncLog.findFirst({
+          orderBy: { startedAt: "desc" },
+        });
+
+        const syncDate = lastLog?.finishedAt
+          ? new Date(lastLog.finishedAt).toLocaleString("id-ID", { dateStyle: "medium", timeStyle: "short" })
+          : null;
+
+        const indicators: Indicator[] = dbIndicators.map((ind) => ({
+          id: `var-${ind.varId}`,
+          name: ind.name,
+          category: getBpsCategory(ind.subject),
+          code: `Var ${ind.varId}`,
+          lastUpdated: ind.updatedAt.toISOString(),
+          subjectId: 0,
+          subjectName: ind.subject,
+          subcatId: 0,
+          isActive: ind.isActive,
+        }));
+
+        return { indicators, syncDate };
+      }
+    } catch (dbErr: any) {
+      console.warn("[adminActions] Supabase DB read skipped/failed, fallback to file:", dbErr.message || dbErr);
+    }
+
+    // 2. Fallback to file system
     ensureDataDir();
     
-    // Read catalog
     let catalog: any[] = [];
     if (fs.existsSync(catalogPath)) {
       catalog = JSON.parse(fs.readFileSync(catalogPath, "utf-8"));
     }
     
-    // Read config
     let config = { activeIndicators: [] as string[] };
     if (fs.existsSync(configPath)) {
       config = JSON.parse(fs.readFileSync(configPath, "utf-8"));
     }
 
-    // Merge active status
     const indicators: Indicator[] = catalog.map((item: any) => ({
       ...item,
-      isActive: config.activeIndicators.includes(item.id)
+      category: getBpsCategory(item.subjectName || item.category || item.subject || ""),
+      subjectName: item.subjectName || item.category || item.subject || "Lainnya",
+      isActive: config.activeIndicators.includes(item.id),
     }));
 
-    // Get file modified date as syncDate
     let syncDate = null;
     if (fs.existsSync(catalogPath)) {
       const stats = fs.statSync(catalogPath);
-      syncDate = stats.mtime.toLocaleString("id-ID", { dateStyle: 'medium', timeStyle: 'short' });
+      syncDate = stats.mtime.toLocaleString("id-ID", { dateStyle: "medium", timeStyle: "short" });
     }
 
     return { indicators, syncDate };
@@ -102,15 +143,42 @@ export async function getIndicatorData(): Promise<{ indicators: Indicator[], syn
 }
 
 /**
- * Action 2: Save Active Indicators
+ * Action 2: Save Active Indicators (updates Supabase DB & invalidates Redis cache)
  */
-// {*Fungsi: Menulis dan menyimpan perubahan status on/off indikator ke admin-config.json*}
 export async function saveActiveIndicators(activeIds: string[]): Promise<{ success: boolean; message: string }> {
   try {
-    ensureDataDir();
-    const config = { activeIndicators: activeIds };
-    fs.writeFileSync(configPath, JSON.stringify(config, null, 2), "utf-8");
-    return { success: true, message: "Konfigurasi berhasil disimpan!" };
+    const varIds = activeIds.map((id) => parseInt(id.replace(/\D/g, ""), 10)).filter((id) => !isNaN(id));
+
+    // 1. Update Supabase Database
+    try {
+      await prisma.$transaction([
+        prisma.strategicIndicator.updateMany({
+          where: { varId: { in: varIds } },
+          data: { isActive: true },
+        }),
+        prisma.strategicIndicator.updateMany({
+          where: { varId: { notIn: varIds } },
+          data: { isActive: false },
+        }),
+      ]);
+
+      // Invalidate Redis cache so dashboard immediately reflects changes
+      await deleteCache("indicators:*");
+      await deleteCache("map:*");
+    } catch (dbErr) {
+      console.warn("[adminActions] DB update failed, saving to file:", dbErr);
+    }
+
+    // 2. Try saving to file system (wrapped in try/catch for read-only platforms like Vercel)
+    try {
+      ensureDataDir();
+      const config = { activeIndicators: activeIds };
+      fs.writeFileSync(configPath, JSON.stringify(config, null, 2), "utf-8");
+    } catch (fileErr) {
+      console.info("[adminActions] File write skipped (read-only system):", fileErr);
+    }
+
+    return { success: true, message: "Konfigurasi indikator berhasil disimpan!" };
   } catch (error) {
     console.error("Failed to save configuration:", error);
     return { success: false, message: "Gagal menyimpan konfigurasi." };
@@ -118,62 +186,18 @@ export async function saveActiveIndicators(activeIds: string[]): Promise<{ succe
 }
 
 /**
- * Action 3: Sync BPS API (The Monster Fetcher)
+ * Action 3: Trigger BPS Scheduler Sync
  */
 export async function syncBpsApi(): Promise<{ success: boolean; count?: number; message: string }> {
   try {
-    ensureDataDir();
-    
-    const allIndicators: any[] = [];
-    
-    // 1. Fetch Subcategories
-    console.log("Fetching subcategories...");
-    const subcats = await fetchWithRetry(`${BASE_URL}/subcat/domain/${DOMAIN}/key/${API_KEY}/`);
-    
-    for (const subcat of subcats) {
-      console.log(`Fetching subjects for subcat: ${subcat.title}`);
-      await delay(500); // Wait 0.5s to avoid rate limit
-      
-      // 2. Fetch Subjects for each Subcat
-      const subjects = await fetchWithRetry(`${BASE_URL}/subject/domain/${DOMAIN}/subcat/${subcat.subcat_id}/key/${API_KEY}/`);
-      
-      if (!subjects || subjects.length === 0) continue;
-
-      for (const subject of subjects) {
-        console.log(`Fetching vars for subject: ${subject.title}`);
-        await delay(500); // Wait 0.5s to avoid rate limit
-        
-        // 3. Fetch Variables (Indicators) for each Subject
-        const vars = await fetchWithRetry(`${BASE_URL}/var/domain/${DOMAIN}/subject/${subject.sub_id}/key/${API_KEY}/`);
-        
-        if (!vars || vars.length === 0) continue;
-
-        for (const v of vars) {
-          allIndicators.push({
-            id: `var-${v.var_id}`,
-            name: v.title,
-            category: subcat.title,
-            code: `Var ${v.var_id}`,
-            lastUpdated: v.updt_year || "-",
-            subjectId: subject.sub_id,
-            subjectName: subject.title,
-            subcatId: subcat.subcat_id
-          });
-        }
-      }
-    }
-
-    // Write to catalog
-    fs.writeFileSync(catalogPath, JSON.stringify(allIndicators, null, 2), "utf-8");
-    
-    return { 
-      success: true, 
-      count: allIndicators.length, 
-      message: `Berhasil sinkronisasi ${allIndicators.length} indikator dari BPS.` 
+    const res = await executeBpsSync();
+    return {
+      success: res.success,
+      count: res.totalIndicators,
+      message: res.message,
     };
-
   } catch (error: any) {
     console.error("Sync failed:", error);
-    return { success: false, message: error.message || "Gagal melakukan sinkronisasi dengan BPS API." };
+    return { success: false, message: error.message || "Gagal melakukan sinkronisasi BPS." };
   }
 }

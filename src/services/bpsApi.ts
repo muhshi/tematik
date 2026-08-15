@@ -35,7 +35,10 @@ export async function fetchDynamicBpsData(yearStr: string = "2024", targetVarId?
   // {*Fetching API BPS Backend*}
   const url = `${BPS_BASE_URL}/api/list/model/data/domain/3321/var/${var_id}/th/${th_id}/key/${apiKey}/`;
 
-  const response = await fetch(url, { next: { revalidate: 86400 } });
+  const response = await fetch(url, {
+    signal: AbortSignal.timeout(3000), // Max 3s timeout
+    next: { revalidate: 86400 },
+  });
 
   if (!response.ok) {
     throw new Error(`BPS API request failed: ${response.status}`);

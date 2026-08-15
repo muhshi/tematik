@@ -80,8 +80,9 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year, i
     const valText = val !== null ? new Intl.NumberFormat("id-ID").format(val) : "Data Tidak Tersedia";
 
     // Bind popup
+    const regionLabel = granularity === "Kabupaten" ? "Kabupaten/Kota" : granularity === "Desa" ? "Desa" : "Kecamatan";
     layer.bindPopup(`
-      <div class="font-semibold text-primary mb-1">Kecamatan ${name}</div>
+      <div class="font-semibold text-primary mb-1">${regionLabel} ${name}</div>
       ${village ? `<div class="text-sm font-medium mb-1 text-slate-700 dark:text-slate-300">Desa ${village}</div>` : ''}
       <div class="text-muted-foreground text-sm">${indicatorName}: <span class="font-medium text-foreground">${valText}</span></div>
     `);
@@ -111,11 +112,15 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year, i
     });
   };
 
+  // Determine center & zoom based on granularity
+  const center: [number, number] = granularity === "Kabupaten" || granularity === "Provinsi" ? [-7.15, 110.14] : [-6.89, 110.64];
+  const zoom = granularity === "Kabupaten" || granularity === "Provinsi" ? 8 : 11;
+
   return (
     <div className="relative h-full w-full bg-slate-50">
       <MapContainer
-        center={[-6.89, 110.64]} // Approximate center of Demak
-        zoom={11}
+        center={center}
+        zoom={zoom}
         zoomControl={false}
         scrollWheelZoom={true}
         className="h-full w-full"

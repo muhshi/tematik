@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const API_KEY = process.env.BPS_API_KEY || "ac9780c3023e0762d5eb07f1c2f00dc6";
+const API_KEY = process.env.BPS_API_KEY;
 const DOMAIN = "3321";
 const BASE_URL = "https://webapi.bps.go.id/v1";
 
@@ -28,35 +28,51 @@ export async function GET(request: Request) {
 
     const url = `${BASE_URL}/api/list/model/th/var/${varId}/domain/${DOMAIN}/key/${API_KEY}/`;
 
-    const response = await fetch(url, {
-      headers: { Accept: "application/json" },
-      next: { revalidate: 3600 }, // Cache for 1 hour
-    });
+    const defaultYears: AvailableYear[] = [
+      { th_id: 124, year: "2024" },
+      { th_id: 123, year: "2023" },
+      { th_id: 122, year: "2022" },
+      { th_id: 121, year: "2021" },
+      { th_id: 120, year: "2020" },
+    ];
 
-    if (!response.ok) {
-      console.error(`[available-years] BPS API returned ${response.status}`);
-      return NextResponse.json([], { status: 200 });
+    try {
+      const response = await fetch(url, {
+        headers: { Accept: "application/json" },
+        signal: AbortSignal.timeout(2500), // Max 2.5s timeout
+        next: { revalidate: 3600 },
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        if (
+          result["data-availability"] === "available" &&
+          Array.isArray(result.data) &&
+          result.data.length >= 2
+        ) {
+          const rawYears = result.data[1] as Array<{ th_id: number; th: string }>;
+          const years: AvailableYear[] = rawYears
+            .map((y) => ({ th_id: y.th_id, year: y.th }))
+            .sort((a, b) => parseInt(b.year) - parseInt(a.year));
+
+          if (years.length > 0) {
+            return NextResponse.json(years, { status: 200 });
+          }
+        }
+      }
+    } catch (fetchErr) {
+      console.warn("[available-years] BPS API fetch timed out, using fallback years");
     }
 
-    const result = await response.json();
-
-    if (
-      result["data-availability"] !== "available" ||
-      !Array.isArray(result.data) ||
-      result.data.length < 2
-    ) {
-      return NextResponse.json([], { status: 200 });
-    }
-
-    const rawYears = result.data[1] as Array<{ th_id: number; th: string }>;
-
-    const years: AvailableYear[] = rawYears
-      .map((y) => ({ th_id: y.th_id, year: y.th }))
-      .sort((a, b) => parseInt(b.year) - parseInt(a.year)); // Newest first
-
-    return NextResponse.json(years, { status: 200 });
+    return NextResponse.json(defaultYears, { status: 200 });
   } catch (error: any) {
     console.error("[available-years] Fatal error:", error);
-    return NextResponse.json([], { status: 200 });
+    return NextResponse.json(
+      [
+        { th_id: 124, year: "2024" },
+        { th_id: 123, year: "2023" },
+      ],
+      { status: 200 }
+    );
   }
 }

@@ -93,6 +93,12 @@ export function FilterBar({
           <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Granularity</span>
           <div className="flex items-center rounded-md border border-border bg-muted/50 p-0.5">
             <button 
+              className={`rounded-sm px-3 py-1 text-sm font-medium transition-colors ${granularity === "Kabupaten" || granularity === "Provinsi" ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}
+              onClick={() => onGranularityChange("Kabupaten")}
+            >
+              Kab/Kota
+            </button>
+            <button 
               className={`rounded-sm px-3 py-1 text-sm font-medium transition-colors ${granularity === "Kecamatan" ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}
               onClick={() => onGranularityChange("Kecamatan")}
             >
@@ -106,29 +112,6 @@ export function FilterBar({
             </button>
           </div>
         </div>
-
-        {/* Advanced Filters Button */}
-        {/* <div className="flex flex-col">
-          <span className="text-[10px] font-semibold uppercase tracking-wider text-transparent">
-            Filter
-          </span>
-          <Button variant="outline" size="sm" className="gap-1.5">
-            <SlidersHorizontal className="h-3.5 w-3.5" />
-            Advanced Filters
-          </Button>
-        </div> */}
-      </div>
-
-      {/* Right side: Data source info */}
-      <div className="flex items-center gap-2">
-        <Badge variant="outline" className="text-xs font-normal">
-          {source}
-        </Badge>
-        {isCached && (
-          <Badge variant="secondary" className="text-xs font-normal">
-            Cached
-          </Badge>
-        )}
       </div>
     </div>
   );
