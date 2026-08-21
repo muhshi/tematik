@@ -67,7 +67,7 @@ export default function DocsPage() {
               <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-sky-100 text-sky-700 font-bold text-xs">3</span>
               <h3 className="text-base font-bold text-slate-900">Filter Tahun & Granularitas</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Pilih survei tahun pada dropdown <strong className="text-slate-800">Year</strong>, lalu gunakan tombol toggle <strong className="text-slate-800">Granularity</strong> untuk beralih antara tingkat peta wilayah <strong className="text-slate-800">Kecamatan</strong> atau <strong className="text-slate-800">Desa</strong>.
+                Pilih survei tahun pada dropdown <strong className="text-slate-800">Year</strong>, lalu gunakan tombol toggle <strong className="text-slate-800">Granularity</strong> untuk beralih antara tingkat peta wilayah <strong className="text-slate-800">Kab/Kota</strong> (Jawa Tengah) atau <strong className="text-slate-800">Kecamatan</strong> (Kabupaten Demak).
               </p>
             </Card>
 
@@ -75,7 +75,7 @@ export default function DocsPage() {
               <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-sky-100 text-sky-700 font-bold text-xs">4</span>
               <h3 className="text-base font-bold text-slate-900">Interaksi Klik Wilayah Peta</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Arahkan kursor atau klik pada salah satu polygon wilayah Kecamatan/Desa di peta untuk menampilkan panel informasi statistik detail di sisi kanan layar.
+                Arahkan kursor atau klik pada salah satu polygon wilayah di peta untuk menampilkan panel informasi statistik detail di sisi kanan layar.
               </p>
             </Card>
           </div>

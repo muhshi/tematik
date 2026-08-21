@@ -73,17 +73,15 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year, i
   const onEachFeature = (feature: any, layer: Layer) => {
     const demakFeature = feature as DemakFeature;
     const name = demakFeature.properties.district;
-    const village = granularity === "Desa" ? demakFeature.properties.village : null;
     const val = demakFeature.properties.value;
     
     // Format value number
     const valText = val !== null ? new Intl.NumberFormat("id-ID").format(val) : "Data Tidak Tersedia";
 
     // Bind popup
-    const regionLabel = granularity === "Kabupaten" ? "Kabupaten/Kota" : granularity === "Desa" ? "Desa" : "Kecamatan";
+    const regionLabel = granularity === "Kabupaten" || granularity === "Provinsi" ? "Kabupaten/Kota" : "Kecamatan";
     layer.bindPopup(`
       <div class="font-semibold text-primary mb-1">${regionLabel} ${name}</div>
-      ${village ? `<div class="text-sm font-medium mb-1 text-slate-700 dark:text-slate-300">Desa ${village}</div>` : ''}
       <div class="text-muted-foreground text-sm">${indicatorName}: <span class="font-medium text-foreground">${valText}</span></div>
     `);
 

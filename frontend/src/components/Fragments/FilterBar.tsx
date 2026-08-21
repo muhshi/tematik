@@ -100,12 +100,6 @@ export function FilterBar({
             >
               Kecamatan
             </button>
-            <button 
-              className={`rounded-sm px-3 py-1 text-sm font-medium transition-colors ${granularity === "Desa" ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}
-              onClick={() => onGranularityChange("Desa")}
-            >
-              Desa
-            </button>
           </div>
         </div>
       </div>

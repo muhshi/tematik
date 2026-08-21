@@ -78,7 +78,7 @@ export type DemakFeatureCollection = FeatureCollection<
 
 // -- UI State Types --
 
-export type Granularity = "Provinsi" | "Kabupaten" | "Kecamatan" | "Desa";
+export type Granularity = "Provinsi" | "Kabupaten" | "Kecamatan";
 
 export interface RegionDetail {
   kecamatan: string;
@@ -91,8 +91,9 @@ export interface RegionDetail {
 
 /** API response wrapper from /api/map-data */
 export interface MapDataResponse {
+  geojsonKabupaten?: DemakFeatureCollection;
   geojsonKecamatan: DemakFeatureCollection;
-  geojsonDesa: DemakFeatureCollection;
+  geojsonDesa?: DemakFeatureCollection;
   metadata: {
     source: string;
     year: string;

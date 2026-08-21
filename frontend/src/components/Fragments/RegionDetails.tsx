@@ -25,14 +25,12 @@ export function RegionDetails({ data, indicatorName, onClose }: RegionDetailsPro
       <div className="flex items-center justify-between border-b border-border p-5">
         <div className="flex flex-col">
           <h2 className="text-xl font-bold text-foreground">
-            {data.village ? `Desa ${data.village}` : data.kecamatan}
+            {data.kecamatan}
           </h2>
           <span className="text-xs text-muted-foreground">
-            {data.village
-              ? `Kecamatan ${data.kecamatan}, Kab. Demak`
-              : (data.kecamatan?.toLowerCase().includes("kab") || data.kecamatan?.toLowerCase().includes("kota"))
+            {(data.kecamatan?.toLowerCase().includes("kab") || data.kecamatan?.toLowerCase().includes("kota"))
               ? "Provinsi Jawa Tengah"
-              : `Kabupaten Demak`}
+              : "Kabupaten Demak"}
           </span>
         </div>
         <Button

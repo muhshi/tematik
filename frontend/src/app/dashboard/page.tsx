@@ -47,14 +47,14 @@ export default function Page() {
             setSelectedSubjectId(indicators[0].subjectId);
             setSelectedIndicatorId(indicators[0].id);
           } else {
-            setSelectedIndicatorId("var-31");
+            setSelectedIndicatorId("var-248");
           }
         } else {
-          setSelectedIndicatorId("var-31");
+          setSelectedIndicatorId("var-248");
         }
       } catch (err) {
         console.error("Failed to load active indicators", err);
-        setSelectedIndicatorId("var-31");
+        setSelectedIndicatorId("var-248");
       }
     }
     loadIndicators();
@@ -187,10 +187,8 @@ export default function Page() {
                 <MapCanvas
                   geojson={
                     granularity === "Kabupaten" || granularity === "Provinsi"
-                      ? ((mapData as any).geojsonKabupaten || mapData.geojsonKecamatan)
-                      : granularity === "Kecamatan"
-                      ? mapData.geojsonKecamatan
-                      : mapData.geojsonDesa
+                      ? (mapData.geojsonKabupaten || mapData.geojsonKecamatan)
+                      : mapData.geojsonKecamatan
                   }
                   onRegionClick={handleRegionClick}
                   granularity={granularity}
@@ -218,10 +216,8 @@ export default function Page() {
             <MapLegend 
               data={
                 granularity === "Kabupaten" || granularity === "Provinsi"
-                  ? ((mapData as any).geojsonKabupaten || mapData.geojsonKecamatan)
-                  : granularity === "Kecamatan"
-                  ? mapData.geojsonKecamatan
-                  : mapData.geojsonDesa
+                  ? (mapData.geojsonKabupaten || mapData.geojsonKecamatan)
+                  : mapData.geojsonKecamatan
               } 
               indicatorName={activeIndicators.find((i) => i.id === selectedIndicatorId)?.name || "Nilai Indikator"}
             />

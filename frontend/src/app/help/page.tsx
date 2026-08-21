@@ -24,13 +24,13 @@ interface FAQItem {
 const FAQS: FAQItem[] = [
   {
     category: "Umum",
-    question: "Apa itu WebGIS Tematik Kabupaten Demak?",
-    answer: "WebGIS Tematik Demak adalah platform sistem informasi geografis interaktif yang menggabungkan data statistik resmi dari BPS Kabupaten Demak dengan batas wilayah spasial (Kecamatan dan Desa) untuk visualisasi peta tematik choropleth."
+    question: "Apa itu WebGIS Tematik Jawa Tengah & Kabupaten Demak?",
+    answer: "WebGIS Tematik adalah platform sistem informasi geografis interaktif yang menggabungkan data statistik resmi dari BPS dengan batas wilayah spasial (Kab/Kota Jawa Tengah dan Kecamatan Demak) untuk visualisasi peta tematik choropleth."
   },
   {
     category: "Peta & GIS",
-    question: "Bagaimana cara mengubah tampilan peta dari Kecamatan ke Desa?",
-    answer: "Pada baris filter bagian atas peta, Anda dapat mengklik tombol toggle 'Granularity' untuk beralih secara instan antara batas wilayah Kecamatan dan Desa."
+    question: "Bagaimana cara mengubah tampilan peta dari Kab/Kota ke Kecamatan?",
+    answer: "Pada baris filter bagian atas peta, Anda dapat mengklik tombol toggle 'Granularity' untuk beralih antara tingkat wilayah Kab/Kota (Jawa Tengah) dan Kecamatan (Kabupaten Demak)."
   },
   {
     category: "BPS & Data",

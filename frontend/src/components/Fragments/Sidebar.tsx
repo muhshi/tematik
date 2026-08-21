@@ -108,7 +108,10 @@ export function Sidebar({
 
         {/* Navigation Items */}
         <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-2 py-3">
-          {NAV_ITEMS.map((item) => {
+          {NAV_ITEMS.filter((item) => {
+            if (activeIndicators.length === 0) return true;
+            return activeIndicators.some((i) => i.category === item.label);
+          }).map((item) => {
             const Icon = item.icon;
             const isCategorySelected = selectedCategory === item.label;
             const isExpanded = expandedCategories[item.label] ?? true;

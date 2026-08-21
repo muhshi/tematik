@@ -6,27 +6,20 @@ import { getCache, setCache } from "@/lib/redis";
 import type {
   DemakFeatureCollection,
   DemakGeoJsonProperties,
+  DemakFeature,
   KecamatanData,
   MapDataResponse,
 } from "@/types/map";
 import {
   fetchDynamicBpsData,
-  normalizeKecamatanName,
+  fetchDemakStrategicData,
+  normalizeRegionName,
 } from "@/services/bpsApi";
 
 export const dynamic = "force-dynamic";
 
-let cachedGeojsonDemak: DemakFeatureCollection | null = null;
 let cachedGeojsonJateng: DemakFeatureCollection | null = null;
 let cachedGeojsonKec: DemakFeatureCollection | null = null;
-
-async function loadDemakGeoJson(): Promise<DemakFeatureCollection> {
-  if (cachedGeojsonDemak) return cachedGeojsonDemak;
-  const filePath = join(process.cwd(), "src", "assets", "demak.geojson");
-  const raw = await readFile(filePath, "utf-8");
-  cachedGeojsonDemak = JSON.parse(raw) as DemakFeatureCollection;
-  return cachedGeojsonDemak;
-}
 
 async function loadJawaTengahGeoJson(): Promise<DemakFeatureCollection> {
   if (cachedGeojsonJateng) return cachedGeojsonJateng;
@@ -36,7 +29,7 @@ async function loadJawaTengahGeoJson(): Promise<DemakFeatureCollection> {
     cachedGeojsonJateng = JSON.parse(raw) as DemakFeatureCollection;
     return cachedGeojsonJateng;
   } catch {
-    return loadDemakGeoJson();
+    return loadDemakKecGeoJson();
   }
 }
 
@@ -48,40 +41,65 @@ async function loadDemakKecGeoJson(): Promise<DemakFeatureCollection> {
   return cachedGeojsonKec;
 }
 
+function matchDistrict(feature: DemakFeature, dataList: KecamatanData[]): KecamatanData | undefined {
+  if (!dataList || dataList.length === 0) return undefined;
+  const code = (feature.properties as any)?.code;
+  const districtName = feature.properties.district;
+  const isKota = (feature.properties as any)?.type === "Kota" || districtName.toLowerCase().startsWith("kota");
+
+  // 1. Match by 4-digit code if available (e.g. "3301")
+  if (code) {
+    const codeMatch = dataList.find((d) => {
+      const dCode = (d.kecamatan.match(/^\d{4}/) || [])[0];
+      return dCode === code;
+    });
+    if (codeMatch) return codeMatch;
+  }
+
+  // 2. Match by normalized name
+  const normDistrict = normalizeRegionName(districtName);
+  const nameMatch = dataList.find((d) => {
+    const dIsKota = d.kecamatan.toLowerCase().includes("kota");
+    if (code && isKota !== dIsKota) return false;
+    return normalizeRegionName(d.kecamatan) === normDistrict;
+  });
+  if (nameMatch) return nameMatch;
+
+  // 3. Jika hanya ada 1 data tunggal agregat (contoh: angka kemiskinan/IPM/TPT Demak), gunakan untuk kecamatan Demak
+  if (dataList.length === 1) {
+    return dataList[0];
+  }
+
+  return undefined;
+}
+
 function joinDataWithGeoJson(
   geoJson: DemakFeatureCollection,
   popData: KecamatanData[],
-  baseDesaGeoJson?: DemakFeatureCollection
+  isKabupatenLevel: boolean = false,
+  demakDetailData: KecamatanData[] = []
 ): DemakFeatureCollection {
   const newFeatures = geoJson.features.map((feature) => {
-    const districtName = feature.properties.district;
-    const normalizedKec = normalizeKecamatanName(districtName);
-
-    const match = popData.find(
-      (d) => normalizeKecamatanName(d.kecamatan) === normalizedKec
-    );
-
+    const match = matchDistrict(feature as DemakFeature, popData);
     let value = match && match.value !== null && !isNaN(match.value) ? match.value : null;
-    if (value === null) {
-      let hash = 0;
-      for (let i = 0; i < districtName.length; i++) {
-        hash = (hash << 5) - hash + districtName.charCodeAt(i);
-        hash |= 0;
+
+    const districtName = feature.properties?.district || "";
+    const isDemak = normalizeRegionName(districtName) === "demak";
+
+    // Khusus Peta Level Kab/Kota (Jateng): Jika nilai Demak belum terisi atau perlu penjumlahan kecamatan
+    if (isKabupatenLevel && isDemak && (value === null || isNaN(value)) && demakDetailData && demakDetailData.length > 0) {
+      const numValues = demakDetailData.map((d) => d.value).filter((v) => typeof v === "number" && !isNaN(v));
+      if (numValues.length > 1) {
+        // Penjumlahan total dari seluruh kecamatan (contoh: Jumlah Penduduk Demak = jumlah 14 kecamatan)
+        value = numValues.reduce((a, b) => a + b, 0);
+      } else if (numValues.length === 1) {
+        value = numValues[0];
       }
-      const absHash = Math.abs(hash);
-      value = 45000 + (absHash % 85000);
     }
 
     const areaSqMeters = area(feature);
     const luasWilayah = areaSqMeters / 1_000_000;
-    const kepadatan = value ? value / luasWilayah : null;
-
-    let jumlahDesa = undefined;
-    if (baseDesaGeoJson) {
-      jumlahDesa = baseDesaGeoJson.features.filter(
-        (f) => normalizeKecamatanName(f.properties.district) === normalizedKec
-      ).length;
-    }
+    const kepadatan = value && luasWilayah > 0 ? value / luasWilayah : null;
 
     return {
       ...feature,
@@ -90,7 +108,6 @@ function joinDataWithGeoJson(
         value,
         luasWilayah,
         kepadatan,
-        jumlahDesa,
       } as DemakGeoJsonProperties,
     };
   });
@@ -121,9 +138,9 @@ export async function GET(request: Request) {
     // Backend server offline, fall through to local processing
   }
 
-  // 2. Local Fallback Processing
+  // 2. Local Processing
   try {
-    const targetVarId = varIdStr ? parseInt(varIdStr.replace(/\D/g, ""), 10) : 31;
+    const targetVarId = varIdStr ? parseInt(varIdStr.replace(/\D/g, ""), 10) : 132;
     const cacheKey = `map:${targetVarId}:${requestedYear}`;
 
     const cachedResponse = await getCache<any>(cacheKey);
@@ -131,23 +148,26 @@ export async function GET(request: Request) {
       return NextResponse.json(cachedResponse);
     }
 
-    const geojsonDesa = await loadDemakGeoJson();
     const geojsonKec = await loadDemakKecGeoJson();
     const geojsonJateng = await loadJawaTengahGeoJson();
 
+    // Fetch dynamic Jateng data for all 35 Kab/Kota
     const { data: populationData, source, isCached } = await fetchDynamicBpsData(
       requestedYear,
       targetVarId
     );
 
-    const enrichedGeoJsonKabupaten = joinDataWithGeoJson(geojsonJateng, populationData);
-    const enrichedGeoJsonKecamatan = joinDataWithGeoJson(geojsonKec, populationData, geojsonDesa);
-    const enrichedGeoJsonDesa = joinDataWithGeoJson(geojsonDesa, populationData);
+    // Fetch [Data Strategis] for Kabupaten Demak kecamatan
+    const demakStrategicData = await fetchDemakStrategicData(requestedYear, targetVarId);
 
-    const response: MapDataResponse & { geojsonKabupaten?: DemakFeatureCollection } = {
-      geojsonKecamatan: enrichedGeoJsonKecamatan,
-      geojsonDesa: enrichedGeoJsonDesa,
+    // Level Kab/Kota: 35 Kab/Kota di Jawa Tengah dengan Demak teragregasi
+    const enrichedGeoJsonKabupaten = joinDataWithGeoJson(geojsonJateng, populationData, true, demakStrategicData);
+    // Level Kecamatan: 14 Kecamatan di Kabupaten Demak dengan data per kecamatan
+    const enrichedGeoJsonKecamatan = joinDataWithGeoJson(geojsonKec, demakStrategicData, false);
+
+    const response: MapDataResponse = {
       geojsonKabupaten: enrichedGeoJsonKabupaten,
+      geojsonKecamatan: enrichedGeoJsonKecamatan,
       metadata: {
         source,
         year: requestedYear,
