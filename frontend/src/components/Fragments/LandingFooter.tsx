@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
-// Lucide removed brand icons in recent versions, so we use inline SVGs instead
 const FacebookIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
@@ -59,29 +58,29 @@ export function LandingFooter() {
           
           {/* Left Column (Span 5) */}
           <div className="md:col-span-5 flex flex-col gap-6">
-            <h3 className="text-2xl font-bold text-slate-700 tracking-tight">Statistik Demak</h3>
+            <h3 className="text-2xl font-bold text-slate-800 tracking-tight">Statistik Demak</h3>
             
             <div className="text-sm text-slate-600 leading-relaxed flex flex-col mt-2">
-              <p>Jl. Sultan Hadiwijaya No.23</p>
-              <p>Krajan, Mangunjiwan, Demak</p>
+              <p>Badan Pusat Statistik Kabupaten Demak</p>
+              <p>Jl. Sultan Hadiwijaya No.23, Krajan, Mangunjiwan, Demak</p>
             </div>
 
             <div className="text-sm text-slate-600 flex flex-col gap-1.5 mt-2">
-              <p><span className="font-bold text-slate-700">Phone:</span> (0291) 685445</p>
-              <p><span className="font-bold text-slate-700">Email:</span> bps3321@bps.go.id.</p>
+              <p><span className="font-bold text-slate-700">Telepon:</span> (0291) 685445</p>
+              <p><span className="font-bold text-slate-700">Email:</span> bps3321@bps.go.id</p>
             </div>
 
             <div className="flex items-center gap-3 mt-4">
-              <a href="#" aria-label="Twitter" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
+              <a href="#" aria-label="Twitter" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs">
                 <TwitterIcon />
               </a>
-              <a href="#" aria-label="Facebook" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
+              <a href="#" aria-label="Facebook" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs">
                 <FacebookIcon />
               </a>
-              <a href="#" aria-label="Instagram" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
+              <a href="#" aria-label="Instagram" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs">
                 <InstagramIcon />
               </a>
-              <a href="#" aria-label="Youtube" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-400 transition-colors bg-white">
+              <a href="#" aria-label="Youtube" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs">
                 <YoutubeIcon />
               </a>
             </div>
@@ -89,24 +88,24 @@ export function LandingFooter() {
 
           {/* Middle Column (Span 3) */}
           <div className="md:col-span-3 flex flex-col gap-6">
-            <h4 className="text-base font-bold text-slate-700">Tautan</h4>
-            <ul className="flex flex-col gap-4 text-sm text-slate-500">
-              <li><Link href="/" className="hover:text-slate-800 transition-colors">Beranda</Link></li>
-              <li><Link href="#fitur" className="hover:text-slate-800 transition-colors">Fitur</Link></li>
-              <li><Link href="#data" className="hover:text-slate-800 transition-colors">Data Interaktif</Link></li>
-              <li><Link href="/dashboard" className="hover:text-slate-800 transition-colors">Dashboard GIS</Link></li>
-              <li><Link href="#" className="hover:text-slate-800 transition-colors">FAQ</Link></li>
-              <li><Link href="#" className="hover:text-slate-800 transition-colors">Kontak</Link></li>
+            <h4 className="text-base font-bold text-slate-800">Tautan Cepat</h4>
+            <ul className="flex flex-col gap-3.5 text-sm text-slate-500">
+              <li><Link href="/" className="hover:text-primary transition-colors">Beranda</Link></li>
+              <li><Link href="#fitur" className="hover:text-primary transition-colors">Fitur</Link></li>
+              <li><Link href="#data" className="hover:text-primary transition-colors">Data Interaktif</Link></li>
+              <li><Link href="/dashboard" className="hover:text-primary transition-colors font-medium">Dashboard WebGIS</Link></li>
+              <li><Link href="#faq" className="hover:text-primary transition-colors">FAQ</Link></li>
             </ul>
           </div>
 
           {/* Right Column (Span 4) */}
           <div className="md:col-span-4 flex flex-col gap-6">
-            <h4 className="text-base font-bold text-slate-700">Layanan & Program</h4>
-            <ul className="flex flex-col gap-4 text-sm text-slate-500">
-              <li><Link href="#" className="hover:text-slate-800 transition-colors">Peta Kependudukan Demak</Link></li>
-              <li><Link href="#" className="hover:text-slate-800 transition-colors">Analisis Tren Sosial & Ekonomi</Link></li>
-              <li><Link href="#" className="hover:text-slate-800 transition-colors">Pengambilan Data Penelitian</Link></li>
+            <h4 className="text-base font-bold text-slate-800">Portal Layanan BPS</h4>
+            <ul className="flex flex-col gap-3.5 text-sm text-slate-500">
+              <li><Link href="/dashboard" className="hover:text-primary transition-colors">Peta Kependudukan Demak</Link></li>
+              <li><Link href="/dashboard" className="hover:text-primary transition-colors">Analisis 35 Kab/Kota Jawa Tengah</Link></li>
+              <li><Link href="/docs" className="hover:text-primary transition-colors">Panduan & Cara Baca Data</Link></li>
+              <li><Link href="/help" className="hover:text-primary transition-colors">Pusat Bantuan & FAQ</Link></li>
             </ul>
           </div>
 
@@ -115,10 +114,10 @@ export function LandingFooter() {
         {/* Bottom Bar */}
         <div className="border-t border-slate-200 pt-8 relative flex flex-col items-center gap-1.5">
           <p className="text-[13px] text-slate-600">
-            &copy; Copyright <span className="font-bold text-slate-700">Statistik Demak</span> All Rights Reserved
+            &copy; {new Date().getFullYear()} <span className="font-bold text-slate-800">Badan Pusat Statistik Kabupaten Demak</span>. All Rights Reserved.
           </p>
-          <p className="text-[13px] text-slate-600">
-            Designed by <span className="text-[#0077c0] hover:text-[#005a94] transition-colors font-medium cursor-pointer">BPS Demak Web Team</span>
+          <p className="text-[13px] text-slate-500">
+            Designed for <span className="text-primary font-bold">Portal WebGIS Tematik Demak & Jateng</span>
           </p>
         </div>
       </div>
@@ -126,7 +125,7 @@ export function LandingFooter() {
       {/* Floating Scroll to Top Button */}
       <button 
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 md:bottom-10 md:right-10 h-14 w-14 rounded-full bg-[#0077c0] hover:bg-[#005a94] text-white flex items-center justify-center shadow-lg shadow-blue-500/20 transition-all duration-300 z-50 ${
+        className={`fixed bottom-8 right-8 md:bottom-10 md:right-10 h-13 w-13 rounded-full bg-primary hover:opacity-90 text-primary-foreground flex items-center justify-center shadow-xl transition-all duration-300 z-50 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
         }`}
         aria-label="Scroll to top"

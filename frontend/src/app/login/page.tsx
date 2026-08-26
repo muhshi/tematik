@@ -4,24 +4,25 @@ import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
 import { authenticate } from './actions';
 import { MapPin, Key, User, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function LoginPage() {
   const [errorMessage, dispatch] = useActionState(authenticate, undefined);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-50 p-4">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
-        <div className="bg-[#0b1b36] p-8 text-center relative overflow-hidden">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+        <div className="bg-sidebar p-8 text-center relative overflow-hidden text-sidebar-foreground">
           <div className="absolute top-0 right-0 opacity-10">
             <MapPin size={120} className="-mt-8 -mr-8" />
           </div>
           <div className="relative z-10 flex justify-center mb-4">
-            <div className="bg-white/10 p-3 rounded-xl backdrop-blur-sm">
-              <MapPin size={32} className="text-teal-400" />
+            <div className="bg-primary/20 p-3 rounded-xl backdrop-blur-sm border border-primary/30">
+              <MapPin size={32} className="text-primary" />
             </div>
           </div>
           <h1 className="text-2xl font-bold text-white mb-2 relative z-10">Statistik Demak</h1>
-          <p className="text-slate-300 text-sm relative z-10">Portal WebGIS Kabupaten Demak</p>
+          <p className="text-slate-300 text-sm relative z-10">Portal WebGIS Tematik Demak & Jawa Tengah</p>
         </div>
 
         <div className="p-8">
@@ -40,7 +41,7 @@ export default function LoginPage() {
                   <User size={18} className="text-slate-400" />
                 </div>
                 <input
-                  className="block w-full pl-10 pr-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0b1b36] focus:border-transparent sm:text-sm transition-shadow"
+                  className="block w-full pl-10 pr-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary sm:text-sm transition-all"
                   id="username"
                   type="text"
                   name="username"
@@ -58,7 +59,7 @@ export default function LoginPage() {
                   <Key size={18} className="text-slate-400" />
                 </div>
                 <input
-                  className="block w-full pl-10 pr-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0b1b36] focus:border-transparent sm:text-sm transition-shadow"
+                  className="block w-full pl-10 pr-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary sm:text-sm transition-all"
                   id="password"
                   type="password"
                   name="password"
@@ -76,6 +77,12 @@ export default function LoginPage() {
             )}
 
             <LoginButton />
+
+            <div className="pt-2 text-center">
+              <Link href="/" className="text-xs text-slate-500 hover:text-primary transition-colors">
+                ← Kembali ke Beranda
+              </Link>
+            </div>
           </form>
         </div>
       </div>
@@ -88,7 +95,7 @@ function LoginButton() {
   
   return (
     <button
-      className="w-full flex justify-center items-center py-2.5 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-[#0b1b36] hover:bg-[#152a50] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0b1b36] disabled:opacity-70 disabled:cursor-not-allowed transition-colors"
+      className="w-full flex justify-center items-center py-2.5 px-4 rounded-xl shadow-sm text-sm font-semibold text-primary-foreground bg-primary hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-70 disabled:cursor-not-allowed transition-all"
       aria-disabled={pending}
       type="submit"
       disabled={pending}

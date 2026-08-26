@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const { BPS_CONFIG } = require("./config/bpsConfig");
 const apiRouter = require("./routes/api");
+const bpsRouter = require("./routes/bpsRoutes");
 const { syncBpsCatalog } = require("./services/indicatorService");
 
 const app = express();
@@ -11,6 +12,7 @@ app.use(express.json());
 
 // Register API Routes
 app.use("/api", apiRouter);
+app.use("/api/bps", bpsRouter);
 
 // Health Check Endpoint
 app.get("/health", (req, res) => {
@@ -19,6 +21,12 @@ app.get("/health", (req, res) => {
     server: "WebGIS Demak Standalone Backend API (No Prisma)",
     time: new Date().toISOString(),
     scheduler: "24-Hour Automated BPS Sync Active",
+    modules: [
+      "Demak Target Fetcher",
+      "Semantic Mapping Service (Jateng Matcher)",
+      "Unified Data Transformer & Normalizer",
+      "In-Memory Multi-layer Cache Manager"
+    ]
   });
 });
 
@@ -38,6 +46,7 @@ app.listen(BPS_CONFIG.PORT, () => {
   console.log(`=======================================================`);
   console.log(`🚀 WebGIS Demak Backend Server running on port ${BPS_CONFIG.PORT}`);
   console.log(`🌐 Base URL: http://localhost:${BPS_CONFIG.PORT}/api`);
+  console.log(`📊 Unified BPS API: http://localhost:${BPS_CONFIG.PORT}/api/bps`);
   console.log(`⏰ 24-Hour Automated Sync Scheduler: ACTIVE`);
   console.log(`=======================================================`);
 });

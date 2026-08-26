@@ -7,6 +7,7 @@ html {
 }
 
 @custom-variant dark (&:is(.dark *));
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -51,98 +52,187 @@ html {
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-:root {
-  /* -- Statistik Modern Color Palette -- */
-  /* Primary: #004C97 (Navy Blue) */
-  --primary: oklch(0.38 0.12 255);
-  --primary-foreground: oklch(0.99 0 0);
+/* ==========================================================================
+   TEMA 1: BIRU BPS (#3db7e4) - DEFAULT
+   ========================================================================== */
+:root,
+[data-theme="blue"] {
+  --theme-id: "blue";
+  --theme-name: "Tema Biru BPS";
+  --theme-hex: #3db7e4;
 
-  /* Secondary: #F7941D (Orange) */
-  --secondary: oklch(0.74 0.16 65);
-  --secondary-foreground: oklch(0.15 0 0);
+  /* Primary Brand: #3db7e4 */
+  --primary: #3db7e4;
+  --primary-foreground: #ffffff;
 
-  /* Tertiary / Accent: #00AEEF (Cyan) */
-  --accent: oklch(0.70 0.14 230);
-  --accent-foreground: oklch(0.15 0 0);
+  /* Secondary: #ff8849 (Oranye BPS) */
+  --secondary: #ff8849;
+  --secondary-foreground: #ffffff;
 
-  /* Neutral: #84748B (Gray-Purple) */
-  --muted: oklch(0.95 0.005 280);
-  --muted-foreground: oklch(0.50 0.02 280);
+  /* Accent: #3db7e4 */
+  --accent: #eaf8fd;
+  --accent-foreground: #0284c7;
+
+  /* Neutral */
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
 
   /* Core UI */
-  --background: oklch(0.975 0.002 250);
-  --foreground: oklch(0.15 0.02 255);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 255);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 255);
-  --border: oklch(0.90 0.01 250);
-  --input: oklch(0.90 0.01 250);
-  --ring: oklch(0.38 0.12 255);
-  --destructive: oklch(0.577 0.245 27.325);
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #3db7e4;
+  --destructive: #ef4444;
 
-  /* Choropleth Gradient Colors */
-  --choropleth-1: oklch(0.90 0.06 250);
-  --choropleth-2: oklch(0.75 0.10 250);
-  --choropleth-3: oklch(0.55 0.14 250);
-  --choropleth-4: oklch(0.38 0.12 255);
+  /* Choropleth Gradient: Light to Dark (#3db7e4 based) */
+  --choropleth-1: #d4f3fd;
+  --choropleth-2: #8fe0f9;
+  --choropleth-3: #3db7e4;
+  --choropleth-4: #0284c7;
 
-  /* Chart Colors */
-  --chart-1: oklch(0.38 0.12 255);
-  --chart-2: oklch(0.74 0.16 65);
-  --chart-3: oklch(0.70 0.14 230);
-  --chart-4: oklch(0.55 0.14 250);
-  --chart-5: oklch(0.50 0.02 280);
+  /* Charts */
+  --chart-1: #3db7e4;
+  --chart-2: #ff8849;
+  --chart-3: #69be28;
+  --chart-4: #0284c7;
+  --chart-5: #64748b;
 
   /* Sidebar */
-  --sidebar: oklch(0.22 0.05 255);
-  --sidebar-foreground: oklch(0.92 0.01 250);
-  --sidebar-primary: oklch(0.74 0.16 65);
-  --sidebar-primary-foreground: oklch(0.15 0 0);
-  --sidebar-accent: oklch(0.30 0.06 255);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.30 0.04 255);
-  --sidebar-ring: oklch(0.74 0.16 65);
+  --sidebar: #0A192F;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #3db7e4;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #132742;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #1E3A5F;
+  --sidebar-ring: #3db7e4;
 
   --radius: 0.625rem;
 }
 
-.dark {
-  --primary: oklch(0.65 0.12 255);
-  --primary-foreground: oklch(0.12 0.02 255);
-  --secondary: oklch(0.74 0.16 65);
-  --secondary-foreground: oklch(0.12 0 0);
-  --accent: oklch(0.70 0.14 230);
-  --accent-foreground: oklch(0.12 0 0);
-  --muted: oklch(0.22 0.01 255);
-  --muted-foreground: oklch(0.65 0.02 255);
-  --background: oklch(0.13 0.02 255);
-  --foreground: oklch(0.95 0.005 250);
-  --card: oklch(0.18 0.02 255);
-  --card-foreground: oklch(0.95 0.005 250);
-  --popover: oklch(0.18 0.02 255);
-  --popover-foreground: oklch(0.95 0.005 250);
-  --border: oklch(0.28 0.03 255);
-  --input: oklch(0.28 0.03 255);
-  --ring: oklch(0.65 0.12 255);
-  --destructive: oklch(0.704 0.191 22.216);
-  --choropleth-1: oklch(0.30 0.06 250);
-  --choropleth-2: oklch(0.45 0.10 250);
-  --choropleth-3: oklch(0.60 0.14 250);
-  --choropleth-4: oklch(0.75 0.12 255);
-  --chart-1: oklch(0.65 0.12 255);
-  --chart-2: oklch(0.74 0.16 65);
-  --chart-3: oklch(0.70 0.14 230);
-  --chart-4: oklch(0.55 0.14 250);
-  --chart-5: oklch(0.65 0.02 255);
-  --sidebar: oklch(0.13 0.03 255);
-  --sidebar-foreground: oklch(0.92 0.01 250);
-  --sidebar-primary: oklch(0.74 0.16 65);
-  --sidebar-primary-foreground: oklch(0.12 0 0);
-  --sidebar-accent: oklch(0.22 0.04 255);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.25 0.03 255);
-  --sidebar-ring: oklch(0.74 0.16 65);
+/* ==========================================================================
+   TEMA 2: ORANYE BPS (#ff8849)
+   ========================================================================== */
+[data-theme="orange"] {
+  --theme-id: "orange";
+  --theme-name: "Tema Oranye BPS";
+  --theme-hex: #ff8849;
+
+  /* Primary Brand: #ff8849 */
+  --primary: #ff8849;
+  --primary-foreground: #ffffff;
+
+  /* Secondary: #3db7e4 (Biru BPS) */
+  --secondary: #3db7e4;
+  --secondary-foreground: #ffffff;
+
+  /* Accent: #ff8849 */
+  --accent: #fff4ed;
+  --accent-foreground: #c2410c;
+
+  /* Neutral */
+  --muted: #fbf7f4;
+  --muted-foreground: #786b62;
+
+  /* Core UI */
+  --background: #faf8f6;
+  --foreground: #231812;
+  --card: #ffffff;
+  --card-foreground: #231812;
+  --popover: #ffffff;
+  --popover-foreground: #231812;
+  --border: #f0e6df;
+  --input: #f0e6df;
+  --ring: #ff8849;
+  --destructive: #ef4444;
+
+  /* Choropleth Gradient: Light to Dark (#ff8849 based) */
+  --choropleth-1: #ffeade;
+  --choropleth-2: #ffbe99;
+  --choropleth-3: #ff8849;
+  --choropleth-4: #c2410c;
+
+  /* Charts */
+  --chart-1: #ff8849;
+  --chart-2: #3db7e4;
+  --chart-3: #69be28;
+  --chart-4: #c2410c;
+  --chart-5: #786b62;
+
+  /* Sidebar */
+  --sidebar: #2b180d;
+  --sidebar-foreground: #fef7f2;
+  --sidebar-primary: #ff8849;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #422615;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #57331d;
+  --sidebar-ring: #ff8849;
+}
+
+/* ==========================================================================
+   TEMA 3: HIJAU BPS (#69be28)
+   ========================================================================== */
+[data-theme="green"] {
+  --theme-id: "green";
+  --theme-name: "Tema Hijau BPS";
+  --theme-hex: #69be28;
+
+  /* Primary Brand: #69be28 */
+  --primary: #69be28;
+  --primary-foreground: #ffffff;
+
+  /* Secondary: #3db7e4 (Biru BPS) */
+  --secondary: #3db7e4;
+  --secondary-foreground: #ffffff;
+
+  /* Accent: #69be28 */
+  --accent: #f2fbe9;
+  --accent-foreground: #2f6810;
+
+  /* Neutral */
+  --muted: #f4f8f1;
+  --muted-foreground: #65745e;
+
+  /* Core UI */
+  --background: #f7faf5;
+  --foreground: #141f0f;
+  --card: #ffffff;
+  --card-foreground: #141f0f;
+  --popover: #ffffff;
+  --popover-foreground: #141f0f;
+  --border: #e3ede0;
+  --input: #e3ede0;
+  --ring: #69be28;
+  --destructive: #ef4444;
+
+  /* Choropleth Gradient: Light to Dark (#69be28 based) */
+  --choropleth-1: #e4f9d2;
+  --choropleth-2: #9fe266;
+  --choropleth-3: #69be28;
+  --choropleth-4: #2f6810;
+
+  /* Charts */
+  --chart-1: #69be28;
+  --chart-2: #3db7e4;
+  --chart-3: #ff8849;
+  --chart-4: #2f6810;
+  --chart-5: #65745e;
+
+  /* Sidebar */
+  --sidebar: #0d2610;
+  --sidebar-foreground: #f4fbf2;
+  --sidebar-primary: #69be28;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #173f1b;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #225929;
+  --sidebar-ring: #69be28;
 }
 
 @layer base {
@@ -167,8 +257,8 @@ html {
 
 .leaflet-popup-content-wrapper {
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 76, 151, 0.15);
-  border: 1px solid rgba(0, 76, 151, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border);
 }
 
 .leaflet-popup-content {
@@ -180,14 +270,14 @@ html {
 
 .leaflet-control-zoom a {
   border-radius: 8px !important;
-  border: 1px solid rgba(0, 76, 151, 0.15) !important;
-  color: #004C97 !important;
+  border: 1px solid var(--border) !important;
+  color: var(--primary) !important;
   font-weight: 600 !important;
 }
 
 .leaflet-control-zoom a:hover {
-  background-color: #004C97 !important;
-  color: white !important;
+  background-color: var(--primary) !important;
+  color: var(--primary-foreground) !important;
 }
 
 /* -- Region Details Panel Animation -- */
@@ -231,12 +321,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.70 0.02 255);
+  background: #cbd5e1;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.55 0.04 255);
+  background: #94a3b8;
 }
 
 /* -- Custom Animations -- */

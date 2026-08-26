@@ -35,7 +35,7 @@ const FAQS: FAQItem[] = [
   {
     category: "BPS & Data",
     question: "Dari mana asal data indikator statistik yang ditampilkan?",
-    answer: "Data ditarik secara otomatis dari API Resmi BPS Web Service Indonesia (domain 3321 untuk Kabupaten Demak) serta disinkronkan dengan database Supabase PostGIS dan cache Upstash Redis."
+    answer: "Data ditarik secara otomatis dari API Resmi BPS Web Service Indonesia (domain 3321 untuk Kabupaten Demak dan domain 3300 untuk Provinsi Jawa Tengah) serta disinkronkan dengan database Supabase PostGIS dan cache Upstash Redis."
   },
   {
     category: "BPS & Data",
@@ -74,143 +74,84 @@ export default function HelpPage() {
         <div className="space-y-4">
           <Link 
             href="/dashboard" 
-            className="inline-flex items-center gap-2 text-xs font-semibold text-sky-700 hover:text-sky-800 transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline transition-colors"
           >
             <ArrowLeft className="h-4 w-4" /> Kembali ke Peta Utama
           </Link>
 
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-sky-700 via-indigo-600 to-sky-800 text-white p-8 md:p-10 shadow-md">
-            <div className="relative z-10 space-y-4 max-w-2xl">
-              <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+          <div className="bg-sidebar rounded-2xl p-6 md:p-8 text-sidebar-foreground flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
+            <div className="space-y-2 z-10 max-w-xl">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider border border-primary/30">
+                Pusat Bantuan
+              </span>
+              <h1 className="text-2xl md:text-3xl font-extrabold text-white">
                 Ada yang bisa kami bantu?
               </h1>
-              <p className="text-sky-100 text-sm md:text-base leading-relaxed">
-                Cari panduan penggunaan, pertanyaan umum tentang data BPS Demak, serta tips penggunaan fitur GIS tematik.
+              <p className="text-slate-300 text-xs md:text-sm leading-relaxed">
+                Cari jawaban cepat seputar cara membaca data, integrasi API BPS, dan pengoperasian peta spasial.
               </p>
+            </div>
 
-              {/* Search Bar */}
-              <div className="relative max-w-xl pt-2">
-                <Search className="absolute left-4 top-5 h-5 w-5 text-slate-400" />
-                <input
-                  type="text"
-                  placeholder="Cari pertanyaan, indikator, atau kata kunci..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full h-12 pl-12 pr-4 rounded-xl bg-white text-slate-900 placeholder-slate-400 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm shadow-sm"
-                />
-              </div>
+            {/* Quick Search */}
+            <div className="w-full md:w-80 relative z-10">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+              <input 
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Ketik kata kunci pertanyaan..."
+                className="w-full pl-10 pr-4 py-2.5 bg-white/10 border border-white/20 rounded-xl text-xs md:text-sm text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+              />
             </div>
           </div>
         </div>
 
-        {/* Quick Help Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <Card className="bg-white border-slate-200 p-6 rounded-xl shadow-xs hover:shadow-md transition-all">
-            <div className="h-10 w-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 mb-4">
-              <MapPin className="h-5 w-5" />
-            </div>
-            <h3 className="text-base font-semibold text-slate-900 mb-1">Panduan Navigasi Peta</h3>
-            <p className="text-xs text-slate-600 leading-relaxed mb-4">
-              Pelajari cara membaca legenda warna choropleth, berpindah antara Kecamatan & Desa, serta mengklik daerah.
-            </p>
-            <Link href="/docs#membaca-peta" className="text-xs font-semibold text-sky-600 hover:underline inline-flex items-center gap-1">
-              Baca Panduan <ExternalLink className="h-3 w-3" />
-            </Link>
-          </Card>
-
-          <Card className="bg-white border-slate-200 p-6 rounded-xl shadow-xs hover:shadow-md transition-all">
-            <div className="h-10 w-10 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 mb-4">
-              <Database className="h-5 w-5" />
-            </div>
-            <h3 className="text-base font-semibold text-slate-900 mb-1">Penjelasan Tema & Subjek</h3>
-            <p className="text-xs text-slate-600 leading-relaxed mb-4">
-              Pelajari pengelompokan 3 Tema Utama BPS (Sosial, Ekonomi, Pertanian) serta tata cara memilih subjek dan variabel.
-            </p>
-            <Link href="/docs#cara-menggunakan" className="text-xs font-semibold text-indigo-600 hover:underline inline-flex items-center gap-1">
-              Lihat Panduan Web <ExternalLink className="h-3 w-3" />
-            </Link>
-          </Card>
-
-          <Card className="bg-white border-slate-200 p-6 rounded-xl shadow-xs hover:shadow-md transition-all">
-            <div className="h-10 w-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 mb-4">
-              <MessageSquare className="h-5 w-5" />
-            </div>
-            <h3 className="text-base font-semibold text-slate-900 mb-1">Hubungi Layanan BPS</h3>
-            <p className="text-xs text-slate-600 leading-relaxed mb-4">
-              Membutuhkan data statistik khusus Kabupaten Demak yang tidak tercantum di portal WebGIS?
-            </p>
-            <a 
-              href="https://demakkab.bps.go.id" 
-              target="_blank" 
-              rel="noreferrer"
-              className="text-xs font-semibold text-emerald-600 hover:underline inline-flex items-center gap-1"
+        {/* Category Tabs */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-2">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0 ${
+                selectedCategory === cat
+                  ? "bg-primary text-primary-foreground shadow-xs"
+                  : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
+              }`}
             >
-              Kunjungi PST BPS Demak <ExternalLink className="h-3 w-3" />
-            </a>
-          </Card>
+              {cat}
+            </button>
+          ))}
         </div>
 
-        {/* FAQ Section */}
-        <div className="space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
-            <div>
-              <h2 className="text-xl font-bold text-slate-900">Pertanyaan yang Sering Diajukan (FAQ)</h2>
-              <p className="text-xs text-slate-500">Temukan jawaban cepat seputar penggunaan aplikasi WebGIS Tematik Demak.</p>
-            </div>
-
-            {/* Category Filter Pills */}
-            <div className="flex flex-wrap items-center gap-1.5">
-              {categories.map((cat) => (
+        {/* FAQ Accordion List */}
+        <div className="space-y-3">
+          {filteredFaqs.map((faq, idx) => {
+            const isOpen = openFaqIndex === idx;
+            return (
+              <Card 
+                key={idx} 
+                className={`bg-white transition-all duration-200 overflow-hidden ${
+                  isOpen ? "border-primary/40 ring-1 ring-primary/20 shadow-sm" : "border-slate-200 shadow-xs"
+                }`}
+              >
                 <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                    selectedCategory === cat 
-                      ? "bg-sky-600 text-white font-semibold shadow-xs" 
-                      : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                  onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
+                  className={`w-full px-5 py-4 flex items-center justify-between text-left font-bold text-sm transition-colors ${
+                    isOpen ? "text-primary bg-primary/5" : "text-slate-800 hover:text-primary"
                   }`}
                 >
-                  {cat}
+                  <span className="pr-4">{faq.question}</span>
+                  <ChevronDown className={`h-4 w-4 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180 text-primary" : "text-slate-400"}`} />
                 </button>
-              ))}
-            </div>
-          </div>
 
-          {/* Accordions */}
-          <div className="space-y-3">
-            {filteredFaqs.length === 0 ? (
-              <div className="text-center py-12 border border-dashed border-slate-300 rounded-xl bg-white">
-                <HelpCircle className="h-8 w-8 text-slate-400 mx-auto mb-2" />
-                <p className="text-sm font-medium text-slate-500">Tidak ada pertanyaan yang sesuai pencarian Anda.</p>
-              </div>
-            ) : (
-              filteredFaqs.map((faq, idx) => {
-                const isOpen = openFaqIndex === idx;
-                return (
-                  <div 
-                    key={idx}
-                    className="rounded-xl bg-white border border-slate-200 shadow-xs overflow-hidden transition-all"
-                  >
-                    <button
-                      onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
-                      className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-slate-50 transition-colors"
-                    >
-                      <span className="text-sm font-semibold text-slate-800 pr-4">
-                        {faq.question}
-                      </span>
-                      <ChevronDown className={`h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 ${isOpen ? "rotate-180 text-sky-600" : ""}`} />
-                    </button>
-                    
-                    {isOpen && (
-                      <div className="px-6 pb-5 pt-1 text-xs md:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
-                        {faq.answer}
-                      </div>
-                    )}
+                {isOpen && (
+                  <div className="px-5 pb-4 pt-1 text-xs md:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                    {faq.answer}
                   </div>
-                );
-              })
-            )}
-          </div>
+                )}
+              </Card>
+            );
+          })}
         </div>
 
       </main>

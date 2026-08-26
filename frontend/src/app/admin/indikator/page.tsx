@@ -99,13 +99,6 @@ export default function AdminIndikatorPage() {
     ));
   };
 
-  // {*Fungsi: Memperbarui status toggle on/off secara lokal sebelum disimpan*}
-  const handleToggle = (id: string, active: boolean) => {
-    setIndicators(indicators.map(ind => 
-      ind.id === id ? { ...ind, isActive: active } : ind
-    ));
-  };
-
   // {*Fungsi: Menyimpan konfigurasi toggle ke file JSON via Server Action*}
   const handleSave = async () => {
     setIsSaving(true);
@@ -150,9 +143,9 @@ export default function AdminIndikatorPage() {
           <h1 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
             Manajemen Indikator BPS
           </h1>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-100 self-start">
-            <div className={`w-2 h-2 rounded-full ${lastSyncDate ? 'bg-teal-500 animate-pulse' : 'bg-amber-500'}`}></div>
-            <span className={`text-xs font-semibold uppercase tracking-wider ${lastSyncDate ? 'text-teal-700' : 'text-amber-700'}`}>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 self-start">
+            <div className={`w-2 h-2 rounded-full ${lastSyncDate ? 'bg-primary animate-pulse' : 'bg-amber-500'}`}></div>
+            <span className={`text-xs font-semibold uppercase tracking-wider ${lastSyncDate ? 'text-primary' : 'text-amber-700'}`}>
               {lastSyncDate ? 'Tersinkronisasi' : 'Belum Tersinkronisasi'}
             </span>
           </div>
@@ -161,7 +154,7 @@ export default function AdminIndikatorPage() {
         <button 
           onClick={handleSave}
           disabled={isSaving || isLoading}
-          className="w-full md:w-auto flex items-center justify-center gap-2 px-5 py-2.5 bg-teal-600 hover:bg-teal-700 disabled:bg-teal-600/50 text-white rounded-lg font-medium transition-colors shadow-sm"
+          className="w-full md:w-auto flex items-center justify-center gap-2 px-5 py-2.5 bg-primary hover:opacity-90 disabled:opacity-50 text-primary-foreground rounded-lg font-medium transition-all shadow-sm"
         >
           {isSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
           {isSaving ? "Menyimpan..." : "Simpan Perubahan"}
@@ -179,7 +172,7 @@ export default function AdminIndikatorPage() {
             <select 
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all appearance-none cursor-pointer"
+              className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all appearance-none cursor-pointer"
             >
               <option value="Semua Kategori">Semua Kategori</option>
               {Array.from(new Set(indicators.map(i => i.category))).map(cat => (
@@ -196,7 +189,7 @@ export default function AdminIndikatorPage() {
             <select 
               value={selectedSubject}
               onChange={(e) => setSelectedSubject(e.target.value)}
-              className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all appearance-none cursor-pointer"
+              className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all appearance-none cursor-pointer"
             >
               <option value="Semua Subjek">Semua Subjek</option>
               {availableSubjects.sort().map(sub => (
@@ -214,7 +207,7 @@ export default function AdminIndikatorPage() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Cari nama indikator atau kode..." 
-            className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all"
+            className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
           />
         </div>
       </div>
@@ -226,7 +219,7 @@ export default function AdminIndikatorPage() {
             <h2 className="text-lg font-bold text-slate-900">Daftar Indikator Statistik</h2>
             {lastSyncDate && <p className="text-xs text-slate-500 mt-1">Update terakhir: {lastSyncDate}</p>}
           </div>
-          <div className="inline-flex px-3 py-1 rounded-full bg-cyan-100 text-cyan-800 text-xs font-bold self-start mt-2 sm:mt-0">
+          <div className="inline-flex px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold self-start mt-2 sm:mt-0">
             {filteredIndicators.length} Indikator Ditemukan
           </div>
         </div>
@@ -234,7 +227,7 @@ export default function AdminIndikatorPage() {
         <div className="border-t border-slate-100">
           {isLoading ? (
             <div className="py-20 flex flex-col items-center justify-center gap-4 text-slate-400">
-              <Loader2 className="w-8 h-8 animate-spin text-teal-500" />
+              <Loader2 className="w-8 h-8 animate-spin text-primary" />
               <p>Memuat data indikator...</p>
             </div>
           ) : filteredIndicators.length === 0 ? (
@@ -299,7 +292,7 @@ export default function AdminIndikatorPage() {
                         {ind.code.replace('Var ', '')}
                       </span>
                       <div className="flex items-center gap-2">
-                        <span className={`text-xs font-bold ${ind.isActive ? 'text-teal-600' : 'text-slate-400'}`}>
+                        <span className={`text-xs font-bold ${ind.isActive ? 'text-primary' : 'text-slate-400'}`}>
                           {ind.isActive ? 'AKTIF' : 'NONAKTIF'}
                         </span>
                         <Switch 
@@ -335,7 +328,7 @@ export default function AdminIndikatorPage() {
           <button 
             onClick={handleSync}
             disabled={isSyncing}
-            className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2 border border-teal-200 bg-teal-50 text-teal-700 hover:bg-teal-100 disabled:bg-teal-50/50 disabled:text-teal-700/50 rounded-lg font-medium transition-colors"
+            className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2 border border-primary/20 bg-primary/10 text-primary hover:bg-primary/20 disabled:opacity-50 rounded-lg font-medium transition-colors"
           >
             <RefreshCw className={`w-4 h-4 ${isSyncing ? 'animate-spin' : ''}`} />
             {isSyncing ? 'Menyinkronkan...' : 'Refresh BPS API'}
@@ -356,7 +349,7 @@ export default function AdminIndikatorPage() {
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
-                <div className="px-3 h-8 flex items-center justify-center rounded bg-teal-600 text-white font-medium text-xs">
+                <div className="px-3 h-8 flex items-center justify-center rounded bg-primary text-primary-foreground font-medium text-xs">
                   Hal {currentPage} / {totalPages}
                 </div>
                 <button 
@@ -375,7 +368,7 @@ export default function AdminIndikatorPage() {
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-4">
-          <div className="bg-[#0A192F] p-3 rounded-xl text-white">
+          <div className="bg-primary p-3 rounded-xl text-primary-foreground shadow-xs">
             <CheckCircle2 className="w-6 h-6" />
           </div>
           <div>
@@ -385,7 +378,7 @@ export default function AdminIndikatorPage() {
         </div>
         
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-4">
-          <div className="bg-cyan-400 p-3 rounded-xl text-white">
+          <div className="bg-slate-200 p-3 rounded-xl text-slate-700">
             <Clock className="w-6 h-6" />
           </div>
           <div>
@@ -395,7 +388,7 @@ export default function AdminIndikatorPage() {
         </div>
         
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-4">
-          <div className="bg-teal-400 p-3 rounded-xl text-white">
+          <div className="bg-primary/20 p-3 rounded-xl text-primary">
             <ActivitySquare className="w-6 h-6" />
           </div>
           <div>

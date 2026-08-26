@@ -6,7 +6,7 @@
         "year": 2025,
         "kecamatan": "Kab. Demak",
         "value": 73.04,
-        "updatedAt": "2026-08-21T08:09:44.716Z"
+        "updatedAt": "2026-08-26T02:26:43.500Z"
       }
     ],
     "114_2024": [
@@ -15,7 +15,7 @@
         "year": 2024,
         "kecamatan": "Kab. Demak",
         "value": 72.36,
-        "updatedAt": "2026-08-21T07:46:22.728Z"
+        "updatedAt": "2026-08-26T01:49:18.636Z"
       }
     ],
     "114_2023": [
@@ -96,7 +96,7 @@
         "year": 2025,
         "kecamatan": "Kab. Demak",
         "value": 4.58,
-        "updatedAt": "2026-08-21T06:35:56.418Z"
+        "updatedAt": "2026-08-26T01:55:57.502Z"
       }
     ],
     "115_2024": [
@@ -105,7 +105,7 @@
         "year": 2024,
         "kecamatan": "Kab. Demak",
         "value": 4.75,
-        "updatedAt": "2026-08-21T07:46:24.126Z"
+        "updatedAt": "2026-08-26T01:43:07.421Z"
       }
     ],
     "115_2023": [
@@ -186,98 +186,98 @@
         "year": 2024,
         "kecamatan": "Mranggen",
         "value": 181444,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Karangawen",
         "value": 98566,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Guntur",
         "value": 91123,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Sayung",
         "value": 108177,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Karangtengah",
         "value": 72140,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Bonang",
         "value": 110024,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Demak",
         "value": 113928,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Wonosalam",
         "value": 89384,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Dempet",
         "value": 62686,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Kebonagung",
         "value": 42699,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Gajah",
         "value": 54948,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Karanganyar",
         "value": 80582,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Mijen",
         "value": 61019,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       },
       {
         "varId": 248,
         "year": 2024,
         "kecamatan": "Wedung",
         "value": 86250,
-        "updatedAt": "2026-08-21T07:51:29.770Z"
+        "updatedAt": "2026-08-26T02:24:27.353Z"
       }
     ],
     "248_2023": [
@@ -607,7 +607,7 @@
         "year": 2025,
         "kecamatan": "Kab. Demak",
         "value": 10.87,
-        "updatedAt": "2026-08-21T07:51:30.618Z"
+        "updatedAt": "2026-08-26T02:24:17.599Z"
       }
     ],
     "178_2024": [
@@ -616,7 +616,7 @@
         "year": 2024,
         "kecamatan": "Kab. Demak",
         "value": 11.89,
-        "updatedAt": "2026-08-21T07:51:30.056Z"
+        "updatedAt": "2026-08-26T01:55:19.638Z"
       }
     ],
     "178_2023": [
@@ -706,7 +706,7 @@
         "year": 2025,
         "kecamatan": "Kab. Demak",
         "value": 75.08,
-        "updatedAt": "2026-08-21T08:09:35.436Z"
+        "updatedAt": "2026-08-26T02:24:39.375Z"
       }
     ],
     "213_2024": [
@@ -715,7 +715,7 @@
         "year": 2024,
         "kecamatan": "Kab. Demak",
         "value": 74.57,
-        "updatedAt": "2026-08-21T07:48:40.556Z"
+        "updatedAt": "2026-08-26T02:24:38.938Z"
       }
     ],
     "213_2023": [
@@ -760,119 +760,119 @@
         "year": 2025,
         "kecamatan": "A. Pertanian, Kehutanan, dan Perikanan",
         "value": 9.53,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "B. Pertambangan dan Penggalian ",
         "value": -3.79,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "C. Industri Pengolahan",
         "value": 6.92,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "D. Pengadaan Listrik dan Gas",
         "value": 5.08,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "E. Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang",
         "value": -1.27,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "F. Konstruksi",
         "value": 11.86,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "G. Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor",
         "value": 3.95,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "H. Transportasi dan Pergudangan ",
         "value": 3.96,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "I. Penyediaan Akomodasi dan Makan Minum",
         "value": 10.02,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "J. Informasi dan Komunikasi",
         "value": 8.05,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "K. Jasa Keuangan dan Asuransi",
         "value": 4.75,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "L. Real Estate",
         "value": 6.76,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "M,N. Jasa Perusahaan",
         "value": 7.79,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "O. Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
         "value": 2.3,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "P. Jasa Pendidikan",
         "value": 4.23,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "Q. Jasa Kesehatan dan Kegiatan Sosial",
         "value": 4.41,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       },
       {
         "varId": 110,
         "year": 2025,
         "kecamatan": "R,S,T,U. Jasa lainnya",
         "value": 5.02,
-        "updatedAt": "2026-08-21T08:07:55.191Z"
+        "updatedAt": "2026-08-26T02:30:44.432Z"
       }
     ],
     "110_2024": [
@@ -881,119 +881,119 @@
         "year": 2024,
         "kecamatan": "A. Pertanian, Kehutanan, dan Perikanan",
         "value": 0.37,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "B. Pertambangan dan Penggalian ",
         "value": 8.34,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "C. Industri Pengolahan",
         "value": 4.86,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "D. Pengadaan Listrik dan Gas",
         "value": 6.23,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "E. Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang",
         "value": 2.2,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "F. Konstruksi",
         "value": 9.96,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "G. Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor",
         "value": 4.69,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "H. Transportasi dan Pergudangan ",
         "value": 5.46,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "I. Penyediaan Akomodasi dan Makan Minum",
         "value": 7.29,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "J. Informasi dan Komunikasi",
         "value": 9.92,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "K. Jasa Keuangan dan Asuransi",
         "value": 5.16,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "L. Real Estate",
         "value": 6.34,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "M,N. Jasa Perusahaan",
         "value": 9.1,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "O. Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
         "value": 8.12,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "P. Jasa Pendidikan",
         "value": 6.41,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "Q. Jasa Kesehatan dan Kegiatan Sosial",
         "value": 6.44,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       },
       {
         "varId": 110,
         "year": 2024,
         "kecamatan": "R,S,T,U. Jasa lainnya",
         "value": 6.32,
-        "updatedAt": "2026-08-21T07:46:25.105Z"
+        "updatedAt": "2026-08-21T08:40:14.571Z"
       }
     ],
     "110_2023": [
@@ -2154,252 +2154,252 @@
         "year": 2025,
         "kecamatan": "3300 PROVINSI JAWA TENGAH",
         "value": 4.66,
-        "updatedAt": "2026-08-21T07:05:07.522Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3301 Kabupaten Cilacap",
         "value": 7.4,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3302 Kabupaten Banyumas",
         "value": 6.26,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3303 Kabupaten Purbalingga",
         "value": 4.83,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3304 Kabupaten Banjarnegara",
         "value": 5.39,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3305 Kabupaten Kebumen",
         "value": 4.95,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3306 Kabupaten Purworejo",
         "value": 3.72,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3307 Kabupaten Wonosobo",
         "value": 3.99,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3308 Kabupaten Magelang",
         "value": 3.52,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3309 Kabupaten Boyolali",
         "value": 2.97,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3310 Kabupaten Klaten",
         "value": 3.88,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3311 Kabupaten Sukoharjo",
         "value": 4.32,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3312 Kabupaten Wonogiri",
         "value": 2.16,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3313 Kabupaten Karanganyar",
         "value": 3.26,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3314 Kabupaten Sragen",
         "value": 3.49,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3315 Kabupaten Grobogan",
         "value": 3.12,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3316 Kabupaten Blora",
         "value": 3.61,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3317 Kabupaten Rembang",
         "value": 2.9,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3318 Kabupaten Pati",
         "value": 3.71,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3319 Kabupaten Kudus",
         "value": 3.23,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3320 Kabupaten Jepara",
         "value": 3.3,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3321 Kabupaten Demak",
         "value": 4.58,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3322 Kabupaten Semarang",
         "value": 3.63,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3323 Kabupaten Temanggung",
         "value": 2.31,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3324 Kabupaten Kendal",
         "value": 4.6,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3325 Kabupaten Batang",
         "value": 5.07,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3326 Kabupaten Pekalongan",
         "value": 3.24,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3327 Kabupaten Pemalang",
         "value": 6.61,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3328 Kabupaten Tegal",
         "value": 7.61,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3329 Kabupaten Brebes",
         "value": 8.07,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3371 Kota Magelang",
         "value": 4.31,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3372 Kota Surakarta",
         "value": 4.5,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3373 Kota Salatiga",
         "value": 3.67,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3374 Kota Semarang",
         "value": 5.65,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3375 Kota Pekalongan",
         "value": 4.83,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       },
       {
         "varId": 64,
         "year": 2025,
         "kecamatan": "3376 Kota Tegal",
         "value": 5.82,
-        "updatedAt": "2026-08-21T07:05:07.523Z"
+        "updatedAt": "2026-08-26T01:55:56.879Z"
       }
     ],
     "64_2024": [
@@ -2408,252 +2408,252 @@
         "year": 2024,
         "kecamatan": "3300 PROVINSI JAWA TENGAH",
         "value": 4.78,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3301 Kabupaten Cilacap",
         "value": 7.83,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3302 Kabupaten Banyumas",
         "value": 6.18,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3303 Kabupaten Purbalingga",
         "value": 4.96,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3304 Kabupaten Banjarnegara",
         "value": 5.57,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3305 Kabupaten Kebumen",
         "value": 5.07,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3306 Kabupaten Purworejo",
         "value": 3.89,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3307 Kabupaten Wonosobo",
         "value": 4.02,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3308 Kabupaten Magelang",
         "value": 3.55,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3309 Kabupaten Boyolali",
         "value": 3.16,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3310 Kabupaten Klaten",
         "value": 3.97,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3311 Kabupaten Sukoharjo",
         "value": 3.65,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3312 Kabupaten Wonogiri",
         "value": 2.4,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3313 Kabupaten Karanganyar",
         "value": 3.47,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3314 Kabupaten Sragen",
         "value": 3.53,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3315 Kabupaten Grobogan",
         "value": 3.23,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3316 Kabupaten Blora",
         "value": 3.67,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3317 Kabupaten Rembang",
         "value": 2.84,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3318 Kabupaten Pati",
         "value": 3.87,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3319 Kabupaten Kudus",
         "value": 3.19,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3320 Kabupaten Jepara",
         "value": 3.34,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3321 Kabupaten Demak",
         "value": 4.75,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3322 Kabupaten Semarang",
         "value": 3.73,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3323 Kabupaten Temanggung",
         "value": 2.35,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3324 Kabupaten Kendal",
         "value": 5.01,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3325 Kabupaten Batang",
         "value": 5.67,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3326 Kabupaten Pekalongan",
         "value": 3.3,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3327 Kabupaten Pemalang",
         "value": 6.63,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3328 Kabupaten Tegal",
         "value": 7.53,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3329 Kabupaten Brebes",
         "value": 8.35,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3371 Kota Magelang",
         "value": 4.4,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3372 Kota Surakarta",
         "value": 4.61,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3373 Kota Salatiga",
         "value": 3.86,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3374 Kota Semarang",
         "value": 5.82,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3375 Kota Pekalongan",
         "value": 4.91,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       },
       {
         "varId": 64,
         "year": 2024,
         "kecamatan": "3376 Kota Tegal",
         "value": 5.88,
-        "updatedAt": "2026-08-21T07:46:23.634Z"
+        "updatedAt": "2026-08-26T01:43:06.910Z"
       }
     ],
     "64_2023": [
@@ -4694,252 +4694,252 @@
         "year": 2025,
         "kecamatan": "3300 PROVINSI JAWA TENGAH",
         "value": 74.36,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3301 Kabupaten Cilacap",
         "value": 66.67,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3302 Kabupaten Banyumas",
         "value": 69.87,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3303 Kabupaten Purbalingga",
         "value": 75.35,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3304 Kabupaten Banjarnegara",
         "value": 73.92,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3305 Kabupaten Kebumen",
         "value": 76.17,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3306 Kabupaten Purworejo",
         "value": 74.98,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3307 Kabupaten Wonosobo",
         "value": 75.74,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3308 Kabupaten Magelang",
         "value": 78.12,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3309 Kabupaten Boyolali",
         "value": 77.15,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3310 Kabupaten Klaten",
         "value": 75.64,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3311 Kabupaten Sukoharjo",
         "value": 70,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3312 Kabupaten Wonogiri",
         "value": 78.66,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3313 Kabupaten Karanganyar",
         "value": 74.81,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3314 Kabupaten Sragen",
         "value": 74.89,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3315 Kabupaten Grobogan",
         "value": 77.58,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3316 Kabupaten Blora",
         "value": 77.63,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3317 Kabupaten Rembang",
         "value": 75.97,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3318 Kabupaten Pati",
         "value": 77.08,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3319 Kabupaten Kudus",
         "value": 75.72,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3320 Kabupaten Jepara",
         "value": 73.49,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3321 Kabupaten Demak",
         "value": 73.04,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3322 Kabupaten Semarang",
         "value": 79.85,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3323 Kabupaten Temanggung",
         "value": 77.77,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3324 Kabupaten Kendal",
         "value": 76.45,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3325 Kabupaten Batang",
         "value": 77.81,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3326 Kabupaten Pekalongan",
         "value": 77.27,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3327 Kabupaten Pemalang",
         "value": 71.97,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3328 Kabupaten Tegal",
         "value": 72.01,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3329 Kabupaten Brebes",
         "value": 71.9,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3371 Kota Magelang",
         "value": 67.69,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3372 Kota Surakarta",
         "value": 70.68,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3373 Kota Salatiga",
         "value": 70.93,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3374 Kota Semarang",
         "value": 72.6,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3375 Kota Pekalongan",
         "value": 75.34,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       },
       {
         "varId": 63,
         "year": 2025,
         "kecamatan": "3376 Kota Tegal",
         "value": 68.8,
-        "updatedAt": "2026-08-21T08:09:44.122Z"
+        "updatedAt": "2026-08-26T02:26:42.991Z"
       }
     ],
     "63_2024": [
@@ -4948,252 +4948,252 @@
         "year": 2024,
         "kecamatan": "3300 PROVINSI JAWA TENGAH",
         "value": 73.74,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3301 Kabupaten Cilacap",
         "value": 67.95,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3302 Kabupaten Banyumas",
         "value": 68.03,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3303 Kabupaten Purbalingga",
         "value": 74.47,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3304 Kabupaten Banjarnegara",
         "value": 73.38,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3305 Kabupaten Kebumen",
         "value": 77.37,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3306 Kabupaten Purworejo",
         "value": 73.72,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3307 Kabupaten Wonosobo",
         "value": 74.97,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3308 Kabupaten Magelang",
         "value": 77.72,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3309 Kabupaten Boyolali",
         "value": 75.25,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3310 Kabupaten Klaten",
         "value": 74.24,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3311 Kabupaten Sukoharjo",
         "value": 68.21,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3312 Kabupaten Wonogiri",
         "value": 77.75,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3313 Kabupaten Karanganyar",
         "value": 74.57,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3314 Kabupaten Sragen",
         "value": 74.54,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3315 Kabupaten Grobogan",
         "value": 76.56,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3316 Kabupaten Blora",
         "value": 73.51,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3317 Kabupaten Rembang",
         "value": 74.5,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3318 Kabupaten Pati",
         "value": 76.75,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3319 Kabupaten Kudus",
         "value": 75.53,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3320 Kabupaten Jepara",
         "value": 71.94,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3321 Kabupaten Demak",
         "value": 72.36,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3322 Kabupaten Semarang",
         "value": 79.29,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3323 Kabupaten Temanggung",
         "value": 78.06,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3324 Kabupaten Kendal",
         "value": 76.85,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3325 Kabupaten Batang",
         "value": 77.91,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3326 Kabupaten Pekalongan",
         "value": 76.38,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3327 Kabupaten Pemalang",
         "value": 72.24,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3328 Kabupaten Tegal",
         "value": 73.49,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3329 Kabupaten Brebes",
         "value": 71.92,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3371 Kota Magelang",
         "value": 67.66,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3372 Kota Surakarta",
         "value": 67.42,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3373 Kota Salatiga",
         "value": 70.72,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3374 Kota Semarang",
         "value": 69.88,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3375 Kota Pekalongan",
         "value": 76.06,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       },
       {
         "varId": 63,
         "year": 2024,
         "kecamatan": "3376 Kota Tegal",
         "value": 69.61,
-        "updatedAt": "2026-08-21T07:46:22.270Z"
+        "updatedAt": "2026-08-26T01:49:18.121Z"
       }
     ],
     "63_2023": [
@@ -7234,252 +7234,252 @@
         "year": 2025,
         "kecamatan": "3300 PROVINSI JAWA TENGAH",
         "value": 9.48,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3301 Kabupaten Cilacap",
         "value": 9.41,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3302 Kabupaten Banyumas",
         "value": 11.15,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3303 Kabupaten Purbalingga",
         "value": 12.55,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3304 Kabupaten Banjarnegara",
         "value": 13.28,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3305 Kabupaten Kebumen",
         "value": 13.58,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3306 Kabupaten Purworejo",
         "value": 10.06,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3307 Kabupaten Wonosobo",
         "value": 13.34,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3308 Kabupaten Magelang",
         "value": 9.9,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3309 Kabupaten Boyolali",
         "value": 8.71,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3310 Kabupaten Klaten",
         "value": 11,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3311 Kabupaten Sukoharjo",
         "value": 6.83,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3312 Kabupaten Wonogiri",
         "value": 9.59,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3313 Kabupaten Karanganyar",
         "value": 8.48,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3314 Kabupaten Sragen",
         "value": 11.22,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3315 Kabupaten Grobogan",
         "value": 10.63,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3316 Kabupaten Blora",
         "value": 10.58,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3317 Kabupaten Rembang",
         "value": 13.01,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3318 Kabupaten Pati",
         "value": 8.24,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3319 Kabupaten Kudus",
         "value": 6.59,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3320 Kabupaten Jepara",
         "value": 5.79,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3321 Kabupaten Demak",
         "value": 10.87,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3322 Kabupaten Semarang",
         "value": 6.3,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3323 Kabupaten Temanggung",
         "value": 7.78,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3324 Kabupaten Kendal",
         "value": 8.4,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3325 Kabupaten Batang",
         "value": 7.79,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3326 Kabupaten Pekalongan",
         "value": 8.05,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3327 Kabupaten Pemalang",
         "value": 13.32,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3328 Kabupaten Tegal",
         "value": 6.16,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3329 Kabupaten Brebes",
         "value": 14.15,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3371 Kota Magelang",
         "value": 5.68,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3372 Kota Surakarta",
         "value": 7.69,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3373 Kota Salatiga",
         "value": 4.2,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3374 Kota Semarang",
         "value": 3.8,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3375 Kota Pekalongan",
         "value": 6.14,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       },
       {
         "varId": 34,
         "year": 2025,
         "kecamatan": "3376 Kota Tegal",
         "value": 7.28,
-        "updatedAt": "2026-08-21T07:51:30.126Z"
+        "updatedAt": "2026-08-26T02:24:16.967Z"
       }
     ],
     "34_2024": [
@@ -7488,252 +7488,252 @@
         "year": 2024,
         "kecamatan": "3300 PROVINSI JAWA TENGAH",
         "value": 10.47,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3301 Kabupaten Cilacap",
         "value": 10.68,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3302 Kabupaten Banyumas",
         "value": 11.95,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3303 Kabupaten Purbalingga",
         "value": 14.18,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3304 Kabupaten Banjarnegara",
         "value": 14.71,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3305 Kabupaten Kebumen",
         "value": 15.71,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3306 Kabupaten Purworejo",
         "value": 10.87,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3307 Kabupaten Wonosobo",
         "value": 15.28,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3308 Kabupaten Magelang",
         "value": 10.83,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3309 Kabupaten Boyolali",
         "value": 9.63,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3310 Kabupaten Klaten",
         "value": 12.04,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3311 Kabupaten Sukoharjo",
         "value": 7.47,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3312 Kabupaten Wonogiri",
         "value": 10.71,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3313 Kabupaten Karanganyar",
         "value": 9.59,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3314 Kabupaten Sragen",
         "value": 12.41,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3315 Kabupaten Grobogan",
         "value": 11.43,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3316 Kabupaten Blora",
         "value": 11.42,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3317 Kabupaten Rembang",
         "value": 14.02,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3318 Kabupaten Pati",
         "value": 9.17,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3319 Kabupaten Kudus",
         "value": 7.23,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3320 Kabupaten Jepara",
         "value": 6.09,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3321 Kabupaten Demak",
         "value": 11.89,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3322 Kabupaten Semarang",
         "value": 6.96,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3323 Kabupaten Temanggung",
         "value": 8.67,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3324 Kabupaten Kendal",
         "value": 9.35,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3325 Kabupaten Batang",
         "value": 8.73,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3326 Kabupaten Pekalongan",
         "value": 8.95,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3327 Kabupaten Pemalang",
         "value": 14.92,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3328 Kabupaten Tegal",
         "value": 6.81,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3329 Kabupaten Brebes",
         "value": 15.6,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3371 Kota Magelang",
         "value": 5.94,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3372 Kota Surakarta",
         "value": 8.31,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3373 Kota Salatiga",
         "value": 4.57,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3374 Kota Semarang",
         "value": 4.03,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3375 Kota Pekalongan",
         "value": 6.71,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       },
       {
         "varId": 34,
         "year": 2024,
         "kecamatan": "3376 Kota Tegal",
         "value": 7.64,
-        "updatedAt": "2026-08-21T07:51:29.591Z"
+        "updatedAt": "2026-08-26T01:55:19.061Z"
       }
     ],
     "34_2023": [
@@ -10028,252 +10028,252 @@
         "year": 2025,
         "kecamatan": "3300 PROVINSI JAWA TENGAH",
         "value": 74.77,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3301 Kabupaten Cilacap",
         "value": 73.45,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3302 Kabupaten Banyumas",
         "value": 75.44,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3303 Kabupaten Purbalingga",
         "value": 71.71,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3304 Kabupaten Banjarnegara",
         "value": 70.61,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3305 Kabupaten Kebumen",
         "value": 73.17,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3306 Kabupaten Purworejo",
         "value": 75.93,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3307 Kabupaten Wonosobo",
         "value": 71.5,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3308 Kabupaten Magelang",
         "value": 73.09,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3309 Kabupaten Boyolali",
         "value": 76.95,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3310 Kabupaten Klaten",
         "value": 78.68,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3311 Kabupaten Sukoharjo",
         "value": 79.9,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3312 Kabupaten Wonogiri",
         "value": 73.42,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3313 Kabupaten Karanganyar",
         "value": 78.67,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3314 Kabupaten Sragen",
         "value": 76.38,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3315 Kabupaten Grobogan",
         "value": 72.94,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3316 Kabupaten Blora",
         "value": 72.35,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3317 Kabupaten Rembang",
         "value": 73.4,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3318 Kabupaten Pati",
         "value": 74.98,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3319 Kabupaten Kudus",
         "value": 77.94,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3320 Kabupaten Jepara",
         "value": 74.9,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3321 Kabupaten Demak",
         "value": 75.08,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3322 Kabupaten Semarang",
         "value": 76.4,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3323 Kabupaten Temanggung",
         "value": 72.52,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3324 Kabupaten Kendal",
         "value": 75.07,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3325 Kabupaten Batang",
         "value": 71.7,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3326 Kabupaten Pekalongan",
         "value": 72.71,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3327 Kabupaten Pemalang",
         "value": 69.47,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3328 Kabupaten Tegal",
         "value": 72.36,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3329 Kabupaten Brebes",
         "value": 71.18,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3371 Kota Magelang",
         "value": 82.92,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3372 Kota Surakarta",
         "value": 84.92,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3373 Kota Salatiga",
         "value": 86.23,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3374 Kota Semarang",
         "value": 85.8,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3375 Kota Pekalongan",
         "value": 77.76,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       },
       {
         "varId": 2034,
         "year": 2025,
         "kecamatan": "3376 Kota Tegal",
         "value": 77.95,
-        "updatedAt": "2026-08-21T08:09:34.885Z"
+        "updatedAt": "2026-08-26T02:24:38.848Z"
       }
     ],
     "2034_2024": [
@@ -10282,252 +10282,252 @@
         "year": 2024,
         "kecamatan": "3300 PROVINSI JAWA TENGAH",
         "value": 73.87,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3301 Kabupaten Cilacap",
         "value": 72.55,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3302 Kabupaten Banyumas",
         "value": 74.52,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3303 Kabupaten Purbalingga",
         "value": 70.97,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3304 Kabupaten Banjarnegara",
         "value": 69.62,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3305 Kabupaten Kebumen",
         "value": 72.48,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3306 Kabupaten Purworejo",
         "value": 75.16,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3307 Kabupaten Wonosobo",
         "value": 70.63,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3308 Kabupaten Magelang",
         "value": 72.1,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3309 Kabupaten Boyolali",
         "value": 75.96,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3310 Kabupaten Klaten",
         "value": 78.16,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3311 Kabupaten Sukoharjo",
         "value": 79.3,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3312 Kabupaten Wonogiri",
         "value": 72.54,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3313 Kabupaten Karanganyar",
         "value": 78.11,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3314 Kabupaten Sragen",
         "value": 75.53,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3315 Kabupaten Grobogan",
         "value": 72.02,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3316 Kabupaten Blora",
         "value": 71.42,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3317 Kabupaten Rembang",
         "value": 72.53,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3318 Kabupaten Pati",
         "value": 74.1,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3319 Kabupaten Kudus",
         "value": 77.21,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3320 Kabupaten Jepara",
         "value": 74.32,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3321 Kabupaten Demak",
         "value": 74.57,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3322 Kabupaten Semarang",
         "value": 75.67,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3323 Kabupaten Temanggung",
         "value": 71.86,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3324 Kabupaten Kendal",
         "value": 74.34,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3325 Kabupaten Batang",
         "value": 70.73,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3326 Kabupaten Pekalongan",
         "value": 71.95,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3327 Kabupaten Pemalang",
         "value": 68.65,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3328 Kabupaten Tegal",
         "value": 71.7,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3329 Kabupaten Brebes",
         "value": 70.18,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3371 Kota Magelang",
         "value": 82.15,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3372 Kota Surakarta",
         "value": 84.41,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3373 Kota Salatiga",
         "value": 85.72,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3374 Kota Semarang",
         "value": 85.24,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3375 Kota Pekalongan",
         "value": 77.21,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       },
       {
         "varId": 2034,
         "year": 2024,
         "kecamatan": "3376 Kota Tegal",
         "value": 77.5,
-        "updatedAt": "2026-08-21T07:48:40.055Z"
+        "updatedAt": "2026-08-26T02:24:38.288Z"
       }
     ],
     "2034_2023": [
@@ -11551,253 +11551,253 @@
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3301 Kabupaten Cilacap",
-        "value": 101.3,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 2046390,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3302 Kabupaten Banyumas",
-        "value": 101.1,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1865270,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3303 Kabupaten Purbalingga",
-        "value": 102.3,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1047760,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3304 Kabupaten Banjarnegara",
-        "value": 102.8,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1067610,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3305 Kabupaten Kebumen",
-        "value": 102.8,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1431780,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3306 Kabupaten Purworejo",
-        "value": 100.3,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 801670,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3307 Kabupaten Wonosobo",
-        "value": 103.6,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 931140,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3308 Kabupaten Magelang",
-        "value": 101,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1351950,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3309 Kabupaten Boyolali",
-        "value": 100.8,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1109330,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3310 Kabupaten Klaten",
-        "value": 99,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1300940,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3311 Kabupaten Sukoharjo",
-        "value": 99.8,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 950420,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3312 Kabupaten Wonogiri",
-        "value": 99.5,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1057050,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3313 Kabupaten Karanganyar",
-        "value": 99.3,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 968480,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3314 Kabupaten Sragen",
-        "value": 99.2,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1011820,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3315 Kabupaten Grobogan",
-        "value": 100.5,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1519380,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3316 Kabupaten Blora",
-        "value": 100,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 914170,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3317 Kabupaten Rembang",
-        "value": 100.9,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 670100,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3318 Kabupaten Pati",
-        "value": 99.7,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1381910,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3319 Kabupaten Kudus",
-        "value": 99.4,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 891720,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3320 Kabupaten Jepara",
-        "value": 101.1,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1244310,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3321 Kabupaten Demak",
-        "value": 101.7,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1265050,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3322 Kabupaten Semarang",
-        "value": 99,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1098570,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3323 Kabupaten Temanggung",
-        "value": 100.7,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 821120,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3324 Kabupaten Kendal",
-        "value": 101.4,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1076480,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3325 Kabupaten Batang",
-        "value": 101.4,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 847180,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3326 Kabupaten Pekalongan",
-        "value": 103.3,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1030340,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3327 Kabupaten Pemalang",
-        "value": 102.6,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1559310,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3328 Kabupaten Tegal",
-        "value": 102.7,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1694240,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3329 Kabupaten Brebes",
-        "value": 102.8,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 2087330,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3371 Kota Magelang",
-        "value": 98.6,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 122670,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3372 Kota Surakarta",
-        "value": 96.9,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 529080,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3373 Kota Salatiga",
-        "value": 97.5,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 203550,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3374 Kota Semarang",
-        "value": 97.8,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 1722420,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3375 Kota Pekalongan",
-        "value": 102,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 324560,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3376 Kota Tegal",
-        "value": 101.6,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 288820,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       },
       {
         "varId": 2205,
         "year": 2025,
         "kecamatan": "3300 Provinsi Jawa Tengah",
-        "value": 100.9,
-        "updatedAt": "2026-08-21T07:51:28.595Z"
+        "value": 38233930,
+        "updatedAt": "2026-08-26T02:24:25.985Z"
       }
     ],
     "2205_2024": [
@@ -11805,253 +11805,253 @@
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3301 Kabupaten Cilacap",
-        "value": 101.4,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 2027380,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3302 Kabupaten Banyumas",
-        "value": 101.2,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1847100,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3303 Kabupaten Purbalingga",
-        "value": 102.4,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1037640,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3304 Kabupaten Banjarnegara",
-        "value": 102.9,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1057560,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3305 Kabupaten Kebumen",
-        "value": 102.8,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1414750,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3306 Kabupaten Purworejo",
-        "value": 100.3,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 795030,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3307 Kabupaten Wonosobo",
-        "value": 103.7,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 920510,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3308 Kabupaten Magelang",
-        "value": 101.1,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1341450,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3309 Kabupaten Boyolali",
-        "value": 100.9,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1099850,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3310 Kabupaten Klaten",
-        "value": 99,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1292800,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3311 Kabupaten Sukoharjo",
-        "value": 99.9,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 941650,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3312 Kabupaten Wonogiri",
-        "value": 99.5,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1054150,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3313 Kabupaten Karanganyar",
-        "value": 99.4,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 961910,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3314 Kabupaten Sragen",
-        "value": 99.2,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1004760,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3315 Kabupaten Grobogan",
-        "value": 100.6,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1506370,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3316 Kabupaten Blora",
-        "value": 100,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 907990,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3317 Kabupaten Rembang",
-        "value": 101,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 665240,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3318 Kabupaten Pati",
-        "value": 99.7,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1370820,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3319 Kabupaten Kudus",
-        "value": 99.5,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 883320,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3320 Kabupaten Jepara",
-        "value": 101.2,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1232880,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3321 Kabupaten Demak",
-        "value": 101.8,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1252970,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3322 Kabupaten Semarang",
-        "value": 99.1,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1089770,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3323 Kabupaten Temanggung",
-        "value": 100.8,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 814880,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3324 Kabupaten Kendal",
-        "value": 101.6,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1064810,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3325 Kabupaten Batang",
-        "value": 101.5,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 838190,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3326 Kabupaten Pekalongan",
-        "value": 103.3,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1019010,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3327 Kabupaten Pemalang",
-        "value": 102.6,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1541690,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3328 Kabupaten Tegal",
-        "value": 102.7,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1674800,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3329 Kabupaten Brebes",
-        "value": 102.8,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 2065500,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3371 Kota Magelang",
-        "value": 98.5,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 122430,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3372 Kota Surakarta",
-        "value": 96.9,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 528040,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3373 Kota Salatiga",
-        "value": 97.5,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 201270,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3374 Kota Semarang",
-        "value": 97.9,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 1708830,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3375 Kota Pekalongan",
-        "value": 102,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 321100,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3376 Kota Tegal",
-        "value": 101.6,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 285840,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       },
       {
         "varId": 2205,
         "year": 2024,
         "kecamatan": "3300 Provinsi Jawa Tengah",
-        "value": 101,
-        "updatedAt": "2026-08-21T07:51:29.294Z"
+        "value": 37892280,
+        "updatedAt": "2026-08-26T02:24:26.494Z"
       }
     ],
     "2205_2023": [
@@ -21974,5 +21974,5 @@
       "isActive": true
     }
   ],
-  "lastSyncedAt": "2026-08-21T08:09:44.716Z"
+  "lastSyncedAt": "2026-08-26T02:30:44.433Z"
 }

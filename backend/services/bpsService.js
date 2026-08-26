@@ -15,6 +15,29 @@ function normalizeKecamatanName(name) {
   return normalizeRegionName(name);
 }
 
+function selectOptimalTurvar(varId, turvarList) {
+  if (!turvarList || turvarList.length === 0) return 0;
+  if (turvarList.length === 1) return turvarList[0].val;
+
+  // 1. Khusus Var 2205 (Jumlah Penduduk Jateng): Pilih turvar 'Penduduk (ribu jiwa)'
+  if (varId === 2205) {
+    const popTurvar = turvarList.find((t) => t.label && (t.label.toLowerCase().includes("ribu jiwa") || t.val == 2423));
+    if (popTurvar) return popTurvar.val;
+  }
+
+  // 2. Khusus Var 34 (Kemiskinan Jateng): Pilih turvar 'Persentase Penduduk Miskin'
+  if (varId === 34) {
+    const pctTurvar = turvarList.find((t) => t.label && (t.label.toLowerCase().includes("persentase") || t.val == 55));
+    if (pctTurvar) return pctTurvar.val;
+  }
+
+  // 3. Preferensi persen
+  const pct = turvarList.find((t) => t.label && (t.label.toLowerCase().includes("persen") || t.label.toLowerCase().includes("persentase")));
+  if (pct) return pct.val;
+
+  return turvarList[0].val;
+}
+
 // Tabel Pemetaan Indikator Strategis Lintas Domain (Demak 3321 <-> Jawa Tengah 3300)
 const STRATEGIC_INDICATOR_PAIRS = [
   {
@@ -105,7 +128,7 @@ async function fetchDynamicBpsData(yearStr = "2024", targetVarId) {
         const turvarList = result.turvar || [];
         const turtahunList = result.turtahun || [];
 
-        const turvar_id = turvarList.length > 0 ? turvarList[turvarList.length - 1].val : 0;
+        const turvar_id = selectOptimalTurvar(var_id, turvarList);
         const turtahun_id = turtahunList.length > 0 ? turtahunList[turtahunList.length - 1].val : 0;
 
         const results = [];
@@ -129,8 +152,13 @@ async function fetchDynamicBpsData(yearStr = "2024", targetVarId) {
             }
           }
 
-          if (value !== undefined && value !== null) {
-            const numValue = typeof value === "number" ? value : parseFloat(value) || 0;
+          if (value !== undefined && value !== null && value !== "-" && value !== "...") {
+            let numValue = typeof value === "number" ? value : parseFloat(value) || 0;
+            // Konversi satuan ribu jiwa menjadi jiwa utuh untuk var 2205
+            if (var_id === 2205 && numValue > 0 && numValue < 100000) {
+              numValue = Math.round(numValue * 1000);
+            }
+
             results.push({
               kecamatan: kecamatanName,
               value: numValue,
@@ -200,7 +228,7 @@ async function fetchDemakStrategicData(yearStr = "2024", targetVarId) {
         const turvarList = result.turvar || [];
         const turtahunList = result.turtahun || [];
 
-        const turvar_id = turvarList.length > 0 ? turvarList[turvarList.length - 1].val : 0;
+        const turvar_id = selectOptimalTurvar(var_id, turvarList);
         const turtahun_id = turtahunList.length > 0 ? turtahunList[turtahunList.length - 1].val : 0;
 
         const results = [];
@@ -229,7 +257,7 @@ async function fetchDemakStrategicData(yearStr = "2024", targetVarId) {
             }
           }
 
-          if (value !== undefined && value !== null) {
+          if (value !== undefined && value !== null && value !== "-" && value !== "...") {
             const numValue = typeof value === "number" ? value : parseFloat(value) || 0;
             results.push({
               kecamatan: regionName,

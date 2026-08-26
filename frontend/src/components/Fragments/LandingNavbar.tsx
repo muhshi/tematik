@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/Elements/button";
 import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export function LandingNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,14 +16,12 @@ export function LandingNavbar() {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 20);
 
-      // Determine active section
-      const sections = ["fitur", "data"];
+      const sections = ["fitur", "data", "faq"];
       let current = "beranda";
 
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
-          // Navbar height offset + some buffer
           if (scrollY >= element.offsetTop - 150) {
             current = section;
           }
@@ -33,21 +31,20 @@ export function LandingNavbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    // Trigger once on mount
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const getLinkClass = (section: string) => {
     return activeSection === section
-      ? "text-slate-900 font-semibold transition-colors"
-      : "text-slate-500 font-medium hover:text-slate-900 transition-colors";
+      ? "text-primary font-bold transition-colors"
+      : "text-slate-600 font-medium hover:text-primary transition-colors";
   };
 
   const getMobileLinkClass = (section: string) => {
     return activeSection === section
-      ? "block w-full text-left text-slate-900 font-semibold py-3 border-b border-slate-100"
-      : "block w-full text-left text-slate-600 font-medium py-3 border-b border-slate-100";
+      ? "block w-full text-left text-primary font-bold py-3 border-b border-slate-100"
+      : "block w-full text-left text-slate-600 font-medium py-3 border-b border-slate-100 hover:text-primary";
   };
 
   return (
@@ -61,8 +58,8 @@ export function LandingNavbar() {
       <div className="container mx-auto px-4 md:px-8 max-w-7xl flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/logoBPS.png" alt="Logo BPS Demak" width={44} height={44} className="object-contain" priority />
-          <span className="text-2xl font-bold text-slate-800 tracking-tight">
+          <Image src="/logoBPS.png" alt="Logo BPS Demak" width={40} height={40} className="object-contain" priority />
+          <span className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
             Statistik Demak
           </span>
         </Link>
@@ -92,45 +89,40 @@ export function LandingNavbar() {
             </li>
           </ul>
           <Link href="/dashboard">
-            <Button className="bg-[#0077c0] hover:bg-[#005a94] text-white font-medium rounded-full px-7 h-10 text-sm shadow-sm transition-transform hover:-translate-y-0.5">
+            <Button className="bg-primary hover:opacity-90 text-primary-foreground font-semibold rounded-full px-7 h-10 text-sm shadow-sm transition-transform hover:-translate-y-0.5">
               Masuk Dashboard
             </Button>
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Hamburger */}
         <button
-          className="md:hidden text-slate-900 p-2"
+          className="md:hidden p-2 text-slate-700 hover:text-primary transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle mobile menu"
+          aria-label="Toggle menu"
         >
-          <Menu className="h-6 w-6" />
+          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-slate-200 shadow-lg py-4 px-4 flex flex-col gap-4">
-          <ul className="flex flex-col">
-            <li>
-              <a href="#beranda" onClick={() => setIsMobileMenuOpen(false)} className={getMobileLinkClass("beranda")}>
-                Beranda
-              </a>
-            </li>
-            <li>
-              <a href="#fitur" onClick={() => setIsMobileMenuOpen(false)} className={getMobileLinkClass("fitur")}>
-                Fitur
-              </a>
-            </li>
-            <li>
-              <a href="#data" onClick={() => setIsMobileMenuOpen(false)} className={getMobileLinkClass("data")}>
-                Data
-              </a>
-            </li>
-          </ul>
-          <Link href="/dashboard" onClick={() => setIsMobileMenuOpen(false)}>
-            <Button className="w-full bg-slate-950 hover:bg-slate-800 text-white rounded-full mt-2">
-              Buka Dashboard
+        <div className="md:hidden bg-white border-b border-slate-200 px-6 py-4 shadow-lg flex flex-col gap-2 animate-fade-in-up">
+          <a href="#beranda" onClick={() => setIsMobileMenuOpen(false)} className={getMobileLinkClass("beranda")}>
+            Beranda
+          </a>
+          <a href="#fitur" onClick={() => setIsMobileMenuOpen(false)} className={getMobileLinkClass("fitur")}>
+            Fitur
+          </a>
+          <a href="#data" onClick={() => setIsMobileMenuOpen(false)} className={getMobileLinkClass("data")}>
+            Data
+          </a>
+          <a href="#faq" onClick={() => setIsMobileMenuOpen(false)} className={getMobileLinkClass("faq")}>
+            FAQ
+          </a>
+          <Link href="/dashboard" className="pt-2" onClick={() => setIsMobileMenuOpen(false)}>
+            <Button className="w-full bg-primary hover:opacity-90 text-primary-foreground font-semibold rounded-xl h-11 text-sm shadow-sm">
+              Masuk Dashboard
             </Button>
           </Link>
         </div>

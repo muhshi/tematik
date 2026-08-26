@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/Providers/ThemeProvider";
 
 const poppins = Poppins({ 
   subsets: ["latin"],
@@ -23,8 +24,33 @@ export default function RootLayout({
       lang="en"
       className={`h-full antialiased ${poppins.variable} font-sans`}
       data-scroll-behavior="smooth"
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('bps-theme');
+                  if (!theme) {
+                    var match = document.cookie.match(/(?:^|; )bps-theme=([^;]*)/);
+                    if (match) theme = match[1];
+                  }
+                  if (theme && ['blue', 'orange', 'green'].indexOf(theme) !== -1) {
+                    document.documentElement.setAttribute('data-theme', theme);
+                  } else {
+                    document.documentElement.setAttribute('data-theme', 'blue');
+                  }
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
