@@ -1,0 +1,846 @@
+{
+  "domain_bps": 3300,
+  "tahun": 2024,
+  "kabupaten_data": [
+    {
+      "id_bps": 3301,
+      "nama_kabupaten": "3301 Kabupaten Cilacap",
+      "total_penduduk": {
+        "Laki-laki": 873564,
+        "Perempuan": 869083,
+        "Total": 1742647
+      },
+      "kelompok_umur_total": {
+        "0-14": 396166,
+        "15-64": 1162412,
+        "65+": 184069
+      },
+      "kelompok_umur_L": {
+        "0-14": 197805,
+        "15-64": 588278,
+        "65+": 90533
+      },
+      "kelompok_umur_P": {
+        "0-14": 198361,
+        "15-64": 574134,
+        "65+": 96588
+      }
+    },
+    {
+      "id_bps": 3302,
+      "nama_kabupaten": "3302 Kabupaten Banyumas",
+      "total_penduduk": {
+        "Laki-laki": 870595,
+        "Perempuan": 870901,
+        "Total": 1741496
+      },
+      "kelompok_umur_total": {
+        "0-14": 380402,
+        "15-64": 1169412,
+        "65+": 191682
+      },
+      "kelompok_umur_L": {
+        "0-14": 194212,
+        "15-64": 586625,
+        "65+": 93244
+      },
+      "kelompok_umur_P": {
+        "0-14": 186190,
+        "15-64": 582787,
+        "65+": 101924
+      }
+    },
+    {
+      "id_bps": 3303,
+      "nama_kabupaten": "3303 Kabupaten Purbalingga",
+      "total_penduduk": {
+        "Laki-laki": 477449,
+        "Perempuan": 488296,
+        "Total": 965745
+      },
+      "kelompok_umur_total": {
+        "0-14": 219605,
+        "15-64": 640664,
+        "65+": 105476
+      },
+      "kelompok_umur_L": {
+        "0-14": 111679,
+        "15-64": 312459,
+        "65+": 55368
+      },
+      "kelompok_umur_P": {
+        "0-14": 107926,
+        "15-64": 328205,
+        "65+": 52165
+      }
+    },
+    {
+      "id_bps": 3304,
+      "nama_kabupaten": "3304 Kabupaten Banjarnegara",
+      "total_penduduk": {
+        "Laki-laki": 469465,
+        "Perempuan": 467138,
+        "Total": 936603
+      },
+      "kelompok_umur_total": {
+        "0-14": 195608,
+        "15-64": 642314,
+        "65+": 98681
+      },
+      "kelompok_umur_L": {
+        "0-14": 99972,
+        "15-64": 317335,
+        "65+": 53979
+      },
+      "kelompok_umur_P": {
+        "0-14": 95636,
+        "15-64": 324979,
+        "65+": 46523
+      }
+    },
+    {
+      "id_bps": 3305,
+      "nama_kabupaten": "3305 Kabupaten Kebumen",
+      "total_penduduk": {
+        "Laki-laki": 596156,
+        "Perempuan": 600274,
+        "Total": 1196430
+      },
+      "kelompok_umur_total": {
+        "0-14": 264062,
+        "15-64": 781787,
+        "65+": 150581
+      },
+      "kelompok_umur_L": {
+        "0-14": 136709,
+        "15-64": 389019,
+        "65+": 72695
+      },
+      "kelompok_umur_P": {
+        "0-14": 127353,
+        "15-64": 392768,
+        "65+": 80153
+      }
+    },
+    {
+      "id_bps": 3306,
+      "nama_kabupaten": "3306 Kabupaten Purworejo",
+      "total_penduduk": {
+        "Laki-laki": 354106,
+        "Perempuan": 363444,
+        "Total": 717550
+      },
+      "kelompok_umur_total": {
+        "0-14": 147411,
+        "15-64": 468906,
+        "65+": 101233
+      },
+      "kelompok_umur_L": {
+        "0-14": 77594,
+        "15-64": 230146,
+        "65+": 47820
+      },
+      "kelompok_umur_P": {
+        "0-14": 69817,
+        "15-64": 238760,
+        "65+": 54867
+      }
+    },
+    {
+      "id_bps": 3307,
+      "nama_kabupaten": "3307 Kabupaten Wonosobo",
+      "total_penduduk": {
+        "Laki-laki": 403645,
+        "Perempuan": 392054,
+        "Total": 795699
+      },
+      "kelompok_umur_total": {
+        "0-14": 178645,
+        "15-64": 532809,
+        "65+": 84245
+      },
+      "kelompok_umur_L": {
+        "0-14": 90591,
+        "15-64": 270010,
+        "65+": 44506
+      },
+      "kelompok_umur_P": {
+        "0-14": 88054,
+        "15-64": 262799,
+        "65+": 41201
+      }
+    },
+    {
+      "id_bps": 3308,
+      "nama_kabupaten": "3308 Kabupaten Magelang",
+      "total_penduduk": {
+        "Laki-laki": 667593,
+        "Perempuan": 662124,
+        "Total": 1329717
+      },
+      "kelompok_umur_total": {
+        "0-14": 277443,
+        "15-64": 906083,
+        "65+": 146191
+      },
+      "kelompok_umur_L": {
+        "0-14": 141650,
+        "15-64": 458497,
+        "65+": 70059
+      },
+      "kelompok_umur_P": {
+        "0-14": 135793,
+        "15-64": 447586,
+        "65+": 78745
+      }
+    },
+    {
+      "id_bps": 3309,
+      "nama_kabupaten": "3309 Kabupaten Boyolali",
+      "total_penduduk": {
+        "Laki-laki": 491212,
+        "Perempuan": 505855,
+        "Total": 997067
+      },
+      "kelompok_umur_total": {
+        "0-14": 203903,
+        "15-64": 657306,
+        "65+": 135858
+      },
+      "kelompok_umur_L": {
+        "0-14": 105236,
+        "15-64": 323808,
+        "65+": 64317
+      },
+      "kelompok_umur_P": {
+        "0-14": 98667,
+        "15-64": 333498,
+        "65+": 73690
+      }
+    },
+    {
+      "id_bps": 3310,
+      "nama_kabupaten": "3310 Kabupaten Klaten",
+      "total_penduduk": {
+        "Laki-laki": 578556,
+        "Perempuan": 599541,
+        "Total": 1178097
+      },
+      "kelompok_umur_total": {
+        "0-14": 227309,
+        "15-64": 787259,
+        "65+": 163529
+      },
+      "kelompok_umur_L": {
+        "0-14": 115212,
+        "15-64": 392660,
+        "65+": 73007
+      },
+      "kelompok_umur_P": {
+        "0-14": 112097,
+        "15-64": 394599,
+        "65+": 92845
+      }
+    },
+    {
+      "id_bps": 3311,
+      "nama_kabupaten": "3311 Kabupaten Sukoharjo",
+      "total_penduduk": {
+        "Laki-laki": 453057,
+        "Perempuan": 460776,
+        "Total": 913833
+      },
+      "kelompok_umur_total": {
+        "0-14": 177860,
+        "15-64": 635688,
+        "65+": 100285
+      },
+      "kelompok_umur_L": {
+        "0-14": 89018,
+        "15-64": 314102,
+        "65+": 51800
+      },
+      "kelompok_umur_P": {
+        "0-14": 88842,
+        "15-64": 321586,
+        "65+": 50348
+      }
+    },
+    {
+      "id_bps": 3312,
+      "nama_kabupaten": "3312 Kabupaten Wonogiri",
+      "total_penduduk": {
+        "Laki-laki": 466051,
+        "Perempuan": 492156,
+        "Total": 958207
+      },
+      "kelompok_umur_total": {
+        "0-14": 161648,
+        "15-64": 628726,
+        "65+": 167833
+      },
+      "kelompok_umur_L": {
+        "0-14": 83287,
+        "15-64": 306329,
+        "65+": 78665
+      },
+      "kelompok_umur_P": {
+        "0-14": 78361,
+        "15-64": 322397,
+        "65+": 91398
+      }
+    },
+    {
+      "id_bps": 3313,
+      "nama_kabupaten": "3313 Kabupaten Karanganyar",
+      "total_penduduk": {
+        "Laki-laki": 451647,
+        "Perempuan": 460932,
+        "Total": 912579
+      },
+      "kelompok_umur_total": {
+        "0-14": 185939,
+        "15-64": 621507,
+        "65+": 105133
+      },
+      "kelompok_umur_L": {
+        "0-14": 94486,
+        "15-64": 309268,
+        "65+": 49703
+      },
+      "kelompok_umur_P": {
+        "0-14": 91453,
+        "15-64": 312239,
+        "65+": 57240
+      }
+    },
+    {
+      "id_bps": 3314,
+      "nama_kabupaten": "3314 Kabupaten Sragen",
+      "total_penduduk": {
+        "Laki-laki": 437201,
+        "Perempuan": 454592,
+        "Total": 891793
+      },
+      "kelompok_umur_total": {
+        "0-14": 176344,
+        "15-64": 600204,
+        "65+": 115245
+      },
+      "kelompok_umur_L": {
+        "0-14": 89538,
+        "15-64": 297241,
+        "65+": 52037
+      },
+      "kelompok_umur_P": {
+        "0-14": 86806,
+        "15-64": 302963,
+        "65+": 64823
+      }
+    },
+    {
+      "id_bps": 3315,
+      "nama_kabupaten": "3315 Kabupaten Grobogan",
+      "total_penduduk": {
+        "Laki-laki": 688609,
+        "Perempuan": 702705,
+        "Total": 1391314
+      },
+      "kelompok_umur_total": {
+        "0-14": 294886,
+        "15-64": 951687,
+        "65+": 144741
+      },
+      "kelompok_umur_L": {
+        "0-14": 151454,
+        "15-64": 473102,
+        "65+": 66293
+      },
+      "kelompok_umur_P": {
+        "0-14": 143432,
+        "15-64": 478585,
+        "65+": 80688
+      }
+    },
+    {
+      "id_bps": 3316,
+      "nama_kabupaten": "3316 Kabupaten Blora",
+      "total_penduduk": {
+        "Laki-laki": 427792,
+        "Perempuan": 440942,
+        "Total": 868734
+      },
+      "kelompok_umur_total": {
+        "0-14": 171730,
+        "15-64": 596999,
+        "65+": 100005
+      },
+      "kelompok_umur_L": {
+        "0-14": 87266,
+        "15-64": 296791,
+        "65+": 45213
+      },
+      "kelompok_umur_P": {
+        "0-14": 84464,
+        "15-64": 300208,
+        "65+": 56270
+      }
+    },
+    {
+      "id_bps": 3317,
+      "nama_kabupaten": "3317 Kabupaten Rembang",
+      "total_penduduk": {
+        "Laki-laki": 325815,
+        "Perempuan": 327530,
+        "Total": 653345
+      },
+      "kelompok_umur_total": {
+        "0-14": 133149,
+        "15-64": 458326,
+        "65+": 61870
+      },
+      "kelompok_umur_L": {
+        "0-14": 69271,
+        "15-64": 229520,
+        "65+": 28051
+      },
+      "kelompok_umur_P": {
+        "0-14": 63878,
+        "15-64": 228806,
+        "65+": 34846
+      }
+    },
+    {
+      "id_bps": 3318,
+      "nama_kabupaten": "3318 Kabupaten Pati",
+      "total_penduduk": {
+        "Laki-laki": 617784,
+        "Perempuan": 656706,
+        "Total": 1274490
+      },
+      "kelompok_umur_total": {
+        "0-14": 253367,
+        "15-64": 874082,
+        "65+": 147041
+      },
+      "kelompok_umur_L": {
+        "0-14": 129121,
+        "15-64": 424373,
+        "65+": 66500
+      },
+      "kelompok_umur_P": {
+        "0-14": 124246,
+        "15-64": 449709,
+        "65+": 82751
+      }
+    },
+    {
+      "id_bps": 3319,
+      "nama_kabupaten": "3319 Kabupaten Kudus",
+      "total_penduduk": {
+        "Laki-laki": 448467,
+        "Perempuan": 461863,
+        "Total": 910330
+      },
+      "kelompok_umur_total": {
+        "0-14": 194008,
+        "15-64": 646206,
+        "65+": 70116
+      },
+      "kelompok_umur_L": {
+        "0-14": 98149,
+        "15-64": 320633,
+        "65+": 30948
+      },
+      "kelompok_umur_P": {
+        "0-14": 95859,
+        "15-64": 325573,
+        "65+": 40431
+      }
+    },
+    {
+      "id_bps": 3320,
+      "nama_kabupaten": "3320 Kabupaten Jepara",
+      "total_penduduk": {
+        "Laki-laki": 663953,
+        "Perempuan": 666978,
+        "Total": 1330931
+      },
+      "kelompok_umur_total": {
+        "0-14": 306738,
+        "15-64": 904690,
+        "65+": 119503
+      },
+      "kelompok_umur_L": {
+        "0-14": 154641,
+        "15-64": 455272,
+        "65+": 56479
+      },
+      "kelompok_umur_P": {
+        "0-14": 152097,
+        "15-64": 449418,
+        "65+": 65463
+      }
+    },
+    {
+      "id_bps": 3321,
+      "nama_kabupaten": "3321 Kabupaten Demak",
+      "total_penduduk": {
+        "Laki-laki": 596714,
+        "Perempuan": 606997,
+        "Total": 1203711
+      },
+      "kelompok_umur_total": {
+        "0-14": 270784,
+        "15-64": 844587,
+        "65+": 88340
+      },
+      "kelompok_umur_L": {
+        "0-14": 135975,
+        "15-64": 423169,
+        "65+": 39135
+      },
+      "kelompok_umur_P": {
+        "0-14": 134809,
+        "15-64": 421418,
+        "65+": 50770
+      }
+    },
+    {
+      "id_bps": 3322,
+      "nama_kabupaten": "3322 Kabupaten Semarang",
+      "total_penduduk": {
+        "Laki-laki": 544509,
+        "Perempuan": 563024,
+        "Total": 1107533
+      },
+      "kelompok_umur_total": {
+        "0-14": 222849,
+        "15-64": 767069,
+        "65+": 117615
+      },
+      "kelompok_umur_L": {
+        "0-14": 111512,
+        "15-64": 379304,
+        "65+": 56026
+      },
+      "kelompok_umur_P": {
+        "0-14": 111337,
+        "15-64": 387765,
+        "65+": 63922
+      }
+    },
+    {
+      "id_bps": 3323,
+      "nama_kabupaten": "3323 Kabupaten Temanggung",
+      "total_penduduk": {
+        "Laki-laki": 398330,
+        "Perempuan": 396004,
+        "Total": 794334
+      },
+      "kelompok_umur_total": {
+        "0-14": 163538,
+        "15-64": 547906,
+        "65+": 82890
+      },
+      "kelompok_umur_L": {
+        "0-14": 85394,
+        "15-64": 275204,
+        "65+": 39189
+      },
+      "kelompok_umur_P": {
+        "0-14": 78144,
+        "15-64": 272702,
+        "65+": 45158
+      }
+    },
+    {
+      "id_bps": 3324,
+      "nama_kabupaten": "3324 Kabupaten Kendal",
+      "total_penduduk": {
+        "Laki-laki": 503785,
+        "Perempuan": 489480,
+        "Total": 993265
+      },
+      "kelompok_umur_total": {
+        "0-14": 212027,
+        "15-64": 693806,
+        "65+": 87432
+      },
+      "kelompok_umur_L": {
+        "0-14": 109492,
+        "15-64": 353356,
+        "65+": 42491
+      },
+      "kelompok_umur_P": {
+        "0-14": 102535,
+        "15-64": 340450,
+        "65+": 46495
+      }
+    },
+    {
+      "id_bps": 3325,
+      "nama_kabupaten": "3325 Kabupaten Batang",
+      "total_penduduk": {
+        "Laki-laki": 394660,
+        "Perempuan": 395273,
+        "Total": 789933
+      },
+      "kelompok_umur_total": {
+        "0-14": 167111,
+        "15-64": 550757,
+        "65+": 72065
+      },
+      "kelompok_umur_L": {
+        "0-14": 83247,
+        "15-64": 281206,
+        "65+": 31382
+      },
+      "kelompok_umur_P": {
+        "0-14": 83864,
+        "15-64": 269551,
+        "65+": 41858
+      }
+    },
+    {
+      "id_bps": 3326,
+      "nama_kabupaten": "3326 Kabupaten Pekalongan",
+      "total_penduduk": {
+        "Laki-laki": 454511,
+        "Perempuan": 459885,
+        "Total": 914396
+      },
+      "kelompok_umur_total": {
+        "0-14": 209781,
+        "15-64": 632607,
+        "65+": 72008
+      },
+      "kelompok_umur_L": {
+        "0-14": 106079,
+        "15-64": 315026,
+        "65+": 34658
+      },
+      "kelompok_umur_P": {
+        "0-14": 103702,
+        "15-64": 317581,
+        "65+": 38602
+      }
+    },
+    {
+      "id_bps": 3327,
+      "nama_kabupaten": "3327 Kabupaten Pemalang",
+      "total_penduduk": {
+        "Laki-laki": 644661,
+        "Perempuan": 656875,
+        "Total": 1301536
+      },
+      "kelompok_umur_total": {
+        "0-14": 298614,
+        "15-64": 882192,
+        "65+": 120730
+      },
+      "kelompok_umur_L": {
+        "0-14": 149646,
+        "15-64": 438887,
+        "65+": 57978
+      },
+      "kelompok_umur_P": {
+        "0-14": 148968,
+        "15-64": 443305,
+        "65+": 64602
+      }
+    },
+    {
+      "id_bps": 3328,
+      "nama_kabupaten": "3328 Kabupaten Tegal",
+      "total_penduduk": {
+        "Laki-laki": 715605,
+        "Perempuan": 723193,
+        "Total": 1438798
+      },
+      "kelompok_umur_total": {
+        "0-14": 337831,
+        "15-64": 963868,
+        "65+": 137099
+      },
+      "kelompok_umur_L": {
+        "0-14": 168876,
+        "15-64": 485701,
+        "65+": 63047
+      },
+      "kelompok_umur_P": {
+        "0-14": 168955,
+        "15-64": 478167,
+        "65+": 76071
+      }
+    },
+    {
+      "id_bps": 3329,
+      "nama_kabupaten": "3329 Kabupaten Brebes",
+      "total_penduduk": {
+        "Laki-laki": 913562,
+        "Perempuan": 903402,
+        "Total": 1816964
+      },
+      "kelompok_umur_total": {
+        "0-14": 415598,
+        "15-64": 1233727,
+        "65+": 167639
+      },
+      "kelompok_umur_L": {
+        "0-14": 211670,
+        "15-64": 625377,
+        "65+": 79136
+      },
+      "kelompok_umur_P": {
+        "0-14": 203928,
+        "15-64": 608350,
+        "65+": 91124
+      }
+    },
+    {
+      "id_bps": 3371,
+      "nama_kabupaten": "3371 Kota Magelang",
+      "total_penduduk": {
+        "Laki-laki": 60147,
+        "Perempuan": 61890,
+        "Total": 122037
+      },
+      "kelompok_umur_total": {
+        "0-14": 22390,
+        "15-64": 87355,
+        "65+": 12292
+      },
+      "kelompok_umur_L": {
+        "0-14": 11395,
+        "15-64": 43389,
+        "65+": 5539
+      },
+      "kelompok_umur_P": {
+        "0-14": 10995,
+        "15-64": 43966,
+        "65+": 6929
+      }
+    },
+    {
+      "id_bps": 3372,
+      "nama_kabupaten": "3372 Kota Surakarta",
+      "total_penduduk": {
+        "Laki-laki": 253569,
+        "Perempuan": 267547,
+        "Total": 521116
+      },
+      "kelompok_umur_total": {
+        "0-14": 98329,
+        "15-64": 376388,
+        "65+": 46399
+      },
+      "kelompok_umur_L": {
+        "0-14": 49100,
+        "15-64": 183989,
+        "65+": 21175
+      },
+      "kelompok_umur_P": {
+        "0-14": 49229,
+        "15-64": 192399,
+        "65+": 25919
+      }
+    },
+    {
+      "id_bps": 3373,
+      "nama_kabupaten": "3373 Kota Salatiga",
+      "total_penduduk": {
+        "Laki-laki": 100214,
+        "Perempuan": 104530,
+        "Total": 204744
+      },
+      "kelompok_umur_total": {
+        "0-14": 40564,
+        "15-64": 145899,
+        "65+": 18281
+      },
+      "kelompok_umur_L": {
+        "0-14": 20215,
+        "15-64": 72508,
+        "65+": 7833
+      },
+      "kelompok_umur_P": {
+        "0-14": 20349,
+        "15-64": 73391,
+        "65+": 10790
+      }
+    },
+    {
+      "id_bps": 3374,
+      "nama_kabupaten": "3374 Kota Semarang",
+      "total_penduduk": {
+        "Laki-laki": 949719,
+        "Perempuan": 988524,
+        "Total": 1938243
+      },
+      "kelompok_umur_total": {
+        "0-14": 389143,
+        "15-64": 1427448,
+        "65+": 121652
+      },
+      "kelompok_umur_L": {
+        "0-14": 197930,
+        "15-64": 696779,
+        "65+": 57665
+      },
+      "kelompok_umur_P": {
+        "0-14": 191213,
+        "15-64": 730669,
+        "65+": 66642
+      }
+    },
+    {
+      "id_bps": 3375,
+      "nama_kabupaten": "3375 Kota Pekalongan",
+      "total_penduduk": {
+        "Laki-laki": 157698,
+        "Perempuan": 158285,
+        "Total": 315983
+      },
+      "kelompok_umur_total": {
+        "0-14": 69511,
+        "15-64": 225895,
+        "65+": 20577
+      },
+      "kelompok_umur_L": {
+        "0-14": 34184,
+        "15-64": 115298,
+        "65+": 8553
+      },
+      "kelompok_umur_P": {
+        "0-14": 35327,
+        "15-64": 110597,
+        "65+": 12361
+      }
+    },
+    {
+      "id_bps": 3376,
+      "nama_kabupaten": "3376 Kota Tegal",
+      "total_penduduk": {
+        "Laki-laki": 124308,
+        "Perempuan": 126584,
+        "Total": 250892
+      },
+      "kelompok_umur_total": {
+        "0-14": 57125,
+        "15-64": 173820,
+        "65+": 19947
+      },
+      "kelompok_umur_L": {
+        "0-14": 29112,
+        "15-64": 86338,
+        "65+": 9160
+      },
+      "kelompok_umur_P": {
+        "0-14": 28013,
+        "15-64": 87482,
+        "65+": 11089
+      }
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "domain_bps": 3313,
+  "tahun": 2024,
+  "nama_kabupaten": "Karanganyar",
+  "kecamatan_data": [
+    {
+      "id_bps": 1300,
+      "nama_kecamatan": "Kabupaten Karanganyar",
+      "total_penduduk": {
+        "Laki-laki": 479433,
+        "Perempuan": 460858,
+        "Total": 940291
+      }
+    },
+    {
+      "id_bps": 1301,
+      "nama_kecamatan": "Kecamatan Jatipuro",
+      "total_penduduk": {
+        "Laki-laki": 17797,
+        "Perempuan": 17852,
+        "Total": 35649
+      }
+    },
+    {
+      "id_bps": 1302,
+      "nama_kecamatan": "Kecamatan Jatiyoso",
+      "total_penduduk": {
+        "Laki-laki": 20246,
+        "Perempuan": 19967,
+        "Total": 40213
+      }
+    },
+    {
+      "id_bps": 1303,
+      "nama_kecamatan": "Kecamatan Jumapolo",
+      "total_penduduk": {
+        "Laki-laki": 22182,
+        "Perempuan": 21977,
+        "Total": 44159
+      }
+    },
+    {
+      "id_bps": 1304,
+      "nama_kecamatan": "Kecamatan Jumantono",
+      "total_penduduk": {
+        "Laki-laki": 25610,
+        "Perempuan": 25613,
+        "Total": 51223
+      }
+    },
+    {
+      "id_bps": 1305,
+      "nama_kecamatan": "Kecamatan Matesih",
+      "total_penduduk": {
+        "Laki-laki": 22803,
+        "Perempuan": 22781,
+        "Total": 45584
+      }
+    },
+    {
+      "id_bps": 1306,
+      "nama_kecamatan": "Kecamatan Tawangmangu",
+      "total_penduduk": {
+        "Laki-laki": 23985,
+        "Perempuan": 2402,
+        "Total": 26387
+      }
+    },
+    {
+      "id_bps": 1307,
+      "nama_kecamatan": "Kecamatan Ngargoyoso",
+      "total_penduduk": {
+        "Laki-laki": 19003,
+        "Perempuan": 18972,
+        "Total": 37975
+      }
+    },
+    {
+      "id_bps": 1308,
+      "nama_kecamatan": "Kecamatan Karangpandan",
+      "total_penduduk": {
+        "Laki-laki": 22113,
+        "Perempuan": 22503,
+        "Total": 44616
+      }
+    },
+    {
+      "id_bps": 1309,
+      "nama_kecamatan": "Kecamatan Karanganyar",
+      "total_penduduk": {
+        "Laki-laki": 43257,
+        "Perempuan": 43668,
+        "Total": 86925
+      }
+    },
+    {
+      "id_bps": 1310,
+      "nama_kecamatan": "Kecamatan Tasikmadu",
+      "total_penduduk": {
+        "Laki-laki": 34528,
+        "Perempuan": 34908,
+        "Total": 69436
+      }
+    },
+    {
+      "id_bps": 1311,
+      "nama_kecamatan": "Kecamatan Jaten",
+      "total_penduduk": {
+        "Laki-laki": 42679,
+        "Perempuan": 43693,
+        "Total": 86372
+      }
+    },
+    {
+      "id_bps": 1312,
+      "nama_kecamatan": "Kecamatan Colomadu",
+      "total_penduduk": {
+        "Laki-laki": 37737,
+        "Perempuan": 38887,
+        "Total": 76624
+      }
+    },
+    {
+      "id_bps": 1313,
+      "nama_kecamatan": "Kecamatan Gondangrejo",
+      "total_penduduk": {
+        "Laki-laki": 45963,
+        "Perempuan": 44883,
+        "Total": 90846
+      }
+    },
+    {
+      "id_bps": 1314,
+      "nama_kecamatan": "Kecamatan Kebakramat",
+      "total_penduduk": {
+        "Laki-laki": 32345,
+        "Perempuan": 33194,
+        "Total": 65539
+      }
+    },
+    {
+      "id_bps": 1315,
+      "nama_kecamatan": "Kecamatan Mojogedang",
+      "total_penduduk": {
+        "Laki-laki": 36053,
+        "Perempuan": 36283,
+        "Total": 72336
+      }
+    },
+    {
+      "id_bps": 1316,
+      "nama_kecamatan": "Kecamatan Kerjo",
+      "total_penduduk": {
+        "Laki-laki": 19257,
+        "Perempuan": 19339,
+        "Total": 38596
+      }
+    },
+    {
+      "id_bps": 1317,
+      "nama_kecamatan": "Kecamatan Jenawi",
+      "total_penduduk": {
+        "Laki-laki": 13875,
+        "Perempuan": 13936,
+        "Total": 27811
+      }
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
+node_modules/
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -14,11 +14,11 @@
 /coverage
 
 # next.js
-/.next/
-/out/
+.next/
+out/
 
 # production
-/build
+build/
 
 # misc
 .DS_Store
@@ -66,3 +66,15 @@ Thumbs.db
 test-*.json
 test-api.js
 test-results*
+bps_edits.json
+
+# Temporary scripts & junk
+scratch/
+out.html
+*.tsbuildinfo
+*.zip
+*.log
+
+# Database backups
+backend/data/db_backup/
+backend/data/db_old/

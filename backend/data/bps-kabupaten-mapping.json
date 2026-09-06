@@ -1,0 +1,212 @@
+{
+  "3301": {
+    "gender_var_id": 604,
+    "umur_var_id": 604,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3302": {
+    "gender_var_id": 33,
+    "umur_var_id": 205,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3303": {
+    "gender_var_id": 235,
+    "umur_var_id": 610,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3304": {
+    "gender_var_id": 168,
+    "umur_var_id": 290,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3305": {
+    "gender_var_id": 51,
+    "umur_var_id": 49,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3306": {
+    "gender_var_id": 32,
+    "umur_var_id": null,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": false
+  },
+  "3307": {
+    "gender_var_id": 103,
+    "umur_var_id": 104,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3308": {
+    "gender_var_id": 1002,
+    "umur_var_id": 772,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3309": {
+    "gender_var_id": 310,
+    "umur_var_id": 589,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3310": {
+    "gender_var_id": 866,
+    "umur_var_id": 868,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3311": {
+    "gender_var_id": 360,
+    "umur_var_id": 370,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": false
+  },
+  "3312": {
+    "gender_var_id": 28,
+    "umur_var_id": 175,
+    "gender_has_kecamatan": false,
+    "umur_has_kecamatan": true
+  },
+  "3313": {
+    "gender_var_id": 462,
+    "umur_var_id": 505,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3314": {
+    "gender_var_id": 267,
+    "umur_var_id": 267,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3315": {
+    "gender_var_id": 346,
+    "umur_var_id": 346,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3316": {
+    "gender_var_id": 506,
+    "umur_var_id": 244,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3317": {
+    "gender_var_id": 553,
+    "umur_var_id": 553,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3318": {
+    "gender_var_id": 34,
+    "umur_var_id": 396,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3319": {
+    "gender_var_id": 43,
+    "umur_var_id": 260,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3320": {
+    "gender_var_id": 488,
+    "umur_var_id": 488,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3321": {
+    "gender_var_id": 249,
+    "umur_var_id": 118,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": false
+  },
+  "3322": {
+    "gender_var_id": 254,
+    "umur_var_id": null,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": false
+  },
+  "3323": {
+    "gender_var_id": 32,
+    "umur_var_id": 186,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": false
+  },
+  "3324": {
+    "gender_var_id": 754,
+    "umur_var_id": 754,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3325": {
+    "gender_var_id": 30,
+    "umur_var_id": 194,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": false
+  },
+  "3326": {
+    "gender_var_id": 255,
+    "umur_var_id": 251,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3327": {
+    "gender_var_id": 103,
+    "umur_var_id": 314,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3328": {
+    "gender_var_id": 774,
+    "umur_var_id": 591,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3329": {
+    "gender_var_id": 83,
+    "umur_var_id": 426,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3371": {
+    "gender_var_id": 318,
+    "umur_var_id": 318,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": false
+  },
+  "3372": {
+    "gender_var_id": 856,
+    "umur_var_id": 872,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3373": {
+    "gender_var_id": null,
+    "umur_var_id": null,
+    "gender_has_kecamatan": false,
+    "umur_has_kecamatan": false
+  },
+  "3374": {
+    "gender_var_id": 443,
+    "umur_var_id": 443,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3375": {
+    "gender_var_id": 465,
+    "umur_var_id": 172,
+    "gender_has_kecamatan": true,
+    "umur_has_kecamatan": true
+  },
+  "3376": {
+    "gender_var_id": null,
+    "umur_var_id": 43,
+    "gender_has_kecamatan": false,
+    "umur_has_kecamatan": true
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "domain_bps": 3315,
+  "tahun": 2024,
+  "nama_kabupaten": "Grobogan",
+  "kecamatan_data": [
+    {
+      "id_bps": 326,
+      "nama_kecamatan": "Kedungjati",
+      "total_penduduk": {
+        "Laki-laki": 22910,
+        "Perempuan": 22723,
+        "Total": 45633
+      }
+    },
+    {
+      "id_bps": 329,
+      "nama_kecamatan": "Karangrayung",
+      "total_penduduk": {
+        "Laki-laki": 53340,
+        "Perempuan": 52274,
+        "Total": 105614
+      }
+    },
+    {
+      "id_bps": 330,
+      "nama_kecamatan": "Penawangan",
+      "total_penduduk": {
+        "Laki-laki": 34169,
+        "Perempuan": 33636,
+        "Total": 67805
+      }
+    },
+    {
+      "id_bps": 331,
+      "nama_kecamatan": "Toroh",
+      "total_penduduk": {
+        "Laki-laki": 60941,
+        "Perempuan": 60864,
+        "Total": 121805
+      }
+    },
+    {
+      "id_bps": 326,
+      "nama_kecamatan": "Gayer",
+      "total_penduduk": {
+        "Laki-laki": 22910,
+        "Perempuan": 22723,
+        "Total": 45633
+      }
+    },
+    {
+      "id_bps": 333,
+      "nama_kecamatan": "Pulokulon",
+      "total_penduduk": {
+        "Laki-laki": 57663,
+        "Perempuan": 56473,
+        "Total": 114136
+      }
+    },
+    {
+      "id_bps": 334,
+      "nama_kecamatan": "Kradenan",
+      "total_penduduk": {
+        "Laki-laki": 43465,
+        "Perempuan": 43019,
+        "Total": 86484
+      }
+    },
+    {
+      "id_bps": 335,
+      "nama_kecamatan": "Gabus",
+      "total_penduduk": {
+        "Laki-laki": 38439,
+        "Perempuan": 38036,
+        "Total": 76475
+      }
+    },
+    {
+      "id_bps": 336,
+      "nama_kecamatan": "Ngaringan",
+      "total_penduduk": {
+        "Laki-laki": 36788,
+        "Perempuan": 35515,
+        "Total": 72303
+      }
+    },
+    {
+      "id_bps": 337,
+      "nama_kecamatan": "Wirosari",
+      "total_penduduk": {
+        "Laki-laki": 49067,
+        "Perempuan": 48405,
+        "Total": 97472
+      }
+    },
+    {
+      "id_bps": 338,
+      "nama_kecamatan": "Tawangharjo",
+      "total_penduduk": {
+        "Laki-laki": 30962,
+        "Perempuan": 30173,
+        "Total": 61135
+      }
+    },
+    {
+      "id_bps": 339,
+      "nama_kecamatan": "Grobogan",
+      "total_penduduk": {
+        "Laki-laki": 41468,
+        "Perempuan": 40604,
+        "Total": 82072
+      }
+    },
+    {
+      "id_bps": 340,
+      "nama_kecamatan": "Purwodadi",
+      "total_penduduk": {
+        "Laki-laki": 72157,
+        "Perempuan": 72523,
+        "Total": 144680
+      }
+    },
+    {
+      "id_bps": 341,
+      "nama_kecamatan": "Brati",
+      "total_penduduk": {
+        "Laki-laki": 26818,
+        "Perempuan": 26145,
+        "Total": 52963
+      }
+    },
+    {
+      "id_bps": 342,
+      "nama_kecamatan": "Klambu",
+      "total_penduduk": {
+        "Laki-laki": 20307,
+        "Perempuan": 19880,
+        "Total": 40187
+      }
+    },
+    {
+      "id_bps": 343,
+      "nama_kecamatan": "Godong",
+      "total_penduduk": {
+        "Laki-laki": 45195,
+        "Perempuan": 44983,
+        "Total": 90178
+      }
+    },
+    {
+      "id_bps": 344,
+      "nama_kecamatan": "Gubug",
+      "total_penduduk": {
+        "Laki-laki": 44395,
+        "Perempuan": 44118,
+        "Total": 88513
+      }
+    },
+    {
+      "id_bps": 345,
+      "nama_kecamatan": "Tegowanu",
+      "total_penduduk": {
+        "Laki-laki": 30529,
+        "Perempuan": 30199,
+        "Total": 60728
+      }
+    },
+    {
+      "id_bps": 346,
+      "nama_kecamatan": "Tanggungharjo",
+      "total_penduduk": {
+        "Laki-laki": 22255,
+        "Perempuan": 21964,
+        "Total": 44219
+      }
+    },
+    {
+      "id_bps": 347,
+      "nama_kecamatan": "Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kabupaten Grobogan",
+      "total_penduduk": {
+        "Laki-laki": 765275,
+        "Perempuan": 755699,
+        "Total": 1520974
+      }
+    }
+  ]
+}

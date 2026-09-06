@@ -1,0 +1,43 @@
+{
+  "domain_bps": 3373,
+  "tahun": 2018,
+  "nama_kabupaten": "Kota Salatiga",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Argomulyo",
+      "total_penduduk": {
+        "Laki-laki": 22318,
+        "Perempuan": 23031,
+        "Total": 45349
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Tingkir",
+      "total_penduduk": {
+        "Laki-laki": 21840,
+        "Perempuan": 22771,
+        "Total": 44611
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Sidomukti",
+      "total_penduduk": {
+        "Laki-laki": 21494,
+        "Perempuan": 22174,
+        "Total": 43668
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Sidorejo",
+      "total_penduduk": {
+        "Laki-laki": 28066,
+        "Perempuan": 29877,
+        "Total": 57943
+      }
+    }
+  ]
+}

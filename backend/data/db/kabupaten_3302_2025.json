@@ -1,0 +1,259 @@
+{
+  "domain_bps": 3302,
+  "tahun": 2025,
+  "nama_kabupaten": "Banyumas",
+  "kecamatan_data": [
+    {
+      "id_bps": 3302000,
+      "nama_kecamatan": "Kabupaten Banyumas",
+      "total_penduduk": {
+        "Laki-laki": 937725,
+        "Perempuan": 927545,
+        "Total": 1865270
+      }
+    },
+    {
+      "id_bps": 3302010,
+      "nama_kecamatan": "Lumbir",
+      "total_penduduk": {
+        "Laki-laki": 26305,
+        "Perempuan": 25662,
+        "Total": 51967
+      }
+    },
+    {
+      "id_bps": 3302020,
+      "nama_kecamatan": "Wangon",
+      "total_penduduk": {
+        "Laki-laki": 43958,
+        "Perempuan": 43066,
+        "Total": 87024
+      }
+    },
+    {
+      "id_bps": 3302030,
+      "nama_kecamatan": "Jatilawang",
+      "total_penduduk": {
+        "Laki-laki": 35124,
+        "Perempuan": 34491,
+        "Total": 69615
+      }
+    },
+    {
+      "id_bps": 3302040,
+      "nama_kecamatan": "Rawalo",
+      "total_penduduk": {
+        "Laki-laki": 27981,
+        "Perempuan": 27469,
+        "Total": 55450
+      }
+    },
+    {
+      "id_bps": 3302050,
+      "nama_kecamatan": "Kebasen",
+      "total_penduduk": {
+        "Laki-laki": 36116,
+        "Perempuan": 35401,
+        "Total": 71517
+      }
+    },
+    {
+      "id_bps": 3302060,
+      "nama_kecamatan": "Kemranjen",
+      "total_penduduk": {
+        "Laki-laki": 38388,
+        "Perempuan": 37334,
+        "Total": 75722
+      }
+    },
+    {
+      "id_bps": 3302070,
+      "nama_kecamatan": "Sumpiuh",
+      "total_penduduk": {
+        "Laki-laki": 30411,
+        "Perempuan": 29942,
+        "Total": 60353
+      }
+    },
+    {
+      "id_bps": 3302080,
+      "nama_kecamatan": "Tambak",
+      "total_penduduk": {
+        "Laki-laki": 26510,
+        "Perempuan": 26753,
+        "Total": 53263
+      }
+    },
+    {
+      "id_bps": 3302090,
+      "nama_kecamatan": "Somagede",
+      "total_penduduk": {
+        "Laki-laki": 19709,
+        "Perempuan": 19876,
+        "Total": 39585
+      }
+    },
+    {
+      "id_bps": 3302100,
+      "nama_kecamatan": "Kalibagor",
+      "total_penduduk": {
+        "Laki-laki": 30712,
+        "Perempuan": 30553,
+        "Total": 61265
+      }
+    },
+    {
+      "id_bps": 3302110,
+      "nama_kecamatan": "Banyumas",
+      "total_penduduk": {
+        "Laki-laki": 27552,
+        "Perempuan": 27740,
+        "Total": 55292
+      }
+    },
+    {
+      "id_bps": 3302120,
+      "nama_kecamatan": "Patikraja",
+      "total_penduduk": {
+        "Laki-laki": 32151,
+        "Perempuan": 32433,
+        "Total": 64584
+      }
+    },
+    {
+      "id_bps": 3302130,
+      "nama_kecamatan": "Purwojati",
+      "total_penduduk": {
+        "Laki-laki": 19791,
+        "Perempuan": 19540,
+        "Total": 39331
+      }
+    },
+    {
+      "id_bps": 3302140,
+      "nama_kecamatan": "Ajibarang",
+      "total_penduduk": {
+        "Laki-laki": 53691,
+        "Perempuan": 52367,
+        "Total": 106058
+      }
+    },
+    {
+      "id_bps": 3302150,
+      "nama_kecamatan": "Gumelar",
+      "total_penduduk": {
+        "Laki-laki": 28346,
+        "Perempuan": 27956,
+        "Total": 56302
+      }
+    },
+    {
+      "id_bps": 3302160,
+      "nama_kecamatan": "Pekuncen",
+      "total_penduduk": {
+        "Laki-laki": 40499,
+        "Perempuan": 38985,
+        "Total": 79484
+      }
+    },
+    {
+      "id_bps": 3302170,
+      "nama_kecamatan": "Cilongok",
+      "total_penduduk": {
+        "Laki-laki": 65491,
+        "Perempuan": 64135,
+        "Total": 129626
+      }
+    },
+    {
+      "id_bps": 3302180,
+      "nama_kecamatan": "Karanglewas",
+      "total_penduduk": {
+        "Laki-laki": 35740,
+        "Perempuan": 35096,
+        "Total": 70836
+      }
+    },
+    {
+      "id_bps": 3302190,
+      "nama_kecamatan": "Kedungbanteng",
+      "total_penduduk": {
+        "Laki-laki": 32893,
+        "Perempuan": 33011,
+        "Total": 65904
+      }
+    },
+    {
+      "id_bps": 3302200,
+      "nama_kecamatan": "Baturraden",
+      "total_penduduk": {
+        "Laki-laki": 27771,
+        "Perempuan": 27617,
+        "Total": 55388
+      }
+    },
+    {
+      "id_bps": 3302210,
+      "nama_kecamatan": "Sumbang",
+      "total_penduduk": {
+        "Laki-laki": 51056,
+        "Perempuan": 49906,
+        "Total": 100962
+      }
+    },
+    {
+      "id_bps": 3302220,
+      "nama_kecamatan": "Kembaran",
+      "total_penduduk": {
+        "Laki-laki": 42741,
+        "Perempuan": 41785,
+        "Total": 84526
+      }
+    },
+    {
+      "id_bps": 3302230,
+      "nama_kecamatan": "Sokaraja",
+      "total_penduduk": {
+        "Laki-laki": 46537,
+        "Perempuan": 46739,
+        "Total": 93276
+      }
+    },
+    {
+      "id_bps": 3302710,
+      "nama_kecamatan": "Purwokerto Selatan",
+      "total_penduduk": {
+        "Laki-laki": 37759,
+        "Perempuan": 37847,
+        "Total": 75606
+      }
+    },
+    {
+      "id_bps": 3302720,
+      "nama_kecamatan": "Purwokerto Barat",
+      "total_penduduk": {
+        "Laki-laki": 27248,
+        "Perempuan": 27342,
+        "Total": 54590
+      }
+    },
+    {
+      "id_bps": 3302730,
+      "nama_kecamatan": "Purwokerto Timur",
+      "total_penduduk": {
+        "Laki-laki": 28035,
+        "Perempuan": 28399,
+        "Total": 56434
+      }
+    },
+    {
+      "id_bps": 3302740,
+      "nama_kecamatan": "Purwokerto Utara",
+      "total_penduduk": {
+        "Laki-laki": 25210,
+        "Perempuan": 26100,
+        "Total": 51310
+      }
+    }
+  ]
+}

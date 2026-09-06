@@ -1,0 +1,115 @@
+{
+  "domain_bps": 3311,
+  "tahun": 2025,
+  "nama_kabupaten": "Sukoharjo",
+  "kecamatan_data": [
+    {
+      "id_bps": 270,
+      "nama_kecamatan": "Weru",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 57638
+      }
+    },
+    {
+      "id_bps": 271,
+      "nama_kecamatan": "Bulu",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 37563
+      }
+    },
+    {
+      "id_bps": 272,
+      "nama_kecamatan": "Tawangsari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 54888
+      }
+    },
+    {
+      "id_bps": 273,
+      "nama_kecamatan": "Sukoharjo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 101476
+      }
+    },
+    {
+      "id_bps": 274,
+      "nama_kecamatan": "Nguter",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 58011
+      }
+    },
+    {
+      "id_bps": 275,
+      "nama_kecamatan": "Bendosari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 66703
+      }
+    },
+    {
+      "id_bps": 270,
+      "nama_kecamatan": "Polokarta",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 57638
+      }
+    },
+    {
+      "id_bps": 277,
+      "nama_kecamatan": "Mojolaban",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 101852
+      }
+    },
+    {
+      "id_bps": 278,
+      "nama_kecamatan": "Grogol",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 128077
+      }
+    },
+    {
+      "id_bps": 279,
+      "nama_kecamatan": "Baki",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 80477
+      }
+    },
+    {
+      "id_bps": 280,
+      "nama_kecamatan": "Gatak",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 58448
+      }
+    },
+    {
+      "id_bps": 281,
+      "nama_kecamatan": "Kartasura",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 116128
+      }
+    }
+  ]
+}

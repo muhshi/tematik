@@ -1,0 +1,169 @@
+{
+  "domain_bps": 3329,
+  "tahun": 2017,
+  "nama_kabupaten": "Brebes",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Kabupaten Brebes",
+      "total_penduduk": {
+        "Laki-laki": 902397,
+        "Perempuan": 893607,
+        "Total": 1796004
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Salem",
+      "total_penduduk": {
+        "Laki-laki": 29798,
+        "Perempuan": 30318,
+        "Total": 60116
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Bantarkawung",
+      "total_penduduk": {
+        "Laki-laki": 43503,
+        "Perempuan": 45819,
+        "Total": 89322
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Bumiayu",
+      "total_penduduk": {
+        "Laki-laki": 48465,
+        "Perempuan": 49694,
+        "Total": 98159
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Paguyangan",
+      "total_penduduk": {
+        "Laki-laki": 50951,
+        "Perempuan": 50090,
+        "Total": 101041
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Sirampog",
+      "total_penduduk": {
+        "Laki-laki": 31932,
+        "Perempuan": 32360,
+        "Total": 64292
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Tonjong",
+      "total_penduduk": {
+        "Laki-laki": 33132,
+        "Perempuan": 33427,
+        "Total": 66559
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Larangan",
+      "total_penduduk": {
+        "Laki-laki": 71285,
+        "Perempuan": 68812,
+        "Total": 140097
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Ketanggungan",
+      "total_penduduk": {
+        "Laki-laki": 68646,
+        "Perempuan": 69399,
+        "Total": 138045
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Banjarharjo",
+      "total_penduduk": {
+        "Laki-laki": 61020,
+        "Perempuan": 60995,
+        "Total": 122015
+      }
+    },
+    {
+      "id_bps": 100,
+      "nama_kecamatan": "Losari",
+      "total_penduduk": {
+        "Laki-laki": 62500,
+        "Perempuan": 60305,
+        "Total": 122805
+      }
+    },
+    {
+      "id_bps": 110,
+      "nama_kecamatan": "Tanjung",
+      "total_penduduk": {
+        "Laki-laki": 48803,
+        "Perempuan": 47604,
+        "Total": 96407
+      }
+    },
+    {
+      "id_bps": 120,
+      "nama_kecamatan": "Kersana",
+      "total_penduduk": {
+        "Laki-laki": 29411,
+        "Perempuan": 29743,
+        "Total": 59154
+      }
+    },
+    {
+      "id_bps": 130,
+      "nama_kecamatan": "Bulakamba",
+      "total_penduduk": {
+        "Laki-laki": 86523,
+        "Perempuan": 84007,
+        "Total": 170530
+      }
+    },
+    {
+      "id_bps": 140,
+      "nama_kecamatan": "Wanasari",
+      "total_penduduk": {
+        "Laki-laki": 77127,
+        "Perempuan": 73869,
+        "Total": 150996
+      }
+    },
+    {
+      "id_bps": 150,
+      "nama_kecamatan": "Songgom",
+      "total_penduduk": {
+        "Laki-laki": 35622,
+        "Perempuan": 34139,
+        "Total": 69761
+      }
+    },
+    {
+      "id_bps": 160,
+      "nama_kecamatan": "Jatibarang",
+      "total_penduduk": {
+        "Laki-laki": 43346,
+        "Perempuan": 43019,
+        "Total": 86365
+      }
+    },
+    {
+      "id_bps": 170,
+      "nama_kecamatan": "Brebes",
+      "total_penduduk": {
+        "Laki-laki": 80333,
+        "Perempuan": 80007,
+        "Total": 160340
+      }
+    }
+  ]
+}

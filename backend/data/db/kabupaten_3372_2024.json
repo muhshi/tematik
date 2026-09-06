@@ -1,0 +1,538 @@
+{
+  "domain_bps": 3372,
+  "tahun": 2024,
+  "nama_kabupaten": "Kota Surakarta",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "1. Pajang",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 88941
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "2. Laweyan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 48437
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "3. Bumi",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 79726
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "4. Panularan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 139295
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "5. Sriwedari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 171645
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "6. Penumping",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 528044
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "7. Purwosari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 10354
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "8. Sondakan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 12374
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "9. Kerten",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 9568
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "10. Jajar",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 9491
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "11. Karangasem",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 10658
+      }
+    },
+    {
+      "id_bps": 12,
+      "nama_kecamatan": "Kecamatan Laweyan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 104453
+      }
+    },
+    {
+      "id_bps": 13,
+      "nama_kecamatan": "1. Joyotakan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 8141
+      }
+    },
+    {
+      "id_bps": 14,
+      "nama_kecamatan": "2. Danukusuman",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 10180
+      }
+    },
+    {
+      "id_bps": 15,
+      "nama_kecamatan": "3. Serengan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 10982
+      }
+    },
+    {
+      "id_bps": 16,
+      "nama_kecamatan": "4. Tipes",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 12395
+      }
+    },
+    {
+      "id_bps": 17,
+      "nama_kecamatan": "5. Kratonan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 5456
+      }
+    },
+    {
+      "id_bps": 18,
+      "nama_kecamatan": "6. Jayengan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 3924
+      }
+    },
+    {
+      "id_bps": 19,
+      "nama_kecamatan": "7. Kemlayan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 3754
+      }
+    },
+    {
+      "id_bps": 20,
+      "nama_kecamatan": "Kecamatan Serengan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 54832
+      }
+    },
+    {
+      "id_bps": 21,
+      "nama_kecamatan": "1. Joyosuran",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 10702
+      }
+    },
+    {
+      "id_bps": 22,
+      "nama_kecamatan": "2. Semanggi",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 23540
+      }
+    },
+    {
+      "id_bps": 23,
+      "nama_kecamatan": "3. Pasar Kliwon",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 5565
+      }
+    },
+    {
+      "id_bps": 24,
+      "nama_kecamatan": "4. Baluwarti",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 6539
+      }
+    },
+    {
+      "id_bps": 25,
+      "nama_kecamatan": "5. Gajahan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 3888
+      }
+    },
+    {
+      "id_bps": 26,
+      "nama_kecamatan": "6. Kauman",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 2692
+      }
+    },
+    {
+      "id_bps": 27,
+      "nama_kecamatan": "7. Kampung Baru",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 2986
+      }
+    },
+    {
+      "id_bps": 28,
+      "nama_kecamatan": "8. Kedung Lumbu",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 5482
+      }
+    },
+    {
+      "id_bps": 29,
+      "nama_kecamatan": "9. Sangkrah",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 12826
+      }
+    },
+    {
+      "id_bps": 30,
+      "nama_kecamatan": "10. Mojo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 14574
+      }
+    },
+    {
+      "id_bps": 31,
+      "nama_kecamatan": "Kecamatan Pasar Kliwon",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 88794
+      }
+    },
+    {
+      "id_bps": 32,
+      "nama_kecamatan": "1. Kepatihan Kulon",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 2578
+      }
+    },
+    {
+      "id_bps": 33,
+      "nama_kecamatan": "2. Kepatihan Wetan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 2626
+      }
+    },
+    {
+      "id_bps": 34,
+      "nama_kecamatan": "3. Sudiroprajan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 3787
+      }
+    },
+    {
+      "id_bps": 35,
+      "nama_kecamatan": "4. Gandekan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 9158
+      }
+    },
+    {
+      "id_bps": 36,
+      "nama_kecamatan": "5. Sewu",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 7145
+      }
+    },
+    {
+      "id_bps": 37,
+      "nama_kecamatan": "6. Pucangsawit",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 14482
+      }
+    },
+    {
+      "id_bps": 38,
+      "nama_kecamatan": "7. Jagalan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 12247
+      }
+    },
+    {
+      "id_bps": 39,
+      "nama_kecamatan": "8. Purwodiningratan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 4971
+      }
+    },
+    {
+      "id_bps": 40,
+      "nama_kecamatan": "9. Tegalharjo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 5104
+      }
+    },
+    {
+      "id_bps": 41,
+      "nama_kecamatan": "10. Jebres",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 34053
+      }
+    },
+    {
+      "id_bps": 42,
+      "nama_kecamatan": "11. Mojosongo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 55730
+      }
+    },
+    {
+      "id_bps": 43,
+      "nama_kecamatan": "Kecamatan Jebres",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 151881
+      }
+    },
+    {
+      "id_bps": 44,
+      "nama_kecamatan": "1. Mangkubumen",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 9875
+      }
+    },
+    {
+      "id_bps": 45,
+      "nama_kecamatan": "2. Timuran",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 2879
+      }
+    },
+    {
+      "id_bps": 46,
+      "nama_kecamatan": "3. Keprabon",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 2995
+      }
+    },
+    {
+      "id_bps": 47,
+      "nama_kecamatan": "4. Ketelan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 3482
+      }
+    },
+    {
+      "id_bps": 48,
+      "nama_kecamatan": "5. Punggawan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 4315
+      }
+    },
+    {
+      "id_bps": 49,
+      "nama_kecamatan": "6. Kestalan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 2850
+      }
+    },
+    {
+      "id_bps": 50,
+      "nama_kecamatan": "7. Setabelan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 4174
+      }
+    },
+    {
+      "id_bps": 51,
+      "nama_kecamatan": "8. Gilingan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 20828
+      }
+    },
+    {
+      "id_bps": 52,
+      "nama_kecamatan": "9. Manahan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 11702
+      }
+    },
+    {
+      "id_bps": 53,
+      "nama_kecamatan": "10. Sumber",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 19054
+      }
+    },
+    {
+      "id_bps": 54,
+      "nama_kecamatan": "11. Nusukan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 31400
+      }
+    },
+    {
+      "id_bps": 55,
+      "nama_kecamatan": "12. Kadipiro",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 25090
+      }
+    },
+    {
+      "id_bps": 56,
+      "nama_kecamatan": "13. Banyuanyar",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 15890
+      }
+    },
+    {
+      "id_bps": 57,
+      "nama_kecamatan": "14. Joglo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 14053
+      }
+    },
+    {
+      "id_bps": 58,
+      "nama_kecamatan": "15. Banjarsari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 20695
+      }
+    },
+    {
+      "id_bps": 59,
+      "nama_kecamatan": "Kecamatan Banjarsari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 189282
+      }
+    }
+  ]
+}

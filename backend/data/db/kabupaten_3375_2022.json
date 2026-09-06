@@ -1,0 +1,52 @@
+{
+  "domain_bps": 3375,
+  "tahun": 2022,
+  "nama_kabupaten": "Kota Pekalongan",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Pekalongan Barat",
+      "total_penduduk": {
+        "Laki-laki": 48608,
+        "Perempuan": 47744,
+        "Total": 96352
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Pekalongan Timur",
+      "total_penduduk": {
+        "Laki-laki": 35041,
+        "Perempuan": 34657,
+        "Total": 69698
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Pekalongan Selatan",
+      "total_penduduk": {
+        "Laki-laki": 34492,
+        "Perempuan": 33706,
+        "Total": 68198
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Pekalongan Utara",
+      "total_penduduk": {
+        "Laki-laki": 40404,
+        "Perempuan": 39217,
+        "Total": 79621
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Kota Pekalongan",
+      "total_penduduk": {
+        "Laki-laki": 158545,
+        "Perempuan": 155324,
+        "Total": 313869
+      }
+    }
+  ]
+}

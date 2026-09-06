@@ -1,0 +1,160 @@
+{
+  "domain_bps": 3312,
+  "tahun": 2024,
+  "nama_kabupaten": "Wonogiri",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "0-4",
+      "total_penduduk": {
+        "Laki-laki": 2391,
+        "Perempuan": 2249,
+        "Total": 4640
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "5-9",
+      "total_penduduk": {
+        "Laki-laki": 2922,
+        "Perempuan": 2756,
+        "Total": 5678
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "10-14",
+      "total_penduduk": {
+        "Laki-laki": 3376,
+        "Perempuan": 3088,
+        "Total": 6464
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "14-19",
+      "total_penduduk": {
+        "Laki-laki": 3422,
+        "Perempuan": 3270,
+        "Total": 6692
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "20-24",
+      "total_penduduk": {
+        "Laki-laki": 3216,
+        "Perempuan": 3091,
+        "Total": 6307
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "25-29",
+      "total_penduduk": {
+        "Laki-laki": 3021,
+        "Perempuan": 2874,
+        "Total": 5895
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "30-34",
+      "total_penduduk": {
+        "Laki-laki": 2747,
+        "Perempuan": 2751,
+        "Total": 5498
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "35-39",
+      "total_penduduk": {
+        "Laki-laki": 2595,
+        "Perempuan": 2815,
+        "Total": 5410
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "40-44",
+      "total_penduduk": {
+        "Laki-laki": 3495,
+        "Perempuan": 3574,
+        "Total": 7069
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "45-49",
+      "total_penduduk": {
+        "Laki-laki": 3328,
+        "Perempuan": 3324,
+        "Total": 6652
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "50-54",
+      "total_penduduk": {
+        "Laki-laki": 3111,
+        "Perempuan": 3090,
+        "Total": 6201
+      }
+    },
+    {
+      "id_bps": 12,
+      "nama_kecamatan": "55-59",
+      "total_penduduk": {
+        "Laki-laki": 2906,
+        "Perempuan": 3074,
+        "Total": 5980
+      }
+    },
+    {
+      "id_bps": 13,
+      "nama_kecamatan": "60-64",
+      "total_penduduk": {
+        "Laki-laki": 2471,
+        "Perempuan": 2778,
+        "Total": 5249
+      }
+    },
+    {
+      "id_bps": 14,
+      "nama_kecamatan": "65-69",
+      "total_penduduk": {
+        "Laki-laki": 2101,
+        "Perempuan": 2183,
+        "Total": 4284
+      }
+    },
+    {
+      "id_bps": 15,
+      "nama_kecamatan": "70-74",
+      "total_penduduk": {
+        "Laki-laki": 1452,
+        "Perempuan": 1446,
+        "Total": 2898
+      }
+    },
+    {
+      "id_bps": 16,
+      "nama_kecamatan": ">=75",
+      "total_penduduk": {
+        "Laki-laki": 1343,
+        "Perempuan": 1770,
+        "Total": 3113
+      }
+    },
+    {
+      "id_bps": 17,
+      "nama_kecamatan": "Jumlah",
+      "total_penduduk": {
+        "Laki-laki": 43897,
+        "Perempuan": 44133,
+        "Total": 88030
+      }
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "domain_bps": 3323,
+  "tahun": 2023,
+  "nama_kabupaten": "Temanggung",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Parakan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 54158
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Kledung",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 28463
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Bansari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 24498
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Bulu",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 49751
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Temanggung",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 84294
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Tlogomulyo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 23698
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Tembarak",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 32023
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Selopampang",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 20873
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Kranggan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 50764
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Pringsurat",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 53618
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "Kaloran",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 46325
+      }
+    },
+    {
+      "id_bps": 12,
+      "nama_kecamatan": "Kandangan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 53603
+      }
+    },
+    {
+      "id_bps": 13,
+      "nama_kecamatan": "Kedu",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 60479
+      }
+    },
+    {
+      "id_bps": 14,
+      "nama_kecamatan": "Ngadirejo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 57495
+      }
+    },
+    {
+      "id_bps": 15,
+      "nama_kecamatan": "Jumo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 30376
+      }
+    },
+    {
+      "id_bps": 16,
+      "nama_kecamatan": "Gemawang",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 34155
+      }
+    },
+    {
+      "id_bps": 17,
+      "nama_kecamatan": "Candiroto",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 33127
+      }
+    },
+    {
+      "id_bps": 18,
+      "nama_kecamatan": "Bejen",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 22010
+      }
+    },
+    {
+      "id_bps": 19,
+      "nama_kecamatan": "Tretep",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 21714
+      }
+    },
+    {
+      "id_bps": 20,
+      "nama_kecamatan": "Wonoboyo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 27022
+      }
+    },
+    {
+      "id_bps": 21,
+      "nama_kecamatan": "Kabupaten Temanggung",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 808446
+      }
+    }
+  ]
+}

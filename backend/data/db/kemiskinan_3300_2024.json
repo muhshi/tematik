@@ -1,0 +1,251 @@
+{
+  "domain_bps": 3300,
+  "tahun": 2024,
+  "kabupaten_data": [
+    {
+      "id_bps": 3301,
+      "nama_kabupaten": "Kabupaten Cilacap",
+      "jumlah_penduduk_miskin_ribu_jiwa": 186.08,
+      "persentase_penduduk_miskin": 10.68,
+      "garis_kemiskinan_rp": 441093
+    },
+    {
+      "id_bps": 3302,
+      "nama_kabupaten": "Kabupaten Banyumas",
+      "jumlah_penduduk_miskin_ribu_jiwa": 207.78,
+      "persentase_penduduk_miskin": 11.95,
+      "garis_kemiskinan_rp": 500861
+    },
+    {
+      "id_bps": 3303,
+      "nama_kabupaten": "Kabupaten Purbalingga",
+      "jumlah_penduduk_miskin_ribu_jiwa": 136.72,
+      "persentase_penduduk_miskin": 14.18,
+      "garis_kemiskinan_rp": 460870
+    },
+    {
+      "id_bps": 3304,
+      "nama_kabupaten": "Kabupaten Banjarnegara",
+      "jumlah_penduduk_miskin_ribu_jiwa": 137.68,
+      "persentase_penduduk_miskin": 14.71,
+      "garis_kemiskinan_rp": 398344
+    },
+    {
+      "id_bps": 3305,
+      "nama_kabupaten": "Kabupaten Kebumen",
+      "jumlah_penduduk_miskin_ribu_jiwa": 187.95,
+      "persentase_penduduk_miskin": 15.71,
+      "garis_kemiskinan_rp": 471824
+    },
+    {
+      "id_bps": 3306,
+      "nama_kabupaten": "Kabupaten Purworejo",
+      "jumlah_penduduk_miskin_ribu_jiwa": 78.02,
+      "persentase_penduduk_miskin": 10.87,
+      "garis_kemiskinan_rp": 459253
+    },
+    {
+      "id_bps": 3307,
+      "nama_kabupaten": "Kabupaten Wonosobo",
+      "jumlah_penduduk_miskin_ribu_jiwa": 121.49,
+      "persentase_penduduk_miskin": 15.28,
+      "garis_kemiskinan_rp": 456351
+    },
+    {
+      "id_bps": 3308,
+      "nama_kabupaten": "Kabupaten Magelang",
+      "jumlah_penduduk_miskin_ribu_jiwa": 143.8,
+      "persentase_penduduk_miskin": 10.83,
+      "garis_kemiskinan_rp": 431289
+    },
+    {
+      "id_bps": 3309,
+      "nama_kabupaten": "Kabupaten Boyolali",
+      "jumlah_penduduk_miskin_ribu_jiwa": 95.96,
+      "persentase_penduduk_miskin": 9.63,
+      "garis_kemiskinan_rp": 442071
+    },
+    {
+      "id_bps": 3310,
+      "nama_kabupaten": "Kabupaten Klaten",
+      "jumlah_penduduk_miskin_ribu_jiwa": 141.84,
+      "persentase_penduduk_miskin": 12.04,
+      "garis_kemiskinan_rp": 505826
+    },
+    {
+      "id_bps": 3311,
+      "nama_kabupaten": "Kabupaten Sukoharjo",
+      "jumlah_penduduk_miskin_ribu_jiwa": 68.15,
+      "persentase_penduduk_miskin": 7.47,
+      "garis_kemiskinan_rp": 501693
+    },
+    {
+      "id_bps": 3312,
+      "nama_kabupaten": "Kabupaten Wonogiri",
+      "jumlah_penduduk_miskin_ribu_jiwa": 102.57,
+      "persentase_penduduk_miskin": 10.71,
+      "garis_kemiskinan_rp": 443563
+    },
+    {
+      "id_bps": 3313,
+      "nama_kabupaten": "Kabupaten Karanganyar",
+      "jumlah_penduduk_miskin_ribu_jiwa": 87.37,
+      "persentase_penduduk_miskin": 9.59,
+      "garis_kemiskinan_rp": 491551
+    },
+    {
+      "id_bps": 3314,
+      "nama_kabupaten": "Kabupaten Sragen",
+      "jumlah_penduduk_miskin_ribu_jiwa": 110.65,
+      "persentase_penduduk_miskin": 12.41,
+      "garis_kemiskinan_rp": 453663
+    },
+    {
+      "id_bps": 3315,
+      "nama_kabupaten": "Kabupaten Grobogan",
+      "jumlah_penduduk_miskin_ribu_jiwa": 159,
+      "persentase_penduduk_miskin": 11.43,
+      "garis_kemiskinan_rp": 489208
+    },
+    {
+      "id_bps": 3316,
+      "nama_kabupaten": "Kabupaten Blora",
+      "jumlah_penduduk_miskin_ribu_jiwa": 99.14,
+      "persentase_penduduk_miskin": 11.42,
+      "garis_kemiskinan_rp": 464959
+    },
+    {
+      "id_bps": 3317,
+      "nama_kabupaten": "Kabupaten Rembang",
+      "jumlah_penduduk_miskin_ribu_jiwa": 91.45,
+      "persentase_penduduk_miskin": 14.02,
+      "garis_kemiskinan_rp": 518607
+    },
+    {
+      "id_bps": 3318,
+      "nama_kabupaten": "Kabupaten Pati",
+      "jumlah_penduduk_miskin_ribu_jiwa": 116.84,
+      "persentase_penduduk_miskin": 9.17,
+      "garis_kemiskinan_rp": 559499
+    },
+    {
+      "id_bps": 3319,
+      "nama_kabupaten": "Kabupaten Kudus",
+      "jumlah_penduduk_miskin_ribu_jiwa": 65.69,
+      "persentase_penduduk_miskin": 7.23,
+      "garis_kemiskinan_rp": 550075
+    },
+    {
+      "id_bps": 3320,
+      "nama_kabupaten": "Kabupaten Jepara",
+      "jumlah_penduduk_miskin_ribu_jiwa": 80.84,
+      "persentase_penduduk_miskin": 6.09,
+      "garis_kemiskinan_rp": 503832
+    },
+    {
+      "id_bps": 3321,
+      "nama_kabupaten": "Kabupaten Demak",
+      "jumlah_penduduk_miskin_ribu_jiwa": 142.91,
+      "persentase_penduduk_miskin": 11.89,
+      "garis_kemiskinan_rp": 535134
+    },
+    {
+      "id_bps": 3322,
+      "nama_kabupaten": "Kabupaten Semarang",
+      "jumlah_penduduk_miskin_ribu_jiwa": 76.87,
+      "persentase_penduduk_miskin": 6.96,
+      "garis_kemiskinan_rp": 520639
+    },
+    {
+      "id_bps": 3323,
+      "nama_kabupaten": "Kabupaten Temanggung",
+      "jumlah_penduduk_miskin_ribu_jiwa": 68.77,
+      "persentase_penduduk_miskin": 8.67,
+      "garis_kemiskinan_rp": 416086
+    },
+    {
+      "id_bps": 3324,
+      "nama_kabupaten": "Kabupaten Kendal",
+      "jumlah_penduduk_miskin_ribu_jiwa": 92.7,
+      "persentase_penduduk_miskin": 9.35,
+      "garis_kemiskinan_rp": 488940
+    },
+    {
+      "id_bps": 3325,
+      "nama_kabupaten": "Kabupaten Batang",
+      "jumlah_penduduk_miskin_ribu_jiwa": 68.85,
+      "persentase_penduduk_miskin": 8.73,
+      "garis_kemiskinan_rp": 412196
+    },
+    {
+      "id_bps": 3326,
+      "nama_kabupaten": "Kabupaten Pekalongan",
+      "jumlah_penduduk_miskin_ribu_jiwa": 81.72,
+      "persentase_penduduk_miskin": 8.95,
+      "garis_kemiskinan_rp": 505520
+    },
+    {
+      "id_bps": 3327,
+      "nama_kabupaten": "Kabupaten Pemalang",
+      "jumlah_penduduk_miskin_ribu_jiwa": 194.2,
+      "persentase_penduduk_miskin": 14.92,
+      "garis_kemiskinan_rp": 493593
+    },
+    {
+      "id_bps": 3328,
+      "nama_kabupaten": "Kabupaten Tegal",
+      "jumlah_penduduk_miskin_ribu_jiwa": 98.02,
+      "persentase_penduduk_miskin": 6.81,
+      "garis_kemiskinan_rp": 497315
+    },
+    {
+      "id_bps": 3329,
+      "nama_kabupaten": "Kabupaten Brebes",
+      "jumlah_penduduk_miskin_ribu_jiwa": 283.28,
+      "persentase_penduduk_miskin": 15.6,
+      "garis_kemiskinan_rp": 542495
+    },
+    {
+      "id_bps": 3371,
+      "nama_kabupaten": "Kota Magelang",
+      "jumlah_penduduk_miskin_ribu_jiwa": 7.25,
+      "persentase_penduduk_miskin": 5.94,
+      "garis_kemiskinan_rp": 626614
+    },
+    {
+      "id_bps": 3372,
+      "nama_kabupaten": "Kota Surakarta",
+      "jumlah_penduduk_miskin_ribu_jiwa": 43.28,
+      "persentase_penduduk_miskin": 8.31,
+      "garis_kemiskinan_rp": 638102
+    },
+    {
+      "id_bps": 3373,
+      "nama_kabupaten": "Kota Salatiga",
+      "jumlah_penduduk_miskin_ribu_jiwa": 9.33,
+      "persentase_penduduk_miskin": 4.57,
+      "garis_kemiskinan_rp": 596659
+    },
+    {
+      "id_bps": 3374,
+      "nama_kabupaten": "Kota Semarang",
+      "jumlah_penduduk_miskin_ribu_jiwa": 77.79,
+      "persentase_penduduk_miskin": 4.03,
+      "garis_kemiskinan_rp": 671936
+    },
+    {
+      "id_bps": 3375,
+      "nama_kabupaten": "Kota Pekalongan",
+      "jumlah_penduduk_miskin_ribu_jiwa": 21.16,
+      "persentase_penduduk_miskin": 6.71,
+      "garis_kemiskinan_rp": 605312
+    },
+    {
+      "id_bps": 3376,
+      "nama_kabupaten": "Kota Tegal",
+      "jumlah_penduduk_miskin_ribu_jiwa": 19.17,
+      "persentase_penduduk_miskin": 7.64,
+      "garis_kemiskinan_rp": 664922
+    }
+  ]
+}

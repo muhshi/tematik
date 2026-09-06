@@ -1,0 +1,50 @@
+[
+  {
+    "id": "var-213",
+    "name": "[Data Strategis] [IPM Metode Baru] Indeks Pembangunan Manusia (Umur Harapan Hidup Hasil Long Form SP2020)",
+    "category": "Sosial dan Kependudukan",
+    "code": "Var 213",
+    "lastUpdated": "2025",
+    "isActive": true
+  },
+  {
+    "id": "var-248",
+    "name": "[Data Strategis] [Proyeksi Hasil LFSP2020] Penduduk Kabupaten Demak Menurut Kecamatan",
+    "category": "Sosial dan Kependudukan",
+    "code": "Var 248",
+    "lastUpdated": "2024",
+    "isActive": true
+  },
+  {
+    "id": "var-110",
+    "name": "[Data Strategis] Laju Pertumbuhan PDRB ADHK Seri 2010 Menurut Lapangan Usaha ",
+    "category": "Sosial dan Kependudukan",
+    "code": "Var 110",
+    "lastUpdated": "2025",
+    "isActive": true
+  },
+  {
+    "id": "var-178",
+    "name": "[Data Strategis] Persentase Penduduk Miskin",
+    "category": "Sosial dan Kependudukan",
+    "code": "Var 178",
+    "lastUpdated": "2025",
+    "isActive": true
+  },
+  {
+    "id": "var-114",
+    "name": "[Data Strategis] Tingkat Partisipasi Angkatan Kerja (TPAK)",
+    "category": "Sosial dan Kependudukan",
+    "code": "Var 114",
+    "lastUpdated": "2025",
+    "isActive": true
+  },
+  {
+    "id": "var-115",
+    "name": "[Data Strategis] Tingkat Pengangguran Terbuka (TPT)",
+    "category": "Sosial dan Kependudukan",
+    "code": "Var 115",
+    "lastUpdated": "2025",
+    "isActive": true
+  }
+]

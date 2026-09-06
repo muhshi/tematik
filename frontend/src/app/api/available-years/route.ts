@@ -6,6 +6,7 @@ export const dynamic = "force-dynamic";
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const varIdStr = searchParams.get("var");
+  const kabupaten = searchParams.get("kabupaten");
 
   if (!varIdStr) {
     return NextResponse.json([], { status: 200 });
@@ -14,9 +15,10 @@ export async function GET(request: Request) {
   // 1. Try Backend API Server
   const backendUrl = process.env.BACKEND_API_URL || "http://localhost:5000/api";
   try {
-    const res = await fetch(`${backendUrl}/available-years?var=${varIdStr}`, {
+    const query = kabupaten ? `var=${varIdStr}&kabupaten=${encodeURIComponent(kabupaten)}` : `var=${varIdStr}`;
+    const res = await fetch(`${backendUrl}/available-years?${query}`, {
       cache: "no-store",
-      signal: AbortSignal.timeout(1500),
+      signal: AbortSignal.timeout(15000),
     });
     if (res.ok) {
       const years = await res.json();

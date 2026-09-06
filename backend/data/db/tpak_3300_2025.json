@@ -1,0 +1,321 @@
+{
+  "domain_bps": 3300,
+  "tahun": 2025,
+  "kabupaten_data": [
+    {
+      "id_bps": 3301,
+      "nama_kabupaten": "Kabupaten Cilacap",
+      "tpak": {
+        "Laki-laki": 83.27,
+        "Perempuan": 50.02,
+        "Total": 66.67
+      }
+    },
+    {
+      "id_bps": 3302,
+      "nama_kabupaten": "Kabupaten Banyumas",
+      "tpak": {
+        "Laki-laki": 82.95,
+        "Perempuan": 56.79,
+        "Total": 69.87
+      }
+    },
+    {
+      "id_bps": 3303,
+      "nama_kabupaten": "Kabupaten Purbalingga",
+      "tpak": {
+        "Laki-laki": 87.27,
+        "Perempuan": 63.23,
+        "Total": 75.35
+      }
+    },
+    {
+      "id_bps": 3304,
+      "nama_kabupaten": "Kabupaten Banjarnegara",
+      "tpak": {
+        "Laki-laki": 86.44,
+        "Perempuan": 61.1,
+        "Total": 73.92
+      }
+    },
+    {
+      "id_bps": 3305,
+      "nama_kabupaten": "Kabupaten Kebumen",
+      "tpak": {
+        "Laki-laki": 85.74,
+        "Perempuan": 66.41,
+        "Total": 76.17
+      }
+    },
+    {
+      "id_bps": 3306,
+      "nama_kabupaten": "Kabupaten Purworejo",
+      "tpak": {
+        "Laki-laki": 85.83,
+        "Perempuan": 64.2,
+        "Total": 74.98
+      }
+    },
+    {
+      "id_bps": 3307,
+      "nama_kabupaten": "Kabupaten Wonosobo",
+      "tpak": {
+        "Laki-laki": 87.84,
+        "Perempuan": 63.25,
+        "Total": 75.74
+      }
+    },
+    {
+      "id_bps": 3308,
+      "nama_kabupaten": "Kabupaten Magelang",
+      "tpak": {
+        "Laki-laki": 86.15,
+        "Perempuan": 70.08,
+        "Total": 78.12
+      }
+    },
+    {
+      "id_bps": 3309,
+      "nama_kabupaten": "Kabupaten Boyolali",
+      "tpak": {
+        "Laki-laki": 87.96,
+        "Perempuan": 66.37,
+        "Total": 77.15
+      }
+    },
+    {
+      "id_bps": 3310,
+      "nama_kabupaten": "Kabupaten Klaten",
+      "tpak": {
+        "Laki-laki": 84.06,
+        "Perempuan": 67.43,
+        "Total": 75.64
+      }
+    },
+    {
+      "id_bps": 3311,
+      "nama_kabupaten": "Kabupaten Sukoharjo",
+      "tpak": {
+        "Laki-laki": 80.14,
+        "Perempuan": 59.99,
+        "Total": 70
+      }
+    },
+    {
+      "id_bps": 3312,
+      "nama_kabupaten": "Kabupaten Wonogiri",
+      "tpak": {
+        "Laki-laki": 88.03,
+        "Perempuan": 69.43,
+        "Total": 78.66
+      }
+    },
+    {
+      "id_bps": 3313,
+      "nama_kabupaten": "Kabupaten Karanganyar",
+      "tpak": {
+        "Laki-laki": 84.76,
+        "Perempuan": 65.06,
+        "Total": 74.81
+      }
+    },
+    {
+      "id_bps": 3314,
+      "nama_kabupaten": "Kabupaten Sragen",
+      "tpak": {
+        "Laki-laki": 84.95,
+        "Perempuan": 65.03,
+        "Total": 74.89
+      }
+    },
+    {
+      "id_bps": 3315,
+      "nama_kabupaten": "Kabupaten Grobogan",
+      "tpak": {
+        "Laki-laki": 87.53,
+        "Perempuan": 67.69,
+        "Total": 77.58
+      }
+    },
+    {
+      "id_bps": 3316,
+      "nama_kabupaten": "Kabupaten Blora",
+      "tpak": {
+        "Laki-laki": 87.52,
+        "Perempuan": 67.85,
+        "Total": 77.63
+      }
+    },
+    {
+      "id_bps": 3317,
+      "nama_kabupaten": "Kabupaten Rembang",
+      "tpak": {
+        "Laki-laki": 87.76,
+        "Perempuan": 64.17,
+        "Total": 75.97
+      }
+    },
+    {
+      "id_bps": 3318,
+      "nama_kabupaten": "Kabupaten Pati",
+      "tpak": {
+        "Laki-laki": 86.65,
+        "Perempuan": 67.66,
+        "Total": 77.08
+      }
+    },
+    {
+      "id_bps": 3319,
+      "nama_kabupaten": "Kabupaten Kudus",
+      "tpak": {
+        "Laki-laki": 84.84,
+        "Perempuan": 66.78,
+        "Total": 75.72
+      }
+    },
+    {
+      "id_bps": 3320,
+      "nama_kabupaten": "Kabupaten Jepara",
+      "tpak": {
+        "Laki-laki": 83.5,
+        "Perempuan": 63.47,
+        "Total": 73.49
+      }
+    },
+    {
+      "id_bps": 3321,
+      "nama_kabupaten": "Kabupaten Demak",
+      "tpak": {
+        "Laki-laki": 85.59,
+        "Perempuan": 60.41,
+        "Total": 73.04
+      }
+    },
+    {
+      "id_bps": 3322,
+      "nama_kabupaten": "Kabupaten Semarang",
+      "tpak": {
+        "Laki-laki": 88.76,
+        "Perempuan": 71.16,
+        "Total": 79.85
+      }
+    },
+    {
+      "id_bps": 3323,
+      "nama_kabupaten": "Kabupaten Temanggung",
+      "tpak": {
+        "Laki-laki": 86.36,
+        "Perempuan": 69.2,
+        "Total": 77.77
+      }
+    },
+    {
+      "id_bps": 3324,
+      "nama_kabupaten": "Kabupaten Kendal",
+      "tpak": {
+        "Laki-laki": 88.03,
+        "Perempuan": 64.8,
+        "Total": 76.45
+      }
+    },
+    {
+      "id_bps": 3325,
+      "nama_kabupaten": "Kabupaten Batang",
+      "tpak": {
+        "Laki-laki": 89.61,
+        "Perempuan": 65.95,
+        "Total": 77.81
+      }
+    },
+    {
+      "id_bps": 3326,
+      "nama_kabupaten": "Kabupaten Pekalongan",
+      "tpak": {
+        "Laki-laki": 86.1,
+        "Perempuan": 68.2,
+        "Total": 77.27
+      }
+    },
+    {
+      "id_bps": 3327,
+      "nama_kabupaten": "Kabupaten Pemalang",
+      "tpak": {
+        "Laki-laki": 85.79,
+        "Perempuan": 57.88,
+        "Total": 71.97
+      }
+    },
+    {
+      "id_bps": 3328,
+      "nama_kabupaten": "Kabupaten Tegal",
+      "tpak": {
+        "Laki-laki": 83.37,
+        "Perempuan": 60.44,
+        "Total": 72.01
+      }
+    },
+    {
+      "id_bps": 3329,
+      "nama_kabupaten": "Kabupaten Brebes",
+      "tpak": {
+        "Laki-laki": 85.95,
+        "Perempuan": 57.54,
+        "Total": 71.9
+      }
+    },
+    {
+      "id_bps": 3371,
+      "nama_kabupaten": "Kota Magelang",
+      "tpak": {
+        "Laki-laki": 76.1,
+        "Perempuan": 59.5,
+        "Total": 67.69
+      }
+    },
+    {
+      "id_bps": 3372,
+      "nama_kabupaten": "Kota Surakarta",
+      "tpak": {
+        "Laki-laki": 79.94,
+        "Perempuan": 61.86,
+        "Total": 70.68
+      }
+    },
+    {
+      "id_bps": 3373,
+      "nama_kabupaten": "Kota Salatiga",
+      "tpak": {
+        "Laki-laki": 79.93,
+        "Perempuan": 62.3,
+        "Total": 70.93
+      }
+    },
+    {
+      "id_bps": 3374,
+      "nama_kabupaten": "Kota Semarang",
+      "tpak": {
+        "Laki-laki": 81.61,
+        "Perempuan": 63.95,
+        "Total": 72.6
+      }
+    },
+    {
+      "id_bps": 3375,
+      "nama_kabupaten": "Kota Pekalongan",
+      "tpak": {
+        "Laki-laki": 85.19,
+        "Perempuan": 65.38,
+        "Total": 75.34
+      }
+    },
+    {
+      "id_bps": 3376,
+      "nama_kabupaten": "Kota Tegal",
+      "tpak": {
+        "Laki-laki": 79.48,
+        "Perempuan": 58.06,
+        "Total": 68.8
+      }
+    }
+  ]
+}

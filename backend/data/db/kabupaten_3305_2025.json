@@ -1,0 +1,241 @@
+{
+  "domain_bps": 3305,
+  "tahun": 2025,
+  "nama_kabupaten": "Kebumen",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Ayah",
+      "total_penduduk": {
+        "Laki-laki": 34541,
+        "Perempuan": 33700,
+        "Total": 68241
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Buayan",
+      "total_penduduk": {
+        "Laki-laki": 35746,
+        "Perempuan": 34014,
+        "Total": 69760
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Puring",
+      "total_penduduk": {
+        "Laki-laki": 34143,
+        "Perempuan": 33581,
+        "Total": 67724
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Petanahan",
+      "total_penduduk": {
+        "Laki-laki": 31472,
+        "Perempuan": 31427,
+        "Total": 62899
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Klirong",
+      "total_penduduk": {
+        "Laki-laki": 34155,
+        "Perempuan": 33486,
+        "Total": 67641
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Buluspesantren",
+      "total_penduduk": {
+        "Laki-laki": 31034,
+        "Perempuan": 29702,
+        "Total": 60736
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Ambal",
+      "total_penduduk": {
+        "Laki-laki": 33032,
+        "Perempuan": 32040,
+        "Total": 65072
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Mirit",
+      "total_penduduk": {
+        "Laki-laki": 27780,
+        "Perempuan": 27354,
+        "Total": 55134
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Bonorowo",
+      "total_penduduk": {
+        "Laki-laki": 11150,
+        "Perempuan": 10894,
+        "Total": 22044
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Prembun",
+      "total_penduduk": {
+        "Laki-laki": 14652,
+        "Perempuan": 14655,
+        "Total": 29307
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "Padureso",
+      "total_penduduk": {
+        "Laki-laki": 9037,
+        "Perempuan": 8846,
+        "Total": 17883
+      }
+    },
+    {
+      "id_bps": 100,
+      "nama_kecamatan": "Kutowinangun",
+      "total_penduduk": {
+        "Laki-laki": 25525,
+        "Perempuan": 24353,
+        "Total": 49878
+      }
+    },
+    {
+      "id_bps": 110,
+      "nama_kecamatan": "Alian",
+      "total_penduduk": {
+        "Laki-laki": 36681,
+        "Perempuan": 34981,
+        "Total": 71662
+      }
+    },
+    {
+      "id_bps": 111,
+      "nama_kecamatan": "Poncowarno",
+      "total_penduduk": {
+        "Laki-laki": 10004,
+        "Perempuan": 9601,
+        "Total": 19605
+      }
+    },
+    {
+      "id_bps": 120,
+      "nama_kecamatan": "Kebumen",
+      "total_penduduk": {
+        "Laki-laki": 68867,
+        "Perempuan": 67465,
+        "Total": 136332
+      }
+    },
+    {
+      "id_bps": 130,
+      "nama_kecamatan": "Pejagoan",
+      "total_penduduk": {
+        "Laki-laki": 29616,
+        "Perempuan": 28389,
+        "Total": 58005
+      }
+    },
+    {
+      "id_bps": 140,
+      "nama_kecamatan": "Sruweng",
+      "total_penduduk": {
+        "Laki-laki": 32417,
+        "Perempuan": 31665,
+        "Total": 64082
+      }
+    },
+    {
+      "id_bps": 150,
+      "nama_kecamatan": "Adimulyo",
+      "total_penduduk": {
+        "Laki-laki": 19057,
+        "Perempuan": 19302,
+        "Total": 38359
+      }
+    },
+    {
+      "id_bps": 160,
+      "nama_kecamatan": "Kuwarasan",
+      "total_penduduk": {
+        "Laki-laki": 27038,
+        "Perempuan": 25927,
+        "Total": 52965
+      }
+    },
+    {
+      "id_bps": 170,
+      "nama_kecamatan": "Rowokele",
+      "total_penduduk": {
+        "Laki-laki": 27364,
+        "Perempuan": 26807,
+        "Total": 54171
+      }
+    },
+    {
+      "id_bps": 180,
+      "nama_kecamatan": "Sempor",
+      "total_penduduk": {
+        "Laki-laki": 36903,
+        "Perempuan": 35335,
+        "Total": 72238
+      }
+    },
+    {
+      "id_bps": 190,
+      "nama_kecamatan": "Gombong",
+      "total_penduduk": {
+        "Laki-laki": 25497,
+        "Perempuan": 25658,
+        "Total": 51155
+      }
+    },
+    {
+      "id_bps": 200,
+      "nama_kecamatan": "Karanganyar",
+      "total_penduduk": {
+        "Laki-laki": 19547,
+        "Perempuan": 19058,
+        "Total": 38605
+      }
+    },
+    {
+      "id_bps": 210,
+      "nama_kecamatan": "Karanggayam",
+      "total_penduduk": {
+        "Laki-laki": 31895,
+        "Perempuan": 30793,
+        "Total": 62688
+      }
+    },
+    {
+      "id_bps": 220,
+      "nama_kecamatan": "Sadang",
+      "total_penduduk": {
+        "Laki-laki": 12575,
+        "Perempuan": 11833,
+        "Total": 24408
+      }
+    },
+    {
+      "id_bps": 221,
+      "nama_kecamatan": "Karangsambung",
+      "total_penduduk": {
+        "Laki-laki": 26059,
+        "Perempuan": 25124,
+        "Total": 51183
+      }
+    }
+  ]
+}

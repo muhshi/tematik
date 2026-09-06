@@ -1,6 +1,37 @@
 const { BPS_CONFIG, getApiKey } = require("../config/bpsConfig");
 const { db } = require("../db");
 
+function generateMockDemographics(total, varId) {
+  // Hanya generate demografi untuk indikator kependudukan (Demak 248, Jateng 2205)
+  if (varId !== 248 && varId !== 2205) return undefined;
+  
+  const totalSafe = Math.max(0, Number(total) || 0);
+  
+  // Random variance +/- 2%
+  const l_pct = 0.505 + (Math.random() * 0.04 - 0.02);
+  const p_pct = 1 - l_pct;
+  
+  const l_val = Math.round(totalSafe * l_pct);
+  const p_val = totalSafe - l_val;
+  
+  const ageDistribution = [0.08, 0.08, 0.085, 0.085, 0.08, 0.075, 0.075, 0.07, 0.07, 0.065, 0.06, 0.05, 0.045, 0.08];
+  const ageLabels = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
+  
+  const age = {};
+  let ageSum = 0;
+  for (let i = 0; i < ageDistribution.length - 1; i++) {
+    const val = Math.round(totalSafe * (ageDistribution[i] + (Math.random() * 0.01 - 0.005)));
+    age[ageLabels[i]] = val;
+    ageSum += val;
+  }
+  age["65+"] = Math.max(0, totalSafe - ageSum);
+
+  return {
+    gender: { L: l_val, P: p_val },
+    age
+  };
+}
+
 function normalizeRegionName(name) {
   if (!name) return "";
   return name
@@ -104,7 +135,7 @@ function resolveDemakVarId(targetVarId) {
   return numId;
 }
 
-async function fetchDynamicBpsData(yearStr = "2024", targetVarId) {
+async function fetchDynamicBpsData(yearStr = "2024", targetVarId, domain = 3300) {
   const resolvedYearStr = yearStr === "ALL" ? "2024" : yearStr;
   const year = parseInt(resolvedYearStr, 10) || 2024;
   const th_id = year - 1900;
@@ -162,6 +193,7 @@ async function fetchDynamicBpsData(yearStr = "2024", targetVarId) {
             results.push({
               kecamatan: kecamatanName,
               value: numValue,
+              demographics: generateMockDemographics(numValue, var_id),
             });
             dbPoints.push({
               varId: var_id,
@@ -191,7 +223,11 @@ async function fetchDynamicBpsData(yearStr = "2024", targetVarId) {
   const storedPoints = await db.getBpsDataPoints(var_id, year);
   if (storedPoints && storedPoints.length > 0) {
     return {
-      data: storedPoints.map((p) => ({ kecamatan: p.kecamatan, value: p.value })),
+      data: storedPoints.map((p) => ({ 
+        kecamatan: p.kecamatan, 
+        value: p.value,
+        demographics: generateMockDemographics(p.value, var_id)
+      })),
       source: "BPS Provinsi Jawa Tengah",
       isCached: true,
     };
@@ -262,6 +298,7 @@ async function fetchDemakStrategicData(yearStr = "2024", targetVarId) {
             results.push({
               kecamatan: regionName,
               value: numValue,
+              demographics: generateMockDemographics(numValue, var_id),
             });
             dbPoints.push({
               varId: var_id,
@@ -286,12 +323,16 @@ async function fetchDemakStrategicData(yearStr = "2024", targetVarId) {
   // 2. DB Fallback Store
   const storedPoints = await db.getBpsDataPoints(var_id, year);
   if (storedPoints && storedPoints.length > 0) {
-    return storedPoints.map((p) => ({ kecamatan: p.kecamatan, value: p.value }));
+    return storedPoints.map((p) => ({ 
+      kecamatan: p.kecamatan, 
+      value: p.value,
+      demographics: generateMockDemographics(p.value, var_id)
+    }));
   }
 
   // 3. Fallback for Var 248 (Kecamatan Demak)
   if (var_id === 248) {
-    return [
+    const demakDefault = [
       { kecamatan: "Mranggen", value: 181444 },
       { kecamatan: "Karangawen", value: 98566 },
       { kecamatan: "Guntur", value: 91123 },
@@ -307,6 +348,10 @@ async function fetchDemakStrategicData(yearStr = "2024", targetVarId) {
       { kecamatan: "Mijen", value: 61019 },
       { kecamatan: "Wedung", value: 86250 },
     ];
+    return demakDefault.map(d => ({
+      ...d,
+      demographics: generateMockDemographics(d.value, var_id)
+    }));
   }
 
   return [];
@@ -368,4 +413,5 @@ module.exports = {
   normalizeRegionName,
   normalizeKecamatanName,
   getAvailableYearsForVar,
+  generateMockDemographics,
 };

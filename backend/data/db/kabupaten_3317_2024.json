@@ -1,0 +1,142 @@
+{
+  "domain_bps": 3317,
+  "tahun": 2024,
+  "nama_kabupaten": "Rembang",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "010.Sumber",
+      "total_penduduk": {
+        "Laki-laki": 18840,
+        "Perempuan": 19155,
+        "Total": 37995
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "020.Bulu",
+      "total_penduduk": {
+        "Laki-laki": 14597,
+        "Perempuan": 14294,
+        "Total": 28891
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "020.Gunem",
+      "total_penduduk": {
+        "Laki-laki": 12451,
+        "Perempuan": 12339,
+        "Total": 24790
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "040.Sale",
+      "total_penduduk": {
+        "Laki-laki": 20207,
+        "Perempuan": 19871,
+        "Total": 40078
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "050.Sarang",
+      "total_penduduk": {
+        "Laki-laki": 32140,
+        "Perempuan": 31650,
+        "Total": 63790
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "060.Sedan",
+      "total_penduduk": {
+        "Laki-laki": 29114,
+        "Perempuan": 27617,
+        "Total": 56731
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "070.Pamotan",
+      "total_penduduk": {
+        "Laki-laki": 26428,
+        "Perempuan": 25570,
+        "Total": 51998
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "080.Sulang",
+      "total_penduduk": {
+        "Laki-laki": 19926,
+        "Perempuan": 20009,
+        "Total": 39935
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "090.Kaliori",
+      "total_penduduk": {
+        "Laki-laki": 21542,
+        "Perempuan": 21986,
+        "Total": 43528
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "100.Rembang",
+      "total_penduduk": {
+        "Laki-laki": 47191,
+        "Perempuan": 47656,
+        "Total": 94847
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "110.Pancur",
+      "total_penduduk": {
+        "Laki-laki": 16259,
+        "Perempuan": 15889,
+        "Total": 32148
+      }
+    },
+    {
+      "id_bps": 12,
+      "nama_kecamatan": "120.Kragan",
+      "total_penduduk": {
+        "Laki-laki": 34402,
+        "Perempuan": 33903,
+        "Total": 68305
+      }
+    },
+    {
+      "id_bps": 13,
+      "nama_kecamatan": "130.Sluke",
+      "total_penduduk": {
+        "Laki-laki": 15331,
+        "Perempuan": 15274,
+        "Total": 30605
+      }
+    },
+    {
+      "id_bps": 14,
+      "nama_kecamatan": "140.Lasem",
+      "total_penduduk": {
+        "Laki-laki": 25877,
+        "Perempuan": 25719,
+        "Total": 51596
+      }
+    },
+    {
+      "id_bps": 15,
+      "nama_kecamatan": "Kab. Rembang",
+      "total_penduduk": {
+        "Laki-laki": 334305,
+        "Perempuan": 330932,
+        "Total": 665237
+      }
+    }
+  ]
+}

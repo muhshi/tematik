@@ -23,6 +23,7 @@ export default function Page() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedRegion, setSelectedRegion] = useState<RegionDetail | null>(null);
+  const [drilldownKabupaten, setDrilldownKabupaten] = useState<string | null>(null);
 
   const [granularity, setGranularity] = useState<Granularity>("Kabupaten");
   const [selectedYear, setSelectedYear] = useState<string>("");
@@ -40,13 +41,23 @@ export default function Page() {
       try {
         const res = await fetch("/api/indicators/active");
         if (res.ok) {
-          const indicators: Indicator[] = await res.json();
-          setActiveIndicators(indicators);
-          if (indicators.length > 0) {
-            setSelectedCategory(indicators[0].category);
-            setSelectedSubjectId(indicators[0].subjectId);
-            setSelectedIndicatorId(indicators[0].id);
-          } else {
+            const indicators: Indicator[] = await res.json();
+            setActiveIndicators(indicators);
+            if (indicators.length > 0) {
+              const savedIndicatorId = localStorage.getItem("selectedIndicatorId");
+              const savedCat = localStorage.getItem("selectedCategory");
+              const savedSubId = localStorage.getItem("selectedSubjectId");
+              
+              if (savedIndicatorId && savedCat && savedSubId && indicators.some(i => i.id === savedIndicatorId)) {
+                setSelectedCategory(savedCat);
+                setSelectedSubjectId(parseInt(savedSubId, 10));
+                setSelectedIndicatorId(savedIndicatorId);
+              } else {
+                setSelectedCategory(indicators[0].category);
+                setSelectedSubjectId(indicators[0].subjectId);
+                setSelectedIndicatorId(indicators[0].id);
+              }
+            } else {
             setSelectedIndicatorId("var-248");
           }
         } else {
@@ -87,20 +98,40 @@ export default function Page() {
     }
   }, [selectedSubjectId, activeIndicators, selectedIndicatorId]);
 
+  // {*Simpan state ke localStorage agar tidak reset saat refresh*}
+  useEffect(() => {
+    if (selectedIndicatorId && selectedCategory && selectedSubjectId !== null) {
+      localStorage.setItem("selectedIndicatorId", selectedIndicatorId);
+      localStorage.setItem("selectedCategory", selectedCategory);
+      localStorage.setItem("selectedSubjectId", selectedSubjectId.toString());
+    }
+  }, [selectedIndicatorId, selectedCategory, selectedSubjectId]);
+
   // {*Fungsi: Menarik Daftar Tahun Tersedia dari BPS saat Indikator diganti*}
   useEffect(() => {
+    // Reset drilldown jika indikator yang dipilih bukan Kependudukan (karena hanya var 248 yang ada drilldown)
+    if (selectedIndicatorId && selectedIndicatorId !== "var-248" && drilldownKabupaten) {
+      setDrilldownKabupaten(null);
+      setGranularity("Kabupaten");
+      setSelectedRegion(null);
+    }
+
     if (!selectedIndicatorId) return;
     
     async function loadYears() {
       setYearsLoading(true);
       try {
-        const res = await fetch(`/api/available-years?var=${selectedIndicatorId}`);
+        const query = drilldownKabupaten ? `var=${selectedIndicatorId}&kabupaten=${encodeURIComponent(drilldownKabupaten)}` : `var=${selectedIndicatorId}`;
+        const res = await fetch(`/api/available-years?${query}`);
         if (res.ok) {
           const years: { th_id: number; year: string }[] = await res.json();
           const yearStrings = years.map((y) => y.year);
           setAvailableYears(yearStrings);
           if (yearStrings.length > 0) {
-            setSelectedYear(yearStrings[0]);
+            // Auto-select year if the current year is not available in the new region
+            setSelectedYear(prevYear => yearStrings.includes(prevYear) ? prevYear : yearStrings[0]);
+          } else {
+            setSelectedYear("");
           }
         } else {
           setAvailableYears([]);
@@ -113,7 +144,7 @@ export default function Page() {
       }
     }
     loadYears();
-  }, [selectedIndicatorId]);
+  }, [selectedIndicatorId, drilldownKabupaten]);
 
   // {*Fungsi: Menarik Data Mentah Peta & BPS saat Tahun/Indikator berubah*}
   useEffect(() => {
@@ -124,7 +155,7 @@ export default function Page() {
         setLoading(true);
         setError(null);
         setSelectedRegion(null); 
-        const data = await fetchMapData(selectedYear, selectedIndicatorId);
+        const data = await fetchMapData(selectedYear, selectedIndicatorId, drilldownKabupaten || undefined);
         setMapData(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
@@ -133,18 +164,47 @@ export default function Page() {
       }
     }
     loadData();
-  }, [selectedYear, selectedIndicatorId]);
+  }, [selectedYear, selectedIndicatorId, drilldownKabupaten]);
 
   // {*Fungsi: Menyimpan data daerah yang diklik user untuk ditampilkan di Panel Kanan & Drill-down*}
-  const handleRegionClick = (feature: DemakFeature) => {
+  const handleRegionClick = async (feature: DemakFeature) => {
     setSelectedRegion({
       kecamatan: feature.properties.district,
+      regency: feature.properties.regency,
+      year: mapData?.metadata.year,
       village: feature.properties.village,
       value: feature.properties.value,
       luasWilayah: feature.properties.luasWilayah ?? null,
       kepadatan: feature.properties.kepadatan ?? null,
       jumlahDesa: feature.properties.jumlahDesa,
+      demographics: feature.properties.demographics,
     });
+
+    // Handle Drill-Down to Kecamatan Level (Hanya untuk Jumlah Penduduk / Var 248)
+    const isJumlahPenduduk = selectedIndicatorId === "var-248";
+    if (isJumlahPenduduk && (granularity === "Provinsi" || granularity === "Kabupaten")) {
+      const kabName = feature.properties.district; // di level jateng, district adalah nama kabupaten
+      if (kabName) {
+        try {
+          setLoading(true);
+          setDrilldownKabupaten(kabName);
+          const res = await fetch(`/api/map-data/kecamatan?kabupaten=${encodeURIComponent(kabName)}&year=${selectedYear}`);
+          if (res.ok) {
+            const drillData = await res.json();
+            // Update map data to show the new drill-down kecamatans
+            setMapData(prev => prev ? {
+              ...prev,
+              geojsonKecamatan: drillData.geojsonKecamatan
+            } : null);
+            setGranularity("Kecamatan");
+          }
+        } catch (error) {
+          console.error("Gagal memuat drill-down data", error);
+        } finally {
+          setLoading(false);
+        }
+      }
+    }
   };
 
   return (
@@ -194,6 +254,7 @@ export default function Page() {
                   granularity={granularity}
                   year={mapData.metadata.year.toString()}
                   indicatorName={activeIndicators.find((i) => i.id === selectedIndicatorId)?.name || "Nilai Indikator"}
+                  dataKey={mapData.metadata.lastUpdated}
                 />
               )}
 
@@ -225,13 +286,16 @@ export default function Page() {
 
           {/* Tombol Navigasi Kembali ke Level Kabupaten Jateng */}
           {granularity !== "Kabupaten" && (
-            <button
-              onClick={() => {
-                setGranularity("Kabupaten");
-                setSelectedRegion(null);
-              }}
-              className="absolute top-4 left-14 z-[1000] flex items-center gap-2 px-3 py-1.5 bg-white/90 hover:bg-white text-slate-800 text-xs font-semibold rounded-lg shadow-md border border-slate-200 backdrop-blur-sm transition-all"
-            >
+              <button
+                onClick={() => {
+                  setGranularity("Kabupaten");
+                  setSelectedRegion(null);
+                  setDrilldownKabupaten(null);
+                }}
+                className="absolute top-4 left-14 z-[1000] flex items-center gap-2 px-3 py-1.5 bg-white/90 
+hover:bg-white text-slate-800 text-xs font-semibold rounded-lg shadow-md border border-slate-200 backdrop-blur-sm 
+transition-all"
+              >
               ← Kembali ke Peta Jawa Tengah
             </button>
           )}

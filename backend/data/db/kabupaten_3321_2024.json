@@ -1,0 +1,133 @@
+{
+  "domain_bps": 3321,
+  "tahun": 2024,
+  "nama_kabupaten": "Demak",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Mranggen",
+      "total_penduduk": {
+        "Laki-laki": 90815,
+        "Perempuan": 90629,
+        "Total": 181444
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Karangawen",
+      "total_penduduk": {
+        "Laki-laki": 49208,
+        "Perempuan": 49358,
+        "Total": 98566
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Guntur",
+      "total_penduduk": {
+        "Laki-laki": 45843,
+        "Perempuan": 45280,
+        "Total": 91123
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Sayung",
+      "total_penduduk": {
+        "Laki-laki": 54814,
+        "Perempuan": 53363,
+        "Total": 108177
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Karangtengah",
+      "total_penduduk": {
+        "Laki-laki": 36345,
+        "Perempuan": 35795,
+        "Total": 72140
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Bonang",
+      "total_penduduk": {
+        "Laki-laki": 56303,
+        "Perempuan": 53721,
+        "Total": 110024
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Demak",
+      "total_penduduk": {
+        "Laki-laki": 57216,
+        "Perempuan": 56712,
+        "Total": 113928
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Wonosalam",
+      "total_penduduk": {
+        "Laki-laki": 45209,
+        "Perempuan": 44175,
+        "Total": 89384
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Dempet",
+      "total_penduduk": {
+        "Laki-laki": 31031,
+        "Perempuan": 31655,
+        "Total": 62686
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Kebonagung",
+      "total_penduduk": {
+        "Laki-laki": 21342,
+        "Perempuan": 21357,
+        "Total": 42699
+      }
+    },
+    {
+      "id_bps": 100,
+      "nama_kecamatan": "Gajah",
+      "total_penduduk": {
+        "Laki-laki": 27821,
+        "Perempuan": 27127,
+        "Total": 54948
+      }
+    },
+    {
+      "id_bps": 110,
+      "nama_kecamatan": "Karanganyar",
+      "total_penduduk": {
+        "Laki-laki": 40777,
+        "Perempuan": 39805,
+        "Total": 80582
+      }
+    },
+    {
+      "id_bps": 120,
+      "nama_kecamatan": "Mijen",
+      "total_penduduk": {
+        "Laki-laki": 31109,
+        "Perempuan": 29910,
+        "Total": 61019
+      }
+    },
+    {
+      "id_bps": 130,
+      "nama_kecamatan": "Wedung",
+      "total_penduduk": {
+        "Laki-laki": 44216,
+        "Perempuan": 42034,
+        "Total": 86250
+      }
+    }
+  ]
+}

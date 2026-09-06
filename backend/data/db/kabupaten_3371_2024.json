@@ -1,0 +1,34 @@
+{
+  "domain_bps": 3371,
+  "tahun": 2024,
+  "nama_kabupaten": "Kota Magelang",
+  "kecamatan_data": [
+    {
+      "id_bps": 313,
+      "nama_kecamatan": "Magelang Utara",
+      "total_penduduk": {
+        "Laki-laki": 18357,
+        "Perempuan": 19273,
+        "Total": 37630
+      }
+    },
+    {
+      "id_bps": 314,
+      "nama_kecamatan": "Magelang Selatan",
+      "total_penduduk": {
+        "Laki-laki": 21133,
+        "Perempuan": 21179,
+        "Total": 42312
+      }
+    },
+    {
+      "id_bps": 315,
+      "nama_kecamatan": "Magelang Tengah",
+      "total_penduduk": {
+        "Laki-laki": 24122,
+        "Perempuan": 24645,
+        "Total": 48767
+      }
+    }
+  ]
+}

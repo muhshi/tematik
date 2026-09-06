@@ -1,0 +1,196 @@
+{
+  "domain_bps": 3308,
+  "tahun": 2018,
+  "nama_kabupaten": "Magelang",
+  "kecamatan_data": [
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Salaman",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Borobudur",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Candimulyo",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Dukun",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Grabag",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Kajoran",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Kaliangkrik",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Mertoyudan",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Mungkid",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Muntilan",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Ngablak",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Ngluwar",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Pakis",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Salam",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Bandongan",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Sawangan",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Secang",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Srumbung",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Tegalrejo",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Tempuran",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    },
+    {
+      "id_bps": 772,
+      "nama_kecamatan": "Windusari",
+      "total_penduduk": {
+        "Laki-laki": 1283984,
+        "Perempuan": 1275266,
+        "Total": 2559250
+      }
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "domain_bps": 3303,
+  "tahun": 2023,
+  "nama_kabupaten": "Purbalingga",
+  "kecamatan_data": [
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Kemangkon",
+      "total_penduduk": {
+        "Laki-laki": 33135,
+        "Perempuan": 32961,
+        "Total": 66096
+      }
+    },
+    {
+      "id_bps": 20,
+      "nama_kecamatan": "Bukateja",
+      "total_penduduk": {
+        "Laki-laki": 40446,
+        "Perempuan": 40263,
+        "Total": 80709
+      }
+    },
+    {
+      "id_bps": 30,
+      "nama_kecamatan": "Kejobong",
+      "total_penduduk": {
+        "Laki-laki": 26427,
+        "Perempuan": 26080,
+        "Total": 52507
+      }
+    },
+    {
+      "id_bps": 40,
+      "nama_kecamatan": "Pengadegan",
+      "total_penduduk": {
+        "Laki-laki": 21025,
+        "Perempuan": 21070,
+        "Total": 42095
+      }
+    },
+    {
+      "id_bps": 50,
+      "nama_kecamatan": "Kaligondang",
+      "total_penduduk": {
+        "Laki-laki": 34118,
+        "Perempuan": 33438,
+        "Total": 67556
+      }
+    },
+    {
+      "id_bps": 60,
+      "nama_kecamatan": "Purbalingga",
+      "total_penduduk": {
+        "Laki-laki": 28307,
+        "Perempuan": 28764,
+        "Total": 57071
+      }
+    },
+    {
+      "id_bps": 70,
+      "nama_kecamatan": "Kalimanah",
+      "total_penduduk": {
+        "Laki-laki": 29747,
+        "Perempuan": 29456,
+        "Total": 59203
+      }
+    },
+    {
+      "id_bps": 80,
+      "nama_kecamatan": "Padamara",
+      "total_penduduk": {
+        "Laki-laki": 24251,
+        "Perempuan": 23918,
+        "Total": 48169
+      }
+    },
+    {
+      "id_bps": 90,
+      "nama_kecamatan": "Kutasari",
+      "total_penduduk": {
+        "Laki-laki": 34371,
+        "Perempuan": 33148,
+        "Total": 67519
+      }
+    },
+    {
+      "id_bps": 100,
+      "nama_kecamatan": "Bojongsari",
+      "total_penduduk": {
+        "Laki-laki": 32739,
+        "Perempuan": 31731,
+        "Total": 64470
+      }
+    },
+    {
+      "id_bps": 110,
+      "nama_kecamatan": "Mrebet",
+      "total_penduduk": {
+        "Laki-laki": 40907,
+        "Perempuan": 39598,
+        "Total": 80505
+      }
+    },
+    {
+      "id_bps": 120,
+      "nama_kecamatan": "Bobotsari",
+      "total_penduduk": {
+        "Laki-laki": 27422,
+        "Perempuan": 26984,
+        "Total": 54406
+      }
+    },
+    {
+      "id_bps": 130,
+      "nama_kecamatan": "Karangreja",
+      "total_penduduk": {
+        "Laki-laki": 24469,
+        "Perempuan": 23702,
+        "Total": 48171
+      }
+    },
+    {
+      "id_bps": 131,
+      "nama_kecamatan": "Karangjambu",
+      "total_penduduk": {
+        "Laki-laki": 15000,
+        "Perempuan": 14040,
+        "Total": 29040
+      }
+    },
+    {
+      "id_bps": 140,
+      "nama_kecamatan": "Karanganyar",
+      "total_penduduk": {
+        "Laki-laki": 21129,
+        "Perempuan": 20077,
+        "Total": 41206
+      }
+    },
+    {
+      "id_bps": 141,
+      "nama_kecamatan": "Kertanegara",
+      "total_penduduk": {
+        "Laki-laki": 19643,
+        "Perempuan": 18776,
+        "Total": 38419
+      }
+    },
+    {
+      "id_bps": 150,
+      "nama_kecamatan": "Karangmoncol",
+      "total_penduduk": {
+        "Laki-laki": 30944,
+        "Perempuan": 29265,
+        "Total": 60209
+      }
+    },
+    {
+      "id_bps": 160,
+      "nama_kecamatan": "Rembang",
+      "total_penduduk": {
+        "Laki-laki": 35654,
+        "Perempuan": 34328,
+        "Total": 69982
+      }
+    }
+  ]
+}

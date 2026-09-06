@@ -1,0 +1,295 @@
+{
+  "domain_bps": 3376,
+  "tahun": 2019,
+  "nama_kabupaten": "Kota Tegal",
+  "kecamatan_data": [
+    {
+      "id_bps": 33760100,
+      "nama_kecamatan": "Tegal Selatan",
+      "total_penduduk": {
+        "Laki-laki": 29792,
+        "Perempuan": 30180,
+        "Total": 59972
+      }
+    },
+    {
+      "id_bps": 33760101,
+      "nama_kecamatan": "Kalinyamat Wetan",
+      "total_penduduk": {
+        "Laki-laki": 1916,
+        "Perempuan": 1996,
+        "Total": 3912
+      }
+    },
+    {
+      "id_bps": 33760102,
+      "nama_kecamatan": "Bandung",
+      "total_penduduk": {
+        "Laki-laki": 2656,
+        "Perempuan": 2646,
+        "Total": 5302
+      }
+    },
+    {
+      "id_bps": 33760103,
+      "nama_kecamatan": "Debong Kidul",
+      "total_penduduk": {
+        "Laki-laki": 2672,
+        "Perempuan": 2599,
+        "Total": 5271
+      }
+    },
+    {
+      "id_bps": 33760104,
+      "nama_kecamatan": "Tunon",
+      "total_penduduk": {
+        "Laki-laki": 2942,
+        "Perempuan": 2895,
+        "Total": 5837
+      }
+    },
+    {
+      "id_bps": 33760105,
+      "nama_kecamatan": "Keturen",
+      "total_penduduk": {
+        "Laki-laki": 2206,
+        "Perempuan": 2130,
+        "Total": 4336
+      }
+    },
+    {
+      "id_bps": 33760106,
+      "nama_kecamatan": "Debong Kulon",
+      "total_penduduk": {
+        "Laki-laki": 2578,
+        "Perempuan": 2399,
+        "Total": 4977
+      }
+    },
+    {
+      "id_bps": 33760107,
+      "nama_kecamatan": "Debong Tengah",
+      "total_penduduk": {
+        "Laki-laki": 6616,
+        "Perempuan": 6651,
+        "Total": 13267
+      }
+    },
+    {
+      "id_bps": 33760108,
+      "nama_kecamatan": "Randugunting",
+      "total_penduduk": {
+        "Laki-laki": 8206,
+        "Perempuan": 8864,
+        "Total": 17070
+      }
+    },
+    {
+      "id_bps": 33760200,
+      "nama_kecamatan": "Tegal Timur",
+      "total_penduduk": {
+        "Laki-laki": 39833,
+        "Perempuan": 39870,
+        "Total": 79703
+      }
+    },
+    {
+      "id_bps": 33760201,
+      "nama_kecamatan": "Kejambon",
+      "total_penduduk": {
+        "Laki-laki": 6063,
+        "Perempuan": 6012,
+        "Total": 12075
+      }
+    },
+    {
+      "id_bps": 33760202,
+      "nama_kecamatan": "Slerok",
+      "total_penduduk": {
+        "Laki-laki": 8265,
+        "Perempuan": 8182,
+        "Total": 16447
+      }
+    },
+    {
+      "id_bps": 33760203,
+      "nama_kecamatan": "Panggung",
+      "total_penduduk": {
+        "Laki-laki": 15593,
+        "Perempuan": 15320,
+        "Total": 30913
+      }
+    },
+    {
+      "id_bps": 33760204,
+      "nama_kecamatan": "Mangkukusuman",
+      "total_penduduk": {
+        "Laki-laki": 2317,
+        "Perempuan": 2379,
+        "Total": 4696
+      }
+    },
+    {
+      "id_bps": 33760205,
+      "nama_kecamatan": "Mintaragen",
+      "total_penduduk": {
+        "Laki-laki": 7595,
+        "Perempuan": 7977,
+        "Total": 15572
+      }
+    },
+    {
+      "id_bps": 33760300,
+      "nama_kecamatan": "Tegal Barat",
+      "total_penduduk": {
+        "Laki-laki": 31262,
+        "Perempuan": 32908,
+        "Total": 64170
+      }
+    },
+    {
+      "id_bps": 33760301,
+      "nama_kecamatan": "Pesurungan Kidul",
+      "total_penduduk": {
+        "Laki-laki": 2267,
+        "Perempuan": 2575,
+        "Total": 4842
+      }
+    },
+    {
+      "id_bps": 33760302,
+      "nama_kecamatan": "Debong Lor",
+      "total_penduduk": {
+        "Laki-laki": 1756,
+        "Perempuan": 1906,
+        "Total": 3662
+      }
+    },
+    {
+      "id_bps": 33760303,
+      "nama_kecamatan": "Kemandungan",
+      "total_penduduk": {
+        "Laki-laki": 1782,
+        "Perempuan": 1889,
+        "Total": 3671
+      }
+    },
+    {
+      "id_bps": 33760304,
+      "nama_kecamatan": "Pekauman",
+      "total_penduduk": {
+        "Laki-laki": 3673,
+        "Perempuan": 3940,
+        "Total": 7613
+      }
+    },
+    {
+      "id_bps": 33760305,
+      "nama_kecamatan": "Kraton",
+      "total_penduduk": {
+        "Laki-laki": 6833,
+        "Perempuan": 7192,
+        "Total": 14025
+      }
+    },
+    {
+      "id_bps": 33760306,
+      "nama_kecamatan": "Tegalsari",
+      "total_penduduk": {
+        "Laki-laki": 11953,
+        "Perempuan": 12120,
+        "Total": 24073
+      }
+    },
+    {
+      "id_bps": 33760307,
+      "nama_kecamatan": "Muarareja",
+      "total_penduduk": {
+        "Laki-laki": 2998,
+        "Perempuan": 3286,
+        "Total": 6284
+      }
+    },
+    {
+      "id_bps": 33760400,
+      "nama_kecamatan": "Margadana",
+      "total_penduduk": {
+        "Laki-laki": 22793,
+        "Perempuan": 23218,
+        "Total": 46011
+      }
+    },
+    {
+      "id_bps": 33760401,
+      "nama_kecamatan": "Kaligangsa",
+      "total_penduduk": {
+        "Laki-laki": 4555,
+        "Perempuan": 4476,
+        "Total": 9031
+      }
+    },
+    {
+      "id_bps": 33760402,
+      "nama_kecamatan": "Krandon",
+      "total_penduduk": {
+        "Laki-laki": 2109,
+        "Perempuan": 2258,
+        "Total": 4367
+      }
+    },
+    {
+      "id_bps": 33760403,
+      "nama_kecamatan": "Cabawan",
+      "total_penduduk": {
+        "Laki-laki": 2111,
+        "Perempuan": 2196,
+        "Total": 4307
+      }
+    },
+    {
+      "id_bps": 33760404,
+      "nama_kecamatan": "Margadana",
+      "total_penduduk": {
+        "Laki-laki": 5845,
+        "Perempuan": 5878,
+        "Total": 11723
+      }
+    },
+    {
+      "id_bps": 33760405,
+      "nama_kecamatan": "Kalinyamat Kulon",
+      "total_penduduk": {
+        "Laki-laki": 2164,
+        "Perempuan": 2242,
+        "Total": 4406
+      }
+    },
+    {
+      "id_bps": 33760406,
+      "nama_kecamatan": "Sumurpanggang",
+      "total_penduduk": {
+        "Laki-laki": 3361,
+        "Perempuan": 3501,
+        "Total": 6862
+      }
+    },
+    {
+      "id_bps": 33760407,
+      "nama_kecamatan": "Pesurungan Lor",
+      "total_penduduk": {
+        "Laki-laki": 2648,
+        "Perempuan": 2667,
+        "Total": 5315
+      }
+    },
+    {
+      "id_bps": 33769990,
+      "nama_kecamatan": "Kota Tegal",
+      "total_penduduk": {
+        "Laki-laki": 123680,
+        "Perempuan": 126176,
+        "Total": 249856
+      }
+    }
+  ]
+}

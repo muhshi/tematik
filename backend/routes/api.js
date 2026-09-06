@@ -24,11 +24,49 @@ router.get("/map-data", async (req, res) => {
   }
 });
 
+// GET /api/map-data/kecamatan
+router.get("/map-data/kecamatan", async (req, res) => {
+  try {
+    const requestedYear = req.query.year || "2024";
+    const kabupaten = req.query.kabupaten;
+    if (!kabupaten) return res.status(400).json({ error: "Missing kabupaten param" });
+
+    const { getDrilldownMapData } = require("../services/mapService");
+    const data = await getDrilldownMapData(kabupaten, requestedYear);
+    return res.json(data);
+  } catch (error) {
+    console.error("[GET /api/map-data/kecamatan] Error:", error.message);
+    return res.status(500).json({ error: "Failed to load drilldown data" });
+  }
+});
+
 // GET /api/available-years
 router.get("/available-years", async (req, res) => {
   try {
     const varIdStr = req.query.var;
+    const kabupaten = req.query.kabupaten;
     if (!varIdStr) return res.json([]);
+    
+    // Jika Kependudukan (var 248), baca dari DB Statis kita (sehingga 2025 muncul jika ada)
+    const targetVarId = parseInt(varIdStr.replace(/\D/g, ""), 10);
+    if (targetVarId === 248) {
+      const { getAvailableYears } = require("../services/dbService");
+      
+      let localYears = [];
+      if (kabupaten) {
+        localYears = await getAvailableYears('kabupaten', kabupaten);
+      } else {
+        localYears = await getAvailableYears('provinsi', null);
+      }
+      
+      if (localYears && localYears.length > 0) {
+        // Sort descending
+        localYears.sort((a, b) => b - a);
+        const mappedYears = localYears.map((y, i) => ({ th_id: i + 1, year: y }));
+        return res.json(mappedYears);
+      }
+    }
+
     const years = await getAvailableYearsForVar(varIdStr);
     return res.json(years);
   } catch (error) {

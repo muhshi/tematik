@@ -1,0 +1,52 @@
+{
+  "domain_bps": 3306,
+  "tahun": 2024,
+  "nama_kabupaten": "Purworejo",
+  "kecamatan_data": [
+    {
+      "id_bps": 180,
+      "nama_kecamatan": "Grabag",
+      "total_penduduk": {
+        "Laki-laki": 52794,
+        "Perempuan": 51976,
+        "Total": 104770
+      }
+    },
+    {
+      "id_bps": 181,
+      "nama_kecamatan": "Ngombol",
+      "total_penduduk": {
+        "Laki-laki": 36218,
+        "Perempuan": 36342,
+        "Total": 72560
+      }
+    },
+    {
+      "id_bps": 182,
+      "nama_kecamatan": "Purwodadi",
+      "total_penduduk": {
+        "Laki-laki": 42380,
+        "Perempuan": 42954,
+        "Total": 85334
+      }
+    },
+    {
+      "id_bps": 183,
+      "nama_kecamatan": "Bagelen",
+      "total_penduduk": {
+        "Laki-laki": 31340,
+        "Perempuan": 31526,
+        "Total": 62866
+      }
+    },
+    {
+      "id_bps": 185,
+      "nama_kecamatan": "Kaligesing",
+      "total_penduduk": {
+        "Laki-laki": 32682,
+        "Perempuan": 32446,
+        "Total": 65128
+      }
+    }
+  ]
+}

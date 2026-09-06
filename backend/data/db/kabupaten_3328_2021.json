@@ -1,0 +1,178 @@
+{
+  "domain_bps": 3328,
+  "tahun": 2021,
+  "nama_kabupaten": "Tegal",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Margasari",
+      "total_penduduk": {
+        "Laki-laki": 55147,
+        "Perempuan": 54261,
+        "Total": 109408
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Bumijawa",
+      "total_penduduk": {
+        "Laki-laki": 49775,
+        "Perempuan": 46911,
+        "Total": 96686
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Bojong",
+      "total_penduduk": {
+        "Laki-laki": 37277,
+        "Perempuan": 36116,
+        "Total": 73393
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Balapulang",
+      "total_penduduk": {
+        "Laki-laki": 46750,
+        "Perempuan": 45940,
+        "Total": 92690
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Pagerbarang",
+      "total_penduduk": {
+        "Laki-laki": 31269,
+        "Perempuan": 30901,
+        "Total": 62170
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Lebaksiu",
+      "total_penduduk": {
+        "Laki-laki": 46750,
+        "Perempuan": 47075,
+        "Total": 93825
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Jatinegara",
+      "total_penduduk": {
+        "Laki-laki": 30715,
+        "Perempuan": 29295,
+        "Total": 60010
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Kedungbanteng",
+      "total_penduduk": {
+        "Laki-laki": 22714,
+        "Perempuan": 22082,
+        "Total": 44796
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Pangkah",
+      "total_penduduk": {
+        "Laki-laki": 57955,
+        "Perempuan": 56211,
+        "Total": 114166
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Slawi",
+      "total_penduduk": {
+        "Laki-laki": 39571,
+        "Perempuan": 39312,
+        "Total": 78883
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "Dukuhwaru",
+      "total_penduduk": {
+        "Laki-laki": 34527,
+        "Perempuan": 33822,
+        "Total": 68349
+      }
+    },
+    {
+      "id_bps": 12,
+      "nama_kecamatan": "Adiwerna",
+      "total_penduduk": {
+        "Laki-laki": 66422,
+        "Perempuan": 63802,
+        "Total": 130224
+      }
+    },
+    {
+      "id_bps": 13,
+      "nama_kecamatan": "Dukuhturi",
+      "total_penduduk": {
+        "Laki-laki": 51104,
+        "Perempuan": 48784,
+        "Total": 99888
+      }
+    },
+    {
+      "id_bps": 14,
+      "nama_kecamatan": "Talang",
+      "total_penduduk": {
+        "Laki-laki": 54774,
+        "Perempuan": 52374,
+        "Total": 107148
+      }
+    },
+    {
+      "id_bps": 15,
+      "nama_kecamatan": "Tarub",
+      "total_penduduk": {
+        "Laki-laki": 43477,
+        "Perempuan": 42455,
+        "Total": 85932
+      }
+    },
+    {
+      "id_bps": 16,
+      "nama_kecamatan": "Kramat",
+      "total_penduduk": {
+        "Laki-laki": 59891,
+        "Perempuan": 58916,
+        "Total": 118807
+      }
+    },
+    {
+      "id_bps": 17,
+      "nama_kecamatan": "Suradadi",
+      "total_penduduk": {
+        "Laki-laki": 47460,
+        "Perempuan": 45741,
+        "Total": 93201
+      }
+    },
+    {
+      "id_bps": 18,
+      "nama_kecamatan": "Warureja",
+      "total_penduduk": {
+        "Laki-laki": 34306,
+        "Perempuan": 33114,
+        "Total": 67420
+      }
+    },
+    {
+      "id_bps": 19,
+      "nama_kecamatan": "Kabupaten Tegal",
+      "total_penduduk": {
+        "Laki-laki": 809884,
+        "Perempuan": 787112,
+        "Total": 1596996
+      }
+    }
+  ]
+}

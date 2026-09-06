@@ -1,0 +1,223 @@
+{
+  "domain_bps": 3301,
+  "tahun": 2023,
+  "nama_kabupaten": "Cilacap",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Dayeuhluhur",
+      "total_penduduk": {
+        "Laki-laki": 24444,
+        "Perempuan": 25174,
+        "Total": 49618
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Wanareja",
+      "total_penduduk": {
+        "Laki-laki": 53956,
+        "Perempuan": 53523,
+        "Total": 107479
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Majenang",
+      "total_penduduk": {
+        "Laki-laki": 72130,
+        "Perempuan": 70971,
+        "Total": 143101
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Cimanggu",
+      "total_penduduk": {
+        "Laki-laki": 53140,
+        "Perempuan": 51645,
+        "Total": 104785
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Karangpucung",
+      "total_penduduk": {
+        "Laki-laki": 41164,
+        "Perempuan": 39763,
+        "Total": 80927
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Cipari",
+      "total_penduduk": {
+        "Laki-laki": 34953,
+        "Perempuan": 33890,
+        "Total": 68843
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Sidareja",
+      "total_penduduk": {
+        "Laki-laki": 32025,
+        "Perempuan": 31804,
+        "Total": 63829
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Kedungreja",
+      "total_penduduk": {
+        "Laki-laki": 46105,
+        "Perempuan": 45384,
+        "Total": 91489
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Patimuan",
+      "total_penduduk": {
+        "Laki-laki": 25458,
+        "Perempuan": 25200,
+        "Total": 50658
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Gandrungmangu",
+      "total_penduduk": {
+        "Laki-laki": 57575,
+        "Perempuan": 55791,
+        "Total": 113366
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "Bantarsari",
+      "total_penduduk": {
+        "Laki-laki": 39243,
+        "Perempuan": 38354,
+        "Total": 77597
+      }
+    },
+    {
+      "id_bps": 12,
+      "nama_kecamatan": "Kawunganten",
+      "total_penduduk": {
+        "Laki-laki": 44255,
+        "Perempuan": 43168,
+        "Total": 87423
+      }
+    },
+    {
+      "id_bps": 13,
+      "nama_kecamatan": "Kampung Laut",
+      "total_penduduk": {
+        "Laki-laki": 8383,
+        "Perempuan": 7770,
+        "Total": 16153
+      }
+    },
+    {
+      "id_bps": 14,
+      "nama_kecamatan": "Jeruklegi",
+      "total_penduduk": {
+        "Laki-laki": 41085,
+        "Perempuan": 39990,
+        "Total": 81075
+      }
+    },
+    {
+      "id_bps": 15,
+      "nama_kecamatan": "Kesugihan",
+      "total_penduduk": {
+        "Laki-laki": 70212,
+        "Perempuan": 68964,
+        "Total": 139176
+      }
+    },
+    {
+      "id_bps": 16,
+      "nama_kecamatan": "Adipala",
+      "total_penduduk": {
+        "Laki-laki": 49520,
+        "Perempuan": 48807,
+        "Total": 98327
+      }
+    },
+    {
+      "id_bps": 17,
+      "nama_kecamatan": "Maos",
+      "total_penduduk": {
+        "Laki-laki": 23505,
+        "Perempuan": 23595,
+        "Total": 47100
+      }
+    },
+    {
+      "id_bps": 18,
+      "nama_kecamatan": "Sampang",
+      "total_penduduk": {
+        "Laki-laki": 22380,
+        "Perempuan": 22374,
+        "Total": 44754
+      }
+    },
+    {
+      "id_bps": 19,
+      "nama_kecamatan": "Kroya",
+      "total_penduduk": {
+        "Laki-laki": 59775,
+        "Perempuan": 58595,
+        "Total": 118370
+      }
+    },
+    {
+      "id_bps": 20,
+      "nama_kecamatan": "Binangun",
+      "total_penduduk": {
+        "Laki-laki": 36410,
+        "Perempuan": 35616,
+        "Total": 72026
+      }
+    },
+    {
+      "id_bps": 21,
+      "nama_kecamatan": "Nusawungu",
+      "total_penduduk": {
+        "Laki-laki": 45625,
+        "Perempuan": 44363,
+        "Total": 89988
+      }
+    },
+    {
+      "id_bps": 22,
+      "nama_kecamatan": "Cilacap Selatan",
+      "total_penduduk": {
+        "Laki-laki": 41882,
+        "Perempuan": 42976,
+        "Total": 84858
+      }
+    },
+    {
+      "id_bps": 23,
+      "nama_kecamatan": "Cilacap Tengah",
+      "total_penduduk": {
+        "Laki-laki": 45677,
+        "Perempuan": 45895,
+        "Total": 91572
+      }
+    },
+    {
+      "id_bps": 24,
+      "nama_kecamatan": "Cilacap Utara",
+      "total_penduduk": {
+        "Laki-laki": 42684,
+        "Perempuan": 42631,
+        "Total": 85315
+      }
+    }
+  ]
+}

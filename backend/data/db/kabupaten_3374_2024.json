@@ -1,0 +1,160 @@
+{
+  "domain_bps": 3374,
+  "tahun": 2024,
+  "nama_kabupaten": "Kota Semarang",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Mijen",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 93088
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Gunung Pati",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 101577
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Banyumanik",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 143746
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Gajah Mungkur",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 56334
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Semarang Selatan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 62018
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Candisari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 75442
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Tembalang",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 201821
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Pedurungan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 197468
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Genuk",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 137356
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Gayamsari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 70388
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "Semarang Timur",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 66475
+      }
+    },
+    {
+      "id_bps": 12,
+      "nama_kecamatan": "Semarang Utara",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 117865
+      }
+    },
+    {
+      "id_bps": 13,
+      "nama_kecamatan": "Semarang Tengah",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 55208
+      }
+    },
+    {
+      "id_bps": 14,
+      "nama_kecamatan": "Semarang Barat",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 149327
+      }
+    },
+    {
+      "id_bps": 15,
+      "nama_kecamatan": "Tugu",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 34092
+      }
+    },
+    {
+      "id_bps": 16,
+      "nama_kecamatan": "Ngaliyan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 146628
+      }
+    },
+    {
+      "id_bps": 17,
+      "nama_kecamatan": "Kota Semarang",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 1708833
+      }
+    }
+  ]
+}

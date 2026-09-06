@@ -1,0 +1,250 @@
+{
+  "domain_bps": 3310,
+  "tahun": 2021,
+  "nama_kabupaten": "Klaten",
+  "kecamatan_data": [
+    {
+      "id_bps": 3310000,
+      "nama_kecamatan": "Kabupaten Klaten",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310010,
+      "nama_kecamatan": "Prambanan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310020,
+      "nama_kecamatan": "Gantiwarno",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310030,
+      "nama_kecamatan": "Wedi",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310040,
+      "nama_kecamatan": "Bayat",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310050,
+      "nama_kecamatan": "Cawas",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310060,
+      "nama_kecamatan": "Trucuk",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310070,
+      "nama_kecamatan": "Kalikotes",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310080,
+      "nama_kecamatan": "Kebonarum",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310090,
+      "nama_kecamatan": "Jogonalan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310100,
+      "nama_kecamatan": "Manisrenggo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310110,
+      "nama_kecamatan": "Karangnongko",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310120,
+      "nama_kecamatan": "Ngawen",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310130,
+      "nama_kecamatan": "Ceper",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310140,
+      "nama_kecamatan": "Pedan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310150,
+      "nama_kecamatan": "Karangdowo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310160,
+      "nama_kecamatan": "Juwiring",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310170,
+      "nama_kecamatan": "Wonosari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310180,
+      "nama_kecamatan": "Delanggu",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310190,
+      "nama_kecamatan": "Polanharjo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310200,
+      "nama_kecamatan": "Karanganom",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310210,
+      "nama_kecamatan": "Tulung",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310220,
+      "nama_kecamatan": "Jatinom",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310230,
+      "nama_kecamatan": "Kemalang",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310710,
+      "nama_kecamatan": "Klaten Selatan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310720,
+      "nama_kecamatan": "Klaten Tengah",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    },
+    {
+      "id_bps": 3310730,
+      "nama_kecamatan": "Klaten Utara",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 0
+      }
+    }
+  ]
+}

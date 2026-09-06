@@ -12,10 +12,11 @@ interface MapCanvasProps {
   granularity: Granularity;
   year: string;
   indicatorName: string;
+  dataKey?: string;
 }
 
 // {*Fungsi Utama: Komponen Visual yang merender Peta menggunakan library Leaflet*}
-export default function MapCanvas({ geojson, onRegionClick, granularity, year, indicatorName }: MapCanvasProps) {
+export default function MapCanvas({ geojson, onRegionClick, granularity, year, indicatorName, dataKey }: MapCanvasProps) {
   const mapRef = useRef<LeafletMap | null>(null);
 
   // {*Menyimpan GeoJSON yang sudah siap pakai*}
@@ -57,14 +58,27 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year, i
   };
 
   // Helper component to adjust map bounds to fit GeoJSON
-  function FitBounds({ data }: { data: DemakFeatureCollection | null }) {
+  function FitBounds({ data, currentGranularity }: { data: DemakFeatureCollection | null, currentGranularity: string }) {
     const map = useMap();
     useEffect(() => {
-      if (data && data.features.length > 0 && mapRef.current) {
-        // Leaflet GeoJSON layer bounds calculation workaround without direct layer ref
-        // We'll let it stay at Demak center, no strict auto-fit needed for V1 since center/zoom are set
+      if (data && data.features.length > 0) {
+        import("leaflet").then((L) => {
+          try {
+            const layer = L.geoJSON(data as any);
+            const bounds = layer.getBounds();
+            if (bounds.isValid()) {
+              if (currentGranularity === "Kecamatan") {
+                map.flyToBounds(bounds, { duration: 1.5, padding: [20, 20] });
+              } else {
+                map.setView([-7.15, 110.14], 8, { animate: true, duration: 1 });
+              }
+            }
+          } catch (e) {
+            console.error("Bounds error", e);
+          }
+        });
       }
-    }, [data, map]);
+    }, [data, map, currentGranularity]);
     return null;
   }
 
@@ -89,6 +103,8 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year, i
     layer.on({
       click: () => {
         onRegionClick(demakFeature);
+        layer.bringToFront();
+        layer.openPopup(); // Munculkan popup saat di-hover
       },
       mouseover: (e) => {
         const layer = e.target;
@@ -132,13 +148,13 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year, i
         
         {displayGeojson && displayGeojson.features.length > 0 && (
           <GeoJSON
-            key={`${granularity}-${year}`} // Paksa react-leaflet render ulang saat tahun/granularity berubah
+            key={`${granularity}-${year}-${indicatorName}-${displayGeojson.features.length}-${dataKey || ''}`} // Paksa react-leaflet render ulang
             data={displayGeojson}
             style={(feature) => getFeatureStyle(feature, granularity)}
             onEachFeature={onEachFeature}
           />
         )}
-        <FitBounds data={displayGeojson} />
+        <FitBounds data={displayGeojson} currentGranularity={granularity} />
       </MapContainer>
     </div>
   );

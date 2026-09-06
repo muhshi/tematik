@@ -1,0 +1,151 @@
+{
+  "domain_bps": 3316,
+  "tahun": 2022,
+  "nama_kabupaten": "Blora",
+  "kecamatan_data": [
+    {
+      "id_bps": 271,
+      "nama_kecamatan": "Jati",
+      "total_penduduk": {
+        "Laki-laki": 51182,
+        "Perempuan": 50654,
+        "Total": 101836
+      }
+    },
+    {
+      "id_bps": 272,
+      "nama_kecamatan": "Randublatung",
+      "total_penduduk": {
+        "Laki-laki": 80470,
+        "Perempuan": 80588,
+        "Total": 161058
+      }
+    },
+    {
+      "id_bps": 273,
+      "nama_kecamatan": "Kradenan",
+      "total_penduduk": {
+        "Laki-laki": 42636,
+        "Perempuan": 42306,
+        "Total": 84942
+      }
+    },
+    {
+      "id_bps": 274,
+      "nama_kecamatan": "Kedungtuban",
+      "total_penduduk": {
+        "Laki-laki": 60440,
+        "Perempuan": 59100,
+        "Total": 119540
+      }
+    },
+    {
+      "id_bps": 275,
+      "nama_kecamatan": "Cepu",
+      "total_penduduk": {
+        "Laki-laki": 76094,
+        "Perempuan": 77240,
+        "Total": 153334
+      }
+    },
+    {
+      "id_bps": 276,
+      "nama_kecamatan": "Sambong",
+      "total_penduduk": {
+        "Laki-laki": 28460,
+        "Perempuan": 28580,
+        "Total": 57040
+      }
+    },
+    {
+      "id_bps": 277,
+      "nama_kecamatan": "Jiken",
+      "total_penduduk": {
+        "Laki-laki": 39520,
+        "Perempuan": 39422,
+        "Total": 78942
+      }
+    },
+    {
+      "id_bps": 279,
+      "nama_kecamatan": "Bogorejo",
+      "total_penduduk": {
+        "Laki-laki": 25488,
+        "Perempuan": 25724,
+        "Total": 51212
+      }
+    },
+    {
+      "id_bps": 280,
+      "nama_kecamatan": "Jepon",
+      "total_penduduk": {
+        "Laki-laki": 65128,
+        "Perempuan": 64228,
+        "Total": 129356
+      }
+    },
+    {
+      "id_bps": 281,
+      "nama_kecamatan": "Blora",
+      "total_penduduk": {
+        "Laki-laki": 94920,
+        "Perempuan": 96578,
+        "Total": 191498
+      }
+    },
+    {
+      "id_bps": 282,
+      "nama_kecamatan": "Banjarejo",
+      "total_penduduk": {
+        "Laki-laki": 64750,
+        "Perempuan": 63512,
+        "Total": 128262
+      }
+    },
+    {
+      "id_bps": 283,
+      "nama_kecamatan": "Tunjungan",
+      "total_penduduk": {
+        "Laki-laki": 49518,
+        "Perempuan": 49910,
+        "Total": 99428
+      }
+    },
+    {
+      "id_bps": 284,
+      "nama_kecamatan": "Japah",
+      "total_penduduk": {
+        "Laki-laki": 36326,
+        "Perempuan": 36658,
+        "Total": 72984
+      }
+    },
+    {
+      "id_bps": 285,
+      "nama_kecamatan": "Ngawen",
+      "total_penduduk": {
+        "Laki-laki": 63466,
+        "Perempuan": 62674,
+        "Total": 126140
+      }
+    },
+    {
+      "id_bps": 286,
+      "nama_kecamatan": "Kunduran",
+      "total_penduduk": {
+        "Laki-laki": 69278,
+        "Perempuan": 68922,
+        "Total": 138200
+      }
+    },
+    {
+      "id_bps": 287,
+      "nama_kecamatan": "Todanan",
+      "total_penduduk": {
+        "Laki-laki": 65414,
+        "Perempuan": 65138,
+        "Total": 130552
+      }
+    }
+  ]
+}

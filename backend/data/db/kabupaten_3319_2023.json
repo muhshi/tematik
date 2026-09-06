@@ -1,0 +1,88 @@
+{
+  "domain_bps": 3319,
+  "tahun": 2023,
+  "nama_kabupaten": "Kudus",
+  "kecamatan_data": [
+    {
+      "id_bps": 3319010,
+      "nama_kecamatan": "Kecamatan Kaliwungu",
+      "total_penduduk": {
+        "Laki-laki": 53955,
+        "Perempuan": 53412,
+        "Total": 107367
+      }
+    },
+    {
+      "id_bps": 3319020,
+      "nama_kecamatan": "Kecamatan Kota Kudus",
+      "total_penduduk": {
+        "Laki-laki": 43650,
+        "Perempuan": 46050,
+        "Total": 89700
+      }
+    },
+    {
+      "id_bps": 3319030,
+      "nama_kecamatan": "Kecamatan Jati",
+      "total_penduduk": {
+        "Laki-laki": 55751,
+        "Perempuan": 56219,
+        "Total": 111970
+      }
+    },
+    {
+      "id_bps": 3319040,
+      "nama_kecamatan": "Kecamatan Undaan",
+      "total_penduduk": {
+        "Laki-laki": 39664,
+        "Perempuan": 39464,
+        "Total": 79128
+      }
+    },
+    {
+      "id_bps": 3319050,
+      "nama_kecamatan": "Kecamatan Mejobo",
+      "total_penduduk": {
+        "Laki-laki": 40199,
+        "Perempuan": 39815,
+        "Total": 80014
+      }
+    },
+    {
+      "id_bps": 3319060,
+      "nama_kecamatan": "Kecamatan Jekulo",
+      "total_penduduk": {
+        "Laki-laki": 55899,
+        "Perempuan": 56096,
+        "Total": 111995
+      }
+    },
+    {
+      "id_bps": 3319070,
+      "nama_kecamatan": "Kecamatan Bae",
+      "total_penduduk": {
+        "Laki-laki": 38143,
+        "Perempuan": 38303,
+        "Total": 76446
+      }
+    },
+    {
+      "id_bps": 3319080,
+      "nama_kecamatan": "Kecamatan Gebog",
+      "total_penduduk": {
+        "Laki-laki": 53925,
+        "Perempuan": 53881,
+        "Total": 107806
+      }
+    },
+    {
+      "id_bps": 3319090,
+      "nama_kecamatan": "Kecamatan Dawe",
+      "total_penduduk": {
+        "Laki-laki": 55061,
+        "Perempuan": 55145,
+        "Total": 110206
+      }
+    }
+  ]
+}

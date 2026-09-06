@@ -83,25 +83,6 @@ export function FilterBar({
             )}
           </select>
         </div>
-
-        {/* Granularity Toggle */}
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Granularity</span>
-          <div className="flex items-center rounded-md border border-border bg-muted/50 p-0.5">
-            <button 
-              className={`rounded-sm px-3 py-1 text-sm font-medium transition-colors ${granularity === "Kabupaten" || granularity === "Provinsi" ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}
-              onClick={() => onGranularityChange("Kabupaten")}
-            >
-              Kab/Kota
-            </button>
-            <button 
-              className={`rounded-sm px-3 py-1 text-sm font-medium transition-colors ${granularity === "Kecamatan" ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}
-              onClick={() => onGranularityChange("Kecamatan")}
-            >
-              Kecamatan
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );

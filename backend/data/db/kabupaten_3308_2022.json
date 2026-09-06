@@ -1,0 +1,16 @@
+{
+  "domain_bps": 3308,
+  "tahun": 2022,
+  "nama_kabupaten": "Magelang",
+  "kecamatan_data": [
+    {
+      "id_bps": 970,
+      "nama_kecamatan": "di Kabupaten Magelang",
+      "total_penduduk": {
+        "Laki-laki": 1322262,
+        "Perempuan": 1302884,
+        "Total": 2625146
+      }
+    }
+  ]
+}

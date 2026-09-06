@@ -1,0 +1,142 @@
+{
+  "domain_bps": 3327,
+  "tahun": 2023,
+  "nama_kabupaten": "Pemalang",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Moga",
+      "total_penduduk": {
+        "Laki-laki": 38275,
+        "Perempuan": 37108,
+        "Total": 75383
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Warungpring",
+      "total_penduduk": {
+        "Laki-laki": 23114,
+        "Perempuan": 22099,
+        "Total": 45213
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Pulosari",
+      "total_penduduk": {
+        "Laki-laki": 32095,
+        "Perempuan": 31395,
+        "Total": 63490
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Belik",
+      "total_penduduk": {
+        "Laki-laki": 62562,
+        "Perempuan": 60031,
+        "Total": 122593
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Watukumpul",
+      "total_penduduk": {
+        "Laki-laki": 40754,
+        "Perempuan": 38343,
+        "Total": 79097
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Bodeh",
+      "total_penduduk": {
+        "Laki-laki": 32549,
+        "Perempuan": 31815,
+        "Total": 64364
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Bantarbolang",
+      "total_penduduk": {
+        "Laki-laki": 45384,
+        "Perempuan": 43886,
+        "Total": 89270
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Radudongkal",
+      "total_penduduk": {
+        "Laki-laki": 57776,
+        "Perempuan": 56718,
+        "Total": 114494
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Pemalang",
+      "total_penduduk": {
+        "Laki-laki": 105070,
+        "Perempuan": 102641,
+        "Total": 207711
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Taman",
+      "total_penduduk": {
+        "Laki-laki": 98899,
+        "Perempuan": 96290,
+        "Total": 195189
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "Petarukan",
+      "total_penduduk": {
+        "Laki-laki": 88963,
+        "Perempuan": 86885,
+        "Total": 175848
+      }
+    },
+    {
+      "id_bps": 12,
+      "nama_kecamatan": "Ampelgading",
+      "total_penduduk": {
+        "Laki-laki": 38544,
+        "Perempuan": 38602,
+        "Total": 77146
+      }
+    },
+    {
+      "id_bps": 13,
+      "nama_kecamatan": "Comal",
+      "total_penduduk": {
+        "Laki-laki": 48358,
+        "Perempuan": 47697,
+        "Total": 96055
+      }
+    },
+    {
+      "id_bps": 14,
+      "nama_kecamatan": "Ulujami",
+      "total_penduduk": {
+        "Laki-laki": 59691,
+        "Perempuan": 58078,
+        "Total": 117769
+      }
+    },
+    {
+      "id_bps": 15,
+      "nama_kecamatan": "Jumlah",
+      "total_penduduk": {
+        "Laki-laki": 772034,
+        "Perempuan": 751588,
+        "Total": 1523622
+      }
+    }
+  ]
+}

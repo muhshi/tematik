@@ -44,6 +44,10 @@ export interface BpsStaticTableView {
 export interface KecamatanData {
   kecamatan: string;
   value: number;
+  demographics?: {
+    gender: { L: number; P: number };
+    age: Record<string, number>;
+  };
 }
 
 // -- GeoJSON Property Types --
@@ -52,6 +56,7 @@ export interface KecamatanData {
 export interface DemakGeoJsonBaseProperties {
   district: string;
   district_code?: string;
+  regency?: string;
   village?: string;
   village_code?: string;
 }
@@ -62,6 +67,10 @@ export interface DemakGeoJsonProperties extends DemakGeoJsonBaseProperties {
   luasWilayah?: number | null;
   kepadatan?: number | null;
   jumlahDesa?: number;
+  demographics?: {
+    gender: { L: number; P: number };
+    age: Record<string, number>;
+  };
 }
 
 /** A single feature in the Demak GeoJSON */
@@ -82,11 +91,17 @@ export type Granularity = "Provinsi" | "Kabupaten" | "Kecamatan";
 
 export interface RegionDetail {
   kecamatan: string;
+  regency?: string;
+  year?: string;
   village?: string;
   value: number | null;
   luasWilayah: number | null;
   kepadatan: number | null;
   jumlahDesa?: number;
+  demographics?: {
+    gender: { L: number; P: number };
+    age: Record<string, number>;
+  };
 }
 
 /** API response wrapper from /api/map-data */

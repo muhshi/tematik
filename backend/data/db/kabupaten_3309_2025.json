@@ -1,0 +1,205 @@
+{
+  "domain_bps": 3309,
+  "tahun": 2025,
+  "nama_kabupaten": "Boyolali",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Selo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 30216
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Ampel",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 41901
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Cepogo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 61736
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Musuk",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 33076
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Boyolali",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 74993
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Mojosongo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 62735
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Teras",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 54950
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Sawit",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 32865
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Banyudono",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 54764
+      }
+    },
+    {
+      "id_bps": 20,
+      "nama_kecamatan": "Tamansari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 29695
+      }
+    },
+    {
+      "id_bps": 21,
+      "nama_kecamatan": "Gladagsari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 43682
+      }
+    },
+    {
+      "id_bps": 22,
+      "nama_kecamatan": "Wonosamodro",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 32907
+      }
+    },
+    {
+      "id_bps": 100,
+      "nama_kecamatan": "Sambi",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 49420
+      }
+    },
+    {
+      "id_bps": 110,
+      "nama_kecamatan": "Ngemplak",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 102247
+      }
+    },
+    {
+      "id_bps": 120,
+      "nama_kecamatan": "Nogosari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 75617
+      }
+    },
+    {
+      "id_bps": 130,
+      "nama_kecamatan": "Simo",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 51602
+      }
+    },
+    {
+      "id_bps": 140,
+      "nama_kecamatan": "Karanggede",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 49334
+      }
+    },
+    {
+      "id_bps": 150,
+      "nama_kecamatan": "Klego",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 51376
+      }
+    },
+    {
+      "id_bps": 160,
+      "nama_kecamatan": "Andong",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 63591
+      }
+    },
+    {
+      "id_bps": 170,
+      "nama_kecamatan": "Kemusu",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 35714
+      }
+    },
+    {
+      "id_bps": 180,
+      "nama_kecamatan": "Wonosegoro",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 40465
+      }
+    },
+    {
+      "id_bps": 190,
+      "nama_kecamatan": "Juwangi",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 36446
+      }
+    }
+  ]
+}

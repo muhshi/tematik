@@ -1,0 +1,196 @@
+{
+  "domain_bps": 3304,
+  "tahun": 2024,
+  "nama_kabupaten": "Banjarnegara",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "KABUPATEN BANJARNEGARA",
+      "total_penduduk": {
+        "Laki-laki": 536347,
+        "Perempuan": 521215,
+        "Total": 1057562
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Kecamatan Susukan",
+      "total_penduduk": {
+        "Laki-laki": 33227,
+        "Perempuan": 32571,
+        "Total": 65798
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Kecamatan Purwareja Klampok",
+      "total_penduduk": {
+        "Laki-laki": 25031,
+        "Perempuan": 24771,
+        "Total": 49802
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Kecamatan Mandiraja",
+      "total_penduduk": {
+        "Laki-laki": 41514,
+        "Perempuan": 41059,
+        "Total": 82573
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Kecamatan Purwanegara",
+      "total_penduduk": {
+        "Laki-laki": 43523,
+        "Perempuan": 42775,
+        "Total": 86298
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Kecamatan Bawang",
+      "total_penduduk": {
+        "Laki-laki": 33265,
+        "Perempuan": 32884,
+        "Total": 66149
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Kecamatan Banjarnegara",
+      "total_penduduk": {
+        "Laki-laki": 35304,
+        "Perempuan": 35314,
+        "Total": 70618
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Kecamatan Pagedongan",
+      "total_penduduk": {
+        "Laki-laki": 22574,
+        "Perempuan": 21660,
+        "Total": 44234
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Kecamatan Sigaluh",
+      "total_penduduk": {
+        "Laki-laki": 16388,
+        "Perempuan": 16480,
+        "Total": 32868
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Kecamatan Madukara",
+      "total_penduduk": {
+        "Laki-laki": 24018,
+        "Perempuan": 23325,
+        "Total": 47343
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "Kecamatan Banjarmangu",
+      "total_penduduk": {
+        "Laki-laki": 24417,
+        "Perempuan": 23554,
+        "Total": 47971
+      }
+    },
+    {
+      "id_bps": 12,
+      "nama_kecamatan": "Kecamatan Wanadadi",
+      "total_penduduk": {
+        "Laki-laki": 17655,
+        "Perempuan": 17203,
+        "Total": 34858
+      }
+    },
+    {
+      "id_bps": 13,
+      "nama_kecamatan": "Kecamatan Rakit",
+      "total_penduduk": {
+        "Laki-laki": 28168,
+        "Perempuan": 27524,
+        "Total": 55692
+      }
+    },
+    {
+      "id_bps": 14,
+      "nama_kecamatan": "Kecamatan Punggelan",
+      "total_penduduk": {
+        "Laki-laki": 46309,
+        "Perempuan": 44482,
+        "Total": 90791
+      }
+    },
+    {
+      "id_bps": 15,
+      "nama_kecamatan": "Kecamatan Karangkobar",
+      "total_penduduk": {
+        "Laki-laki": 16800,
+        "Perempuan": 15689,
+        "Total": 32489
+      }
+    },
+    {
+      "id_bps": 16,
+      "nama_kecamatan": "Kecamatan Pagentan",
+      "total_penduduk": {
+        "Laki-laki": 19715,
+        "Perempuan": 19350,
+        "Total": 39065
+      }
+    },
+    {
+      "id_bps": 17,
+      "nama_kecamatan": "Kecamatan Pejawaran",
+      "total_penduduk": {
+        "Laki-laki": 23515,
+        "Perempuan": 22089,
+        "Total": 45604
+      }
+    },
+    {
+      "id_bps": 18,
+      "nama_kecamatan": "Kecamatan Batur",
+      "total_penduduk": {
+        "Laki-laki": 21545,
+        "Perempuan": 20164,
+        "Total": 41709
+      }
+    },
+    {
+      "id_bps": 19,
+      "nama_kecamatan": "Kecamatan Wanayasa",
+      "total_penduduk": {
+        "Laki-laki": 26696,
+        "Perempuan": 25229,
+        "Total": 51925
+      }
+    },
+    {
+      "id_bps": 20,
+      "nama_kecamatan": "Kecamatan Kalibening",
+      "total_penduduk": {
+        "Laki-laki": 24536,
+        "Perempuan": 23549,
+        "Total": 48085
+      }
+    },
+    {
+      "id_bps": 21,
+      "nama_kecamatan": "Kecamatan Pandanarum",
+      "total_penduduk": {
+        "Laki-laki": 12147,
+        "Perempuan": 11543,
+        "Total": 23690
+      }
+    }
+  ]
+}

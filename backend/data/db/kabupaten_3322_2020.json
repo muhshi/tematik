@@ -1,0 +1,133 @@
+{
+  "domain_bps": 3322,
+  "tahun": 2020,
+  "nama_kabupaten": "Semarang",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "Kopeng",
+      "total_penduduk": {
+        "Laki-laki": 3554,
+        "Perempuan": 3471,
+        "Total": 7025
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Batur",
+      "total_penduduk": {
+        "Laki-laki": 3663,
+        "Perempuan": 3582,
+        "Total": 7245
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Tajuk",
+      "total_penduduk": {
+        "Laki-laki": 2057,
+        "Perempuan": 2030,
+        "Total": 4087
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Jetak",
+      "total_penduduk": {
+        "Laki-laki": 2074,
+        "Perempuan": 2193,
+        "Total": 4267
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Samirono",
+      "total_penduduk": {
+        "Laki-laki": 1212,
+        "Perempuan": 1200,
+        "Total": 2412
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Sumogawe",
+      "total_penduduk": {
+        "Laki-laki": 4281,
+        "Perempuan": 4367,
+        "Total": 8648
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Polobogo",
+      "total_penduduk": {
+        "Laki-laki": 2195,
+        "Perempuan": 2350,
+        "Total": 4545
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Manggihan",
+      "total_penduduk": {
+        "Laki-laki": 899,
+        "Perempuan": 858,
+        "Total": 1757
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Getasan",
+      "total_penduduk": {
+        "Laki-laki": 1530,
+        "Perempuan": 1556,
+        "Total": 3086
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Wates",
+      "total_penduduk": {
+        "Laki-laki": 1604,
+        "Perempuan": 1634,
+        "Total": 3238
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "Tolokan",
+      "total_penduduk": {
+        "Laki-laki": 1451,
+        "Perempuan": 1404,
+        "Total": 2855
+      }
+    },
+    {
+      "id_bps": 12,
+      "nama_kecamatan": "Ngrawan",
+      "total_penduduk": {
+        "Laki-laki": 759,
+        "Perempuan": 755,
+        "Total": 1514
+      }
+    },
+    {
+      "id_bps": 13,
+      "nama_kecamatan": "Nogosaren",
+      "total_penduduk": {
+        "Laki-laki": 794,
+        "Perempuan": 757,
+        "Total": 1551
+      }
+    },
+    {
+      "id_bps": 14,
+      "nama_kecamatan": "Jumlah",
+      "total_penduduk": {
+        "Laki-laki": 26073,
+        "Perempuan": 26157,
+        "Total": 52230
+      }
+    }
+  ]
+}

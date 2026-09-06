@@ -1,0 +1,205 @@
+{
+  "domain_bps": 3318,
+  "tahun": 2022,
+  "nama_kabupaten": "Pati",
+  "kecamatan_data": [
+    {
+      "id_bps": 3318000,
+      "nama_kecamatan": "Kab. Pati",
+      "total_penduduk": {
+        "Laki-laki": 676192,
+        "Perempuan": 684876,
+        "Total": 1361068
+      }
+    },
+    {
+      "id_bps": 3318010,
+      "nama_kecamatan": "Sukolilo",
+      "total_penduduk": {
+        "Laki-laki": 47191,
+        "Perempuan": 47213,
+        "Total": 94404
+      }
+    },
+    {
+      "id_bps": 3318020,
+      "nama_kecamatan": "Kayen",
+      "total_penduduk": {
+        "Laki-laki": 40929,
+        "Perempuan": 40851,
+        "Total": 81780
+      }
+    },
+    {
+      "id_bps": 3318030,
+      "nama_kecamatan": "Tambakromo",
+      "total_penduduk": {
+        "Laki-laki": 28603,
+        "Perempuan": 29011,
+        "Total": 57614
+      }
+    },
+    {
+      "id_bps": 3318040,
+      "nama_kecamatan": "Winong",
+      "total_penduduk": {
+        "Laki-laki": 32439,
+        "Perempuan": 33346,
+        "Total": 65785
+      }
+    },
+    {
+      "id_bps": 3318050,
+      "nama_kecamatan": "Pucakwangi",
+      "total_penduduk": {
+        "Laki-laki": 24672,
+        "Perempuan": 24739,
+        "Total": 49411
+      }
+    },
+    {
+      "id_bps": 3318060,
+      "nama_kecamatan": "Jaken",
+      "total_penduduk": {
+        "Laki-laki": 23119,
+        "Perempuan": 24115,
+        "Total": 47234
+      }
+    },
+    {
+      "id_bps": 3318070,
+      "nama_kecamatan": "Batangan",
+      "total_penduduk": {
+        "Laki-laki": 22723,
+        "Perempuan": 23073,
+        "Total": 45796
+      }
+    },
+    {
+      "id_bps": 3318080,
+      "nama_kecamatan": "Juwana",
+      "total_penduduk": {
+        "Laki-laki": 48554,
+        "Perempuan": 48953,
+        "Total": 97507
+      }
+    },
+    {
+      "id_bps": 3318090,
+      "nama_kecamatan": "Jakenan",
+      "total_penduduk": {
+        "Laki-laki": 24032,
+        "Perempuan": 25174,
+        "Total": 49206
+      }
+    },
+    {
+      "id_bps": 3318100,
+      "nama_kecamatan": "Pati",
+      "total_penduduk": {
+        "Laki-laki": 54828,
+        "Perempuan": 56538,
+        "Total": 111366
+      }
+    },
+    {
+      "id_bps": 3318110,
+      "nama_kecamatan": "Gabus",
+      "total_penduduk": {
+        "Laki-laki": 31853,
+        "Perempuan": 32558,
+        "Total": 64411
+      }
+    },
+    {
+      "id_bps": 3318120,
+      "nama_kecamatan": "Margorejo",
+      "total_penduduk": {
+        "Laki-laki": 31754,
+        "Perempuan": 32490,
+        "Total": 64244
+      }
+    },
+    {
+      "id_bps": 3318130,
+      "nama_kecamatan": "Gembong",
+      "total_penduduk": {
+        "Laki-laki": 24411,
+        "Perempuan": 24530,
+        "Total": 48941
+      }
+    },
+    {
+      "id_bps": 3318140,
+      "nama_kecamatan": "Tlogowungu",
+      "total_penduduk": {
+        "Laki-laki": 28200,
+        "Perempuan": 28089,
+        "Total": 56289
+      }
+    },
+    {
+      "id_bps": 3318150,
+      "nama_kecamatan": "Wedarijaksa",
+      "total_penduduk": {
+        "Laki-laki": 32500,
+        "Perempuan": 32766,
+        "Total": 65266
+      }
+    },
+    {
+      "id_bps": 3318160,
+      "nama_kecamatan": "Trangkil",
+      "total_penduduk": {
+        "Laki-laki": 31987,
+        "Perempuan": 32352,
+        "Total": 64339
+      }
+    },
+    {
+      "id_bps": 3318170,
+      "nama_kecamatan": "Margoyoso",
+      "total_penduduk": {
+        "Laki-laki": 37971,
+        "Perempuan": 37715,
+        "Total": 75686
+      }
+    },
+    {
+      "id_bps": 3318180,
+      "nama_kecamatan": "Gunungwungkal",
+      "total_penduduk": {
+        "Laki-laki": 19400,
+        "Perempuan": 19538,
+        "Total": 38938
+      }
+    },
+    {
+      "id_bps": 3318190,
+      "nama_kecamatan": "Cluwak",
+      "total_penduduk": {
+        "Laki-laki": 24241,
+        "Perempuan": 24435,
+        "Total": 48676
+      }
+    },
+    {
+      "id_bps": 3318200,
+      "nama_kecamatan": "Tayu",
+      "total_penduduk": {
+        "Laki-laki": 35555,
+        "Perempuan": 36063,
+        "Total": 71618
+      }
+    },
+    {
+      "id_bps": 3318210,
+      "nama_kecamatan": "Dukuhseti",
+      "total_penduduk": {
+        "Laki-laki": 31230,
+        "Perempuan": 31327,
+        "Total": 62557
+      }
+    }
+  ]
+}

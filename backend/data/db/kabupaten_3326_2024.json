@@ -1,0 +1,34 @@
+{
+  "domain_bps": 3326,
+  "tahun": 2024,
+  "nama_kabupaten": "Pekalongan",
+  "kecamatan_data": [
+    {
+      "id_bps": 29,
+      "nama_kecamatan": "di Kabupaten Pekalongan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 1019006
+      }
+    },
+    {
+      "id_bps": 86,
+      "nama_kecamatan": "di Kabupaten Pekalongan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 517684
+      }
+    },
+    {
+      "id_bps": 87,
+      "nama_kecamatan": "di Kabupaten Pekalongan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 501322
+      }
+    }
+  ]
+}

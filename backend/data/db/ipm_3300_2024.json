@@ -1,0 +1,321 @@
+{
+  "domain_bps": 3300,
+  "tahun": 2024,
+  "kabupaten_data": [
+    {
+      "id_bps": 3301,
+      "nama_kabupaten": "Kabupaten Cilacap",
+      "ipm": 74.57,
+      "usia_harapan_hidup": 74.97,
+      "harapan_lama_sekolah": 12.69,
+      "rata_rata_lama_sekolah": 7.4,
+      "pengeluaran_per_kapita": 11868
+    },
+    {
+      "id_bps": 3302,
+      "nama_kabupaten": "Kabupaten Banyumas",
+      "ipm": 74.34,
+      "usia_harapan_hidup": 74.34,
+      "harapan_lama_sekolah": 13.34,
+      "rata_rata_lama_sekolah": 7.91,
+      "pengeluaran_per_kapita": 12960
+    },
+    {
+      "id_bps": 3303,
+      "nama_kabupaten": "Kabupaten Purbalingga",
+      "ipm": 73.56,
+      "usia_harapan_hidup": 74.19,
+      "harapan_lama_sekolah": 12.03,
+      "rata_rata_lama_sekolah": 7.36,
+      "pengeluaran_per_kapita": 11343
+    },
+    {
+      "id_bps": 3304,
+      "nama_kabupaten": "Kabupaten Banjarnegara",
+      "ipm": 74.66,
+      "usia_harapan_hidup": 74.7,
+      "harapan_lama_sekolah": 11.83,
+      "rata_rata_lama_sekolah": 6.87,
+      "pengeluaran_per_kapita": 10595
+    },
+    {
+      "id_bps": 3305,
+      "nama_kabupaten": "Kabupaten Kebumen",
+      "ipm": 73.96,
+      "usia_harapan_hidup": 75.22,
+      "harapan_lama_sekolah": 13.39,
+      "rata_rata_lama_sekolah": 7.87,
+      "pengeluaran_per_kapita": 10176
+    },
+    {
+      "id_bps": 3306,
+      "nama_kabupaten": "Kabupaten Purworejo",
+      "ipm": 75.51,
+      "usia_harapan_hidup": 75.64,
+      "harapan_lama_sekolah": 13.55,
+      "rata_rata_lama_sekolah": 8.65,
+      "pengeluaran_per_kapita": 11584
+    },
+    {
+      "id_bps": 3307,
+      "nama_kabupaten": "Kabupaten Wonosobo",
+      "ipm": 72.4,
+      "usia_harapan_hidup": 74.25,
+      "harapan_lama_sekolah": 11.81,
+      "rata_rata_lama_sekolah": 6.9,
+      "pengeluaran_per_kapita": 11980
+    },
+    {
+      "id_bps": 3308,
+      "nama_kabupaten": "Kabupaten Magelang",
+      "ipm": 74.45,
+      "usia_harapan_hidup": 74.68,
+      "harapan_lama_sekolah": 12.62,
+      "rata_rata_lama_sekolah": 7.83,
+      "pengeluaran_per_kapita": 10926
+    },
+    {
+      "id_bps": 3309,
+      "nama_kabupaten": "Kabupaten Boyolali",
+      "ipm": 76.44,
+      "usia_harapan_hidup": 76.44,
+      "harapan_lama_sekolah": 12.67,
+      "rata_rata_lama_sekolah": 8.17,
+      "pengeluaran_per_kapita": 14195
+    },
+    {
+      "id_bps": 3310,
+      "nama_kabupaten": "Kabupaten Klaten",
+      "ipm": 77.3,
+      "usia_harapan_hidup": 77.31,
+      "harapan_lama_sekolah": 13.43,
+      "rata_rata_lama_sekolah": 9.29,
+      "pengeluaran_per_kapita": 13513
+    },
+    {
+      "id_bps": 3311,
+      "nama_kabupaten": "Kabupaten Sukoharjo",
+      "ipm": 78.01,
+      "usia_harapan_hidup": 78.01,
+      "harapan_lama_sekolah": 13.92,
+      "rata_rata_lama_sekolah": 10.01,
+      "pengeluaran_per_kapita": 12758
+    },
+    {
+      "id_bps": 3312,
+      "nama_kabupaten": "Kabupaten Wonogiri",
+      "ipm": 76.84,
+      "usia_harapan_hidup": 76.82,
+      "harapan_lama_sekolah": 12.61,
+      "rata_rata_lama_sekolah": 7.68,
+      "pengeluaran_per_kapita": 10634
+    },
+    {
+      "id_bps": 3313,
+      "nama_kabupaten": "Kabupaten Karanganyar",
+      "ipm": 77.91,
+      "usia_harapan_hidup": 77.91,
+      "harapan_lama_sekolah": 13.73,
+      "rata_rata_lama_sekolah": 9.26,
+      "pengeluaran_per_kapita": 12732
+    },
+    {
+      "id_bps": 3314,
+      "nama_kabupaten": "Kabupaten Sragen",
+      "ipm": 76.18,
+      "usia_harapan_hidup": 76.18,
+      "harapan_lama_sekolah": 12.93,
+      "rata_rata_lama_sekolah": 7.88,
+      "pengeluaran_per_kapita": 13890
+    },
+    {
+      "id_bps": 3315,
+      "nama_kabupaten": "Kabupaten Grobogan",
+      "ipm": 75.24,
+      "usia_harapan_hidup": 75.25,
+      "harapan_lama_sekolah": 12.48,
+      "rata_rata_lama_sekolah": 7.29,
+      "pengeluaran_per_kapita": 11548
+    },
+    {
+      "id_bps": 3316,
+      "nama_kabupaten": "Kabupaten Blora",
+      "ipm": 74.84,
+      "usia_harapan_hidup": 74.92,
+      "harapan_lama_sekolah": 12.6,
+      "rata_rata_lama_sekolah": 7.26,
+      "pengeluaran_per_kapita": 10926
+    },
+    {
+      "id_bps": 3317,
+      "nama_kabupaten": "Kabupaten Rembang",
+      "ipm": 74.97,
+      "usia_harapan_hidup": 74.98,
+      "harapan_lama_sekolah": 12.3,
+      "rata_rata_lama_sekolah": 7.73,
+      "pengeluaran_per_kapita": 11830
+    },
+    {
+      "id_bps": 3318,
+      "nama_kabupaten": "Kabupaten Pati",
+      "ipm": 76.56,
+      "usia_harapan_hidup": 76.56,
+      "harapan_lama_sekolah": 12.98,
+      "rata_rata_lama_sekolah": 7.82,
+      "pengeluaran_per_kapita": 11829
+    },
+    {
+      "id_bps": 3319,
+      "nama_kabupaten": "Kabupaten Kudus",
+      "ipm": 77.08,
+      "usia_harapan_hidup": 77.07,
+      "harapan_lama_sekolah": 13.28,
+      "rata_rata_lama_sekolah": 9.35,
+      "pengeluaran_per_kapita": 12533
+    },
+    {
+      "id_bps": 3320,
+      "nama_kabupaten": "Kabupaten Jepara",
+      "ipm": 76.21,
+      "usia_harapan_hidup": 76.21,
+      "harapan_lama_sekolah": 12.86,
+      "rata_rata_lama_sekolah": 8.27,
+      "pengeluaran_per_kapita": 11729
+    },
+    {
+      "id_bps": 3321,
+      "nama_kabupaten": "Kabupaten Demak",
+      "ipm": 75.79,
+      "usia_harapan_hidup": 75.79,
+      "harapan_lama_sekolah": 13.36,
+      "rata_rata_lama_sekolah": 8.28,
+      "pengeluaran_per_kapita": 11591
+    },
+    {
+      "id_bps": 3322,
+      "nama_kabupaten": "Kabupaten Semarang",
+      "ipm": 76.14,
+      "usia_harapan_hidup": 76.15,
+      "harapan_lama_sekolah": 13.06,
+      "rata_rata_lama_sekolah": 8.16,
+      "pengeluaran_per_kapita": 13377
+    },
+    {
+      "id_bps": 3323,
+      "nama_kabupaten": "Kabupaten Temanggung",
+      "ipm": 75.95,
+      "usia_harapan_hidup": 75.94,
+      "harapan_lama_sekolah": 12.62,
+      "rata_rata_lama_sekolah": 7.53,
+      "pengeluaran_per_kapita": 10519
+    },
+    {
+      "id_bps": 3324,
+      "nama_kabupaten": "Kabupaten Kendal",
+      "ipm": 74.73,
+      "usia_harapan_hidup": 74.73,
+      "harapan_lama_sekolah": 13,
+      "rata_rata_lama_sekolah": 7.74,
+      "pengeluaran_per_kapita": 13277
+    },
+    {
+      "id_bps": 3325,
+      "nama_kabupaten": "Kabupaten Batang",
+      "ipm": 75.03,
+      "usia_harapan_hidup": 75.01,
+      "harapan_lama_sekolah": 12.17,
+      "rata_rata_lama_sekolah": 7.08,
+      "pengeluaran_per_kapita": 10919
+    },
+    {
+      "id_bps": 3326,
+      "nama_kabupaten": "Kabupaten Pekalongan",
+      "ipm": 74,
+      "usia_harapan_hidup": 74.25,
+      "harapan_lama_sekolah": 12.46,
+      "rata_rata_lama_sekolah": 7.48,
+      "pengeluaran_per_kapita": 11701
+    },
+    {
+      "id_bps": 3327,
+      "nama_kabupaten": "Kabupaten Pemalang",
+      "ipm": 73.99,
+      "usia_harapan_hidup": 74.23,
+      "harapan_lama_sekolah": 12.02,
+      "rata_rata_lama_sekolah": 6.56,
+      "pengeluaran_per_kapita": 10017
+    },
+    {
+      "id_bps": 3328,
+      "nama_kabupaten": "Kabupaten Tegal",
+      "ipm": 72.16,
+      "usia_harapan_hidup": 74.25,
+      "harapan_lama_sekolah": 12.96,
+      "rata_rata_lama_sekolah": 7.36,
+      "pengeluaran_per_kapita": 10972
+    },
+    {
+      "id_bps": 3329,
+      "nama_kabupaten": "Kabupaten Brebes",
+      "ipm": 70.29,
+      "usia_harapan_hidup": 74.18,
+      "harapan_lama_sekolah": 12.45,
+      "rata_rata_lama_sekolah": 6.41,
+      "pengeluaran_per_kapita": 11389
+    },
+    {
+      "id_bps": 3371,
+      "nama_kabupaten": "Kota Magelang",
+      "ipm": 77.53,
+      "usia_harapan_hidup": 77.54,
+      "harapan_lama_sekolah": 14.62,
+      "rata_rata_lama_sekolah": 11.43,
+      "pengeluaran_per_kapita": 13619
+    },
+    {
+      "id_bps": 3372,
+      "nama_kabupaten": "Kota Surakarta",
+      "ipm": 77.9,
+      "usia_harapan_hidup": 77.91,
+      "harapan_lama_sekolah": 15.07,
+      "rata_rata_lama_sekolah": 11.25,
+      "pengeluaran_per_kapita": 16291
+    },
+    {
+      "id_bps": 3373,
+      "nama_kabupaten": "Kota Salatiga",
+      "ipm": 78.26,
+      "usia_harapan_hidup": 78.27,
+      "harapan_lama_sekolah": 15.46,
+      "rata_rata_lama_sekolah": 11.48,
+      "pengeluaran_per_kapita": 17096
+    },
+    {
+      "id_bps": 3374,
+      "nama_kabupaten": "Kota Semarang",
+      "ipm": 78.24,
+      "usia_harapan_hidup": 78.23,
+      "harapan_lama_sekolah": 15.57,
+      "rata_rata_lama_sekolah": 11.05,
+      "pengeluaran_per_kapita": 16990
+    },
+    {
+      "id_bps": 3375,
+      "nama_kabupaten": "Kota Pekalongan",
+      "ipm": 74.8,
+      "usia_harapan_hidup": 74.79,
+      "harapan_lama_sekolah": 12.89,
+      "rata_rata_lama_sekolah": 9.34,
+      "pengeluaran_per_kapita": 14547
+    },
+    {
+      "id_bps": 3376,
+      "nama_kabupaten": "Kota Tegal",
+      "ipm": 74.87,
+      "usia_harapan_hidup": 75.01,
+      "harapan_lama_sekolah": 13.25,
+      "rata_rata_lama_sekolah": 9.28,
+      "pengeluaran_per_kapita": 14358
+    }
+  ]
+}

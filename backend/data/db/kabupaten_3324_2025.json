@@ -1,0 +1,196 @@
+{
+  "domain_bps": 3324,
+  "tahun": 2025,
+  "nama_kabupaten": "Kendal",
+  "kecamatan_data": [
+    {
+      "id_bps": 3324010,
+      "nama_kecamatan": "Plantungan",
+      "total_penduduk": {
+        "Laki-laki": 17728,
+        "Perempuan": 16689,
+        "Total": 34417
+      }
+    },
+    {
+      "id_bps": 3324020,
+      "nama_kecamatan": "Sukorejo",
+      "total_penduduk": {
+        "Laki-laki": 31527,
+        "Perempuan": 30258,
+        "Total": 61785
+      }
+    },
+    {
+      "id_bps": 3324030,
+      "nama_kecamatan": "Pageruyung",
+      "total_penduduk": {
+        "Laki-laki": 19327,
+        "Perempuan": 18387,
+        "Total": 37714
+      }
+    },
+    {
+      "id_bps": 3324040,
+      "nama_kecamatan": "Patean",
+      "total_penduduk": {
+        "Laki-laki": 27567,
+        "Perempuan": 27009,
+        "Total": 54576
+      }
+    },
+    {
+      "id_bps": 3324050,
+      "nama_kecamatan": "Singorojo",
+      "total_penduduk": {
+        "Laki-laki": 27975,
+        "Perempuan": 27847,
+        "Total": 55822
+      }
+    },
+    {
+      "id_bps": 3324060,
+      "nama_kecamatan": "Limbangan",
+      "total_penduduk": {
+        "Laki-laki": 18461,
+        "Perempuan": 18545,
+        "Total": 37006
+      }
+    },
+    {
+      "id_bps": 3324070,
+      "nama_kecamatan": "Boja",
+      "total_penduduk": {
+        "Laki-laki": 44221,
+        "Perempuan": 44961,
+        "Total": 89182
+      }
+    },
+    {
+      "id_bps": 3324080,
+      "nama_kecamatan": "Kaliwungu",
+      "total_penduduk": {
+        "Laki-laki": 35123,
+        "Perempuan": 34756,
+        "Total": 69879
+      }
+    },
+    {
+      "id_bps": 3324081,
+      "nama_kecamatan": "Kaliwungu Selatan",
+      "total_penduduk": {
+        "Laki-laki": 28097,
+        "Perempuan": 27714,
+        "Total": 55811
+      }
+    },
+    {
+      "id_bps": 3324090,
+      "nama_kecamatan": "Brangsong",
+      "total_penduduk": {
+        "Laki-laki": 27021,
+        "Perempuan": 26497,
+        "Total": 53518
+      }
+    },
+    {
+      "id_bps": 3324100,
+      "nama_kecamatan": "Pegandon",
+      "total_penduduk": {
+        "Laki-laki": 20156,
+        "Perempuan": 20021,
+        "Total": 40177
+      }
+    },
+    {
+      "id_bps": 3324101,
+      "nama_kecamatan": "Ngampel",
+      "total_penduduk": {
+        "Laki-laki": 19437,
+        "Perempuan": 18795,
+        "Total": 38232
+      }
+    },
+    {
+      "id_bps": 3324110,
+      "nama_kecamatan": "Gemuh",
+      "total_penduduk": {
+        "Laki-laki": 28308,
+        "Perempuan": 27634,
+        "Total": 55942
+      }
+    },
+    {
+      "id_bps": 3324111,
+      "nama_kecamatan": "Ringinarum",
+      "total_penduduk": {
+        "Laki-laki": 20465,
+        "Perempuan": 18521,
+        "Total": 38986
+      }
+    },
+    {
+      "id_bps": 3324120,
+      "nama_kecamatan": "Weleri",
+      "total_penduduk": {
+        "Laki-laki": 30983,
+        "Perempuan": 30712,
+        "Total": 61695
+      }
+    },
+    {
+      "id_bps": 3324130,
+      "nama_kecamatan": "Rowosari",
+      "total_penduduk": {
+        "Laki-laki": 28690,
+        "Perempuan": 28612,
+        "Total": 57302
+      }
+    },
+    {
+      "id_bps": 3324140,
+      "nama_kecamatan": "Kangkung",
+      "total_penduduk": {
+        "Laki-laki": 26655,
+        "Perempuan": 27216,
+        "Total": 53871
+      }
+    },
+    {
+      "id_bps": 3324150,
+      "nama_kecamatan": "Cepiring",
+      "total_penduduk": {
+        "Laki-laki": 27505,
+        "Perempuan": 27904,
+        "Total": 55409
+      }
+    },
+    {
+      "id_bps": 3324160,
+      "nama_kecamatan": "Patebon",
+      "total_penduduk": {
+        "Laki-laki": 31630,
+        "Perempuan": 31004,
+        "Total": 62634
+      }
+    },
+    {
+      "id_bps": 3324170,
+      "nama_kecamatan": "Kendal",
+      "total_penduduk": {
+        "Laki-laki": 31094,
+        "Perempuan": 31428,
+        "Total": 62522
+      }
+    },
+    {
+      "id_bps": 3324180,
+      "nama_kecamatan": "Kabupaten Kendal",
+      "total_penduduk": {
+        "Laki-laki": 541970,
+        "Perempuan": 534510,
+        "Total": 1076480
+      }
+    }
+  ]
+}

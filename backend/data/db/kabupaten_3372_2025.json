@@ -1,0 +1,61 @@
+{
+  "domain_bps": 3372,
+  "tahun": 2025,
+  "nama_kabupaten": "Kota Surakarta",
+  "kecamatan_data": [
+    {
+      "id_bps": 1,
+      "nama_kecamatan": "1. Laweyan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 88978
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "2. Serengan",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 48567
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "3. Pasar Kliwon",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 79972
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "4. Jebres",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 139321
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "5. Banjarsari",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 172241
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Kota Surakarta",
+      "total_penduduk": {
+        "Laki-laki": 0,
+        "Perempuan": 0,
+        "Total": 529079
+      }
+    }
+  ]
+}

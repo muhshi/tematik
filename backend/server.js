@@ -4,6 +4,7 @@ const { BPS_CONFIG } = require("./config/bpsConfig");
 const apiRouter = require("./routes/api");
 const bpsRouter = require("./routes/bpsRoutes");
 const { syncBpsCatalog } = require("./services/indicatorService");
+const { initCron } = require("./services/cronService");
 
 const app = express();
 
@@ -41,6 +42,9 @@ setInterval(async () => {
     console.error("[Scheduler] ❌ Gagal sinkronisasi otomatis:", error.message);
   }
 }, TWENTY_FOUR_HOURS_MS);
+
+// Mulai Auto-Updater Scheduler (BPS Data Rolling Window)
+initCron();
 
 app.listen(BPS_CONFIG.PORT, () => {
   console.log(`=======================================================`);

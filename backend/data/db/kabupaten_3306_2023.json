@@ -1,0 +1,151 @@
+{
+  "domain_bps": 3306,
+  "tahun": 2023,
+  "nama_kabupaten": "Purworejo",
+  "kecamatan_data": [
+    {
+      "id_bps": 180,
+      "nama_kecamatan": "Grabag",
+      "total_penduduk": {
+        "Laki-laki": 52318,
+        "Perempuan": 51568,
+        "Total": 103886
+      }
+    },
+    {
+      "id_bps": 181,
+      "nama_kecamatan": "Ngombol",
+      "total_penduduk": {
+        "Laki-laki": 36160,
+        "Perempuan": 36550,
+        "Total": 72710
+      }
+    },
+    {
+      "id_bps": 182,
+      "nama_kecamatan": "Purwodadi",
+      "total_penduduk": {
+        "Laki-laki": 42420,
+        "Perempuan": 42912,
+        "Total": 85332
+      }
+    },
+    {
+      "id_bps": 183,
+      "nama_kecamatan": "Bagelen",
+      "total_penduduk": {
+        "Laki-laki": 31472,
+        "Perempuan": 31612,
+        "Total": 63084
+      }
+    },
+    {
+      "id_bps": 184,
+      "nama_kecamatan": "Purworejo",
+      "total_penduduk": {
+        "Laki-laki": 88540,
+        "Perempuan": 89832,
+        "Total": 178372
+      }
+    },
+    {
+      "id_bps": 185,
+      "nama_kecamatan": "Kaligesing",
+      "total_penduduk": {
+        "Laki-laki": 32752,
+        "Perempuan": 32390,
+        "Total": 65142
+      }
+    },
+    {
+      "id_bps": 186,
+      "nama_kecamatan": "Banyuurip",
+      "total_penduduk": {
+        "Laki-laki": 43838,
+        "Perempuan": 44522,
+        "Total": 88360
+      }
+    },
+    {
+      "id_bps": 187,
+      "nama_kecamatan": "Bayan",
+      "total_penduduk": {
+        "Laki-laki": 53358,
+        "Perempuan": 53888,
+        "Total": 107246
+      }
+    },
+    {
+      "id_bps": 188,
+      "nama_kecamatan": "Kutoarjo",
+      "total_penduduk": {
+        "Laki-laki": 63460,
+        "Perempuan": 63374,
+        "Total": 126834
+      }
+    },
+    {
+      "id_bps": 189,
+      "nama_kecamatan": "Butuh",
+      "total_penduduk": {
+        "Laki-laki": 43522,
+        "Perempuan": 44016,
+        "Total": 87538
+      }
+    },
+    {
+      "id_bps": 190,
+      "nama_kecamatan": "Pituruh",
+      "total_penduduk": {
+        "Laki-laki": 55258,
+        "Perempuan": 54834,
+        "Total": 110092
+      }
+    },
+    {
+      "id_bps": 192,
+      "nama_kecamatan": "Kemiri",
+      "total_penduduk": {
+        "Laki-laki": 62010,
+        "Perempuan": 60758,
+        "Total": 122768
+      }
+    },
+    {
+      "id_bps": 193,
+      "nama_kecamatan": "Bruno",
+      "total_penduduk": {
+        "Laki-laki": 58580,
+        "Perempuan": 55388,
+        "Total": 113968
+      }
+    },
+    {
+      "id_bps": 194,
+      "nama_kecamatan": "Gebang",
+      "total_penduduk": {
+        "Laki-laki": 45568,
+        "Perempuan": 45028,
+        "Total": 90596
+      }
+    },
+    {
+      "id_bps": 195,
+      "nama_kecamatan": "Loano",
+      "total_penduduk": {
+        "Laki-laki": 40128,
+        "Perempuan": 39598,
+        "Total": 79726
+      }
+    },
+    {
+      "id_bps": 197,
+      "nama_kecamatan": "Bener",
+      "total_penduduk": {
+        "Laki-laki": 60666,
+        "Perempuan": 59260,
+        "Total": 119926
+      }
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { X, TrendingUp, Users, Map as MapIcon, Maximize, Activity } from "lucide
 import { Button } from "@/components/Elements/button";
 import { Separator } from "@/components/Elements/separator";
 import type { RegionDetail } from "@/types/map";
+import { DemographicCharts } from "./DemographicCharts";
 
 interface RegionDetailsProps {
   data: RegionDetail | null;
@@ -30,7 +31,7 @@ export function RegionDetails({ data, indicatorName, onClose }: RegionDetailsPro
           <span className="text-xs text-muted-foreground">
             {(data.kecamatan?.toLowerCase().includes("kab") || data.kecamatan?.toLowerCase().includes("kota"))
               ? "Provinsi Jawa Tengah"
-              : "Kabupaten Demak"}
+              : (data.regency || "Kabupaten Demak")}
           </span>
         </div>
         <Button
@@ -55,9 +56,16 @@ export function RegionDetails({ data, indicatorName, onClose }: RegionDetailsPro
             </span>
           </div>
           {data.value !== null && (
-            <div className="mt-3 flex items-center gap-1.5 text-xs font-medium text-emerald-600">
-              <TrendingUp className="h-3.5 w-3.5" />
-              <span>Data BPS</span>
+            <div className="mt-3 flex items-center justify-between">
+              <div className="flex items-center gap-1.5 text-xs font-medium text-emerald-600">
+                <TrendingUp className="h-3.5 w-3.5" />
+                <span>Data BPS</span>
+              </div>
+              {data.year && (
+                <div className="text-xs font-semibold text-muted-foreground bg-muted px-2 py-0.5 rounded-full">
+                  Tahun: {data.year}
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -101,6 +109,13 @@ export function RegionDetails({ data, indicatorName, onClose }: RegionDetailsPro
             <span className="text-base font-semibold text-foreground">N/A</span>
           </div>
         </div>
+
+        {/* Demographic Charts (Only for 'Jumlah Penduduk' or if demographics data exists) */}
+        {(indicatorName.toLowerCase().includes("penduduk") || data.demographics) && (
+          <div className="mb-6">
+            <DemographicCharts data={data.demographics} regionName={data.kecamatan} />
+          </div>
+        )}
 
         {/* Action Button */}
         <Button className="w-full justify-center">View Full Report</Button>
