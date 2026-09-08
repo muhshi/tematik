@@ -212,9 +212,18 @@ async function getIpmDataFromDB(year) {
     };
   }
 
-  const filePath = path.join(DB_DIR, `ipm_3300_${year}.json`);
+  let filePath = path.join(DB_DIR, `ipm_3300_${year}.json`);
   if (!fs.existsSync(filePath)) {
-    throw new Error(`Data IPM Jateng tahun ${year} belum di-seed/tidak tersedia di Database.`);
+    const files = fs.readdirSync(DB_DIR);
+    const ipmFiles = files
+      .filter(f => f.startsWith('ipm_3300_'))
+      .sort((a, b) => b.localeCompare(a)); // Sort descending
+    
+    if (ipmFiles.length > 0) {
+      filePath = path.join(DB_DIR, ipmFiles[0]);
+    } else {
+      throw new Error(`Data IPM Jateng belum di-seed sama sekali di Database.`);
+    }
   }
   const rawData = fs.readFileSync(filePath, 'utf8');
   return JSON.parse(rawData);

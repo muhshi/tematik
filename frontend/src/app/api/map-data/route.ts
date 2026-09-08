@@ -13,7 +13,7 @@ export async function GET(request: Request) {
   try {
     const res = await fetch(`${backendUrl}/map-data?year=${requestedYear}&var=${varIdStr}`, {
       cache: "no-store",
-      signal: AbortSignal.timeout(15000), // 15 seconds timeout
+      signal: request.signal, // Forward client abort signal
     });
     
     if (res.ok) {

@@ -345,3 +345,37 @@ html {
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
 }
+
+/* -- Glassmorphism Utility -- */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* -- Custom Glassmorphism Leaflet Tooltip -- */
+.glass-tooltip {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.15) !important;
+  border-radius: 16px !important;
+  padding: 0 !important;
+  pointer-events: none !important;
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* Remove Leaflet tooltip default arrow/pointer */
+.leaflet-tooltip-left.glass-tooltip::before,
+.leaflet-tooltip-right.glass-tooltip::before,
+.leaflet-tooltip-top.glass-tooltip::before,
+.leaflet-tooltip-bottom.glass-tooltip::before {
+  display: none !important;
+}

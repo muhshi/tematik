@@ -1,7 +1,7 @@
 import type { MapDataResponse } from "@/types/map";
 
 // {*Fungsi Utama: Fetch API internal Next.js untuk menyatukan Peta GeoJSON & Data BPS*}
-export async function fetchMapData(year: string = "2024", indicator?: string, kabupaten?: string): Promise<MapDataResponse> {
+export async function fetchMapData(year: string = "2024", indicator?: string, kabupaten?: string, signal?: AbortSignal): Promise<MapDataResponse> {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "";
   
   // Jika sedang mode Drilldown (ada kabupaten), panggil endpoint kecamatan
@@ -18,6 +18,7 @@ export async function fetchMapData(year: string = "2024", indicator?: string, ka
       "Content-Type": "application/json",
     },
     cache: "no-store", // {*Mencegah caching agar data selalu baru*}
+    signal, // Abort previous requests to prevent 500 error & memory leak!
   });
 
   if (!response.ok) {

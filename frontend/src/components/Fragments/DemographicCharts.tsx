@@ -7,6 +7,12 @@ import { Users, ActivitySquare } from "lucide-react";
 interface DemographicsData {
   gender?: { L: number; P: number };
   age?: Record<string, number>;
+  ipm?: {
+    usia_harapan_hidup: number;
+    harapan_lama_sekolah: number;
+    rata_rata_lama_sekolah: number;
+    pengeluaran_per_kapita: number;
+  };
 }
 
 interface DemographicChartsProps {
@@ -17,13 +23,13 @@ interface DemographicChartsProps {
 const COLORS = ["#0ea5e9", "#ec4899"]; // Blue for L, Pink for P
 
 export const DemographicCharts: React.FC<DemographicChartsProps> = ({ data, regionName }) => {
-  if (!data || (!data.gender && !data.age)) {
+  if (!data || (!data.gender && !data.age && !data.ipm)) {
     return (
       <div className="flex flex-col items-center justify-center p-6 text-slate-400 bg-slate-50 rounded-xl border border-dashed border-slate-200 mt-4">
         <ActivitySquare className="w-10 h-10 mb-2 opacity-20" />
-        <p className="text-sm font-semibold">Data Demografi Tidak Tersedia</p>
+        <p className="text-sm font-semibold">Data Rincian Tidak Tersedia</p>
         <p className="text-xs text-center mt-1 opacity-70">
-          Rincian kependudukan untuk wilayah ini belum dirilis oleh BPS.
+          Rincian sub-indikator untuk wilayah ini belum dirilis oleh BPS.
         </p>
       </div>
     );
@@ -49,6 +55,7 @@ export const DemographicCharts: React.FC<DemographicChartsProps> = ({ data, regi
 
   return (
     <div className="mt-6 flex flex-col gap-6">
+      {data.gender && (
       <div className="border-t border-slate-200 pt-5">
         <h3 className="text-sm font-bold text-slate-800 flex items-center gap-2 mb-4">
           <Users className="w-4 h-4 text-primary" />
@@ -74,7 +81,7 @@ export const DemographicCharts: React.FC<DemographicChartsProps> = ({ data, regi
                   ))}
                 </Pie>
                 <Tooltip 
-                  formatter={(value: number) => new Intl.NumberFormat('id-ID').format(value) + " jiwa"}
+                  formatter={(value: any) => new Intl.NumberFormat('id-ID').format(value) + " jiwa"}
                   contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                 />
               </PieChart>
@@ -102,7 +109,9 @@ export const DemographicCharts: React.FC<DemographicChartsProps> = ({ data, regi
            <p className="text-xs text-slate-400 italic">Data gender tidak tersedia.</p>
         )}
       </div>
+      )}
 
+      {data.age && (
       <div className="border-t border-slate-200 pt-5">
         <h3 className="text-sm font-bold text-slate-800 flex items-center gap-2 mb-4">
           <ActivitySquare className="w-4 h-4 text-primary" />
@@ -128,7 +137,7 @@ export const DemographicCharts: React.FC<DemographicChartsProps> = ({ data, regi
                   tickFormatter={(val) => val >= 1000 ? `${(val/1000).toFixed(0)}k` : val}
                 />
                 <Tooltip 
-                  formatter={(value: number) => new Intl.NumberFormat('id-ID').format(value) + " jiwa"}
+                  formatter={(value: any) => new Intl.NumberFormat('id-ID').format(value) + " jiwa"}
                   labelStyle={{ fontWeight: 'bold', color: '#334155' }}
                   contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                   cursor={{ fill: '#f1f5f9' }}
@@ -141,6 +150,34 @@ export const DemographicCharts: React.FC<DemographicChartsProps> = ({ data, regi
           <p className="text-xs text-slate-400 italic">Data kelompok umur tidak tersedia.</p>
         )}
       </div>
+      )}
+      {/* Rincian Komponen IPM */}
+      {data.ipm && (
+        <div className="border-t border-slate-200 pt-5">
+          <h3 className="text-sm font-bold text-slate-800 flex items-center gap-2 mb-4">
+            <ActivitySquare className="w-4 h-4 text-primary" />
+            Komponen Penyusun IPM - {regionName}
+          </h3>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
+              <span className="text-[10px] uppercase font-bold text-slate-500 block mb-1">Usia Harapan Hidup</span>
+              <span className="text-lg font-black text-slate-800">{data.ipm.usia_harapan_hidup} <span className="text-xs text-slate-500 font-semibold">Tahun</span></span>
+            </div>
+            <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
+              <span className="text-[10px] uppercase font-bold text-slate-500 block mb-1">Harapan Lama Sekolah</span>
+              <span className="text-lg font-black text-slate-800">{data.ipm.harapan_lama_sekolah} <span className="text-xs text-slate-500 font-semibold">Tahun</span></span>
+            </div>
+            <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
+              <span className="text-[10px] uppercase font-bold text-slate-500 block mb-1">Rata-rata Lama Sekolah</span>
+              <span className="text-lg font-black text-slate-800">{data.ipm.rata_rata_lama_sekolah} <span className="text-xs text-slate-500 font-semibold">Tahun</span></span>
+            </div>
+            <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
+              <span className="text-[10px] uppercase font-bold text-slate-500 block mb-1">Pengeluaran / Kapita</span>
+              <span className="text-lg font-black text-slate-800">Rp {new Intl.NumberFormat('id-ID').format(data.ipm.pengeluaran_per_kapita * 1000)}</span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

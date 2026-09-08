@@ -68,8 +68,14 @@ export interface DemakGeoJsonProperties extends DemakGeoJsonBaseProperties {
   kepadatan?: number | null;
   jumlahDesa?: number;
   demographics?: {
-    gender: { L: number; P: number };
-    age: Record<string, number>;
+    gender?: { L: number; P: number };
+    age?: Record<string, number>;
+    ipm?: {
+      usia_harapan_hidup: number;
+      harapan_lama_sekolah: number;
+      rata_rata_lama_sekolah: number;
+      pengeluaran_per_kapita: number;
+    };
   };
 }
 
@@ -99,8 +105,14 @@ export interface RegionDetail {
   kepadatan: number | null;
   jumlahDesa?: number;
   demographics?: {
-    gender: { L: number; P: number };
-    age: Record<string, number>;
+    gender?: { L: number; P: number };
+    age?: Record<string, number>;
+    ipm?: {
+      usia_harapan_hidup: number;
+      harapan_lama_sekolah: number;
+      rata_rata_lama_sekolah: number;
+      pengeluaran_per_kapita: number;
+    };
   };
 }
 

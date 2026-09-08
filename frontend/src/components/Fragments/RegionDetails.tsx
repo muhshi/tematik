@@ -10,10 +10,11 @@ interface RegionDetailsProps {
   data: RegionDetail | null;
   indicatorName: string;
   onClose: () => void;
+  onDrillDown?: () => void;
 }
 
 // {*Fungsi Utama: Menampilkan Panel Samping Kanan (Detail Kecamatan/Desa) saat wilayah diklik*}
-export function RegionDetails({ data, indicatorName, onClose }: RegionDetailsProps) {
+export function RegionDetails({ data, indicatorName, onClose, onDrillDown }: RegionDetailsProps) {
   if (!data) return null;
 
   const formattedVal = data.value !== null
@@ -70,46 +71,6 @@ export function RegionDetails({ data, indicatorName, onClose }: RegionDetailsPro
           )}
         </div>
 
-        <Separator className="my-5" />
-
-        {/* 2x2 Grid Stats */}
-        <div className="mb-6 grid grid-cols-2 gap-4">
-          <div className="flex flex-col gap-1 rounded-lg border border-border p-3">
-            <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
-              <Users className="h-3.5 w-3.5" />
-              Kepadatan
-            </div>
-            <span className="text-base font-semibold text-foreground">
-              {data.kepadatan ? `${new Intl.NumberFormat("id-ID", { maximumFractionDigits: 1 }).format(data.kepadatan)} jiwa/km²` : "N/A"}
-            </span>
-          </div>
-          <div className="flex flex-col gap-1 rounded-lg border border-border p-3">
-            <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
-              <Maximize className="h-3.5 w-3.5" />
-              Luas Area
-            </div>
-            <span className="text-base font-semibold text-foreground">
-              {data.luasWilayah ? `${new Intl.NumberFormat("id-ID", { maximumFractionDigits: 1 }).format(data.luasWilayah)} km²` : "N/A"}
-            </span>
-          </div>
-          <div className="flex flex-col gap-1 rounded-lg border border-border p-3">
-            <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
-              <MapIcon className="h-3.5 w-3.5" />
-              Desa/Kel
-            </div>
-            <span className="text-base font-semibold text-foreground">
-              {data.jumlahDesa ? data.jumlahDesa.toString() : (data.village ? "1" : "N/A")}
-            </span>
-          </div>
-          <div className="flex flex-col gap-1 rounded-lg border border-border p-3">
-            <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
-              <Activity className="h-3.5 w-3.5" />
-              Trend
-            </div>
-            <span className="text-base font-semibold text-foreground">N/A</span>
-          </div>
-        </div>
-
         {/* Demographic Charts (Only for 'Jumlah Penduduk' or if demographics data exists) */}
         {(indicatorName.toLowerCase().includes("penduduk") || data.demographics) && (
           <div className="mb-6">
@@ -118,7 +79,13 @@ export function RegionDetails({ data, indicatorName, onClose }: RegionDetailsPro
         )}
 
         {/* Action Button */}
-        <Button className="w-full justify-center">View Full Report</Button>
+        {onDrillDown ? (
+          <Button onClick={onDrillDown} className="w-full justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-md">
+            Lihat Peta Tingkat Kecamatan
+          </Button>
+        ) : (
+          <Button variant="outline" className="w-full justify-center" onClick={onClose}>Tutup Panel</Button>
+        )}
       </div>
     </div>
   );

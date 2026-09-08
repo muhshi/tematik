@@ -1,7 +1,7 @@
-require('dotenv').config({ path: '../backend/.env' });
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../../.env') });
 const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
-const path = require('path');
 
 // Skrip ini dirancang untuk membaca master_data.json 
 // dan mem-push seluruh isinya ke Supabase jika sewaktu-waktu dibutuhkan.
@@ -37,10 +37,22 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     nama_kabupaten TEXT NOT NULL,
     tahun INT NOT NULL,
     kependudukan_total INT,
+    kependudukan_l INT,
+    kependudukan_p INT,
     kependudukan_0_14 INT,
     kependudukan_15_64 INT,
     kependudukan_65_plus INT,
+    kependudukan_0_14_l INT,
+    kependudukan_15_64_l INT,
+    kependudukan_65_plus_l INT,
+    kependudukan_0_14_p INT,
+    kependudukan_15_64_p INT,
+    kependudukan_65_plus_p INT,
     ipm FLOAT,
+    ipm_usia_harapan_hidup FLOAT,
+    ipm_harapan_lama_sekolah FLOAT,
+    ipm_rata_rata_lama_sekolah FLOAT,
+    ipm_pengeluaran_per_kapita FLOAT,
     tpt FLOAT,
     tpak FLOAT,
     kemiskinan FLOAT,
@@ -81,11 +93,27 @@ async function pushToSupabase() {
         
         if (ind === 'kependudukan') {
           tempProv[key].kependudukan_total = kab.total_penduduk?.Total;
+          tempProv[key].kependudukan_l = kab.total_penduduk?.["Laki-laki"];
+          tempProv[key].kependudukan_p = kab.total_penduduk?.["Perempuan"];
+          
           tempProv[key].kependudukan_0_14 = kab.kelompok_umur_total?.["0-14"];
           tempProv[key].kependudukan_15_64 = kab.kelompok_umur_total?.["15-64"];
           tempProv[key].kependudukan_65_plus = kab.kelompok_umur_total?.["65+"];
+          
+          tempProv[key].kependudukan_0_14_l = kab.kelompok_umur_L?.["0-14"];
+          tempProv[key].kependudukan_15_64_l = kab.kelompok_umur_L?.["15-64"];
+          tempProv[key].kependudukan_65_plus_l = kab.kelompok_umur_L?.["65+"];
+          
+          tempProv[key].kependudukan_0_14_p = kab.kelompok_umur_P?.["0-14"];
+          tempProv[key].kependudukan_15_64_p = kab.kelompok_umur_P?.["15-64"];
+          tempProv[key].kependudukan_65_plus_p = kab.kelompok_umur_P?.["65+"];
+          
         } else if (ind === 'ipm') {
           tempProv[key].ipm = kab.ipm;
+          tempProv[key].ipm_usia_harapan_hidup = kab.usia_harapan_hidup;
+          tempProv[key].ipm_harapan_lama_sekolah = kab.harapan_lama_sekolah;
+          tempProv[key].ipm_rata_rata_lama_sekolah = kab.rata_rata_lama_sekolah;
+          tempProv[key].ipm_pengeluaran_per_kapita = kab.pengeluaran_per_kapita;
         } else if (ind === 'tpt') {
           // BPS returns TPT as object { "Laki-laki": x, "Perempuan": y, "Total": z } or number
           tempProv[key].tpt = typeof kab.tpt === 'object' ? kab.tpt.Total : kab.tpt;

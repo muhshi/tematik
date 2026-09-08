@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useMemo } from "react";
-import { MapContainer, TileLayer, GeoJSON, useMap, ZoomControl } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import type { Map as LeafletMap, PathOptions, Layer } from "leaflet";
 import type { DemakFeatureCollection, DemakFeature, Granularity } from "@/types/map";
@@ -90,38 +90,87 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year, i
     const val = demakFeature.properties.value;
     
     // Format value number
-    const valText = val !== null ? new Intl.NumberFormat("id-ID").format(val) : "Data Tidak Tersedia";
+    const valText = (val !== null && val !== undefined && !isNaN(val)) ? new Intl.NumberFormat("id-ID").format(val) : "Data Tidak Tersedia";
 
-    // Bind popup
+    // Calculate percentage for the mini CSS bar
+    const percent = (val !== null && range > 0) ? Math.max(5, Math.min(100, ((val - minVal) / range) * 100)) : 0;
+    
+    // Generate Gender HTML if demographics exist
+    const demographics = demakFeature.properties.demographics;
+    let genderHtml = "";
+    if (demographics && demographics.gender && val !== null) {
+      const { L, P } = demographics.gender;
+      const total = L + P;
+      if (total > 0) {
+        const pctL = Math.round((L / total) * 100);
+        const pctP = Math.round((P / total) * 100);
+        genderHtml = `
+          <div class="mt-2.5 pt-2.5 border-t border-slate-200/60">
+            <div class="flex justify-between text-[9px] font-bold mb-1 uppercase tracking-wider">
+              <span class="text-sky-600">Laki-laki ${pctL}%</span>
+              <span class="text-rose-500">${pctP}% Perempuan</span>
+            </div>
+            <div class="h-1.5 w-full rounded-full flex overflow-hidden">
+              <div class="h-full bg-sky-500" style="width: ${pctL}%"></div>
+              <div class="h-full bg-rose-500" style="width: ${pctP}%"></div>
+            </div>
+            <div class="flex justify-between text-[10px] text-slate-500 mt-1 font-semibold">
+              <span>${new Intl.NumberFormat("id-ID").format(L)}</span>
+              <span>${new Intl.NumberFormat("id-ID").format(P)}</span>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // Bind Custom Glassmorphism Tooltip
     const regionLabel = granularity === "Kabupaten" || granularity === "Provinsi" ? "Kabupaten/Kota" : "Kecamatan";
-    layer.bindPopup(`
-      <div class="font-semibold text-primary mb-1">${regionLabel} ${name}</div>
-      <div class="text-muted-foreground text-sm">${indicatorName}: <span class="font-medium text-foreground">${valText}</span></div>
-    `);
+    layer.bindTooltip(`
+      <div class="p-3 w-56">
+        <div class="font-bold text-slate-800 text-sm mb-0.5 tracking-tight break-words">${regionLabel} ${name}</div>
+        <div class="text-[10px] text-slate-500 font-medium mb-2.5 leading-tight line-clamp-2">${indicatorName}</div>
+        <div class="flex flex-col gap-1.5">
+           <div class="flex justify-between items-end">
+              <span class="text-[10px] uppercase font-bold text-slate-400">Total</span>
+              <span class="font-black text-primary text-sm">${valText}</span>
+           </div>
+           ${val !== null ? `
+           <div class="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+             <div class="h-full bg-primary transition-all duration-500" style="width: ${percent}%"></div>
+           </div>
+           ` : ''}
+        </div>
+        ${genderHtml}
+      </div>
+    `, {
+      sticky: true,
+      className: 'glass-tooltip',
+      opacity: 1,
+      direction: 'top',
+      offset: [0, -10]
+    });
 
     // Click event
     layer.on({
       click: () => {
         onRegionClick(demakFeature);
-        layer.bringToFront();
-        layer.openPopup(); // Munculkan popup saat di-hover
+        if ('bringToFront' in layer) (layer as any).bringToFront();
+        if ('openPopup' in layer) (layer as any).openPopup();
       },
       mouseover: (e) => {
-        const layer = e.target;
-        layer.setStyle({
+        const targetLayer = e.target as any;
+        targetLayer.setStyle({
           weight: 3,
           color: "var(--accent)",
           dashArray: "",
-          fillOpacity: 0.9,
+          fillOpacity: 0.95,
         });
-        layer.bringToFront();
-        layer.openPopup(); // Munculkan popup saat di-hover
+        if (targetLayer.bringToFront) targetLayer.bringToFront();
       },
       mouseout: (e) => {
-        const layer = e.target;
+        const targetLayer = e.target as any;
         // Reset style
-        layer.setStyle(getFeatureStyle(feature, granularity));
-        layer.closePopup(); // Tutup popup saat mouse pergi
+        targetLayer.setStyle(getFeatureStyle(feature, granularity));
       },
     });
   };
@@ -135,15 +184,14 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year, i
       <MapContainer
         center={center}
         zoom={zoom}
-        zoomControl={false}
+        zoomControl={true}
         scrollWheelZoom={true}
         className="h-full w-full"
         ref={mapRef}
       >
-        <ZoomControl position="topleft" />
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://www.esri.com/">Esri</a>, HERE, Garmin, NGA, USGS'
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
         />
         
         {displayGeojson && displayGeojson.features.length > 0 && (

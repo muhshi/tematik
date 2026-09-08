@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   description: "WebGIS Interaktif Peta Kependudukan Kabupaten Demak",
 };
 
+import { TooltipProvider } from "@/components/Elements/tooltip";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -49,7 +51,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <TooltipProvider>{children}</TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

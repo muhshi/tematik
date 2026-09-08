@@ -8,10 +8,17 @@ const {
 } = require("./bpsService");
 const dbService = require("./dbService");
 
+const geoJsonCache = {};
+
 async function loadGeoJson(filename) {
+  if (geoJsonCache[filename]) {
+    return geoJsonCache[filename];
+  }
   const filePath = path.join(__dirname, "..", "assets", filename);
   const raw = await fs.readFile(filePath, "utf-8");
-  return JSON.parse(raw);
+  const parsed = JSON.parse(raw);
+  geoJsonCache[filename] = parsed;
+  return parsed;
 }
 
 function matchDistrict(feature, dataList) {
@@ -131,6 +138,40 @@ async function getEnrichedMapData(requestedYear = "2024", targetVarId) {
     populationData = res.data;
     source = res.source;
     isCached = res.isCached;
+
+    // Tambahan khusus untuk Rincian Sub-Komponen IPM (var-213)
+    if (targetVarId === 213) {
+      try {
+        const ipmData = await dbService.getIpmDataFromDB(requestedYear);
+        const ipmDataMap = new Map();
+        
+        // Simpan ke dictionary berdasarkan normalisasi nama kabupaten
+        if (ipmData && ipmData.kabupaten_data) {
+          ipmData.kabupaten_data.forEach(d => {
+             ipmDataMap.set(normalizeRegionName(d.nama_kabupaten), d);
+          });
+        }
+
+        // Sisipkan ke dalam demographics untuk dikonsumsi frontend
+        populationData = populationData.map(d => {
+          const normKec = normalizeRegionName(d.kecamatan);
+          const ipmDetail = ipmDataMap.get(normKec);
+          if (ipmDetail) {
+            d.demographics = {
+              ipm: {
+                usia_harapan_hidup: ipmDetail.usia_harapan_hidup,
+                harapan_lama_sekolah: ipmDetail.harapan_lama_sekolah,
+                rata_rata_lama_sekolah: ipmDetail.rata_rata_lama_sekolah,
+                pengeluaran_per_kapita: ipmDetail.pengeluaran_per_kapita
+              }
+            };
+          }
+          return d;
+        });
+      } catch (e) {
+        console.warn("Gagal meload IPM details:", e.message);
+      }
+    }
   }
 
   const demakStrategicData = await fetchDemakStrategicData(requestedYear, targetVarId);
@@ -154,11 +195,17 @@ async function getEnrichedMapData(requestedYear = "2024", targetVarId) {
 
 async function getDrilldownMapData(kabupaten, requestedYear = "2024") {
   const geojsonAllKec = await loadGeoJson("jateng_kecamatan_merged.geojson");
+  
+  const isKota = kabupaten.toLowerCase().startsWith("kota ");
   const normKab = normalizeRegionName(kabupaten);
   
-  const filteredFeatures = geojsonAllKec.features.filter(f => 
-    normalizeRegionName(f.properties.regency) === normKab
-  );
+  const filteredFeatures = geojsonAllKec.features.filter(f => {
+    const regencyName = f.properties.regency || "";
+    const featureIsKota = regencyName.toLowerCase().startsWith("kota ");
+    
+    if (featureIsKota !== isKota) return false;
+    return normalizeRegionName(regencyName) === normKab;
+  });
   
   const geojsonKec = {
     type: "FeatureCollection",
@@ -178,13 +225,19 @@ async function getDrilldownMapData(kabupaten, requestedYear = "2024") {
       // Selalu gunakan static DB untuk drilldown kecamatan (karena kita hanya punya DB ini)
       const kabData = await dbService.getKabupatenDemographicsFromDB(domainIdForKab, requestedYear);
       if (kabData && kabData.kecamatan_data) {
-        liveData = kabData.kecamatan_data.map(d => ({
-           kecamatan: d.nama_kecamatan,
-           value: d.total_penduduk.Total,
-           demographics: {
-             gender: { L: d.total_penduduk["Laki-laki"], P: d.total_penduduk["Perempuan"] }
-           }
-        }));
+        liveData = kabData.kecamatan_data
+          .filter(d => {
+             const lower = (d.nama_kecamatan || "").toLowerCase();
+             // Buang baris agregat (Total Kabupaten) agar tidak salah match dengan Kecamatan yang namanya sama (e.g. Kecamatan Brebes)
+             return !lower.startsWith("kabupaten ") && !lower.startsWith("kota ");
+          })
+          .map(d => ({
+             kecamatan: d.nama_kecamatan,
+             value: d.total_penduduk.Total,
+             demographics: {
+               gender: { L: d.total_penduduk["Laki-laki"], P: d.total_penduduk["Perempuan"] }
+             }
+          }));
         source = "BPS API (Static JSON)";
         actualYear = kabData.tahun;
       }

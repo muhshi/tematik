@@ -17,7 +17,7 @@ export async function GET(request: Request) {
   try {
     const res = await fetch(`${backendUrl}/map-data/kecamatan?year=${requestedYear}&kabupaten=${kabupaten}`, {
       cache: "no-store",
-      signal: AbortSignal.timeout(15000),
+      signal: request.signal, // Forward client abort signal
     });
     if (res.ok) {
       const data = await res.json();

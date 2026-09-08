@@ -36,7 +36,7 @@ function normalizeRegionName(name) {
   if (!name) return "";
   return name
     .toLowerCase()
-    .replace(/^\d+\s*/, "")
+    .replace(/^\d+[\s.]*/, "") // Remove BPS codes
     .replace(/^(kabupaten|kab\.?|kota|kecamatan|kec\.?)\s+/i, "")
     .replace(/\s+/g, "")
     .trim();
@@ -148,6 +148,7 @@ async function fetchDynamicBpsData(yearStr = "2024", targetVarId, domain = 3300)
 
     const response = await fetch(url, {
       headers: { Accept: "application/json" },
+      signal: AbortSignal.timeout(5000)
     });
 
     if (response.ok) {
@@ -247,13 +248,16 @@ async function fetchDemakStrategicData(yearStr = "2024", targetVarId) {
   const var_id = resolveDemakVarId(targetVarId);
 
   // 1. Live BPS API (Domain 3321 - Kabupaten Demak)
-  try {
-    const apiKey = getApiKey();
-    const domain = BPS_CONFIG.DOMAIN_DEMAK || "3321";
+  // Skip live API for Kependudukan (var_id 248) because we have it in static DB
+  if (var_id !== 248) {
+    try {
+      const apiKey = getApiKey();
+      const domain = BPS_CONFIG.DOMAIN_DEMAK || "3321";
     const url = `${BPS_CONFIG.BASE_URL}/list/model/data/domain/${domain}/var/${var_id}/th/${th_id}/key/${apiKey}/`;
 
     const response = await fetch(url, {
       headers: { Accept: "application/json" },
+      signal: AbortSignal.timeout(5000)
     });
 
     if (response.ok) {
@@ -319,6 +323,7 @@ async function fetchDemakStrategicData(yearStr = "2024", targetVarId) {
   } catch (err) {
     console.warn("[bpsService] Demak strategic data live fetch notice:", err.message);
   }
+  }
 
   // 2. DB Fallback Store
   const storedPoints = await db.getBpsDataPoints(var_id, year);
@@ -378,6 +383,7 @@ async function getAvailableYearsForVar(varIdStr) {
       const url = `${BPS_CONFIG.BASE_URL}/list/model/th/var/${vId}/domain/${domain}/key/${apiKey}/`;
       const response = await fetch(url, {
         headers: { Accept: "application/json" },
+        signal: AbortSignal.timeout(5000)
       });
 
       if (response.ok) {
@@ -397,7 +403,7 @@ async function getAvailableYearsForVar(varIdStr) {
     }
   }
 
-  const fallbackYears = ["2025", "2024", "2023", "2022", "2021", "2020", "2019", "2018"];
+  const fallbackYears = ["2024", "2023", "2022", "2021", "2020", "2019", "2018"];
   return fallbackYears.map((y) => ({
     th_id: parseInt(y, 10) - 1900,
     year: y,

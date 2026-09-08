@@ -32,8 +32,9 @@ export function FilterBar({
   activeIndicators,
   selectedSubjectId,
   selectedIndicatorId,
-  onIndicatorChange
-}: FilterBarProps) {
+  onIndicatorChange,
+  children
+}: FilterBarProps & { children?: React.ReactNode }) {
   const filteredIndicators = selectedSubjectId !== null 
     ? activeIndicators.filter((i) => i.subjectId === selectedSubjectId)
     : [];
@@ -84,6 +85,13 @@ export function FilterBar({
           </select>
         </div>
       </div>
+
+      {/* Right side: Optional children (e.g., ExportButton) */}
+      {children && (
+        <div className="flex items-center">
+          {children}
+        </div>
+      )}
     </div>
   );
 }
