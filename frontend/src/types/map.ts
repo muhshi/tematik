@@ -76,6 +76,11 @@ export interface DemakGeoJsonProperties extends DemakGeoJsonBaseProperties {
       rata_rata_lama_sekolah: number;
       pengeluaran_per_kapita: number;
     };
+    kemiskinan?: {
+      jumlah_penduduk_miskin_ribu_jiwa: number;
+      persentase_penduduk_miskin: number;
+      garis_kemiskinan_rp: number;
+    };
   };
 }
 
@@ -98,6 +103,7 @@ export type Granularity = "Provinsi" | "Kabupaten" | "Kecamatan";
 export interface RegionDetail {
   kecamatan: string;
   regency?: string;
+  type?: string;
   year?: string;
   village?: string;
   value: number | null;
@@ -113,6 +119,11 @@ export interface RegionDetail {
       rata_rata_lama_sekolah: number;
       pengeluaran_per_kapita: number;
     };
+    kemiskinan?: {
+      jumlah_penduduk_miskin_ribu_jiwa: number;
+      persentase_penduduk_miskin: number;
+      garis_kemiskinan_rp: number;
+    };
   };
 }
 
@@ -126,5 +137,7 @@ export interface MapDataResponse {
     year: string;
     lastUpdated: string;
     isCached: boolean;
+    indicatorId?: string;
+    kabupaten?: string | null;
   };
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { type ReactNode, useState } from "react";
+import Link from "next/link";
 import { Sidebar } from "@/components/Fragments/Sidebar";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/Elements/button";
@@ -29,12 +30,16 @@ export function DashboardLayout({
     <div className="relative flex h-screen w-full flex-col md:flex-row overflow-hidden bg-background">
       {/* Mobile Header */}
       <div className="flex h-14 shrink-0 items-center justify-between border-b border-border bg-sidebar px-4 md:hidden">
-        <div className="flex items-center gap-3">
+        <Link 
+          href="/" 
+          className="flex items-center gap-3 group cursor-pointer"
+          title="Kembali ke Beranda"
+        >
           <Image src="/logoBPS.png" alt="Logo BPS Demak" width={28} height={28} className="object-contain" />
-          <span className="text-sm font-semibold text-sidebar-foreground">
+          <span className="text-sm font-semibold text-sidebar-foreground group-hover:text-primary transition-colors">
             Statistik Demak
           </span>
-        </div>
+        </Link>
         <Button
           variant="ghost"
           size="icon"

@@ -7,6 +7,7 @@ import {
   Search, 
   ChevronDown, 
   ArrowLeft,
+  ArrowRight,
   MapPin,
   Database,
   MessageSquare,
@@ -29,8 +30,8 @@ const FAQS: FAQItem[] = [
   },
   {
     category: "Peta & GIS",
-    question: "Bagaimana cara mengubah tampilan peta dari Kab/Kota ke Kecamatan?",
-    answer: "Pada baris filter bagian atas peta, Anda dapat mengklik tombol toggle 'Granularity' untuk beralih antara tingkat wilayah Kab/Kota (Jawa Tengah) dan Kecamatan (Kabupaten Demak)."
+    question: "Bagaimana cara melihat data tingkat Kecamatan?",
+    answer: "Pada peta Jawa Tengah, klik salah satu Kabupaten/Kota (khususnya pada indikator Jumlah Penduduk), lalu pada panel samping kanan klik tombol 'Lihat Peta Tingkat Kecamatan'. Peta akan otomatis memuat batas dan data kecamatan wilayah tersebut."
   },
   {
     category: "BPS & Data",
@@ -45,7 +46,7 @@ const FAQS: FAQItem[] = [
   {
     category: "Peta & GIS",
     question: "Bagaimana cara mendownload data hasil visualisasi peta?",
-    answer: "Anda dapat mengklik tombol 'Export Data' pada sidebar navigasi untuk mengunduh data statistik dalam format GeoJSON, JSON, atau CSV."
+    answer: "Anda dapat mengklik tombol 'Export' pada bar filter bagian atas peta untuk mengunduh data dalam format GeoJSON (vektor spasial GIS), CSV (tabel angka untuk Excel), atau tangkapan visual PNG / Cetak."
   }
 ];
 
@@ -70,14 +71,26 @@ export default function HelpPage() {
 
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 py-8 space-y-8">
         
-        {/* Back Link & Hero Banner */}
+        {/* Back Links & Hero Banner */}
         <div className="space-y-4">
-          <Link 
-            href="/dashboard" 
-            className="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4" /> Kembali ke Peta Utama
-          </Link>
+          <div className="flex items-center justify-between flex-wrap gap-3">
+            <Link 
+              href="/" 
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-primary bg-white hover:bg-slate-100 border border-slate-200 shadow-xs transition-colors"
+            >
+              <ArrowLeft className="h-3.5 w-3.5 text-slate-500" />
+              <span>Kembali ke Beranda</span>
+            </Link>
+
+            <Link 
+              href="/dashboard" 
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-primary hover:bg-primary/90 shadow-xs transition-all"
+            >
+              <MapPin className="h-3.5 w-3.5" />
+              <span>Buka Dashboard Peta</span>
+              <ArrowRight className="h-3.5 w-3.5 ml-0.5" />
+            </Link>
+          </div>
 
           <div className="bg-sidebar rounded-2xl p-6 md:p-8 text-sidebar-foreground flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
             <div className="space-y-2 z-10 max-w-xl">

@@ -50,39 +50,28 @@ async function getKabupatenDemographicsFromDB(kabName, yearStr) {
   const requestedYear = yearStr || "2024";
   let filePath = path.join(DB_DIR, `kabupaten_${domainCode}_${requestedYear}.json`);
   
-  // Jika tahun spesifik tidak ditemukan, cari tahun terbaru yang tersedia di folder DB
+  // Cek apakah file tahun yang diminta ada di Database
   if (!fs.existsSync(filePath)) {
-    const files = fs.readdirSync(DB_DIR);
-    const kabFiles = files
-      .filter(f => f.startsWith(`kabupaten_${domainCode}_`))
-      .sort((a, b) => b.localeCompare(a)); // Sort descending (terbaru di atas)
-      
-    if (kabFiles.length > 0) {
-      filePath = path.join(DB_DIR, kabFiles[0]);
+    // Fallback HANYA ke sistem lama unversioned jika ada (legacy support)
+    const legacyPath = path.join(DB_DIR, `kabupaten_${domainCode}.json`);
+    if (fs.existsSync(legacyPath)) {
+      filePath = legacyPath;
     } else {
-      // Fallback ke sistem lama kalau belum pakai multi-year seeder
-      filePath = path.join(DB_DIR, `kabupaten_${domainCode}.json`);
+      throw new Error(`Data Kabupaten ${kabName} (${domainCode}) tahun ${requestedYear} belum di-seed/tidak tersedia di Database.`);
     }
   }
 
-  if (!fs.existsSync(filePath)) {
-    throw new Error(`Data Kabupaten ${domainCode} belum di-seed/tidak tersedia di Database. Pastikan script db_seeder.js sudah dijalankan.`);
-  }
-  
   const rawData = fs.readFileSync(filePath, 'utf8');
   const data = JSON.parse(rawData);
-  
-  // Extract actual year from filename if fallback was used
-  const matchedYear = filePath.match(/_(\d{4})\.json$/);
-  const actualYear = matchedYear ? matchedYear[1] : requestedYear;
+  const actualYear = requestedYear;
 
   // Hitung indikator gabungan (Total Kabupaten) dari data kecamatan
   let totalLaki = 0, totalPerempuan = 0, totalSemua = 0;
   if (data.kecamatan_data) {
     data.kecamatan_data.forEach(k => {
-      totalLaki += k.total_penduduk["Laki-laki"] || 0;
-      totalPerempuan += k.total_penduduk["Perempuan"] || 0;
-      totalSemua += k.total_penduduk["Total"] || 0;
+      totalLaki += k.total_penduduk?.["Laki-laki"] || 0;
+      totalPerempuan += k.total_penduduk?.["Perempuan"] || 0;
+      totalSemua += k.total_penduduk?.["Total"] || 0;
     });
   }
 

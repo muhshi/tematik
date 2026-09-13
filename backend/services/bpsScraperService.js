@@ -1,4 +1,7 @@
-const BPS_API_KEY = process.env.BPS_API_KEY || "ac9780c3023e0762d5eb07f1c2f00dc6";
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
+const BPS_API_KEY = process.env.BPS_API_KEY || "";
 
 /**
  * Helper to fetch data from BPS Web API
@@ -10,7 +13,7 @@ async function fetchBpsApi(url) {
     });
     if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
     const data = await response.json();
-    if (data.status === "Error") throw new Error(data.message || "BPS API Error");
+    if (data && data.status === "Error") throw new Error(data.message || "BPS API Error");
     return data;
   } catch (error) {
     console.error(`[BPS API Error] Fetch failed for ${url}:`, error.message);
@@ -126,9 +129,7 @@ async function scrapeProvinsiDemographics(yearStr = "2024") {
 
   return result;
 }
-
 const fs = require('fs');
-const path = require('path');
 
 /**
  * Endpoint Kabupaten: Mencari var_id dinamis per kabupaten, lalu tarik data level kecamatannya

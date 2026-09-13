@@ -10,12 +10,12 @@ if (supabaseUrl && supabaseKey && !supabaseUrl.includes("your-project.supabase.c
   try {
     supabase = createClient(supabaseUrl, supabaseKey);
     const keyType = process.env.SUPABASE_SERVICE_ROLE_KEY ? "Service Role Key (RLS Bypass)" : "Anon Key";
-    console.log(`⚡ Supabase client initialized using ${keyType}.`);
+    console.log(`[INFO] Supabase client initialized using ${keyType}.`);
   } catch (err) {
-    console.warn("⚠️ Supabase initialization failed:", err.message);
+    console.warn("[WARN] Supabase initialization failed:", err.message);
   }
 } else {
-  console.warn("⚠️ Supabase credentials missing in .env - running with local DB fallback.");
+  console.warn("[WARN] Supabase credentials missing in .env - running with local DB fallback.");
 }
 
 module.exports = { supabase };

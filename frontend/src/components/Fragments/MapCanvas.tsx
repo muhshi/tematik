@@ -178,6 +178,13 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year, i
   // Determine center & zoom based on granularity
   const center: [number, number] = granularity === "Kabupaten" || granularity === "Provinsi" ? [-7.15, 110.14] : [-6.89, 110.64];
   const zoom = granularity === "Kabupaten" || granularity === "Provinsi" ? 8 : 11;
+  // Dapatkan identitas unik wilayah aktif untuk memastikan Leaflet selalu unmount/mount layer baru saat wilayah berganti
+  const activeRegionId = useMemo(() => {
+    if (!displayGeojson || displayGeojson.features.length === 0) return "empty";
+    if (granularity === "Kabupaten" || granularity === "Provinsi") return "jateng_all";
+    const firstFeature = displayGeojson.features[0]?.properties;
+    return (firstFeature?.regency || firstFeature?.district || "kecamatan").toLowerCase().replace(/\s+/g, "_");
+  }, [displayGeojson, granularity]);
 
   return (
     <div className="relative h-full w-full bg-slate-50">
@@ -196,7 +203,7 @@ export default function MapCanvas({ geojson, onRegionClick, granularity, year, i
         
         {displayGeojson && displayGeojson.features.length > 0 && (
           <GeoJSON
-            key={`${granularity}-${year}-${indicatorName}-${displayGeojson.features.length}-${dataKey || ''}`} // Paksa react-leaflet render ulang
+            key={`${granularity}-${activeRegionId}-${year}-${indicatorName}-${displayGeojson.features.length}-${dataKey || ''}`}
             data={displayGeojson}
             style={(feature) => getFeatureStyle(feature, granularity)}
             onEachFeature={onEachFeature}

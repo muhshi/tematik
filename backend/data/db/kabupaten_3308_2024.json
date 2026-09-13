@@ -4,12 +4,192 @@
   "nama_kabupaten": "Magelang",
   "kecamatan_data": [
     {
-      "id_bps": 970,
-      "nama_kecamatan": "di Kabupaten Magelang",
+      "id_bps": 1,
+      "nama_kecamatan": "Salaman",
       "total_penduduk": {
-        "Laki-laki": 1348694,
-        "Perempuan": 1334200,
-        "Total": 2682894
+        "Laki-laki": 38570,
+        "Perempuan": 38367,
+        "Total": 76937
+      }
+    },
+    {
+      "id_bps": 2,
+      "nama_kecamatan": "Borobudur",
+      "total_penduduk": {
+        "Laki-laki": 32498,
+        "Perempuan": 32131,
+        "Total": 64629
+      }
+    },
+    {
+      "id_bps": 3,
+      "nama_kecamatan": "Ngluwar",
+      "total_penduduk": {
+        "Laki-laki": 16553,
+        "Perempuan": 16694,
+        "Total": 33247
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Salam",
+      "total_penduduk": {
+        "Laki-laki": 24543,
+        "Perempuan": 24733,
+        "Total": 49276
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Srumbung",
+      "total_penduduk": {
+        "Laki-laki": 24708,
+        "Perempuan": 24883,
+        "Total": 49591
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Dukun",
+      "total_penduduk": {
+        "Laki-laki": 23813,
+        "Perempuan": 23986,
+        "Total": 47799
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Muntilan",
+      "total_penduduk": {
+        "Laki-laki": 40636,
+        "Perempuan": 40919,
+        "Total": 81555
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Mungkid",
+      "total_penduduk": {
+        "Laki-laki": 38165,
+        "Perempuan": 38613,
+        "Total": 76778
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Sawangan",
+      "total_penduduk": {
+        "Laki-laki": 29599,
+        "Perempuan": 29443,
+        "Total": 59042
+      }
+    },
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Candimulyo",
+      "total_penduduk": {
+        "Laki-laki": 25982,
+        "Perempuan": 25351,
+        "Total": 51333
+      }
+    },
+    {
+      "id_bps": 11,
+      "nama_kecamatan": "Mertoyudan",
+      "total_penduduk": {
+        "Laki-laki": 59199,
+        "Perempuan": 60484,
+        "Total": 119683
+      }
+    },
+    {
+      "id_bps": 12,
+      "nama_kecamatan": "Tempuran",
+      "total_penduduk": {
+        "Laki-laki": 27289,
+        "Perempuan": 26766,
+        "Total": 54055
+      }
+    },
+    {
+      "id_bps": 13,
+      "nama_kecamatan": "Kajoran",
+      "total_penduduk": {
+        "Laki-laki": 31670,
+        "Perempuan": 30715,
+        "Total": 62385
+      }
+    },
+    {
+      "id_bps": 14,
+      "nama_kecamatan": "Kaliangkrik",
+      "total_penduduk": {
+        "Laki-laki": 31716,
+        "Perempuan": 30401,
+        "Total": 62117
+      }
+    },
+    {
+      "id_bps": 15,
+      "nama_kecamatan": "Bandongan",
+      "total_penduduk": {
+        "Laki-laki": 32428,
+        "Perempuan": 31085,
+        "Total": 63513
+      }
+    },
+    {
+      "id_bps": 16,
+      "nama_kecamatan": "Windusari",
+      "total_penduduk": {
+        "Laki-laki": 27506,
+        "Perempuan": 26055,
+        "Total": 53561
+      }
+    },
+    {
+      "id_bps": 17,
+      "nama_kecamatan": "Secang",
+      "total_penduduk": {
+        "Laki-laki": 42594,
+        "Perempuan": 42654,
+        "Total": 85248
+      }
+    },
+    {
+      "id_bps": 18,
+      "nama_kecamatan": "Tegalrejo",
+      "total_penduduk": {
+        "Laki-laki": 27602,
+        "Perempuan": 27856,
+        "Total": 55458
+      }
+    },
+    {
+      "id_bps": 19,
+      "nama_kecamatan": "Pakis",
+      "total_penduduk": {
+        "Laki-laki": 28278,
+        "Perempuan": 27042,
+        "Total": 55320
+      }
+    },
+    {
+      "id_bps": 20,
+      "nama_kecamatan": "Grabag",
+      "total_penduduk": {
+        "Laki-laki": 49091,
+        "Perempuan": 47788,
+        "Total": 96879
+      }
+    },
+    {
+      "id_bps": 21,
+      "nama_kecamatan": "Ngablak",
+      "total_penduduk": {
+        "Laki-laki": 21907,
+        "Perempuan": 21134,
+        "Total": 43041
       }
     }
   ]

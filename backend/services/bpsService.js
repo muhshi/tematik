@@ -1,45 +1,30 @@
 const { BPS_CONFIG, getApiKey } = require("../config/bpsConfig");
 const { db } = require("../db");
 
-function generateMockDemographics(total, varId) {
-  // Hanya generate demografi untuk indikator kependudukan (Demak 248, Jateng 2205)
-  if (varId !== 248 && varId !== 2205) return undefined;
-  
-  const totalSafe = Math.max(0, Number(total) || 0);
-  
-  // Random variance +/- 2%
-  const l_pct = 0.505 + (Math.random() * 0.04 - 0.02);
-  const p_pct = 1 - l_pct;
-  
-  const l_val = Math.round(totalSafe * l_pct);
-  const p_val = totalSafe - l_val;
-  
-  const ageDistribution = [0.08, 0.08, 0.085, 0.085, 0.08, 0.075, 0.075, 0.07, 0.07, 0.065, 0.06, 0.05, 0.045, 0.08];
-  const ageLabels = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
-  
-  const age = {};
-  let ageSum = 0;
-  for (let i = 0; i < ageDistribution.length - 1; i++) {
-    const val = Math.round(totalSafe * (ageDistribution[i] + (Math.random() * 0.01 - 0.005)));
-    age[ageLabels[i]] = val;
-    ageSum += val;
-  }
-  age["65+"] = Math.max(0, totalSafe - ageSum);
 
-  return {
-    gender: { L: l_val, P: p_val },
-    age
-  };
-}
 
 function normalizeRegionName(name) {
   if (!name) return "";
-  return name
+  let norm = name
     .toLowerCase()
     .replace(/^\d+[\s.]*/, "") // Remove BPS codes
     .replace(/^(kabupaten|kab\.?|kota|kecamatan|kec\.?)\s+/i, "")
+    .replace(/^(kabupaten|kab\.?|kota|kecamatan|kec\.?)\s+/i, "") // Repeat for compound prefixes like 'Kecamatan Kota Kudus'
     .replace(/\s+/g, "")
     .trim();
+
+  // Mapping variasi ejaan resmi BPS vs GeoJSON
+  const aliasMap = {
+    "gayer": "geyer",
+    "kebakramat": "kebakkramat",
+    "pageruyung": "pagerruyung",
+    "radudongkal": "randudongkal",
+    "polokarta": "polokarto",
+    "kotakudus": "kudus",
+    "petungkriyono": "petungkriono",
+  };
+
+  return aliasMap[norm] || norm;
 }
 
 function normalizeKecamatanName(name) {
@@ -154,7 +139,7 @@ async function fetchDynamicBpsData(yearStr = "2024", targetVarId, domain = 3300)
     if (response.ok) {
       const result = await response.json();
 
-      if (result.status === "OK" && result["data-availability"] !== "not-available") {
+      if (result && result.status === "OK" && result["data-availability"] !== "not-available") {
         const vervarList = result.vervar || [];
         const datacontent = result.datacontent || {};
         const turvarList = result.turvar || [];
@@ -194,7 +179,7 @@ async function fetchDynamicBpsData(yearStr = "2024", targetVarId, domain = 3300)
             results.push({
               kecamatan: kecamatanName,
               value: numValue,
-              demographics: generateMockDemographics(numValue, var_id),
+              demographics: undefined,
             });
             dbPoints.push({
               varId: var_id,
@@ -227,7 +212,7 @@ async function fetchDynamicBpsData(yearStr = "2024", targetVarId, domain = 3300)
       data: storedPoints.map((p) => ({ 
         kecamatan: p.kecamatan, 
         value: p.value,
-        demographics: generateMockDemographics(p.value, var_id)
+        demographics: undefined
       })),
       source: "BPS Provinsi Jawa Tengah",
       isCached: true,
@@ -262,7 +247,7 @@ async function fetchDemakStrategicData(yearStr = "2024", targetVarId) {
 
     if (response.ok) {
       const result = await response.json();
-      if (result.status === "OK" && result["data-availability"] !== "not-available") {
+      if (result && result.status === "OK" && result["data-availability"] !== "not-available") {
         const vervarList = result.vervar || [];
         const datacontent = result.datacontent || {};
         const turvarList = result.turvar || [];
@@ -302,7 +287,7 @@ async function fetchDemakStrategicData(yearStr = "2024", targetVarId) {
             results.push({
               kecamatan: regionName,
               value: numValue,
-              demographics: generateMockDemographics(numValue, var_id),
+              demographics: undefined,
             });
             dbPoints.push({
               varId: var_id,
@@ -331,7 +316,7 @@ async function fetchDemakStrategicData(yearStr = "2024", targetVarId) {
     return storedPoints.map((p) => ({ 
       kecamatan: p.kecamatan, 
       value: p.value,
-      demographics: generateMockDemographics(p.value, var_id)
+      demographics: undefined
     }));
   }
 
@@ -355,7 +340,7 @@ async function fetchDemakStrategicData(yearStr = "2024", targetVarId) {
     ];
     return demakDefault.map(d => ({
       ...d,
-      demographics: generateMockDemographics(d.value, var_id)
+      demographics: undefined
     }));
   }
 
@@ -388,7 +373,7 @@ async function getAvailableYearsForVar(varIdStr) {
 
       if (response.ok) {
         const result = await response.json();
-        if (result["data-availability"] === "available" && Array.isArray(result.data) && result.data.length > 1) {
+        if (result && result["data-availability"] === "available" && Array.isArray(result.data) && result.data.length > 1) {
           const rawYears = result.data[1];
           const hasRecentYear = rawYears.some((y) => parseInt(y.th, 10) >= 2021);
           if (hasRecentYear) {
@@ -419,5 +404,4 @@ module.exports = {
   normalizeRegionName,
   normalizeKecamatanName,
   getAvailableYearsForVar,
-  generateMockDemographics,
 };

@@ -128,15 +128,6 @@
         "Perempuan": 58773,
         "Total": 119090
       }
-    },
-    {
-      "id_bps": 15,
-      "nama_kecamatan": "Jumlah",
-      "total_penduduk": {
-        "Laki-laki": 780921,
-        "Perempuan": 760764,
-        "Total": 1541685
-      }
     }
   ]
 }

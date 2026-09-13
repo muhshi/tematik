@@ -4,129 +4,174 @@
   "nama_kabupaten": "Semarang",
   "kecamatan_data": [
     {
-      "id_bps": 1,
-      "nama_kecamatan": "Kopeng",
-      "total_penduduk": {
-        "Laki-laki": 3545,
-        "Perempuan": 3435,
-        "Total": 6980
-      }
-    },
-    {
-      "id_bps": 2,
-      "nama_kecamatan": "Batur",
-      "total_penduduk": {
-        "Laki-laki": 3644,
-        "Perempuan": 3569,
-        "Total": 7213
-      }
-    },
-    {
-      "id_bps": 3,
-      "nama_kecamatan": "Tajuk",
-      "total_penduduk": {
-        "Laki-laki": 2035,
-        "Perempuan": 2018,
-        "Total": 4053
-      }
-    },
-    {
-      "id_bps": 4,
-      "nama_kecamatan": "Jetak",
-      "total_penduduk": {
-        "Laki-laki": 2012,
-        "Perempuan": 2143,
-        "Total": 4155
-      }
-    },
-    {
-      "id_bps": 5,
-      "nama_kecamatan": "Samirono",
-      "total_penduduk": {
-        "Laki-laki": 1210,
-        "Perempuan": 1176,
-        "Total": 2386
-      }
-    },
-    {
-      "id_bps": 6,
-      "nama_kecamatan": "Sumogawe",
-      "total_penduduk": {
-        "Laki-laki": 4257,
-        "Perempuan": 4300,
-        "Total": 8557
-      }
-    },
-    {
-      "id_bps": 7,
-      "nama_kecamatan": "Polobogo",
-      "total_penduduk": {
-        "Laki-laki": 2168,
-        "Perempuan": 2283,
-        "Total": 4451
-      }
-    },
-    {
-      "id_bps": 8,
-      "nama_kecamatan": "Manggihan",
-      "total_penduduk": {
-        "Laki-laki": 840,
-        "Perempuan": 824,
-        "Total": 1664
-      }
-    },
-    {
-      "id_bps": 9,
+      "id_bps": 217,
       "nama_kecamatan": "Getasan",
-      "total_penduduk": {
-        "Laki-laki": 1517,
-        "Perempuan": 1528,
-        "Total": 3045
-      }
-    },
-    {
-      "id_bps": 10,
-      "nama_kecamatan": "Wates",
-      "total_penduduk": {
-        "Laki-laki": 1583,
-        "Perempuan": 1613,
-        "Total": 3196
-      }
-    },
-    {
-      "id_bps": 11,
-      "nama_kecamatan": "Tolokan",
-      "total_penduduk": {
-        "Laki-laki": 1430,
-        "Perempuan": 1388,
-        "Total": 2818
-      }
-    },
-    {
-      "id_bps": 12,
-      "nama_kecamatan": "Ngrawan",
-      "total_penduduk": {
-        "Laki-laki": 762,
-        "Perempuan": 757,
-        "Total": 1519
-      }
-    },
-    {
-      "id_bps": 13,
-      "nama_kecamatan": "Nogosaren",
-      "total_penduduk": {
-        "Laki-laki": 794,
-        "Perempuan": 745,
-        "Total": 1539
-      }
-    },
-    {
-      "id_bps": 14,
-      "nama_kecamatan": "Jumlah",
       "total_penduduk": {
         "Laki-laki": 25797,
         "Perempuan": 25779,
         "Total": 51576
+      }
+    },
+    {
+      "id_bps": 219,
+      "nama_kecamatan": "Tengaran",
+      "total_penduduk": {
+        "Laki-laki": 34783,
+        "Perempuan": 34096,
+        "Total": 68879
+      }
+    },
+    {
+      "id_bps": 221,
+      "nama_kecamatan": "Susukan",
+      "total_penduduk": {
+        "Laki-laki": 24897,
+        "Perempuan": 24597,
+        "Total": 49494
+      }
+    },
+    {
+      "id_bps": 222,
+      "nama_kecamatan": "Kaliwungu",
+      "total_penduduk": {
+        "Laki-laki": 15053,
+        "Perempuan": 15365,
+        "Total": 30418
+      }
+    },
+    {
+      "id_bps": 226,
+      "nama_kecamatan": "Suruh",
+      "total_penduduk": {
+        "Laki-laki": 35514,
+        "Perempuan": 34975,
+        "Total": 70489
+      }
+    },
+    {
+      "id_bps": 227,
+      "nama_kecamatan": "Pabelan",
+      "total_penduduk": {
+        "Laki-laki": 21797,
+        "Perempuan": 21717,
+        "Total": 43514
+      }
+    },
+    {
+      "id_bps": 229,
+      "nama_kecamatan": "Tuntang",
+      "total_penduduk": {
+        "Laki-laki": 33284,
+        "Perempuan": 33613,
+        "Total": 66897
+      }
+    },
+    {
+      "id_bps": 232,
+      "nama_kecamatan": "Banyubiru",
+      "total_penduduk": {
+        "Laki-laki": 22351,
+        "Perempuan": 22020,
+        "Total": 44371
+      }
+    },
+    {
+      "id_bps": 234,
+      "nama_kecamatan": "Jambu",
+      "total_penduduk": {
+        "Laki-laki": 20480,
+        "Perempuan": 20342,
+        "Total": 40822
+      }
+    },
+    {
+      "id_bps": 236,
+      "nama_kecamatan": "Sumowono",
+      "total_penduduk": {
+        "Laki-laki": 17208,
+        "Perempuan": 16810,
+        "Total": 34018
+      }
+    },
+    {
+      "id_bps": 237,
+      "nama_kecamatan": "Ambarawa",
+      "total_penduduk": {
+        "Laki-laki": 31053,
+        "Perempuan": 31257,
+        "Total": 62310
+      }
+    },
+    {
+      "id_bps": 240,
+      "nama_kecamatan": "Bandungan",
+      "total_penduduk": {
+        "Laki-laki": 29283,
+        "Perempuan": 28607,
+        "Total": 57890
+      }
+    },
+    {
+      "id_bps": 241,
+      "nama_kecamatan": "Bawen",
+      "total_penduduk": {
+        "Laki-laki": 28523,
+        "Perempuan": 28387,
+        "Total": 56910
+      }
+    },
+    {
+      "id_bps": 242,
+      "nama_kecamatan": "Bringin",
+      "total_penduduk": {
+        "Laki-laki": 23567,
+        "Perempuan": 23343,
+        "Total": 46910
+      }
+    },
+    {
+      "id_bps": 245,
+      "nama_kecamatan": "Bancak",
+      "total_penduduk": {
+        "Laki-laki": 12096,
+        "Perempuan": 12162,
+        "Total": 24258
+      }
+    },
+    {
+      "id_bps": 247,
+      "nama_kecamatan": "Pringapus",
+      "total_penduduk": {
+        "Laki-laki": 26754,
+        "Perempuan": 26585,
+        "Total": 53339
+      }
+    },
+    {
+      "id_bps": 251,
+      "nama_kecamatan": "Bergas",
+      "total_penduduk": {
+        "Laki-laki": 34270,
+        "Perempuan": 34165,
+        "Total": 68435
+      }
+    },
+    {
+      "id_bps": 252,
+      "nama_kecamatan": "Ungaran Barat",
+      "total_penduduk": {
+        "Laki-laki": 38618,
+        "Perempuan": 39194,
+        "Total": 77812
+      }
+    },
+    {
+      "id_bps": 254,
+      "nama_kecamatan": "Ungaran Timur",
+      "total_penduduk": {
+        "Laki-laki": 36941,
+        "Perempuan": 37140,
+        "Total": 74081
       }
     }
   ]

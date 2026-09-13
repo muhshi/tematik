@@ -4,21 +4,12 @@
   "nama_kabupaten": "Klaten",
   "kecamatan_data": [
     {
-      "id_bps": 3310000,
-      "nama_kecamatan": "Kabupaten Klaten",
-      "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
-        "Total": 0
-      }
-    },
-    {
       "id_bps": 3310010,
       "nama_kecamatan": "Prambanan",
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 52970
       }
     },
     {
@@ -27,7 +18,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 38398
       }
     },
     {
@@ -36,7 +27,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 51683
       }
     },
     {
@@ -45,7 +36,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 61755
       }
     },
     {
@@ -54,7 +45,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 56450
       }
     },
     {
@@ -63,7 +54,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 77636
       }
     },
     {
@@ -72,7 +63,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 37348
       }
     },
     {
@@ -81,7 +72,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 19355
       }
     },
     {
@@ -90,7 +81,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 60030
       }
     },
     {
@@ -99,7 +90,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 43546
       }
     },
     {
@@ -108,7 +99,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 36543
       }
     },
     {
@@ -117,7 +108,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 45543
       }
     },
     {
@@ -126,7 +117,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 64615
       }
     },
     {
@@ -135,7 +126,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 47184
       }
     },
     {
@@ -144,7 +135,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 42741
       }
     },
     {
@@ -153,7 +144,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 57933
       }
     },
     {
@@ -162,7 +153,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 62316
       }
     },
     {
@@ -171,7 +162,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 41037
       }
     },
     {
@@ -180,7 +171,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 40264
       }
     },
     {
@@ -189,7 +180,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 45485
       }
     },
     {
@@ -198,7 +189,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 52293
       }
     },
     {
@@ -207,7 +198,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 59333
       }
     },
     {
@@ -216,7 +207,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 38813
       }
     },
     {
@@ -225,7 +216,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 44448
       }
     },
     {
@@ -234,7 +225,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 40297
       }
     },
     {
@@ -243,7 +234,7 @@
       "total_penduduk": {
         "Laki-laki": 0,
         "Perempuan": 0,
-        "Total": 0
+        "Total": 49256
       }
     }
   ]

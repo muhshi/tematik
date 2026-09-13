@@ -4,21 +4,12 @@
   "nama_kabupaten": "Banyumas",
   "kecamatan_data": [
     {
-      "id_bps": 3302000,
-      "nama_kecamatan": "Kabupaten Banyumas",
-      "total_penduduk": {
-        "Laki-laki": 937725,
-        "Perempuan": 927545,
-        "Total": 1865270
-      }
-    },
-    {
       "id_bps": 3302010,
       "nama_kecamatan": "Lumbir",
       "total_penduduk": {
         "Laki-laki": 26305,
         "Perempuan": 25662,
-        "Total": 51967
+        "Total": 51537
       }
     },
     {
@@ -27,7 +18,7 @@
       "total_penduduk": {
         "Laki-laki": 43958,
         "Perempuan": 43066,
-        "Total": 87024
+        "Total": 86342
       }
     },
     {
@@ -36,7 +27,7 @@
       "total_penduduk": {
         "Laki-laki": 35124,
         "Perempuan": 34491,
-        "Total": 69615
+        "Total": 68961
       }
     },
     {
@@ -45,7 +36,7 @@
       "total_penduduk": {
         "Laki-laki": 27981,
         "Perempuan": 27469,
-        "Total": 55450
+        "Total": 54915
       }
     },
     {
@@ -54,7 +45,7 @@
       "total_penduduk": {
         "Laki-laki": 36116,
         "Perempuan": 35401,
-        "Total": 71517
+        "Total": 70614
       }
     },
     {
@@ -63,7 +54,7 @@
       "total_penduduk": {
         "Laki-laki": 38388,
         "Perempuan": 37334,
-        "Total": 75722
+        "Total": 75037
       }
     },
     {
@@ -72,7 +63,7 @@
       "total_penduduk": {
         "Laki-laki": 30411,
         "Perempuan": 29942,
-        "Total": 60353
+        "Total": 59812
       }
     },
     {
@@ -81,7 +72,7 @@
       "total_penduduk": {
         "Laki-laki": 26510,
         "Perempuan": 26753,
-        "Total": 53263
+        "Total": 52623
       }
     },
     {
@@ -90,7 +81,7 @@
       "total_penduduk": {
         "Laki-laki": 19709,
         "Perempuan": 19876,
-        "Total": 39585
+        "Total": 39165
       }
     },
     {
@@ -99,7 +90,7 @@
       "total_penduduk": {
         "Laki-laki": 30712,
         "Perempuan": 30553,
-        "Total": 61265
+        "Total": 60341
       }
     },
     {
@@ -108,7 +99,7 @@
       "total_penduduk": {
         "Laki-laki": 27552,
         "Perempuan": 27740,
-        "Total": 55292
+        "Total": 54797
       }
     },
     {
@@ -117,7 +108,7 @@
       "total_penduduk": {
         "Laki-laki": 32151,
         "Perempuan": 32433,
-        "Total": 64584
+        "Total": 63770
       }
     },
     {
@@ -126,7 +117,7 @@
       "total_penduduk": {
         "Laki-laki": 19791,
         "Perempuan": 19540,
-        "Total": 39331
+        "Total": 38846
       }
     },
     {
@@ -135,7 +126,7 @@
       "total_penduduk": {
         "Laki-laki": 53691,
         "Perempuan": 52367,
-        "Total": 106058
+        "Total": 105293
       }
     },
     {
@@ -144,7 +135,7 @@
       "total_penduduk": {
         "Laki-laki": 28346,
         "Perempuan": 27956,
-        "Total": 56302
+        "Total": 55694
       }
     },
     {
@@ -153,7 +144,7 @@
       "total_penduduk": {
         "Laki-laki": 40499,
         "Perempuan": 38985,
-        "Total": 79484
+        "Total": 78681
       }
     },
     {
@@ -162,7 +153,7 @@
       "total_penduduk": {
         "Laki-laki": 65491,
         "Perempuan": 64135,
-        "Total": 129626
+        "Total": 128614
       }
     },
     {
@@ -171,7 +162,7 @@
       "total_penduduk": {
         "Laki-laki": 35740,
         "Perempuan": 35096,
-        "Total": 70836
+        "Total": 70103
       }
     },
     {
@@ -180,7 +171,7 @@
       "total_penduduk": {
         "Laki-laki": 32893,
         "Perempuan": 33011,
-        "Total": 65904
+        "Total": 65051
       }
     },
     {
@@ -189,7 +180,7 @@
       "total_penduduk": {
         "Laki-laki": 27771,
         "Perempuan": 27617,
-        "Total": 55388
+        "Total": 55004
       }
     },
     {
@@ -198,7 +189,7 @@
       "total_penduduk": {
         "Laki-laki": 51056,
         "Perempuan": 49906,
-        "Total": 100962
+        "Total": 99344
       }
     },
     {
@@ -207,7 +198,7 @@
       "total_penduduk": {
         "Laki-laki": 42741,
         "Perempuan": 41785,
-        "Total": 84526
+        "Total": 83955
       }
     },
     {
@@ -216,7 +207,7 @@
       "total_penduduk": {
         "Laki-laki": 46537,
         "Perempuan": 46739,
-        "Total": 93276
+        "Total": 92436
       }
     },
     {
@@ -225,7 +216,7 @@
       "total_penduduk": {
         "Laki-laki": 37759,
         "Perempuan": 37847,
-        "Total": 75606
+        "Total": 74928
       }
     },
     {
@@ -234,7 +225,7 @@
       "total_penduduk": {
         "Laki-laki": 27248,
         "Perempuan": 27342,
-        "Total": 54590
+        "Total": 54224
       }
     },
     {
@@ -243,7 +234,7 @@
       "total_penduduk": {
         "Laki-laki": 28035,
         "Perempuan": 28399,
-        "Total": 56434
+        "Total": 56055
       }
     },
     {
@@ -252,7 +243,7 @@
       "total_penduduk": {
         "Laki-laki": 25210,
         "Perempuan": 26100,
-        "Total": 51310
+        "Total": 50955
       }
     }
   ]

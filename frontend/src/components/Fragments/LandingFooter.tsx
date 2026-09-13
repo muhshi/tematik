@@ -10,9 +10,9 @@ const FacebookIcon = () => (
   </svg>
 );
 
-const TwitterIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+const XIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
   </svg>
 );
 
@@ -28,6 +28,12 @@ const YoutubeIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/>
     <path d="m10 15 5-3-5-3z"/>
+  </svg>
+);
+
+const TiktokIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
   </svg>
 );
 
@@ -70,18 +76,51 @@ export function LandingFooter() {
               <p><span className="font-bold text-slate-700">Email:</span> bps3321@bps.go.id</p>
             </div>
 
-            <div className="flex items-center gap-3 mt-4">
-              <a href="#" aria-label="Twitter" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs">
-                <TwitterIcon />
-              </a>
-              <a href="#" aria-label="Facebook" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs">
-                <FacebookIcon />
-              </a>
-              <a href="#" aria-label="Instagram" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs">
+            <div className="flex items-center gap-2.5 mt-4 flex-wrap">
+              <a
+                href="https://www.instagram.com/bpskabdemak?stkn=MW82b2c3dWhiZWd2OA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram BPS Demak"
+                className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs"
+              >
                 <InstagramIcon />
               </a>
-              <a href="#" aria-label="Youtube" className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs">
+              <a
+                href="https://www.tiktok.com/@bpskabdemak?_r=1&_t=ZS-99fYBV6oC97"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok BPS Demak"
+                className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs"
+              >
+                <TiktokIcon />
+              </a>
+              <a
+                href="https://youtube.com/@bpskabdemak?si=sW7JkhLyCHrSVnGO"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube BPS Demak"
+                className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs"
+              >
                 <YoutubeIcon />
+              </a>
+              <a
+                href="https://www.facebook.com/share/1Mj9EFSjFh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook BPS Demak"
+                className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs"
+              >
+                <FacebookIcon />
+              </a>
+              <a
+                href="https://x.com/bpskabdemak"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter) BPS Demak"
+                className="h-10 w-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors bg-white shadow-xs"
+              >
+                <XIcon />
               </a>
             </div>
           </div>

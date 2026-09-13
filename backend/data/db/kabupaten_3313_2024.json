@@ -4,15 +4,6 @@
   "nama_kabupaten": "Karanganyar",
   "kecamatan_data": [
     {
-      "id_bps": 1300,
-      "nama_kecamatan": "Kabupaten Karanganyar",
-      "total_penduduk": {
-        "Laki-laki": 479433,
-        "Perempuan": 460858,
-        "Total": 940291
-      }
-    },
-    {
       "id_bps": 1301,
       "nama_kecamatan": "Kecamatan Jatipuro",
       "total_penduduk": {

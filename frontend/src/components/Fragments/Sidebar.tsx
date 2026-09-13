@@ -4,11 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
+  Home,
   BarChart3,
   Users,
   Leaf,
   HelpCircle,
   FileText,
+  BookOpen,
   Download,
   PanelLeftClose,
   PanelLeftOpen,
@@ -87,14 +89,18 @@ export function Sidebar({
           w-64
         `}
       >
-        {/* Logo Section - Hidden on Mobile */}
-        <div className="hidden md:flex items-center gap-3 px-4 py-5">
+        {/* Logo Section - Clickable back to Landing Page */}
+        <Link 
+          href="/" 
+          className="hidden md:flex items-center gap-3 px-4 py-5 hover:bg-sidebar-accent/50 transition-colors group cursor-pointer"
+          title="Kembali ke Beranda"
+        >
           <div className="flex h-9 w-9 shrink-0 items-center justify-center">
             <Image src="/logoBPS.png" alt="Logo BPS Demak" width={32} height={32} className="object-contain" priority />
           </div>
           {isTextVisible && (
             <div className="flex flex-col overflow-hidden">
-              <span className="truncate text-sm font-semibold text-sidebar-foreground">
+              <span className="truncate text-sm font-semibold text-sidebar-foreground group-hover:text-primary transition-colors">
                 Statistik Demak
               </span>
               <span className="truncate text-[11px] text-sidebar-foreground/60">
@@ -102,7 +108,7 @@ export function Sidebar({
               </span>
             </div>
           )}
-        </div>
+        </Link>
 
         <Separator className="hidden md:block bg-sidebar-border" />
 
@@ -212,6 +218,15 @@ export function Sidebar({
           <Separator className="mb-2 bg-sidebar-border" />
 
           <Link
+            href="/"
+            className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-sidebar-foreground/60 transition-colors hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+            title="Kembali ke Beranda"
+          >
+            <Home className="h-[18px] w-[18px] shrink-0 text-primary" />
+            {isTextVisible && <span>Kembali ke Beranda</span>}
+          </Link>
+
+          <Link
             href="/help"
             className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-sidebar-foreground/60 transition-colors hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
           >
@@ -222,9 +237,10 @@ export function Sidebar({
           <Link
             href="/docs"
             className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-sidebar-foreground/60 transition-colors hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+            title="Panduan & Cara Baca Data"
           >
-            <FileText className="h-[18px] w-[18px] shrink-0" />
-            {isTextVisible && <span>Documentation</span>}
+            <BookOpen className="h-[18px] w-[18px] shrink-0 text-primary" />
+            {isTextVisible && <span>Panduan & Cara Baca</span>}
           </Link>
 
           <div className="px-1 pt-2">

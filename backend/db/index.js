@@ -187,6 +187,18 @@ class DatabaseManager {
     }));
     this.persist();
 
+    // Pastikan Supabase bersih: matikan semua dulu, baru nyalakan yang dipilih
+    if (supabase) {
+      try {
+        await supabase.from("bps_indicators").update({ is_active: false }).neq("id", "");
+        if (activeIds.length > 0) {
+          await supabase.from("bps_indicators").update({ is_active: true }).in("id", activeIds);
+        }
+      } catch (err) {
+        console.warn("[DatabaseManager] Supabase updateActiveIndicators error:", err.message);
+      }
+    }
+
     await this.saveIndicators(this.store.indicators);
   }
 }

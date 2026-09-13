@@ -40,12 +40,12 @@
       }
     },
     {
-      "id_bps": 326,
-      "nama_kecamatan": "Gayer",
+      "id_bps": 332,
+      "nama_kecamatan": "Geyer",
       "total_penduduk": {
-        "Laki-laki": 22869,
-        "Perempuan": 22661,
-        "Total": 45530
+        "Laki-laki": 34458,
+        "Perempuan": 34126,
+        "Total": 68584
       }
     },
     {
@@ -172,15 +172,6 @@
         "Laki-laki": 22113,
         "Perempuan": 21823,
         "Total": 43936
-      }
-    },
-    {
-      "id_bps": 347,
-      "nama_kecamatan": "Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kabupaten Grobogan",
-      "total_penduduk": {
-        "Laki-laki": 761591,
-        "Perempuan": 752710,
-        "Total": 1514301
       }
     }
   ]

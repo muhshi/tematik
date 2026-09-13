@@ -1,0 +1,160 @@
+{
+  "domain_bps": 3320,
+  "tahun": 2023,
+  "nama_kabupaten": "Jepara",
+  "kecamatan_data": [
+    {
+      "id_bps": 10,
+      "nama_kecamatan": "Kedung",
+      "total_penduduk": {
+        "Laki-laki": 41572,
+        "Perempuan": 41002,
+        "Total": 82574
+      }
+    },
+    {
+      "id_bps": 20,
+      "nama_kecamatan": "Pecangaan",
+      "total_penduduk": {
+        "Laki-laki": 45251,
+        "Perempuan": 44875,
+        "Total": 90126
+      }
+    },
+    {
+      "id_bps": 21,
+      "nama_kecamatan": "Kalinyamatan",
+      "total_penduduk": {
+        "Laki-laki": 33022,
+        "Perempuan": 32586,
+        "Total": 65608
+      }
+    },
+    {
+      "id_bps": 30,
+      "nama_kecamatan": "Welahan",
+      "total_penduduk": {
+        "Laki-laki": 41195,
+        "Perempuan": 40493,
+        "Total": 81688
+      }
+    },
+    {
+      "id_bps": 40,
+      "nama_kecamatan": "Mayong",
+      "total_penduduk": {
+        "Laki-laki": 48926,
+        "Perempuan": 48619,
+        "Total": 97545
+      }
+    },
+    {
+      "id_bps": 50,
+      "nama_kecamatan": "Nalumsari",
+      "total_penduduk": {
+        "Laki-laki": 40885,
+        "Perempuan": 40749,
+        "Total": 81634
+      }
+    },
+    {
+      "id_bps": 60,
+      "nama_kecamatan": "Batealit",
+      "total_penduduk": {
+        "Laki-laki": 45568,
+        "Perempuan": 44997,
+        "Total": 90565
+      }
+    },
+    {
+      "id_bps": 70,
+      "nama_kecamatan": "Tahunan",
+      "total_penduduk": {
+        "Laki-laki": 58558,
+        "Perempuan": 57142,
+        "Total": 115700
+      }
+    },
+    {
+      "id_bps": 80,
+      "nama_kecamatan": "Jepara",
+      "total_penduduk": {
+        "Laki-laki": 42738,
+        "Perempuan": 42413,
+        "Total": 85151
+      }
+    },
+    {
+      "id_bps": 90,
+      "nama_kecamatan": "Mlonggo",
+      "total_penduduk": {
+        "Laki-laki": 45335,
+        "Perempuan": 43872,
+        "Total": 89207
+      }
+    },
+    {
+      "id_bps": 91,
+      "nama_kecamatan": "Pakis Aji",
+      "total_penduduk": {
+        "Laki-laki": 32349,
+        "Perempuan": 31561,
+        "Total": 63910
+      }
+    },
+    {
+      "id_bps": 100,
+      "nama_kecamatan": "Bangsri",
+      "total_penduduk": {
+        "Laki-laki": 53049,
+        "Perempuan": 52483,
+        "Total": 105532
+      }
+    },
+    {
+      "id_bps": 101,
+      "nama_kecamatan": "Kembang",
+      "total_penduduk": {
+        "Laki-laki": 37032,
+        "Perempuan": 37275,
+        "Total": 74307
+      }
+    },
+    {
+      "id_bps": 110,
+      "nama_kecamatan": "Keling",
+      "total_penduduk": {
+        "Laki-laki": 33957,
+        "Perempuan": 34090,
+        "Total": 68047
+      }
+    },
+    {
+      "id_bps": 111,
+      "nama_kecamatan": "Donorojo",
+      "total_penduduk": {
+        "Laki-laki": 31239,
+        "Perempuan": 31156,
+        "Total": 62395
+      }
+    },
+    {
+      "id_bps": 120,
+      "nama_kecamatan": "Karimunjawa",
+      "total_penduduk": {
+        "Laki-laki": 5420,
+        "Perempuan": 5189,
+        "Total": 10609
+      }
+    },
+    {
+      "id_bps": 170,
+      "nama_kecamatan": "KAB. JEPARA",
+      "total_penduduk": {
+        "Laki-laki": 636096,
+        "Perempuan": 628502,
+        "Total": 1264598
+      }
+    }
+  ]
+}

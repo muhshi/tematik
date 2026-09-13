@@ -4,15 +4,6 @@
   "nama_kabupaten": "Banyumas",
   "kecamatan_data": [
     {
-      "id_bps": 3302000,
-      "nama_kecamatan": "Kabupaten Banyumas",
-      "total_penduduk": {
-        "Laki-laki": 919879,
-        "Perempuan": 908694,
-        "Total": 1828573
-      }
-    },
-    {
       "id_bps": 3302010,
       "nama_kecamatan": "Lumbir",
       "total_penduduk": {

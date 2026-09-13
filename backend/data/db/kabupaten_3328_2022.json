@@ -164,15 +164,6 @@
         "Perempuan": 33637,
         "Total": 68404
       }
-    },
-    {
-      "id_bps": 19,
-      "nama_kecamatan": "Kabupaten Tegal",
-      "total_penduduk": {
-        "Laki-laki": 823044,
-        "Perempuan": 800551,
-        "Total": 1623595
-      }
     }
   ]
 }

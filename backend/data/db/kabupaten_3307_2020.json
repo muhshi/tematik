@@ -4,183 +4,138 @@
   "nama_kabupaten": "Wonosobo",
   "kecamatan_data": [
     {
-      "id_bps": 1,
-      "nama_kecamatan": "Tawangsari",
+      "id_bps": 88,
+      "nama_kecamatan": "Wadaslintang",
       "total_penduduk": {
-        "Laki-laki": 1370,
-        "Perempuan": 1344,
-        "Total": 2714
+        "Laki-laki": 25913,
+        "Perempuan": 26548,
+        "Total": 52461
       }
     },
     {
-      "id_bps": 2,
-      "nama_kecamatan": "Wonolelo",
+      "id_bps": 89,
+      "nama_kecamatan": "Kepil",
       "total_penduduk": {
-        "Laki-laki": 1940,
-        "Perempuan": 1845,
-        "Total": 3785
+        "Laki-laki": 28652,
+        "Perempuan": 28687,
+        "Total": 57339
       }
     },
     {
-      "id_bps": 3,
-      "nama_kecamatan": "Jogoyitnan",
+      "id_bps": 90,
+      "nama_kecamatan": "Sapuran",
       "total_penduduk": {
-        "Laki-laki": 1187,
-        "Perempuan": 1164,
-        "Total": 2351
+        "Laki-laki": 28970,
+        "Perempuan": 28414,
+        "Total": 57384
       }
     },
     {
-      "id_bps": 4,
-      "nama_kecamatan": "Jaraksari",
+      "id_bps": 91,
+      "nama_kecamatan": "Kalibawang",
       "total_penduduk": {
-        "Laki-laki": 6482,
-        "Perempuan": 6476,
-        "Total": 12958
+        "Laki-laki": 11429,
+        "Perempuan": 11297,
+        "Total": 22726
       }
     },
     {
-      "id_bps": 5,
-      "nama_kecamatan": "Mlipak",
+      "id_bps": 92,
+      "nama_kecamatan": "Kaliwiro",
       "total_penduduk": {
-        "Laki-laki": 2696,
-        "Perempuan": 2656,
-        "Total": 5352
+        "Laki-laki": 22434,
+        "Perempuan": 22448,
+        "Total": 44882
       }
     },
     {
-      "id_bps": 6,
-      "nama_kecamatan": "Sambek",
+      "id_bps": 93,
+      "nama_kecamatan": "Leksono",
       "total_penduduk": {
-        "Laki-laki": 2133,
-        "Perempuan": 2050,
-        "Total": 4183
+        "Laki-laki": 21134,
+        "Perempuan": 20513,
+        "Total": 41647
       }
     },
     {
-      "id_bps": 7,
-      "nama_kecamatan": "Kramatan",
+      "id_bps": 94,
+      "nama_kecamatan": "Sukoharjo",
       "total_penduduk": {
-        "Laki-laki": 1554,
-        "Perempuan": 1467,
-        "Total": 3021
+        "Laki-laki": 17324,
+        "Perempuan": 16362,
+        "Total": 33686
       }
     },
     {
-      "id_bps": 8,
-      "nama_kecamatan": "Pancurwening",
+      "id_bps": 95,
+      "nama_kecamatan": "Selomerto",
       "total_penduduk": {
-        "Laki-laki": 1105,
-        "Perempuan": 1037,
-        "Total": 2142
+        "Laki-laki": 24277,
+        "Perempuan": 23512,
+        "Total": 47789
       }
     },
     {
-      "id_bps": 9,
-      "nama_kecamatan": "Bumireso",
+      "id_bps": 96,
+      "nama_kecamatan": "Kalikajar",
       "total_penduduk": {
-        "Laki-laki": 1753,
-        "Perempuan": 1805,
-        "Total": 3558
+        "Laki-laki": 29641,
+        "Perempuan": 29016,
+        "Total": 58657
       }
     },
     {
-      "id_bps": 10,
-      "nama_kecamatan": "Rojoimo",
+      "id_bps": 97,
+      "nama_kecamatan": "Kertek",
       "total_penduduk": {
-        "Laki-laki": 2034,
-        "Perempuan": 1949,
-        "Total": 3983
+        "Laki-laki": 41108,
+        "Perempuan": 39649,
+        "Total": 80757
       }
     },
     {
-      "id_bps": 11,
-      "nama_kecamatan": "Pagerkukuh",
+      "id_bps": 98,
+      "nama_kecamatan": "Wonosobo",
       "total_penduduk": {
-        "Laki-laki": 2680,
-        "Perempuan": 2712,
-        "Total": 5392
+        "Laki-laki": 45817,
+        "Perempuan": 45090,
+        "Total": 90907
       }
     },
     {
-      "id_bps": 12,
-      "nama_kecamatan": "Kejiwan",
+      "id_bps": 99,
+      "nama_kecamatan": "Watumalang",
       "total_penduduk": {
-        "Laki-laki": 2244,
-        "Perempuan": 2125,
-        "Total": 4369
+        "Laki-laki": 25287,
+        "Perempuan": 24279,
+        "Total": 49566
       }
     },
     {
-      "id_bps": 13,
-      "nama_kecamatan": "Kalianget",
+      "id_bps": 100,
+      "nama_kecamatan": "Mojotengah",
       "total_penduduk": {
-        "Laki-laki": 3573,
-        "Perempuan": 3534,
-        "Total": 7107
+        "Laki-laki": 32143,
+        "Perempuan": 29982,
+        "Total": 62125
       }
     },
     {
-      "id_bps": 14,
-      "nama_kecamatan": "Jlamprang",
+      "id_bps": 101,
+      "nama_kecamatan": "Garung",
       "total_penduduk": {
-        "Laki-laki": 2127,
-        "Perempuan": 2056,
-        "Total": 4183
+        "Laki-laki": 25613,
+        "Perempuan": 24305,
+        "Total": 49918
       }
     },
     {
-      "id_bps": 15,
-      "nama_kecamatan": "Wonosari",
+      "id_bps": 102,
+      "nama_kecamatan": "Kejajar",
       "total_penduduk": {
-        "Laki-laki": 1208,
-        "Perempuan": 1068,
-        "Total": 2276
-      }
-    },
-    {
-      "id_bps": 16,
-      "nama_kecamatan": "Bomerto",
-      "total_penduduk": {
-        "Laki-laki": 1842,
-        "Perempuan": 1643,
-        "Total": 3485
-      }
-    },
-    {
-      "id_bps": 17,
-      "nama_kecamatan": "Sariyoso",
-      "total_penduduk": {
-        "Laki-laki": 962,
-        "Perempuan": 902,
-        "Total": 1864
-      }
-    },
-    {
-      "id_bps": 18,
-      "nama_kecamatan": "Tlogojati",
-      "total_penduduk": {
-        "Laki-laki": 1528,
-        "Perempuan": 1430,
-        "Total": 2958
-      }
-    },
-    {
-      "id_bps": 19,
-      "nama_kecamatan": "Wonosobo Barat",
-      "total_penduduk": {
-        "Laki-laki": 4308,
-        "Perempuan": 4379,
-        "Total": 8687
-      }
-    },
-    {
-      "id_bps": 20,
-      "nama_kecamatan": "Wonosobo Timur",
-      "total_penduduk": {
-        "Laki-laki": 3091,
-        "Perempuan": 3448,
-        "Total": 6539
+        "Laki-laki": 22292,
+        "Perempuan": 21291,
+        "Total": 43583
       }
     }
   ]

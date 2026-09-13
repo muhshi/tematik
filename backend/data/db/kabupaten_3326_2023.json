@@ -4,30 +4,174 @@
   "nama_kabupaten": "Pekalongan",
   "kecamatan_data": [
     {
-      "id_bps": 29,
-      "nama_kecamatan": "di Kabupaten Pekalongan",
+      "id_bps": 1,
+      "nama_kecamatan": "Kandangserang",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
-        "Total": 1007384
+        "Laki-laki": 18530,
+        "Perempuan": 18322,
+        "Total": 36852
       }
     },
     {
-      "id_bps": 86,
-      "nama_kecamatan": "di Kabupaten Pekalongan",
+      "id_bps": 2,
+      "nama_kecamatan": "Paninggaran",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
-        "Total": 511671
+        "Laki-laki": 22530,
+        "Perempuan": 21670,
+        "Total": 44200
       }
     },
     {
-      "id_bps": 87,
-      "nama_kecamatan": "di Kabupaten Pekalongan",
+      "id_bps": 3,
+      "nama_kecamatan": "Lebakbarang",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
-        "Total": 495713
+        "Laki-laki": 5741,
+        "Perempuan": 5721,
+        "Total": 11462
+      }
+    },
+    {
+      "id_bps": 4,
+      "nama_kecamatan": "Petungkriono",
+      "total_penduduk": {
+        "Laki-laki": 6881,
+        "Perempuan": 6654,
+        "Total": 13535
+      }
+    },
+    {
+      "id_bps": 5,
+      "nama_kecamatan": "Talun",
+      "total_penduduk": {
+        "Laki-laki": 16562,
+        "Perempuan": 15715,
+        "Total": 32277
+      }
+    },
+    {
+      "id_bps": 6,
+      "nama_kecamatan": "Doro",
+      "total_penduduk": {
+        "Laki-laki": 24398,
+        "Perempuan": 23328,
+        "Total": 47726
+      }
+    },
+    {
+      "id_bps": 7,
+      "nama_kecamatan": "Karanganyar",
+      "total_penduduk": {
+        "Laki-laki": 24501,
+        "Perempuan": 23587,
+        "Total": 48088
+      }
+    },
+    {
+      "id_bps": 8,
+      "nama_kecamatan": "Kajen",
+      "total_penduduk": {
+        "Laki-laki": 39463,
+        "Perempuan": 38388,
+        "Total": 77851
+      }
+    },
+    {
+      "id_bps": 9,
+      "nama_kecamatan": "Kesesi",
+      "total_penduduk": {
+        "Laki-laki": 37858,
+        "Perempuan": 36962,
+        "Total": 74820
+      }
+    },
+    {
+      "id_bps": 100,
+      "nama_kecamatan": "Sragi",
+      "total_penduduk": {
+        "Laki-laki": 33399,
+        "Perempuan": 33285,
+        "Total": 66684
+      }
+    },
+    {
+      "id_bps": 101,
+      "nama_kecamatan": "Siwalan",
+      "total_penduduk": {
+        "Laki-laki": 21414,
+        "Perempuan": 21087,
+        "Total": 42501
+      }
+    },
+    {
+      "id_bps": 110,
+      "nama_kecamatan": "Bojong",
+      "total_penduduk": {
+        "Laki-laki": 39956,
+        "Perempuan": 38436,
+        "Total": 78392
+      }
+    },
+    {
+      "id_bps": 120,
+      "nama_kecamatan": "Wonopringgo",
+      "total_penduduk": {
+        "Laki-laki": 25048,
+        "Perempuan": 24502,
+        "Total": 49550
+      }
+    },
+    {
+      "id_bps": 130,
+      "nama_kecamatan": "Kedungwuni",
+      "total_penduduk": {
+        "Laki-laki": 52773,
+        "Perempuan": 50781,
+        "Total": 103554
+      }
+    },
+    {
+      "id_bps": 131,
+      "nama_kecamatan": "Karangdadap",
+      "total_penduduk": {
+        "Laki-laki": 22542,
+        "Perempuan": 21169,
+        "Total": 43711
+      }
+    },
+    {
+      "id_bps": 140,
+      "nama_kecamatan": "Buaran",
+      "total_penduduk": {
+        "Laki-laki": 24503,
+        "Perempuan": 23758,
+        "Total": 48261
+      }
+    },
+    {
+      "id_bps": 150,
+      "nama_kecamatan": "Tirto",
+      "total_penduduk": {
+        "Laki-laki": 39598,
+        "Perempuan": 37899,
+        "Total": 77497
+      }
+    },
+    {
+      "id_bps": 160,
+      "nama_kecamatan": "Wiradesa",
+      "total_penduduk": {
+        "Laki-laki": 32273,
+        "Perempuan": 31533,
+        "Total": 63806
+      }
+    },
+    {
+      "id_bps": 161,
+      "nama_kecamatan": "Wonokerto",
+      "total_penduduk": {
+        "Laki-laki": 23701,
+        "Perempuan": 22916,
+        "Total": 46617
       }
     }
   ]

@@ -10,6 +10,7 @@ class CacheManager {
     this.memoryCache = new Map();
     this.cacheDir = path.join(__dirname, "..", "data");
     this.cacheFile = path.join(this.cacheDir, "bps-cache-store.json");
+    this._persistTimer = null;
     this.loadFromDisk();
   }
 
@@ -30,16 +31,29 @@ class CacheManager {
     }
   }
 
+  schedulePersist() {
+    if (this._persistTimer) clearTimeout(this._persistTimer);
+    this._persistTimer = setTimeout(() => {
+      this.persistToDisk();
+    }, 3000);
+  }
+
   persistToDisk() {
     try {
       if (!fs.existsSync(this.cacheDir)) {
         fs.mkdirSync(this.cacheDir, { recursive: true });
       }
       const dataToSave = {};
+      const now = Date.now();
       this.memoryCache.forEach((val, key) => {
-        dataToSave[key] = val;
+        if (val && val.expiresAt > now) {
+          dataToSave[key] = val;
+        }
       });
-      fs.writeFileSync(this.cacheFile, JSON.stringify(dataToSave, null, 2), "utf-8");
+      // Asynchronous non-blocking write, minified without formatting to preserve memory and I/O
+      fs.promises.writeFile(this.cacheFile, JSON.stringify(dataToSave), "utf-8").catch((err) => {
+        console.warn("[CacheManager] Gagal menyimpan cache ke disk:", err.message);
+      });
     } catch (err) {
       console.warn("[CacheManager] Gagal menyimpan cache ke disk:", err.message);
     }
@@ -73,7 +87,7 @@ class CacheManager {
       savedAt: new Date().toISOString(),
     };
     this.memoryCache.set(key, item);
-    this.persistToDisk();
+    this.schedulePersist();
   }
 
   has(key) {
@@ -82,13 +96,29 @@ class CacheManager {
 
   delete(key) {
     const deleted = this.memoryCache.delete(key);
-    if (deleted) this.persistToDisk();
+    if (deleted) this.schedulePersist();
     return deleted;
+  }
+
+  deletePattern(prefix) {
+    let count = 0;
+    for (const key of this.memoryCache.keys()) {
+      if (key.startsWith(prefix)) {
+        this.memoryCache.delete(key);
+        count++;
+      }
+    }
+    if (count > 0) this.schedulePersist();
+    return count;
+  }
+
+  clearMapCache() {
+    return this.deletePattern("map:");
   }
 
   clear() {
     this.memoryCache.clear();
-    this.persistToDisk();
+    this.schedulePersist();
   }
 }
 

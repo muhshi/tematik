@@ -1,231 +1,231 @@
 {
   "domain_bps": 3312,
-  "tahun": 2024,
+  "tahun": 2023,
   "nama_kabupaten": "Wonogiri",
   "kecamatan_data": [
     {
       "id_bps": 1,
       "nama_kecamatan": "Pracimantoro",
       "total_penduduk": {
-        "Laki-laki": 32546,
-        "Perempuan": 32967,
-        "Total": 65513
+        "Laki-laki": 32493,
+        "Perempuan": 32977,
+        "Total": 65470
       }
     },
     {
       "id_bps": 2,
       "nama_kecamatan": "Paranggupito",
       "total_penduduk": {
-        "Laki-laki": 8683,
-        "Perempuan": 9099,
-        "Total": 17782
+        "Laki-laki": 8678,
+        "Perempuan": 9094,
+        "Total": 17772
       }
     },
     {
       "id_bps": 3,
       "nama_kecamatan": "Giritontro",
       "total_penduduk": {
-        "Laki-laki": 10062,
-        "Perempuan": 10428,
-        "Total": 20490
+        "Laki-laki": 10057,
+        "Perempuan": 10421,
+        "Total": 20478
       }
     },
     {
       "id_bps": 4,
       "nama_kecamatan": "Giriwoyo",
       "total_penduduk": {
-        "Laki-laki": 19181,
-        "Perempuan": 19820,
-        "Total": 39001
+        "Laki-laki": 19171,
+        "Perempuan": 19807,
+        "Total": 38978
       }
     },
     {
       "id_bps": 5,
       "nama_kecamatan": "Batuwarno",
       "total_penduduk": {
-        "Laki-laki": 8877,
-        "Perempuan": 9034,
-        "Total": 17911
+        "Laki-laki": 8872,
+        "Perempuan": 9029,
+        "Total": 17901
       }
     },
     {
       "id_bps": 6,
       "nama_kecamatan": "Karangtengah",
       "total_penduduk": {
-        "Laki-laki": 11899,
-        "Perempuan": 11709,
-        "Total": 23608
+        "Laki-laki": 11893,
+        "Perempuan": 11701,
+        "Total": 23594
       }
     },
     {
       "id_bps": 7,
       "nama_kecamatan": "Tirtomoyo",
       "total_penduduk": {
-        "Laki-laki": 27165,
-        "Perempuan": 26903,
-        "Total": 54068
+        "Laki-laki": 27151,
+        "Perempuan": 26885,
+        "Total": 54036
       }
     },
     {
       "id_bps": 8,
       "nama_kecamatan": "Nguntoronadi",
       "total_penduduk": {
-        "Laki-laki": 12450,
-        "Perempuan": 12296,
-        "Total": 24746
+        "Laki-laki": 12443,
+        "Perempuan": 12288,
+        "Total": 24731
       }
     },
     {
       "id_bps": 9,
       "nama_kecamatan": "Baturetno",
       "total_penduduk": {
-        "Laki-laki": 23755,
-        "Perempuan": 24015,
-        "Total": 47770
+        "Laki-laki": 23743,
+        "Perempuan": 23999,
+        "Total": 47742
       }
     },
     {
       "id_bps": 100,
       "nama_kecamatan": "Eromoko",
       "total_penduduk": {
-        "Laki-laki": 21758,
-        "Perempuan": 22254,
-        "Total": 44012
+        "Laki-laki": 21747,
+        "Perempuan": 22239,
+        "Total": 43986
       }
     },
     {
       "id_bps": 110,
       "nama_kecamatan": "Wuryantoro",
       "total_penduduk": {
-        "Laki-laki": 13047,
-        "Perempuan": 13477,
-        "Total": 26524
+        "Laki-laki": 13041,
+        "Perempuan": 13467,
+        "Total": 26508
       }
     },
     {
       "id_bps": 120,
       "nama_kecamatan": "Manyaran",
       "total_penduduk": {
-        "Laki-laki": 17753,
-        "Perempuan": 18222,
-        "Total": 35975
+        "Laki-laki": 17744,
+        "Perempuan": 18209,
+        "Total": 35953
       }
     },
     {
       "id_bps": 130,
       "nama_kecamatan": "Selogiri",
       "total_penduduk": {
-        "Laki-laki": 23998,
-        "Perempuan": 24398,
-        "Total": 48396
+        "Laki-laki": 23797,
+        "Perempuan": 24098,
+        "Total": 47895
       }
     },
     {
       "id_bps": 140,
       "nama_kecamatan": "Wonogiri",
       "total_penduduk": {
-        "Laki-laki": 43241,
-        "Perempuan": 43563,
-        "Total": 86804
+        "Laki-laki": 43209,
+        "Perempuan": 43481,
+        "Total": 86690
       }
     },
     {
       "id_bps": 150,
       "nama_kecamatan": "Ngadirojo",
       "total_penduduk": {
-        "Laki-laki": 29749,
-        "Perempuan": 30362,
-        "Total": 60111
+        "Laki-laki": 29726,
+        "Perempuan": 30251,
+        "Total": 59977
       }
     },
     {
       "id_bps": 160,
       "nama_kecamatan": "Sidoharjo",
       "total_penduduk": {
-        "Laki-laki": 21416,
-        "Perempuan": 21598,
-        "Total": 43014
+        "Laki-laki": 21400,
+        "Perempuan": 21556,
+        "Total": 42956
       }
     },
     {
       "id_bps": 170,
       "nama_kecamatan": "Jatiroto",
       "total_penduduk": {
-        "Laki-laki": 21207,
-        "Perempuan": 20749,
-        "Total": 41956
+        "Laki-laki": 21077,
+        "Perempuan": 20684,
+        "Total": 41761
       }
     },
     {
       "id_bps": 180,
       "nama_kecamatan": "Kismantoro",
       "total_penduduk": {
-        "Laki-laki": 20518,
-        "Perempuan": 20043,
-        "Total": 40561
+        "Laki-laki": 20467,
+        "Perempuan": 19992,
+        "Total": 40459
       }
     },
     {
       "id_bps": 190,
       "nama_kecamatan": "Purwantoro",
       "total_penduduk": {
-        "Laki-laki": 28824,
-        "Perempuan": 28153,
-        "Total": 56977
+        "Laki-laki": 28675,
+        "Perempuan": 28011,
+        "Total": 56686
       }
     },
     {
       "id_bps": 200,
       "nama_kecamatan": "Bulukerto",
       "total_penduduk": {
-        "Laki-laki": 17258,
-        "Perempuan": 17288,
-        "Total": 34546
+        "Laki-laki": 17182,
+        "Perempuan": 17164,
+        "Total": 34346
       }
     },
     {
       "id_bps": 201,
       "nama_kecamatan": "Puhpelem",
       "total_penduduk": {
-        "Laki-laki": 10335,
-        "Perempuan": 10880,
-        "Total": 21215
+        "Laki-laki": 10338,
+        "Perempuan": 10853,
+        "Total": 21191
       }
     },
     {
       "id_bps": 210,
       "nama_kecamatan": "Slogohimo",
       "total_penduduk": {
-        "Laki-laki": 26816,
-        "Perempuan": 26551,
-        "Total": 53367
+        "Laki-laki": 26683,
+        "Perempuan": 26421,
+        "Total": 53104
       }
     },
     {
       "id_bps": 220,
       "nama_kecamatan": "Jatisrono",
       "total_penduduk": {
-        "Laki-laki": 31969,
-        "Perempuan": 31654,
-        "Total": 63623
+        "Laki-laki": 31921,
+        "Perempuan": 31578,
+        "Total": 63499
       }
     },
     {
       "id_bps": 230,
       "nama_kecamatan": "Jatipurno",
       "total_penduduk": {
-        "Laki-laki": 19713,
-        "Perempuan": 19298,
-        "Total": 39011
+        "Laki-laki": 19528,
+        "Perempuan": 19097,
+        "Total": 38625
       }
     },
     {
       "id_bps": 240,
       "nama_kecamatan": "Girimarto",
       "total_penduduk": {
-        "Laki-laki": 23657,
-        "Perempuan": 23507,
-        "Total": 47164
+        "Laki-laki": 23464,
+        "Perempuan": 23283,
+        "Total": 46747
       }
     }
   ]

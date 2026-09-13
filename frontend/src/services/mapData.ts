@@ -21,6 +21,12 @@ export async function fetchMapData(year: string = "2024", indicator?: string, ka
     signal, // Abort previous requests to prevent 500 error & memory leak!
   });
 
+  if (response.status === 499) {
+    const abortErr = new Error("Request aborted");
+    abortErr.name = "AbortError";
+    throw abortErr;
+  }
+
   if (!response.ok) {
     throw new Error(`Failed to fetch map data: ${response.status}`);
   }

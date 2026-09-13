@@ -1,3 +1,7 @@
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
+
 const DOMAIN_MAP = {
   "Cilacap": 3301, "Banyumas": 3302, "Purbalingga": 3303, "Banjarnegara": 3304,
   "Kebumen": 3305, "Purworejo": 3306, "Wonosobo": 3307, "Magelang": 3308,
@@ -65,7 +69,7 @@ Kabupaten Grobogan
 	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kecamatan Karangrayung
 	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kecamatan Penawangan
 	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kecamatan Toroh
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kecamatan Gayer
+	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kecamatan Geyer
 	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kecamatan Pulokulon
 	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kecamatan Kradenan
 	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kecamatan Gabus
@@ -80,7 +84,6 @@ Kabupaten Grobogan
 	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kecamatan Gubug
 	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kecamatan Tegowanu
 	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kecamatan Tanggungharjo
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin Berdasarkan Catatan Registrasi Kependudukan di Kabupaten Grobogan
 Kabupaten Jepara
 	indicator:
 	Penduduk Menurut Kecamatan di Kabupaten Jepara
@@ -102,27 +105,6 @@ Kabupaten Kudus
 Kabupaten Magelang
 	indicator:
 	Hasil Proyeksi SP2020 : Jumlah Penduduk Menurut Jenis Kelamin dan Kecamatan di Kabupaten Magelang
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Salaman
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Borobudur
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Candimulyo	
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Dukun
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Grabag
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Kajoran
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Kaliangkrik
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Mertoyudan
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Mungkid
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Muntilan
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Ngablak
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Ngluwar
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Pakis
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Salam
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Bandongan
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Sawangan
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Secang
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Srumbung
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Tegalrejo
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Tempuran
-	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Windusari
 Kabupaten Pati
 	indicator:
 	Jumlah Penduduk Menurut Jenis Kelamin
@@ -160,10 +142,28 @@ Kabupaten Rembang
 	Penduduk Menurut Kecamatan dan Jenis Kelamin
 Kabupaten Semarang
 	indicator:
-	Jumlah Penduduk Menurut Kecamatan dan Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Getasan Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Tengaran Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Susukan Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Kaliwungu Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Suruh Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Pabelan Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Tuntang Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Banyubiru Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Jambu Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Sumowono Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Ambarawa Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Bandungan Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Bawen Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Bringin Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Bancak Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Pringapus Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Bergas Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Ungaran Barat Menurut Jenis Kelamin
+	[Sidukcapil] Jumlah Penduduk Kecamatan Ungaran Timur Menurut Jenis Kelamin
 Kabupaten Sragen
 	indicator:
-	Jumlah Penduduk Menurut Kecamatan di Kabupaten Sragen
+	Jumlah Penduduk Kabupaten Sragen
 Kabupaten Sukoharjo
 	indicator:
 	Proyeksi Penduduk 2020-2025 Kecamatan Weru
@@ -172,7 +172,7 @@ Kabupaten Sukoharjo
 	Proyeksi Penduduk 2020-2025 Kecamatan Sukoharjo
 	Proyeksi Penduduk 2020-2025 Kecamatan Nguter
 	Proyeksi Penduduk 2020-2025 Kecamatan Bendosari
-	Proyeksi Penduduk 2020-2025 Kecamatan Polokarta
+	Proyeksi Penduduk 2020-2025 Kecamatan Polokarto
 	Proyeksi Penduduk 2020-2025 Kecamatan Mojolaban
 	Proyeksi Penduduk 2020-2025 Kecamatan Grogol
 	Proyeksi Penduduk 2020-2025 Kecamatan Baki
@@ -184,13 +184,26 @@ Kabupaten Tegal
 Kabupaten Temanggung
 	indicator:
 	Distribusi Kepadatan Penduduk:karakteristik = jumlah penduduk
-	Jumlah Penduduk Menurut Jenis Kelamin Per Kecamatan
 Kabupaten Wonogiri
 	indicator:
-	Jumlah Penduduk Menurut Jenis Kelamin dan Kecamatan di Kabupaten Wonogiri
+	Jumlah Penduduk per Kecamatan
 Kabupaten Wonosobo
 	indicator:
-	Distribusi Penduduk Menurut Kecamatan di Kabupaten Wonosobo
+	Proyeksi Penduduk Desa di Kecamatan Wadaslintang
+	Proyeksi Penduduk Desa di Kecamatan Kepil
+	Proyeksi Penduduk Desa di Kecamatan Sapuran
+	Proyeksi Penduduk Desa di Kecamatan Kalibawang
+	Proyeksi Penduduk Desa di Kecamatan Kaliwiro
+	Proyeksi Penduduk Desa di Kecamatan Leksono
+	Proyeksi Penduduk Desa di Kecamatan Sukoharjo
+	Proyeksi Penduduk Desa di Kecamatan Selomerto
+	Proyeksi Penduduk Desa di Kecamatan Kalikajar
+	Proyeksi Penduduk Desa di Kecamatan Kertek
+	Proyeksi Penduduk Desa di Kecamatan Wonosobo
+	Proyeksi Penduduk Desa di Kecamatan Watumalang
+	Proyeksi Penduduk Desa di Kecamatan Mojotengah
+	Proyeksi Penduduk Desa di Kecamatan Garung
+	Proyeksi Penduduk Desa di Kecamatan Kejajar
 Kota Magelang
 	indicator:
 	Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin di Kecamatan Magelang Utara
@@ -201,14 +214,12 @@ Kota Pekalongan
 	Jumlah Penduduk Menurut Kecamatan dan Jenis Kelamin di Kota Pekalongan
 Kota Salatiga
 	indicator:
-	Jumlah Penduduk Menurut Kecamatan dan Jenis Kelamin di Kota Salatiga
+	Penduduk Menurut Jenis Kelamin
 Kota Semarang
 	indicator:
-	Jumlah Penduduk Menurut Kecamatan, Luas Wilayah, dan Kepadatan Penduduk: karakteristik = jumlah pendududk
 	Jumlah Penduduk Menurut Kecamatan dan Jenis Kelamin
 Kota Surakarta
 	indicator:
-	Jumlah Penduduk Menurut Kelurahan dan Jenis Kelamin
 	Jumlah Penduduk Menurut Kecamatan
 Kota Tegal
 	indicator:
@@ -254,5 +265,5 @@ module.exports = {
   DOMAIN_MAP,
   STRATEGIC_VAR_IDS,
   getDemographicMappings: parseDemographicMappings,
-  BPS_API_KEY: "ac9780c3023e0762d5eb07f1c2f00dc6"
+  BPS_API_KEY: process.env.BPS_API_KEY || ""
 };

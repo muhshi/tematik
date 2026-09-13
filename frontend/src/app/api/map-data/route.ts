@@ -9,9 +9,10 @@ export async function GET(request: Request) {
   const varIdStr = searchParams.get("var") || "";
 
   // 1. Try fetching from Backend API server
-  const backendUrl = process.env.BACKEND_API_URL || "http://localhost:5000/api";
+  const rawBackendUrl = process.env.BACKEND_API_URL || "http://127.0.0.1:5000/api";
+  const backendUrl = rawBackendUrl.replace("localhost", "127.0.0.1");
   try {
-    const res = await fetch(`${backendUrl}/map-data?year=${requestedYear}&var=${varIdStr}`, {
+    const res = await fetch(`${backendUrl}/map-data?year=${requestedYear}&var=${encodeURIComponent(varIdStr)}`, {
       cache: "no-store",
       signal: request.signal, // Forward client abort signal
     });
@@ -22,8 +23,15 @@ export async function GET(request: Request) {
     } else {
       console.warn(`Backend returned status ${res.status}`);
     }
-  } catch (err) {
+  } catch (err: any) {
+    if (err.name === 'AbortError' || err.name === 'ResponseAborted' || err.message?.includes('aborted') || request.signal.aborted) {
+      return new Response(null, { status: 499 });
+    }
     console.error("Backend /map-data proxy failed:", err);
+  }
+
+  if (request.signal.aborted) {
+    return new Response(null, { status: 499 });
   }
 
   return NextResponse.json(

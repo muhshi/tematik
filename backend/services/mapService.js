@@ -1,3 +1,4 @@
+
 const fs = require("fs").promises;
 const path = require("path");
 const area = require("@turf/area").default || require("@turf/area");
@@ -95,23 +96,28 @@ function joinDataWithGeoJson(geoJson, popData, isKabupatenLevel = false, demakDe
 }
 
 async function getEnrichedMapData(requestedYear = "2024", targetVarId) {
-  const geojsonKec = await loadGeoJson("demak_kecamatan.geojson");
-  let geojsonJateng = null;
-  try {
-    geojsonJateng = await loadGeoJson("jawa_tengah_kabupaten.geojson");
-  } catch {
-    geojsonJateng = geojsonKec;
-  }
+  const [geojsonKec, geojsonJatengRaw] = await Promise.all([
+    loadGeoJson("demak_kecamatan.geojson"),
+    loadGeoJson("jawa_tengah_kabupaten.geojson").catch(() => null),
+  ]);
+  const geojsonJateng = geojsonJatengRaw || geojsonKec;
 
   let populationData = [];
   let source = "";
   let isCached = false;
+  let demakStrategicData = [];
+
+  // Panggil fetch data Demak dan data Jawa Tengah secara paralel
+  const demakStrategicPromise = fetchDemakStrategicData(requestedYear, targetVarId);
 
   // Jika indikator Kependudukan (var 248), gunakan DB Statis (JSON)
   if (targetVarId === 248) {
     try {
-      const provData = await dbService.getProvinsiDemographicsFromDB(requestedYear);
-      // Map data ke format yang diharapkan fungsi join
+      const [provData, demakRes] = await Promise.all([
+        dbService.getProvinsiDemographicsFromDB(requestedYear),
+        demakStrategicPromise,
+      ]);
+      demakStrategicData = demakRes;
       populationData = provData.kabupaten_data.map(d => ({
         kecamatan: d.nama_kabupaten,
         value: d.total_penduduk?.Total || 0,
@@ -130,17 +136,24 @@ async function getEnrichedMapData(requestedYear = "2024", targetVarId) {
       source = "BPS API (Static JSON)";
       isCached = true;
     } catch (e) {
-      console.warn("Gagal load dari static DB, fallback:", e);
+      console.warn(`[mapService] Data Provinsi Jateng tahun ${requestedYear} tidak tersedia di DB:`, e.message);
+      demakStrategicData = await demakStrategicPromise.catch(() => []);
+      source = "Data Tidak Tersedia di Database";
+      populationData = [];
     }
   } else {
-    // Indikator lain: gunakan live API BPS
-    const res = await fetchDynamicBpsData(requestedYear, targetVarId);
+    // Indikator lain: gunakan live API BPS secara paralel
+    const [res, demakRes] = await Promise.all([
+      fetchDynamicBpsData(requestedYear, targetVarId),
+      demakStrategicPromise,
+    ]);
+    demakStrategicData = demakRes;
     populationData = res.data;
     source = res.source;
     isCached = res.isCached;
 
-    // Tambahan khusus untuk Rincian Sub-Komponen IPM (var-213)
-    if (targetVarId === 213) {
+    // Tambahan khusus untuk Rincian Sub-Komponen IPM (var-213 / var-2034)
+    if (targetVarId === 213 || targetVarId === 2034) {
       try {
         const ipmData = await dbService.getIpmDataFromDB(requestedYear);
         const ipmDataMap = new Map();
@@ -158,6 +171,7 @@ async function getEnrichedMapData(requestedYear = "2024", targetVarId) {
           const ipmDetail = ipmDataMap.get(normKec);
           if (ipmDetail) {
             d.demographics = {
+              ...(d.demographics || {}),
               ipm: {
                 usia_harapan_hidup: ipmDetail.usia_harapan_hidup,
                 harapan_lama_sekolah: ipmDetail.harapan_lama_sekolah,
@@ -172,9 +186,38 @@ async function getEnrichedMapData(requestedYear = "2024", targetVarId) {
         console.warn("Gagal meload IPM details:", e.message);
       }
     }
-  }
 
-  const demakStrategicData = await fetchDemakStrategicData(requestedYear, targetVarId);
+    // Tambahan khusus untuk Rincian Sub-Komponen Kemiskinan (var-178 / var-34)
+    if (targetVarId === 178 || targetVarId === 34) {
+      try {
+        const kemiskinanData = await dbService.getKemiskinanDataFromDB(requestedYear);
+        const kmMap = new Map();
+        if (kemiskinanData && kemiskinanData.kabupaten_data) {
+          kemiskinanData.kabupaten_data.forEach(d => {
+            kmMap.set(normalizeRegionName(d.nama_kabupaten), d);
+          });
+        }
+
+        populationData = populationData.map(d => {
+          const normKec = normalizeRegionName(d.kecamatan);
+          const kmDetail = kmMap.get(normKec);
+          if (kmDetail) {
+            d.demographics = {
+              ...(d.demographics || {}),
+              kemiskinan: {
+                jumlah_penduduk_miskin_ribu_jiwa: kmDetail.jumlah_penduduk_miskin_ribu_jiwa,
+                persentase_penduduk_miskin: kmDetail.persentase_penduduk_miskin,
+                garis_kemiskinan_rp: kmDetail.garis_kemiskinan_rp,
+              }
+            };
+          }
+          return d;
+        });
+      } catch (e) {
+        console.warn("[mapService] Gagal meload Kemiskinan details:", e.message);
+      }
+    }
+  }
 
   // Level Kab/Kota: 35 Kab/Kota di Jawa Tengah dengan Demak teragregasi
   const enrichedGeoJsonKabupaten = joinDataWithGeoJson(geojsonJateng, populationData, true, demakStrategicData);
@@ -196,7 +239,8 @@ async function getEnrichedMapData(requestedYear = "2024", targetVarId) {
 async function getDrilldownMapData(kabupaten, requestedYear = "2024") {
   const geojsonAllKec = await loadGeoJson("jateng_kecamatan_merged.geojson");
   
-  const isKota = kabupaten.toLowerCase().startsWith("kota ");
+  const cleanKab = kabupaten.toLowerCase().trim();
+  const isKota = cleanKab.startsWith("kota ") || ["salatiga", "surakarta"].includes(cleanKab);
   const normKab = normalizeRegionName(kabupaten);
   
   const filteredFeatures = geojsonAllKec.features.filter(f => {
@@ -212,12 +256,11 @@ async function getDrilldownMapData(kabupaten, requestedYear = "2024") {
     features: filteredFeatures
   };
 
-  const { generateMockDemographics } = require("./bpsService");
   const { getDomainForKabupaten } = require("../utils/domainMap");
   
   const domainIdForKab = getDomainForKabupaten(kabupaten);
   let liveData = null;
-  let source = "BPS Kabupaten/Kota (Mocked Fallback)";
+  let source = "BPS Kabupaten/Kota";
   let actualYear = requestedYear;
   
   if (domainIdForKab) {
@@ -233,16 +276,22 @@ async function getDrilldownMapData(kabupaten, requestedYear = "2024") {
           })
           .map(d => ({
              kecamatan: d.nama_kecamatan,
-             value: d.total_penduduk.Total,
+             value: d.total_penduduk?.Total ?? 0,
              demographics: {
-               gender: { L: d.total_penduduk["Laki-laki"], P: d.total_penduduk["Perempuan"] }
+               gender: { 
+                 L: d.total_penduduk?.["Laki-laki"] ?? 0, 
+                 P: d.total_penduduk?.["Perempuan"] ?? 0 
+               }
              }
           }));
         source = "BPS API (Static JSON)";
         actualYear = kabData.tahun;
       }
     } catch (e) {
-      console.warn(`[mapService] Failed to fetch static DB data for domain ${domainIdForKab}`, e.message);
+      console.warn(`[mapService] Data ${kabupaten} tahun ${requestedYear} tidak tersedia di DB:`, e.message);
+      source = "Data Tidak Tersedia di Database";
+      liveData = null;
+      actualYear = requestedYear;
     }
   }
 
@@ -262,14 +311,8 @@ async function getDrilldownMapData(kabupaten, requestedYear = "2024") {
     const areaSqMeters = area(feature);
     const luasWilayah = areaSqMeters / 1_000_000;
     
-    // If no live data matched, use mock fallback
-    if (value === null) {
-      value = Math.round(luasWilayah * (1000 + Math.random() * 1000));
-      if (value < 10000) value += 20000;
-      demographics = generateMockDemographics(value, 248);
-    }
-    
-    const kepadatan = value / luasWilayah;
+    // If no data matched, value remains null and demographics undefined
+    const kepadatan = value !== null && luasWilayah > 0 ? value / luasWilayah : null;
     
     return {
       ...feature,

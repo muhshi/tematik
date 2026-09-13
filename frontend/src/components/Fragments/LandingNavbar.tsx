@@ -87,6 +87,11 @@ export function LandingNavbar() {
                 FAQ
               </a>
             </li>
+            <li>
+              <Link href="/docs" className="text-slate-600 font-medium hover:text-primary transition-colors">
+                Panduan
+              </Link>
+            </li>
           </ul>
           <Link href="/dashboard">
             <Button className="bg-primary hover:opacity-90 text-primary-foreground font-semibold rounded-full px-7 h-10 text-sm shadow-sm transition-transform hover:-translate-y-0.5">
@@ -120,6 +125,9 @@ export function LandingNavbar() {
           <a href="#faq" onClick={() => setIsMobileMenuOpen(false)} className={getMobileLinkClass("faq")}>
             FAQ
           </a>
+          <Link href="/docs" onClick={() => setIsMobileMenuOpen(false)} className="block w-full text-left text-slate-600 font-medium py-3 border-b border-slate-100 hover:text-primary">
+            Panduan & Cara Baca Data
+          </Link>
           <Link href="/dashboard" className="pt-2" onClick={() => setIsMobileMenuOpen(false)}>
             <Button className="w-full bg-primary hover:opacity-90 text-primary-foreground font-semibold rounded-xl h-11 text-sm shadow-sm">
               Masuk Dashboard

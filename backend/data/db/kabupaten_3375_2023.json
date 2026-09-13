@@ -38,15 +38,6 @@
         "Perempuan": 39533,
         "Total": 80297
       }
-    },
-    {
-      "id_bps": 5,
-      "nama_kecamatan": "Kota Pekalongan",
-      "total_penduduk": {
-        "Laki-laki": 160369,
-        "Perempuan": 157155,
-        "Total": 317524
-      }
     }
   ]
 }

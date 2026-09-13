@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Map as MapIcon, Filter, TrendingUp, Compass } from "lucide-react";
+import { ArrowRight, Map as MapIcon, Filter, TrendingUp, Compass, BookOpen } from "lucide-react";
 import { Button } from "@/components/Elements/button";
 import { LandingNavbar } from "@/components/Fragments/LandingNavbar";
 import { LandingFooter } from "@/components/Fragments/LandingFooter";
@@ -23,11 +23,6 @@ export default function LandingPage() {
               
               {/* Left Content */}
               <div className="flex flex-col items-start text-left" data-aos="fade-right">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-6">
-                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  WebGIS Resmi BPS Demak & Jawa Tengah
-                </div>
-
                 <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.15]">
                   Visualisasi Peta Tematik & Data Kependudukan Demak
                 </h1>
@@ -37,16 +32,17 @@ export default function LandingPage() {
                   Analisis tren indikator strategis dengan presisi teknis tingkat tinggi.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row items-center gap-4">
+                <div className="flex flex-col sm:flex-row items-center gap-3.5">
                   <Link href="/dashboard">
                     <Button className="bg-primary hover:opacity-90 text-primary-foreground font-semibold px-7 h-12 rounded-xl shadow-md transition-all hover:-translate-y-0.5">
                       Mulai Jelajah Peta
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
-                  <Link href="#fitur">
-                    <Button variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-100 px-6 h-12 rounded-xl font-medium">
-                      Pelajari Fitur
+                  <Link href="/docs">
+                    <Button variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-100 px-6 h-12 rounded-xl font-medium flex items-center gap-2">
+                      <BookOpen className="h-4 w-4 text-primary" />
+                      Panduan & Cara Baca Data
                     </Button>
                   </Link>
                 </div>

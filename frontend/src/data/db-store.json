@@ -21915,136 +21915,64 @@
   },
   "indicators": [
     {
-      "id": "var-114",
-      "name": "[Data Strategis] Tingkat Partisipasi Angkatan Kerja (TPAK)",
-      "category": "Sosial dan Kependudukan",
-      "code": "Var 114",
-      "lastUpdated": "2025",
-      "subjectId": 6,
-      "subjectName": "Ketenagakerjaan",
-      "subcatId": 0,
-      "isActive": true
-    },
-    {
-      "id": "var-115",
-      "name": "[Data Strategis] Tingkat Pengangguran Terbuka (TPT)",
-      "category": "Sosial dan Kependudukan",
-      "code": "Var 115",
-      "lastUpdated": "2025",
-      "subjectId": 6,
-      "subjectName": "Ketenagakerjaan",
-      "subcatId": 0,
-      "isActive": true
-    },
-    {
       "id": "var-248",
-      "name": "[Data Strategis] [Proyeksi Hasil LFSP2020] Penduduk Kabupaten Demak Menurut Kecamatan",
+      "name": "Jumlah Penduduk",
       "category": "Sosial dan Kependudukan",
-      "code": "Var 248",
-      "lastUpdated": "2024",
       "subjectId": 12,
       "subjectName": "Kependudukan",
-      "subcatId": 0,
-      "isActive": true
+      "code": "Var 248",
+      "isActive": true,
+      "lastUpdated": "2024"
     },
     {
       "id": "var-178",
-      "name": "[Data Strategis] Persentase Penduduk Miskin",
+      "name": "Persentase Penduduk Miskin",
       "category": "Sosial dan Kependudukan",
-      "code": "Var 178",
-      "lastUpdated": "2025",
       "subjectId": 23,
       "subjectName": "Kemiskinan dan Ketimpangan",
-      "subcatId": 0,
-      "isActive": true
+      "code": "Var 178",
+      "isActive": true,
+      "lastUpdated": "2025"
     },
     {
       "id": "var-213",
-      "name": "[Data Strategis] [IPM Metode Baru] Indeks Pembangunan Manusia (Umur Harapan Hidup Hasil Long Form SP2020)",
+      "name": "Indeks Pembangunan Manusia (IPM)",
       "category": "Sosial dan Kependudukan",
-      "code": "Var 213",
-      "lastUpdated": "2025",
       "subjectId": 26,
       "subjectName": "Indeks Pembangunan Manusia",
-      "subcatId": 0,
-      "isActive": true
+      "code": "Var 213",
+      "isActive": true,
+      "lastUpdated": "2025"
+    },
+    {
+      "id": "var-115",
+      "name": "Tingkat Pengangguran Terbuka (TPT)",
+      "category": "Sosial dan Kependudukan",
+      "subjectId": 6,
+      "subjectName": "Ketenagakerjaan",
+      "code": "Var 115",
+      "isActive": true,
+      "lastUpdated": "2025"
+    },
+    {
+      "id": "var-114",
+      "name": "Tingkat Partisipasi Angkatan Kerja (TPAK)",
+      "category": "Sosial dan Kependudukan",
+      "subjectId": 6,
+      "subjectName": "Ketenagakerjaan",
+      "code": "Var 114",
+      "isActive": true,
+      "lastUpdated": "2025"
     },
     {
       "id": "var-110",
-      "name": "[Data Strategis] Laju Pertumbuhan PDRB ADHK Seri 2010 Menurut Lapangan Usaha ",
-      "category": "Sosial dan Kependudukan",
-      "code": "Var 110",
-      "lastUpdated": "2025",
+      "name": "Laju Pertumbuhan PDRB",
+      "category": "Ekonomi dan Perdagangan",
       "subjectId": 155,
       "subjectName": "Produk Domestik Regional Bruto",
-      "subcatId": 0,
-      "isActive": true
-    },
-    {
-      "id": "var-2034",
-      "name": "[Metode Baru] Indeks Pembangunan Manusia menurut Kabupaten/Kota (Umur Harapan Hidup Hasil Long Form SP2020)",
-      "category": "Sosial dan Kependudukan",
-      "code": "Var 2034",
-      "lastUpdated": "2025",
-      "subjectId": 26,
-      "subjectName": "Indeks Pembangunan Manusia",
-      "subcatId": 0,
-      "isActive": true
-    },
-    {
-      "id": "var-2412",
-      "name": "[Indikator Strategis] [IPM] Usia Harapan Hidup saat Lahir (Hasil Long Form SP2020) Menurut Kabupaten/Kota di Provinsi Jawa Tengah",
-      "category": "Sosial dan Kependudukan",
-      "code": "Var 2412",
-      "lastUpdated": "2025",
-      "subjectId": 26,
-      "subjectName": "Indeks Pembangunan Manusia",
-      "subcatId": 0,
-      "isActive": true
-    },
-    {
-      "id": "var-2413",
-      "name": "[Indikator Strategis] [IPM] Harapan Lama Sekolah Menurut Kabupaten/Kota di Provinsi Jawa Tengah",
-      "category": "Sosial dan Kependudukan",
-      "code": "Var 2413",
-      "lastUpdated": "2025",
-      "subjectId": 26,
-      "subjectName": "Indeks Pembangunan Manusia",
-      "subcatId": 0,
-      "isActive": true
-    },
-    {
-      "id": "var-2414",
-      "name": "[Indikator Strategis] [IPM] Rata-rata Lama Sekolah  Menurut Kabupaten/Kota di Provinsi Jawa Tengah",
-      "category": "Sosial dan Kependudukan",
-      "code": "Var 2414",
-      "lastUpdated": "2025",
-      "subjectId": 26,
-      "subjectName": "Indeks Pembangunan Manusia",
-      "subcatId": 0,
-      "isActive": true
-    },
-    {
-      "id": "var-2415",
-      "name": "[Indikator Strategis] [IPM] Pengeluaran per kapita Disesuaikan  Menurut Kabupaten/Kota di Provinsi Jawa Tengah",
-      "category": "Sosial dan Kependudukan",
-      "code": "Var 2415",
-      "lastUpdated": "2025",
-      "subjectId": 26,
-      "subjectName": "Indeks Pembangunan Manusia",
-      "subcatId": 0,
-      "isActive": true
-    },
-    {
-      "id": "var-34",
-      "name": "Kemiskinan Menurut Kabupaten/Kota di Provinsi Jawa Tengah",
-      "category": "Sosial dan Kependudukan",
-      "code": "Var 34",
-      "lastUpdated": "2025",
-      "subjectId": 23,
-      "subjectName": "Kemiskinan dan Ketimpangan",
-      "subcatId": 0,
-      "isActive": true
+      "code": "Var 110",
+      "isActive": true,
+      "lastUpdated": "2025"
     }
   ],
   "lastSyncedAt": "2026-09-03T06:24:05.556Z"

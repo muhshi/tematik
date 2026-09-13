@@ -9,12 +9,12 @@ let redis = null;
 if (url && token && !url.includes("your-redis-url.upstash.io")) {
   try {
     redis = new Redis({ url, token });
-    console.log("⚡ Upstash Redis client initialized.");
+    console.log("[INFO] Upstash Redis client initialized.");
   } catch (err) {
-    console.error("Failed to initialize Upstash Redis client:", err.message);
+    console.error("[ERROR] Failed to initialize Upstash Redis client:", err.message);
   }
 } else {
-  console.warn("⚠️ Upstash Redis credentials unconfigured in .env - running with local in-memory fallback.");
+  console.warn("[WARN] Upstash Redis credentials unconfigured in .env - running with local in-memory fallback.");
 }
 
 module.exports = { redis };

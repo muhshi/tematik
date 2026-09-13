@@ -8,6 +8,7 @@ import { MapLegend } from "@/components/Fragments/MapLegend";
 import { RegionDetails } from "@/components/Fragments/RegionDetails";
 import { ExportButton } from "@/components/Fragments/ExportButton";
 import { Skeleton } from "@/components/Elements/skeleton";
+import { ArrowLeft } from "lucide-react";
 import { fetchMapData } from "@/services/mapData";
 import type { MapDataResponse, DemakFeature, RegionDetail, Granularity } from "@/types/map";
 import type { Indicator } from "@/actions/adminActions";
@@ -111,35 +112,43 @@ export default function Page() {
 
   // {*Fungsi: Menarik Daftar Tahun Tersedia dari BPS saat Indikator diganti*}
   useEffect(() => {
+    if (!selectedIndicatorId) return;
+
     // Reset drilldown jika indikator yang dipilih bukan Kependudukan (karena hanya var 248 yang ada drilldown)
-    if (selectedIndicatorId && selectedIndicatorId !== "var-248" && drilldownKabupaten) {
+    let currentDrilldown = drilldownKabupaten;
+    const isExitingDrilldown = Boolean(currentDrilldown && selectedIndicatorId !== "var-248");
+
+    if (isExitingDrilldown) {
       setDrilldownKabupaten(null);
       setGranularity("Kabupaten");
       setSelectedRegion(null);
+      currentDrilldown = null;
     }
 
-    if (!selectedIndicatorId) return;
-    
     async function loadYears() {
       setYearsLoading(true);
       try {
-        const query = drilldownKabupaten ? `var=${selectedIndicatorId}&kabupaten=${encodeURIComponent(drilldownKabupaten)}` : `var=${selectedIndicatorId}`;
+        const query = currentDrilldown 
+          ? `var=${selectedIndicatorId}&kabupaten=${encodeURIComponent(currentDrilldown)}` 
+          : `var=${selectedIndicatorId}`;
         const res = await fetch(`/api/available-years?${query}`);
         if (res.ok) {
           const years: { th_id: number; year: string }[] = await res.json();
           const yearStrings = years.map((y) => y.year);
           setAvailableYears(yearStrings);
           if (yearStrings.length > 0) {
-            // Auto-select year if the current year is not available in the new region
-            let restored = false;
-            setSelectedYear(prevYear => {
-              if (!drilldownKabupaten && preDrilldownYear && yearStrings.includes(preDrilldownYear)) {
-                restored = true;
-                return preDrilldownYear;
+            setSelectedYear((prevYear) => {
+              // Jika keluar dari drilldown kecamatan, pulihkan tahun provinsi atau tahun terbaru
+              if (isExitingDrilldown) {
+                if (preDrilldownYear && yearStrings.includes(preDrilldownYear)) {
+                  return preDrilldownYear;
+                }
+                return yearStrings[0];
               }
-              return yearStrings.includes(prevYear) ? prevYear : yearStrings[0];
+              // Setiap kali berpindah ke indikator baru, default ke tahun terbaru data tersebut
+              return yearStrings[0];
             });
-            if (restored) setPreDrilldownYear(null);
+            if (isExitingDrilldown) setPreDrilldownYear(null);
           } else {
             setSelectedYear("");
           }
@@ -154,7 +163,7 @@ export default function Page() {
       }
     }
     loadYears();
-  }, [selectedIndicatorId, drilldownKabupaten]);
+  }, [selectedIndicatorId]);
 
   // {*Fungsi: Menarik Data Mentah Peta & BPS saat Tahun/Indikator berubah*}
   useEffect(() => {
@@ -163,12 +172,37 @@ export default function Page() {
     async function loadData() {
       if (!selectedIndicatorId || !selectedYear) return;
       
+      // Lewati fetch HANYA jika data yang ada di memory benar-benar sudah cocok dengan indikator, tahun, dan wilayah yang aktif
+      const currentMeta = mapData?.metadata as any;
+      if (
+        currentMeta &&
+        currentMeta.indicatorId === selectedIndicatorId &&
+        currentMeta.year === selectedYear &&
+        (currentMeta.kabupaten || null) === (drilldownKabupaten || null)
+      ) {
+        return;
+      }
+
       try {
         setLoading(true);
         setError(null);
         setSelectedRegion(null); 
         const data = await fetchMapData(selectedYear, selectedIndicatorId, drilldownKabupaten || undefined, abortController.signal);
-        setMapData(data);
+        setMapData(prev => {
+          const merged = {
+            ...data,
+            metadata: {
+              ...data.metadata,
+              indicatorId: selectedIndicatorId,
+              kabupaten: drilldownKabupaten || null,
+              year: selectedYear,
+            }
+          };
+          if (drilldownKabupaten && prev?.geojsonKabupaten) {
+            merged.geojsonKabupaten = prev.geojsonKabupaten;
+          }
+          return merged;
+        });
       } catch (err: any) {
         if (err.name === 'AbortError') {
           // Request dibatalkan, jangan tampilkan error
@@ -176,7 +210,6 @@ export default function Page() {
         }
         setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
-        // Jangan hilangkan loading jika request dibatalkan karena request baru sedang berjalan
         if (!abortController.signal.aborted) {
           setLoading(false);
         }
@@ -194,6 +227,7 @@ export default function Page() {
     setSelectedRegion({
       kecamatan: feature.properties.district,
       regency: feature.properties.regency,
+      type: (feature.properties as any).type,
       year: mapData?.metadata.year,
       village: feature.properties.village,
       value: feature.properties.value,
@@ -208,33 +242,124 @@ export default function Page() {
   const handleDrillDown = async (kabName: string) => {
     try {
       setLoading(true);
-      setPreDrilldownYear(selectedYear); // Simpan tahun sebelum drill-down
-      setDrilldownKabupaten(kabName);
-      const res = await fetch(`/api/map-data/kecamatan?kabupaten=${encodeURIComponent(kabName)}&year=${selectedYear}`);
+      setYearsLoading(true);
+      setPreDrilldownYear(selectedYear); // Simpan tahun provinsi saat ini (misal: "2025")
+
+      // 1. Ambil daftar tahun asli kabupaten dari database
+      const res = await fetch(`/api/available-years?var=${selectedIndicatorId}&kabupaten=${encodeURIComponent(kabName)}`);
+      let kabYears: string[] = [];
       if (res.ok) {
-        const drillData = await res.json();
-        setMapData(prev => prev ? {
-          ...prev,
-          geojsonKecamatan: drillData.geojsonKecamatan
-        } : null);
-        setGranularity("Kecamatan");
-        // Jangan hapus selectedRegion agar panel tetap terbuka jika diinginkan, atau hapus:
-        setSelectedRegion(null);
+        const yearsData: { th_id: number; year: string }[] = await res.json();
+        kabYears = yearsData.map((y) => y.year);
       }
+
+      // 2. Pilih tahun yang valid untuk kabupaten ini (jangan gunakan tahun provinsi jika tidak ada!)
+      const nextYear = kabYears.includes(selectedYear) ? selectedYear : (kabYears[0] || "");
+
+      // 3. Tarik data peta kecamatan SEBELUM mengganti granularity agar tidak terjadi flash peta kabupaten lain
+      const drillData = await fetchMapData(nextYear, selectedIndicatorId, kabName);
+
+      // 4. Update data peta, tahun, dan granularity secara bersamaan
+      setMapData(prev => ({
+        ...drillData,
+        geojsonKabupaten: prev?.geojsonKabupaten || drillData.geojsonKabupaten,
+        metadata: {
+          ...drillData.metadata,
+          indicatorId: selectedIndicatorId,
+          kabupaten: kabName,
+          year: nextYear,
+        }
+      }));
+      setAvailableYears(kabYears);
+      setSelectedYear(nextYear);
+      setDrilldownKabupaten(kabName);
+      setGranularity("Kecamatan");
+      setSelectedRegion(null);
     } catch (error) {
       console.error("Gagal memuat drill-down data", error);
     } finally {
+      setYearsLoading(false);
       setLoading(false);
     }
   };
+
+  const handleReturnToProvinsi = async () => {
+    try {
+      setLoading(true);
+      setYearsLoading(true);
+
+      // 1. Ambil daftar tahun provinsi dari database
+      const res = await fetch(`/api/available-years?var=${selectedIndicatorId}`);
+      let provYears: string[] = [];
+      if (res.ok) {
+        const yearsData: { th_id: number; year: string }[] = await res.json();
+        provYears = yearsData.map((y) => y.year);
+      }
+
+      // 2. Kembalikan ke tahun provinsi sebelum drill-down (atau tahun provinsi terbaru)
+      const nextYear = (preDrilldownYear && provYears.includes(preDrilldownYear))
+        ? preDrilldownYear
+        : (provYears.includes(selectedYear) ? selectedYear : (provYears[0] || ""));
+
+      // 3. Tarik data provinsi SEBELUM mengganti granularity
+      const provData = await fetchMapData(nextYear, selectedIndicatorId);
+
+      // 4. Update state secara atomik
+      setMapData({
+        ...provData,
+        metadata: {
+          ...provData.metadata,
+          indicatorId: selectedIndicatorId,
+          kabupaten: null,
+          year: nextYear,
+        }
+      });
+      setAvailableYears(provYears);
+      setSelectedYear(nextYear);
+      setPreDrilldownYear(null);
+      setDrilldownKabupaten(null);
+      setGranularity("Kabupaten");
+      setSelectedRegion(null);
+    } catch (error) {
+      console.error("Gagal kembali ke peta provinsi", error);
+    } finally {
+      setYearsLoading(false);
+      setLoading(false);
+    }
+  };
+
+  const handleCategorySelect = (cat: string) => {
+    setSelectedCategory(cat);
+    const inCat = activeIndicators.filter((i) => i.category === cat);
+    if (inCat.length > 0) {
+      const firstSubId = inCat[0].subjectId;
+      setSelectedSubjectId(firstSubId);
+      const inSub = inCat.filter((i) => i.subjectId === firstSubId);
+      if (inSub.length > 0) {
+        setSelectedIndicatorId(inSub[0].id);
+      }
+    }
+  };
+
+  const handleSubjectSelect = (subId: number) => {
+    setSelectedSubjectId(subId);
+    const inSub = activeIndicators.filter((i) => i.subjectId === subId);
+    if (inSub.length > 0) {
+      setSelectedIndicatorId(inSub[0].id);
+    }
+  };
+
+  const displayGeojson = (granularity === "Kabupaten" || granularity === "Provinsi")
+    ? mapData?.geojsonKabupaten
+    : mapData?.geojsonKecamatan;
 
   return (
     <DashboardLayout 
       activeIndicators={activeIndicators}
       selectedCategory={selectedCategory} 
-      onCategorySelect={setSelectedCategory}
+      onCategorySelect={handleCategorySelect}
       selectedSubjectId={selectedSubjectId}
-      onSubjectSelect={setSelectedSubjectId}
+      onSubjectSelect={handleSubjectSelect}
     >
       <div className="flex h-full w-full flex-col relative overflow-hidden">
         {/* Top Filter Bar */}
@@ -253,12 +378,14 @@ export default function Page() {
           selectedIndicatorId={selectedIndicatorId}
           onIndicatorChange={setSelectedIndicatorId}
         >
-          <ExportButton 
-            data={granularity === "Kabupaten" || granularity === "Provinsi" ? (mapData?.geojsonKabupaten || mapData?.geojsonKecamatan) : mapData?.geojsonKecamatan}
-            indicatorName={activeIndicators.find((i) => i.id === selectedIndicatorId)?.name || "Nilai Indikator"}
-            year={selectedYear}
-            granularity={granularity}
-          />
+          {displayGeojson && (
+            <ExportButton 
+              data={displayGeojson}
+              indicatorName={activeIndicators.find((i) => i.id === selectedIndicatorId)?.name || "Nilai Indikator"}
+              year={selectedYear}
+              granularity={granularity}
+            />
+          )}
         </FilterBar>
 
         {/* Main Map Area */}
@@ -271,13 +398,9 @@ export default function Page() {
           ) : (
             <>
               {/* {*Render Kanvas Peta Utama*} */}
-              {mapData && (
+              {mapData && displayGeojson && (
                 <MapCanvas
-                  geojson={
-                    granularity === "Kabupaten" || granularity === "Provinsi"
-                      ? (mapData.geojsonKabupaten || mapData.geojsonKecamatan)
-                      : mapData.geojsonKecamatan
-                  }
+                  geojson={displayGeojson}
                   onRegionClick={handleRegionClick}
                   granularity={granularity}
                   year={mapData.metadata.year.toString()}
@@ -301,13 +424,9 @@ export default function Page() {
           )}
 
           {/* {*Render UI Kotak Legenda Warna Peta*} */}
-          {!error && mapData && (
+          {!error && mapData && displayGeojson && (
             <MapLegend 
-              data={
-                granularity === "Kabupaten" || granularity === "Provinsi"
-                  ? (mapData.geojsonKabupaten || mapData.geojsonKecamatan)
-                  : mapData.geojsonKecamatan
-              } 
+              data={displayGeojson} 
               indicatorName={activeIndicators.find((i) => i.id === selectedIndicatorId)?.name || "Nilai Indikator"}
             />
           )}
@@ -315,22 +434,18 @@ export default function Page() {
           {/* Tombol Navigasi Kembali ke Level Kabupaten Jateng */}
           {granularity !== "Kabupaten" && (
               <button
-                onClick={() => {
-                  setGranularity("Kabupaten");
-                  setSelectedRegion(null);
-                  setDrilldownKabupaten(null);
-                }}
-                className="absolute top-4 left-14 z-[1000] flex items-center gap-2 px-3 py-1.5 bg-white/90 
-hover:bg-white text-slate-800 text-xs font-semibold rounded-lg shadow-md border border-slate-200 backdrop-blur-sm 
-transition-all"
+                onClick={handleReturnToProvinsi}
+                className="absolute top-4 left-14 z-[1000] flex items-center gap-2 px-3 py-1.5 bg-white/90 hover:bg-white text-slate-800 text-xs font-semibold rounded-lg shadow-md border border-slate-200 backdrop-blur-sm transition-all"
               >
-              ← Kembali ke Peta Jawa Tengah
-            </button>
+                <ArrowLeft className="h-3.5 w-3.5 text-slate-700" />
+                <span>Kembali ke Peta Jawa Tengah</span>
+              </button>
           )}
           
           {selectedRegion && (
             <RegionDetails
               data={selectedRegion}
+              granularity={granularity}
               indicatorName={activeIndicators.find((i) => i.id === selectedIndicatorId)?.name || "Nilai Indikator"}
               onClose={() => setSelectedRegion(null)}
               onDrillDown={

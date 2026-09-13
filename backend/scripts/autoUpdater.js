@@ -16,10 +16,19 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 async function fetchBpsApi(url, retries = 2) {
   for (let i = 0; i <= retries; i++) {
     try {
-      const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
-      if (!res.ok) continue;
+      const res = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept': 'application/json'
+        },
+        signal: AbortSignal.timeout(15000)
+      });
+      if (!res.ok) {
+        if (i < retries) await sleep(1000);
+        continue;
+      }
       const data = await res.json();
-      if (data.status === "Error") return null;
+      if (data && data.status === "Error") return null;
       return data;
     } catch (err) {
       if (i === retries) return null;
@@ -47,11 +56,12 @@ async function getThIdForVarAndYear(domain, varId, targetYearStr) {
 
 async function fetchAllVars(domain, subjectId) {
   let allVars = [];
-  for (let page = 1; page <= 5; page++) {
+  let maxPages = 1;
+  for (let page = 1; page <= maxPages && page <= 10; page++) {
     const listRes = await fetchBpsApi(`https://webapi.bps.go.id/v1/api/list/model/var/domain/${domain}/subject/${subjectId}/page/${page}/key/${BPS_API_KEY}/`);
     if (listRes && listRes.data && listRes.data[1]) {
       allVars = [...allVars, ...listRes.data[1]];
-      if (page >= listRes.data[0].pages) break;
+      maxPages = listRes.data[0].pages || 1;
     } else {
       break;
     }
@@ -59,11 +69,33 @@ async function fetchAllVars(domain, subjectId) {
   return allVars;
 }
 
+function checkIsFragmented(indicators) {
+  if (indicators.length <= 1) return false;
+  const titles = indicators.map(i => i.title.toLowerCase());
+  const hasLaki = titles.some(t => t.includes('laki-laki') || t.includes('laki - laki'));
+  const hasPerempuan = titles.some(t => t.includes('perempuan'));
+  if (hasLaki && hasPerempuan && titles.every(t => t.includes('menurut kecamatan'))) {
+    return false;
+  }
+  return true;
+}
+
+function extractKecamatanName(title) {
+  const lower = title.toLowerCase();
+  const idx = lower.indexOf('kecamatan ');
+  if (idx !== -1) {
+    let raw = title.substring(idx + 10);
+    raw = raw.split(/\s+(?:Menurut|Berdasarkan|Desa|Tahun|\d{4})/i)[0].trim();
+    return raw.replace(/^[^\w]+|[^\w]+$/g, '').trim();
+  }
+  return title.trim();
+}
+
 async function findVarIdByTitle(domain, targetTitle) {
-  const normalizedTarget = targetTitle.toLowerCase().replace(/\s+/g, ' ');
+  const normalizedTarget = targetTitle.toLowerCase().replace(/\s+/g, ' ').trim();
 
   const performMatch = (allVars) => {
-    let bestMatch = allVars.find(v => v.title.toLowerCase().replace(/\s+/g, ' ') === normalizedTarget);
+    let bestMatch = allVars.find(v => v.title.toLowerCase().replace(/\s+/g, ' ').trim() === normalizedTarget);
     if (!bestMatch) {
       bestMatch = allVars.find(v => v.title.toLowerCase().includes(normalizedTarget) || normalizedTarget.includes(v.title.toLowerCase()));
     }
@@ -91,19 +123,51 @@ async function findVarIdByTitle(domain, targetTitle) {
     allVars = await fetchAllVars(domain, 40);
     match = performMatch(allVars);
   }
+
+  // Fallback to all variables without subject filter if still not found
+  if (!match) {
+    for (let page = 1; page <= 5; page++) {
+      const listRes = await fetchBpsApi(`https://webapi.bps.go.id/v1/api/list/model/var/domain/${domain}/page/${page}/key/${BPS_API_KEY}/`);
+      if (listRes && listRes.data && listRes.data[1]) {
+        match = performMatch(listRes.data[1]);
+        if (match) break;
+      } else break;
+    }
+  }
   
   return match ? match.var_id : null;
 }
 
+function findDataValue(datacontent, vervarId, varId, turvarId, thId) {
+  if (!datacontent || !turvarId) return 0;
+  const prefix = `${vervarId}${varId}${turvarId}${thId}`;
+  if (datacontent[`${prefix}0`] !== undefined) {
+    return Number(datacontent[`${prefix}0`]) || 0;
+  }
+  if (datacontent[prefix] !== undefined) {
+    return Number(datacontent[prefix]) || 0;
+  }
+  const foundKey = Object.keys(datacontent).find(k => k.startsWith(prefix));
+  if (foundKey) {
+    return Number(datacontent[foundKey]) || 0;
+  }
+  return 0;
+}
+
 function extractDataFromDatacontent(datacontent, varId, mapTurvar, thId, vervarId) {
   let L = 0, P = 0, Total = 0;
-  if (mapTurvar.L && mapTurvar.P) {
-    L = datacontent[`${vervarId}${varId}${mapTurvar.L}${thId}0`] || 0;
-    P = datacontent[`${vervarId}${varId}${mapTurvar.P}${thId}0`] || 0;
-  } else if (mapTurvar.Total) {
-    Total = datacontent[`${vervarId}${varId}${mapTurvar.Total}${thId}0`] || 0;
+  if (mapTurvar.L) {
+    L = findDataValue(datacontent, vervarId, varId, mapTurvar.L, thId);
   }
-  if (!Total && L && P) Total = L + P;
+  if (mapTurvar.P) {
+    P = findDataValue(datacontent, vervarId, varId, mapTurvar.P, thId);
+  }
+  if (mapTurvar.Total) {
+    Total = findDataValue(datacontent, vervarId, varId, mapTurvar.Total, thId);
+  }
+  if (!Total && L && P) {
+    Total = L + P;
+  }
   return { L, P, Total };
 }
 
@@ -262,23 +326,24 @@ async function scrapeStrategicData() {
 // ------------------------------------------------------------------
 // 2. DEMOGRAPHICS SCRAPER (HEAVY - RUNS MONTHLY OR MANUALLY)
 // ------------------------------------------------------------------
-async function scrapeDemographics() {
-  console.log("[AutoUpdater] Mulai scraping Demografi untuk 35 Kabupaten/Kota... (PERINGATAN: PROSES INI BERAT DAN LAMA)");
+async function scrapeDemographics(force = false, targetDomain = null) {
+  console.log("[AutoUpdater] Mulai scraping Demografi untuk Kabupaten/Kota... (PERINGATAN: PROSES INI BERAT DAN LAMA)");
   const reqMap = getDemographicMappings();
   
   for (const [domainStr, indicators] of Object.entries(reqMap)) {
     const domain = parseInt(domainStr);
+    if (targetDomain && domain !== targetDomain) continue;
     
     // Cek jumlah file yang ada
     const existingFiles = fs.readdirSync(dbDir).filter(f => f.startsWith(`kabupaten_${domain}_`));
-    if (existingFiles.length >= 3 && !isTestMode) {
+    if (existingFiles.length >= 3 && !isTestMode && !force) {
       console.log(`[AutoUpdater] Domain ${domain} sudah memiliki ${existingFiles.length} file. Melewati untuk efisiensi...`);
       continue;
     }
 
     console.log(`\n[AutoUpdater] Memproses Domain ${domain} (${indicators.length} indikator)`);
     let yearResults = {};
-    let isFragmented = indicators.length > 2;
+    let isFragmented = checkIsFragmented(indicators);
 
     for (const ind of indicators) {
       const varId = await findVarIdByTitle(domain, ind.title);
@@ -325,10 +390,7 @@ async function scrapeDemographics() {
           let resYear = yearResults[yearKey];
 
           if (isFragmented) {
-            let kecName = ind.title;
-            if (kecName.toLowerCase().includes('kecamatan ')) {
-              kecName = kecName.substring(kecName.toLowerCase().indexOf('kecamatan ') + 10).split(/ Menurut/i)[0].trim();
-            }
+            const kecName = extractKecamatanName(ind.title);
             let sumL = 0, sumP = 0, sumTotal = 0;
             
             dataRes.vervar.forEach(v => {
@@ -339,19 +401,28 @@ async function scrapeDemographics() {
             });
             
             if (!sumTotal) sumTotal = sumL + sumP;
-            resYear.kecamatan_data.push({
+            
+            const existingIdx = resYear.kecamatan_data.findIndex(k => k.nama_kecamatan.toLowerCase() === kecName.toLowerCase());
+            const entry = {
               id_bps: varId, 
               nama_kecamatan: kecName,
               total_penduduk: { "Laki-laki": sumL, "Perempuan": sumP, "Total": sumTotal }
-            });
+            };
+            if (existingIdx >= 0) {
+              resYear.kecamatan_data[existingIdx] = entry;
+            } else {
+              resYear.kecamatan_data.push(entry);
+            }
           } else {
             dataRes.vervar.forEach(v => {
-              if (v.val === domain) return; 
+              const lbl = v.label.toLowerCase().trim();
+              if (v.val === domain || lbl.startsWith("kabupaten ") || lbl.startsWith("kota ") || lbl === "total" || lbl === "jumlah" || lbl === "kabupaten" || lbl === "kota") return; 
               const data = extractDataFromDatacontent(dataRes.datacontent, varId, mapTurvar, thId, v.val);
+              const cleanKecName = v.label.replace(/^\d+[\s.]*/, '').trim();
               
               if (indicators.length > 1 && !isFragmented) {
                 if (!resYear.tempKecamatanData[v.val]) {
-                  resYear.tempKecamatanData[v.val] = { id_bps: v.val, nama_kecamatan: v.label, total_penduduk: { "Laki-laki": 0, "Perempuan": 0, "Total": 0 }};
+                  resYear.tempKecamatanData[v.val] = { id_bps: v.val, nama_kecamatan: cleanKecName, total_penduduk: { "Laki-laki": 0, "Perempuan": 0, "Total": 0 }};
                 }
                 if (ind.title.toLowerCase().includes("laki-laki")) resYear.tempKecamatanData[v.val].total_penduduk["Laki-laki"] = data.Total || data.L;
                 else if (ind.title.toLowerCase().includes("perempuan")) resYear.tempKecamatanData[v.val].total_penduduk["Perempuan"] = data.Total || data.P;
@@ -359,16 +430,16 @@ async function scrapeDemographics() {
               } else {
                 resYear.kecamatan_data.push({
                   id_bps: v.val,
-                  nama_kecamatan: v.label,
+                  nama_kecamatan: cleanKecName,
                   total_penduduk: { "Laki-laki": data.L, "Perempuan": data.P, "Total": data.Total || (data.L + data.P) }
                 });
               }
             });
           }
         }
-        await sleep(400); // Mencegah rate-limit
+        await sleep(300); // Mencegah rate-limit
       }
-      await sleep(400);
+      await sleep(300);
     }
     
     // Save to files per year
@@ -388,7 +459,7 @@ async function scrapeDemographics() {
       };
       const folderName = isTestMode ? 'test_db' : 'db';
       fs.writeFileSync(path.join(dbDir, `kabupaten_${domain}_${yearKey}.json`), JSON.stringify(finalResult, null, 2));
-      console.log(`  [+] Disimpan ke ${folderName}/kabupaten_${domain}_${yearKey}.json`);
+      console.log(`  [+] Disimpan ke ${folderName}/kabupaten_${domain}_${yearKey}.json (${resYear.kecamatan_data.length} kecamatan)`);
     }
   }
   console.log("[AutoUpdater] Scraping Demografi Selesai!");
@@ -493,7 +564,7 @@ async function scrapeProvinsiJateng() {
 // ------------------------------------------------------------------
 // 3. ORCHESTRATOR
 // ------------------------------------------------------------------
-async function runAutoUpdater(forceDemographics = false) {
+async function runAutoUpdater(forceDemographics = false, targetDomain = null) {
   console.log("=========================================");
   console.log("[AutoUpdater] Memulai Pengecekan & Scraping Data BPS");
   
@@ -502,6 +573,15 @@ async function runAutoUpdater(forceDemographics = false) {
   }
 
   try {
+    if (targetDomain) {
+      console.log(`[AutoUpdater] Menargetkan Domain spesifik: ${targetDomain}`);
+      await scrapeDemographics(true, targetDomain);
+      rebuildMasterJson();
+      if (!isTestMode) flushRedisCache();
+      console.log("[AutoUpdater] Proses Domain Spesifik Selesai.");
+      return;
+    }
+
     // 1. Selalu jalankan Data Strategis (cepat dan sering diupdate)
     await scrapeStrategicData();
     
@@ -514,7 +594,7 @@ async function runAutoUpdater(forceDemographics = false) {
     const isFirstWeekOfMonth = today.getDate() <= 7;
     
     if (forceDemographics || isFirstWeekOfMonth || isTestMode) {
-      await scrapeDemographics();
+      await scrapeDemographics(forceDemographics);
     } else {
       console.log("[AutoUpdater] Skip Scraping Demografi (Hanya berjalan di minggu pertama setiap bulan).");
     }
@@ -539,6 +619,17 @@ module.exports = {
 
 // Jika dijalankan langsung dari terminal
 if (require.main === module) {
-  const force = process.argv.includes('--force-demographics');
-  runAutoUpdater(force);
+  const force = process.argv.includes('--force-demographics') || process.argv.includes('--force');
+  const onlyDemo = process.argv.includes('--only-demographics');
+  const domainIdx = process.argv.indexOf('--domain');
+  const targetDomain = domainIdx !== -1 ? parseInt(process.argv[domainIdx + 1]) : null;
+
+  if (onlyDemo) {
+    scrapeDemographics(force, targetDomain).then(() => {
+      rebuildMasterJson();
+      if (!isTestMode) flushRedisCache();
+    });
+  } else {
+    runAutoUpdater(force, targetDomain);
+  }
 }

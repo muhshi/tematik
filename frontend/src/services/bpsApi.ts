@@ -4,12 +4,13 @@ import { db, BpsDataPoint } from "@/lib/db";
 const BPS_BASE_URL = "https://webapi.bps.go.id/v1";
 const DOMAIN = "3300"; // Central Java Domain Code (All 35 Regencies/Cities)
 const DOMAIN_DEMAK = "3321"; // BPS Kabupaten Demak Domain Code
-const DEFAULT_API_KEY = "ac9780c3023e0762d5eb07f1c2f00dc6";
-
-// {*Fungsi: Mengambil API Key BPS dari file .env.local atau default*}
+// {*Fungsi: Mengambil API Key BPS dari file environment variable .env.local*}
 export function getApiKey(): string {
-  const key = process.env.BPS_API_KEY || DEFAULT_API_KEY;
-  return key;
+  const key = process.env.BPS_API_KEY;
+  if (!key) {
+    console.error("[BPS Config Error] Environment variable BPS_API_KEY belum diset pada .env.local!");
+  }
+  return key || "";
 }
 
 // {*Fungsi: Membersihkan dan menyamakan format nama wilayah/kabupaten/kecamatan*}
@@ -146,7 +147,7 @@ export async function fetchDynamicBpsData(
     if (response.ok) {
       const result = await response.json();
 
-      if (result.status === "OK" && result["data-availability"] !== "not-available") {
+      if (result && result.status === "OK" && result["data-availability"] !== "not-available") {
         const vervarList = result.vervar || [];
         const datacontent = result.datacontent || {};
         const turvarList = result.turvar || [];
@@ -251,7 +252,7 @@ export async function fetchDemakStrategicData(
 
     if (response.ok) {
       const result = await response.json();
-      if (result.status === "OK" && result["data-availability"] !== "not-available") {
+      if (result && result.status === "OK" && result["data-availability"] !== "not-available") {
         const vervarList = result.vervar || [];
         const datacontent = result.datacontent || {};
         const turvarList = result.turvar || [];
@@ -353,13 +354,16 @@ export async function getAvailableYearsForVar(varIdStr: string): Promise<Array<{
       const url = `${BPS_BASE_URL}/api/list/model/th/var/${vId}/domain/${dom}/key/${apiKey}/`;
 
       const response = await fetch(url, {
-        headers: { Accept: "application/json" },
+        headers: {
+          Accept: "application/json",
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        },
         next: { revalidate: 3600 },
       });
 
       if (response.ok) {
         const result = await response.json();
-        if (result["data-availability"] === "available" && Array.isArray(result.data) && result.data.length > 1) {
+        if (result && result["data-availability"] === "available" && Array.isArray(result.data) && result.data.length > 1) {
           const rawYears = result.data[1] as Array<{ th_id: number; th: string }>;
           const hasRecentYear = rawYears.some((y) => parseInt(y.th, 10) >= 2021);
           if (hasRecentYear) {

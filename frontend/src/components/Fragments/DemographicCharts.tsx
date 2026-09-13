@@ -13,6 +13,11 @@ interface DemographicsData {
     rata_rata_lama_sekolah: number;
     pengeluaran_per_kapita: number;
   };
+  kemiskinan?: {
+    jumlah_penduduk_miskin_ribu_jiwa: number;
+    persentase_penduduk_miskin: number;
+    garis_kemiskinan_rp: number;
+  };
 }
 
 interface DemographicChartsProps {
@@ -23,7 +28,7 @@ interface DemographicChartsProps {
 const COLORS = ["#0ea5e9", "#ec4899"]; // Blue for L, Pink for P
 
 export const DemographicCharts: React.FC<DemographicChartsProps> = ({ data, regionName }) => {
-  if (!data || (!data.gender && !data.age && !data.ipm)) {
+  if (!data || (!data.gender && !data.age && !data.ipm && !data.kemiskinan)) {
     return (
       <div className="flex flex-col items-center justify-center p-6 text-slate-400 bg-slate-50 rounded-xl border border-dashed border-slate-200 mt-4">
         <ActivitySquare className="w-10 h-10 mb-2 opacity-20" />
@@ -174,6 +179,62 @@ export const DemographicCharts: React.FC<DemographicChartsProps> = ({ data, regi
             <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
               <span className="text-[10px] uppercase font-bold text-slate-500 block mb-1">Pengeluaran / Kapita</span>
               <span className="text-lg font-black text-slate-800">Rp {new Intl.NumberFormat('id-ID').format(data.ipm.pengeluaran_per_kapita * 1000)}</span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Rincian Indikator Kemiskinan */}
+      {data.kemiskinan && (
+        <div className="border-t border-slate-200 pt-5">
+          <h3 className="text-sm font-bold text-slate-800 flex items-center gap-2 mb-4">
+            <ActivitySquare className="w-4 h-4 text-primary" />
+            Rincian Indikator Kemiskinan - {regionName}
+          </h3>
+          <div className="flex flex-col gap-3">
+            <div className="bg-slate-50 p-3.5 rounded-lg border border-slate-200">
+              <span className="text-[10px] uppercase font-bold text-slate-500 block mb-1">
+                Persentase Penduduk Miskin (P0)
+              </span>
+              <span className="text-2xl font-black text-slate-800">
+                {data.kemiskinan.persentase_penduduk_miskin}{" "}
+                <span className="text-sm text-slate-500 font-semibold">%</span>
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                <span className="text-[10px] uppercase font-bold text-slate-500 block mb-1">
+                  Jumlah Penduduk Miskin
+                </span>
+                <span className="text-base font-black text-slate-800">
+                  {new Intl.NumberFormat("id-ID").format(
+                    data.kemiskinan.jumlah_penduduk_miskin_ribu_jiwa
+                  )}{" "}
+                  <span className="text-xs text-slate-500 font-semibold">
+                    Ribu Jiwa
+                  </span>
+                </span>
+                <span className="text-[10px] text-slate-400 block mt-0.5">
+                  (&plusmn; {new Intl.NumberFormat("id-ID").format(
+                    Math.round(
+                      data.kemiskinan.jumlah_penduduk_miskin_ribu_jiwa * 1000
+                    )
+                  )} jiwa)
+                </span>
+              </div>
+              <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                <span className="text-[10px] uppercase font-bold text-slate-500 block mb-1">
+                  Garis Kemiskinan
+                </span>
+                <span className="text-base font-black text-slate-800">
+                  Rp {new Intl.NumberFormat("id-ID").format(
+                    data.kemiskinan.garis_kemiskinan_rp
+                  )}
+                </span>
+                <span className="text-[10px] text-slate-400 block mt-0.5">
+                  / kapita / bulan
+                </span>
+              </div>
             </div>
           </div>
         </div>

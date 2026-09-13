@@ -4,15 +4,6 @@
   "nama_kabupaten": "Brebes",
   "kecamatan_data": [
     {
-      "id_bps": 1,
-      "nama_kecamatan": "Kabupaten Brebes",
-      "total_penduduk": {
-        "Laki-laki": 905683,
-        "Perempuan": 897146,
-        "Total": 1802829
-      }
-    },
-    {
       "id_bps": 2,
       "nama_kecamatan": "Salem",
       "total_penduduk": {

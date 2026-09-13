@@ -7,8 +7,8 @@
       "id_bps": 1,
       "nama_kecamatan": "Mijen",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 47993,
+        "Perempuan": 48364,
         "Total": 96357
       }
     },
@@ -16,8 +16,8 @@
       "id_bps": 2,
       "nama_kecamatan": "Gunung Pati",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 51138,
+        "Perempuan": 51291,
         "Total": 102429
       }
     },
@@ -25,8 +25,8 @@
       "id_bps": 3,
       "nama_kecamatan": "Banyumanik",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 71012,
+        "Perempuan": 73075,
         "Total": 144087
       }
     },
@@ -34,8 +34,8 @@
       "id_bps": 4,
       "nama_kecamatan": "Gajah Mungkur",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 27583,
+        "Perempuan": 28745,
         "Total": 56328
       }
     },
@@ -43,8 +43,8 @@
       "id_bps": 5,
       "nama_kecamatan": "Semarang Selatan",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 30219,
+        "Perempuan": 31762,
         "Total": 61981
       }
     },
@@ -52,8 +52,8 @@
       "id_bps": 6,
       "nama_kecamatan": "Candisari",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 37313,
+        "Perempuan": 38083,
         "Total": 75396
       }
     },
@@ -61,8 +61,8 @@
       "id_bps": 7,
       "nama_kecamatan": "Tembalang",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 101772,
+        "Perempuan": 103093,
         "Total": 204865
       }
     },
@@ -70,8 +70,8 @@
       "id_bps": 8,
       "nama_kecamatan": "Pedurungan",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 98004,
+        "Perempuan": 100448,
         "Total": 198452
       }
     },
@@ -79,8 +79,8 @@
       "id_bps": 9,
       "nama_kecamatan": "Genuk",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 70483,
+        "Perempuan": 70550,
         "Total": 141033
       }
     },
@@ -88,8 +88,8 @@
       "id_bps": 10,
       "nama_kecamatan": "Gayamsari",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 35023,
+        "Perempuan": 35358,
         "Total": 70381
       }
     },
@@ -97,8 +97,8 @@
       "id_bps": 11,
       "nama_kecamatan": "Semarang Timur",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 32284,
+        "Perempuan": 34198,
         "Total": 66482
       }
     },
@@ -106,8 +106,8 @@
       "id_bps": 12,
       "nama_kecamatan": "Semarang Utara",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 58236,
+        "Perempuan": 59629,
         "Total": 117865
       }
     },
@@ -115,8 +115,8 @@
       "id_bps": 13,
       "nama_kecamatan": "Semarang Tengah",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 26457,
+        "Perempuan": 28756,
         "Total": 55213
       }
     },
@@ -124,8 +124,8 @@
       "id_bps": 14,
       "nama_kecamatan": "Semarang Barat",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 73363,
+        "Perempuan": 75994,
         "Total": 149357
       }
     },
@@ -133,8 +133,8 @@
       "id_bps": 15,
       "nama_kecamatan": "Tugu",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 17196,
+        "Perempuan": 17202,
         "Total": 34398
       }
     },
@@ -142,18 +142,9 @@
       "id_bps": 16,
       "nama_kecamatan": "Ngaliyan",
       "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
+        "Laki-laki": 73561,
+        "Perempuan": 74236,
         "Total": 147797
-      }
-    },
-    {
-      "id_bps": 17,
-      "nama_kecamatan": "Kota Semarang",
-      "total_penduduk": {
-        "Laki-laki": 0,
-        "Perempuan": 0,
-        "Total": 1722421
       }
     }
   ]

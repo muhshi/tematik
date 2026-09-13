@@ -4,15 +4,6 @@
   "nama_kabupaten": "Banjarnegara",
   "kecamatan_data": [
     {
-      "id_bps": 1,
-      "nama_kecamatan": "KABUPATEN BANJARNEGARA",
-      "total_penduduk": {
-        "Laki-laki": 541191,
-        "Perempuan": 526415,
-        "Total": 1067606
-      }
-    },
-    {
       "id_bps": 2,
       "nama_kecamatan": "Kecamatan Susukan",
       "total_penduduk": {

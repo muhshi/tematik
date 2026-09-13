@@ -13,9 +13,10 @@ export async function GET(request: Request) {
   }
 
   // 1. Try Backend API Server
-  const backendUrl = process.env.BACKEND_API_URL || "http://localhost:5000/api";
+  const rawBackendUrl = process.env.BACKEND_API_URL || "http://127.0.0.1:5000/api";
+  const backendUrl = rawBackendUrl.replace("localhost", "127.0.0.1");
   try {
-    const query = kabupaten ? `var=${varIdStr}&kabupaten=${encodeURIComponent(kabupaten)}` : `var=${varIdStr}`;
+    const query = kabupaten ? `var=${encodeURIComponent(varIdStr)}&kabupaten=${encodeURIComponent(kabupaten)}` : `var=${encodeURIComponent(varIdStr)}`;
     const res = await fetch(`${backendUrl}/available-years?${query}`, {
       cache: "no-store",
       signal: AbortSignal.timeout(15000),
